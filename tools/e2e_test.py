@@ -124,8 +124,8 @@ def main():
     free = [p for p in PARTS.values() if p["type"] == "free"]
     grade_w = sum((p["points"] // 2) * p["units"] for p in free)
     with sync_playwright() as p:
-        b = p.chromium.launch(channel="chrome", headless=True, args=["--autoplay-policy=no-user-gesture-required"])
-        pg = b.new_page(viewport={"width": 1100, "height": 900})
+        b = p.chromium.launch(channel="chrome", headless=True, args=["--autoplay-policy=no-user-gesture-required", "--use-fake-ui-for-media-stream", "--use-fake-device-for-media-stream"])
+        pg = b.new_context(viewport={"width": 1100, "height": 900}, permissions=["microphone"]).new_page()
         pg.on("pageerror", lambda e: errors.append(str(e)))
         pg.on("console", lambda m: m.type == "error" and "404" not in m.text and errors.append(m.text))
 
@@ -225,6 +225,29 @@ def main():
         pg.wait_for_selector("#startAudio")
         check(pg.locator("#finishSection").is_disabled(), "exam day: listening can't be finished before the recording ends")
         pg.evaluate("localStorage.clear()")
+
+        if CFG.get("speaking"):
+            print(f"[{LEVEL}] 6. speaking practice")
+            # The OS may block a real microphone for a script-launched Chrome; use a synthetic tone instead.
+            pg.add_init_script("""navigator.mediaDevices.getUserMedia = async () => {
+                const ctx = new AudioContext(), osc = ctx.createOscillator(), dest = ctx.createMediaStreamDestination();
+                osc.connect(dest); osc.start(); return dest.stream; };""")
+            pg.goto(URL + f"#/speaking/{LEVEL}")
+            pg.reload()
+            pg.click("#spStart")
+            n = sum(p["units"] for p in CFG["speaking"]["parts"])
+            for k in range(n):
+                pg.wait_for_selector("#spNow, #spDone", timeout=60000)
+                if pg.locator("#spNow").count():
+                    pg.click("#spNow")
+                pg.click("#spDone")
+                pg.wait_for_selector("#spNext")
+                if k == 0:
+                    check(pg.locator("#spCtl audio").count() == 1, "speaking: the answer was recorded and can be played back")
+                pg.click("#spNext")
+            pg.wait_for_selector("h1:has-text('Speaking done')")
+            check(pg.locator("main audio").count() == n, f"speaking: summary lists all {n} recordings")
+            pg.screenshot(path=SHOTS / f"{LEVEL}_speaking.png", full_page=True)
         b.close()
 
     if "--keep" not in args:

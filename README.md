@@ -8,7 +8,8 @@
 ```
 
 **HSK 4 / 5 / 6 mock exams, a fresh paper every time.** Each paper is drawn at random from a bank of
-original questions (15 full papers per level before any item repeats; HSK 2.0 format, 300
+original questions (15 full papers per level before any item repeats; HSK 2.0 format, plus a
+新HSK 4 tab in the new HSK 3.0 format; 300
 points, 180 to pass), with spoken listening audio, timed sections and instant scoring in your browser. Free writing (HSK 4 看图造句, HSK 5 短文, HSK 6 缩写) is graded by
 [Claude Code](https://claude.com/claude-code) against the exam rubrics.
 
@@ -117,6 +118,17 @@ More details:
 | **HSK 4** (100 Qs) | 1–10 true/false · 11–25 two-line dialogues · 26–35 long dialogues · 36–45 passages (2 Qs) | 46–55 word bank · 56–65 order A/B/C · 66–79 short passages · 80–85 passages (2 Qs) — 40 min | 86–95 arrange words · 96–100 picture + word → sentence — 25 min |
 | **HSK 5** (100 Qs) | 1–20 two-line dialogues · 21–30 long dialogues · 31–45 passages (2–3 Qs) | 46–60 cloze (each blank its own options, some sentence-level) · 61–70 pick the matching statement · 71–90 passages (4 Qs) — 45 min | 91–98 arrange words · 99 essay with 5 given words · 100 picture essay (~80 字 each) — 40 min |
 | **HSK 6** (101 Qs) | 1–15 pick the matching statement · 16–30 3 interviews (5 Qs) · 31–50 passages (3–4 Qs) | 51–60 病句 · 61–70 word-set cloze · 71–80 sentence insertion (A–E) · 81–100 passages (4 Qs) — 50 min | 101 缩写: read ~1000 字 (10 min), write ~400 字 (35 min) |
+| **新HSK 4** (3.0, 70 Qs) | 1–14 short dialogues · 15–19 short talks · 20–29 talks (2 Qs) · 30–32 talk (3 Qs) — all 4-option | 33–42 two word banks (6 words, one distractor) · 43–50 short passages · 51–54 passages (2 Qs) · 55–57 passage (3 Qs) · 58–64 sentence insertion (3 + 4) — 30 min | 65–69 picture + word → sentence · 70 short essay ≥80 字 on a topic — 25 min |
+
+The **新HSK 4** tab follows the new HSK 3.0 exam, using the official 2026 sample paper
+(中外语言交流合作中心) for its structure, timing and listening announcements, and the 2025 syllabus word
+lists (levels 1–4, 2000 words) for vocabulary. The new format also pairs every written exam from
+level 3 up with a separate speaking paper (HSK四级口语). That paper isn't scored here, but the tab has a
+**🎤 口语 Speaking** practice mode in the same three parts (听后复述 listen and repeat, 看图说话 describe a
+picture, 回答问题 answer questions) with the official preparation and answer times: it records you in the
+browser (nothing is uploaded) so you can listen back and compare with a model answer. The new pass mark
+hasn't been published, so the 180/300 used here is an estimate, as are the writing weights
+(5 × 10 + essay 50).
 
 Scoring: each section is out of 100. Listening and reading scale with the number correct.
 Writing is an **estimate** (the official weights aren't published):
@@ -166,6 +178,9 @@ server.py        local server + JSON API
 - Word meanings and pinyin in the missed-words list: the complete-hsk-vocabulary data (meanings from
   [CC-CEDICT](https://cc-cedict.org/), CC BY-SA 4.0); about 200 words missing there have glosses
   written for this project (`data/gloss_extra.tsv`). Pinyin for multi-reading words may list both.
+- 新HSK 4: format from the official HSK 3.0 sample papers (2026) and vocabulary from the 2025
+  《HSK考试大纲》 word lists (`data/wordlists_v3`, parsed by `tools/parse_syllabus_v3.py`). No sample
+  item was copied; every question is original.
 - Vocabulary: official HSK 2.0 (2012) word lists, levels 1–6. HSK 4 was cross-checked word by
   word against the vocabulary appendices of 《HSK标准教程4》上/下 (596 of 602 match).
 - Grammar points and topics: the tables of contents of 《HSK标准教程》4上/4下/5上/6上.

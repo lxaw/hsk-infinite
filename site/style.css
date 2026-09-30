@@ -251,3 +251,10 @@ table.parts td { vertical-align: middle; }
   .sh-sec { break-before: auto; }
   .sh-free { break-inside: avoid; }
 }
+
+/* speaking practice */
+.spk .stmt { font-size: 22px; margin: 8px 0 12px; }
+.spbar { display: flex; gap: 14px; align-items: center; margin: 14px 0 8px; }
+.spbar .timer { font-size: 22px; }
+.recdot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); margin-right: 4px; animation: blink 1s infinite; }
+@keyframes blink { 50% { opacity: .2; } }

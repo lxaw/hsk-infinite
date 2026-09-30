@@ -29,10 +29,10 @@ def main():
     out = ROOT / "site/images" / LEVEL
     out.mkdir(parents=True, exist_ok=True)
     units = []
-    for s in cfg["sections"]:
+    for s in cfg["sections"] + ([cfg["speaking"]] if cfg.get("speaking") else []):
         for p in s["parts"]:
             f = ROOT / "bank" / LEVEL / f"{p['id']}.json"
-            if p["type"] == "free" and f.exists():
+            if p["type"] in ("free", "picture_talk") and f.exists():
                 units += [u for u in json.loads(f.read_text()) if u.get("scene")]
     todo = [u for u in units if (not only or u["id"] in only) and (force or only or not (out / f"{u['id']}.jpg").exists())]
     print(f"{LEVEL}: {len(units)} pictures, {len(todo)} to generate")

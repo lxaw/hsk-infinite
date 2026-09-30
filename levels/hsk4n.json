@@ -43,7 +43,9 @@
           "units": 5,
           "group": "L2",
           "pause": 12,
-          "questionsPerUnit": [2],
+          "questionsPerUnit": [
+            2
+          ],
           "rangeIntro": "第{a}到{b}题是根据下面一段话。"
         },
         {
@@ -52,7 +54,9 @@
           "units": 1,
           "group": "L2",
           "pause": 12,
-          "questionsPerUnit": [3],
+          "questionsPerUnit": [
+            3
+          ],
           "rangeIntro": "第{a}到{b}题是根据下面一段话。"
         }
       ]
@@ -69,7 +73,10 @@
           "type": "wordbank",
           "units": 2,
           "group": "R1",
-          "kinds": ["sentence", "dialogue"],
+          "kinds": [
+            "sentence",
+            "dialogue"
+          ],
           "title": "第一部分",
           "desc": "选词填空。请注意：其中一个选项为干扰项，需排除。"
         },
@@ -86,14 +93,18 @@
           "type": "mcq_group",
           "units": 2,
           "group": "R2",
-          "questionsPerUnit": [2]
+          "questionsPerUnit": [
+            2
+          ]
         },
         {
           "id": "R2c",
           "type": "mcq_group",
           "units": 1,
           "group": "R2",
-          "questionsPerUnit": [3]
+          "questionsPerUnit": [
+            3
+          ]
         },
         {
           "id": "R3a",
@@ -144,5 +155,37 @@
         }
       ]
     }
-  ]
+  ],
+  "speaking": {
+    "name": "口语 Speaking",
+    "note": "Practice only, not scored: the real HSK四级口语 is a separate paper (5 tasks, about 20 minutes including 10 minutes of preparation). Your answers are recorded in this browser only; listen back and compare with the model answer.",
+    "parts": [
+      {
+        "id": "S1",
+        "type": "repeat",
+        "units": 2,
+        "title": "第一部分",
+        "desc": "听后复述：听一段话，然后重复。",
+        "answerSeconds": 40
+      },
+      {
+        "id": "S2",
+        "type": "picture_talk",
+        "units": 1,
+        "title": "第二部分",
+        "desc": "看图说话：看图片，说一段话。",
+        "prepSeconds": 180,
+        "answerSeconds": 120
+      },
+      {
+        "id": "S3",
+        "type": "answer",
+        "units": 2,
+        "title": "第三部分",
+        "desc": "回答问题。",
+        "prepSeconds": 210,
+        "answerSeconds": 120
+      }
+    ]
+  }
 }

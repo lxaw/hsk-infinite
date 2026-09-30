@@ -28,6 +28,7 @@ LEVEL = args[args.index("--level") + 1] if "--level" in args else "hsk4"
 CFG = json.loads((ROOT / "levels" / f"{LEVEL}.json").read_text())
 N = CFG.get("num") or int(LEVEL[-1])
 PARTS = {p["id"]: {**p, "section": s["key"]} for s in CFG["sections"] for p in s["parts"]}
+PARTS.update({p["id"]: {**p, "section": "speaking"} for p in CFG.get("speaking", {}).get("parts", [])})
 BANK = ROOT / "bank" / LEVEL
 
 
@@ -84,7 +85,7 @@ def oov(text):
 
 def texts(part, u):
     t = part["type"]
-    for k in ("passage", "statement", "question", "title", "story", "word", "task", "A", "B", "C", "answer"):
+    for k in ("passage", "statement", "question", "title", "story", "word", "task", "text", "A", "B", "C", "answer"):
         if isinstance(u.get(k), str):
             yield MARK.sub("", u[k])
     for d in u.get("dialogue", []):
@@ -210,6 +211,10 @@ def check(part, u, errs, ans):
                 errs.append(f"{i}: '{s}' is not made of exactly the pieces")
         if not u["answer"].endswith(("。", "？", "！")):
             errs.append(f"{i}: answer needs final punctuation")
+    elif t in ("repeat", "picture_talk", "answer"):  # speaking practice (not scored)
+        for f in {"repeat": ["speaker", "text"], "picture_talk": ["scene", "model"], "answer": ["task", "model"]}[t]:
+            if not u.get(f):
+                errs.append(f"{i}: {t} needs {f}")
     elif t == "free":
         k = part["kind"]
         need = {"picture_sentence": ["word", "scene", "models"], "essay_words": ["words", "model"],

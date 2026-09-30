@@ -72,6 +72,10 @@ def segments(part, u):
         for k, q in enumerate(u["questions"]):
             out[f"{i}_q{k}"] = [("n", q["question"])]
         return out
+    if part["type"] == "repeat":  # speaking: listen and repeat
+        return {i: [(u["speaker"], u["text"])]}
+    if part["type"] == "answer":  # speaking: the question is read aloud
+        return {i: [("n", u["task"])]}
     return {}
 
 
@@ -121,7 +125,7 @@ async def main():
     manifest = json.loads(MANIFEST.read_text()) if MANIFEST.exists() else {}
     jobs = [(f"fixed/{k}", [("n", t)]) for k, t in fixed_prompts().items()]
     sec = listening()
-    for part in (sec["parts"] if sec else []):
+    for part in (sec["parts"] if sec else []) + CFG.get("speaking", {}).get("parts", []):
         f = ROOT / "bank" / LEVEL / f"{part['id']}.json"
         if not f.exists():
             continue

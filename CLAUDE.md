@@ -1,13 +1,15 @@
 # HSK practice exams (HSK 4, 5, 6)
 
-Local, randomly generated HSK mock exams (HSK 2.0 format). See README.md for running it and
+Local, randomly generated HSK mock exams: HSK 4/5/6 in the HSK 2.0 format, plus 新HSK 4 (`hsk4n`)
+in the new HSK 3.0 format. See README.md for running it and
 for how the banks are built. Each level's layout, timing, scoring and grading rubrics live in
 `levels/<level>.json`; questions live in `bank/<level>/<PART>.json` (schema: `bank/SCHEMA.md`).
 
 ## Grading free writing ("grade my HSK writing" or similar)
 
 Free-writing parts are graded by you, not by the site:
-HSK 4 看图用词造句 (5 × 0–8), HSK 5 两篇短文 (2 × 0–30), HSK 6 缩写 (0–100).
+HSK 4 看图用词造句 (5 × 0–8), HSK 5 两篇短文 (2 × 0–30), HSK 6 缩写 (0–100), and on the new-format
+新HSK 4 (level `hsk4n`, HSK 3.0) 看图用词造句 (5 × 0–10) plus one topic essay 写短文 (0–50, ≥80 字).
 
 1. Find ungraded requests: every `submissions/pending/<id>.json` without a matching
    `submissions/graded/<id>.json` (`ls submissions/pending submissions/graded`).
@@ -17,6 +19,7 @@ HSK 4 看图用词造句 (5 × 0–8), HSK 5 两篇短文 (2 × 0–30), HSK 6 �
    - `picture_sentence` / `essay_picture`: **look at the picture first** with Read (`image`).
      `scene` is only the prompt the picture was drawn from; the picture is what counts.
    - `essay_words`: check all five `words` are used, correctly.
+   - `essay_topic` (新HSK 4): the essay must answer the `task` prompt and reach `targetChars`.
    - `summary` (缩写): compare against the full source `story` (and its `title`); check key events,
      order, a title, no added opinions, ~400 characters.
    - `models`/`model` are sample answers, not the only correct ones.
@@ -46,8 +49,9 @@ Never edit `submissions/attempts/` — those are the user's answers.
 
 - Add items with `tools/add_batch.py LEVEL PART batch.json`; small edits with `tools/fix.py`.
 - Validate: `.venv/bin/python tools/validate.py --level LEVEL` must report `errors: 0`.
-  HSK 4: no HARD out-of-syllabus words. HSK 5/6: HARD words are warnings (real papers exceed the
-  list) but keep them rare and whitelist proper nouns in `data/whitelist_<level>.txt`; the
+  HSK 4 and 新HSK 4: no HARD out-of-syllabus words (新HSK 4 is checked against the HSK 3.0 (2025)
+  lists in `data/wordlists_v3`; the level config's `syllabus: "v3"` selects them).
+  HSK 5/6: HARD words are warnings (real papers exceed the list) but keep them rare and whitelist proper nouns in `data/whitelist_<level>.txt`; the
   validator also flags items with too few advanced words.
 - Items with more than one defensible answer are the main risk. For word banks, cloze, tuple cloze,
   sentence insertion and 病句, try every option in every blank; for ordering, try all orders.

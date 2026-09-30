@@ -328,7 +328,7 @@ function startTimer() {
 function startWritingPhase() { exam.phase = "write"; exam.deadline = null; save(); renderExam(); }
 
 // ---------- audio ----------
-function playOnce(src) { stopAudio(); player = new Audio(src); player.play(); }
+function playOnce(src) { stopAudio(); player = new Audio(src); player.play().catch(() => {}); }  // interrupted plays are fine
 
 function listeningPlaylist() {
   const S = sectionCfg("listening");
@@ -531,6 +531,7 @@ async function renderHome(level) {
       <a class="btn" href="#/examday/${CFG.level}">🎯 模拟考试日 · Exam day</a>
       <a class="btn" href="#/progress/${CFG.level}">📈 进度 · Progress</a>
       <a class="btn" href="#/words/${CFG.level}">📝 生词本 · Missed words</a>
+      ${CFG.speaking ? `<a class="btn" href="#/speaking/${CFG.level}">🎤 口语 · Speaking</a>` : ""}
     </div>
     <h2>单项练习 · Drill one part</h2>
     <p class="muted small">One part of a paper, untimed. Check each item as you go to see the answer, transcript or explanation.</p>
@@ -996,9 +997,129 @@ async function renderProgress(level) {
   $("#app").onchange = null;
 }
 
+// ---------- speaking practice (levels with a "speaking" config; not scored) ----------
+let SPEAK = null;
+function speakStop() {
+  if (!SPEAK) return;
+  clearInterval(SPEAK.timer);
+  if (SPEAK.rec && SPEAK.rec.state === "recording") { SPEAK.rec.onstop = null; SPEAK.rec.stop(); }
+  stopAudio();
+}
+function speakCountdown(sec, label, onEnd) {
+  clearInterval(SPEAK.timer);
+  const end = Date.now() + sec * 1000;
+  const draw = () => {
+    const left = end - Date.now(), el = $("#spCount");
+    if (el) el.textContent = `${label} ${fmtTime(left)}`;
+    if (left <= 0) { clearInterval(SPEAK.timer); onEnd(); }
+  };
+  draw();
+  SPEAK.timer = setInterval(draw, 250);
+}
+async function renderSpeaking(level) {
+  $("#exambar").hidden = true;
+  speakStop();
+  await useLevel(level);
+  const sp = CFG.speaking;
+  if (!sp) { location.hash = `#/${CFG.level}`; return; }
+  const used = recall("hsk-speak-used") || {};
+  const tasks = sp.parts.flatMap((p) => byUsage(BANK[p.id] || [], used).slice(0, p.units).map((u) => ({ part: p, u })));
+  SPEAK = { tasks, i: -1, stream: null, rec: null, timer: null };
+  const row = (p) => `<tr><td>${esc(p.title)}</td><td>${esc(p.desc)}</td><td>${p.units} 题</td><td>${p.prepSeconds ? `准备 ${p.prepSeconds / 60} min · ` : ""}回答 ${p.answerSeconds >= 60 ? `${p.answerSeconds / 60} min` : `${p.answerSeconds} s`}</td></tr>`;
+  $("#app").innerHTML = `<p><a href="#/${CFG.level}">← 返回 ${esc(CFG.short)}</a></p><h1>${esc(sp.name)} · ${esc(CFG.short)}</h1>
+    <p class="muted">${esc(sp.note)}</p>
+    <table class="hist"><tr><th>部分</th><th>题型</th><th>题数</th><th>时间</th></tr>${sp.parts.map(row).join("")}</table>
+    <div class="notice" id="micNote">点击“开始”后浏览器会请求使用麦克风 · The browser will ask for your microphone. Without one you can still practise aloud with the timers.</div>
+    <p><button class="btn primary" id="spStart">开始 · Start</button></p>`;
+  $("#app").onclick = async (e) => {
+    const t = e.target.closest("button");
+    if (!t) return;
+    if (t.id === "spStart") {
+      t.disabled = true;
+      $("#micNote").textContent = "正在等待麦克风权限… · waiting for microphone permission (continues without recording after 20 s)";
+      // An unanswered permission prompt never settles, so give up after 20 s and practise without recording.
+      const wait = new Promise((resolve) => setTimeout(() => resolve(null), 20000));
+      try { SPEAK.stream = await Promise.race([navigator.mediaDevices.getUserMedia({ audio: true }), wait]); } catch (err) { SPEAK.stream = null; }
+      speakTask(0);
+    } else if (t.id === "spNow") speakAnswer();
+    else if (t.id === "spDone") speakFinish();
+    else if (t.id === "spNext") speakTask(SPEAK.i + 1);
+    else if (t.id === "spReplay") playOnce(audio(SPEAK.tasks[SPEAK.i].u.id));
+  };
+}
+function speakTask(i) {
+  speakStop();
+  if (i >= SPEAK.tasks.length) return speakSummary();
+  SPEAK.i = i;
+  const { part, u } = SPEAK.tasks[i];
+  const head = `<p class="muted">第 ${i + 1} / ${SPEAK.tasks.length} 题 · ${esc(part.title)} · ${esc(part.desc)}</p>`;
+  const prompt = part.type === "picture_talk" ? `<div class="w2"><img src="${image(u.id)}" alt=""><div></div></div>`
+    : part.type === "answer" ? `<div class="stmt">${esc(u.task)}</div>` : `<div class="small muted">听录音，然后重复你听到的话 · listen, then say it back</div>`;
+  $("#app").innerHTML = `<h1>${esc(CFG.speaking.name)}</h1>${head}<div class="part spk">${prompt}
+    <div class="spbar"><span id="spCount" class="timer"></span> <span id="spState" class="small muted"></span></div><div id="spCtl"></div></div>`;
+  if (part.type === "repeat") {
+    $("#spState").textContent = "正在播放 · playing (once)";
+    player = new Audio(audio(u.id));
+    player.onended = () => speakAnswer();
+    player.onerror = () => speakAnswer();
+    player.play().catch(() => speakAnswer());
+  } else {
+    if (part.type === "answer") playOnce(audio(u.id));
+    $("#spState").textContent = "准备 · preparation";
+    $("#spCtl").innerHTML = `<button class="btn small" id="spNow">开始回答 · Answer now</button>`;
+    speakCountdown(part.prepSeconds, "准备", speakAnswer);
+  }
+}
+function speakAnswer() {
+  const { part } = SPEAK.tasks[SPEAK.i];
+  stopAudio();
+  SPEAK.chunks = [];
+  SPEAK.rec = null;
+  if (SPEAK.stream && window.MediaRecorder) {
+    SPEAK.rec = new MediaRecorder(SPEAK.stream);
+    SPEAK.rec.ondataavailable = (e) => e.data.size && SPEAK.chunks.push(e.data);
+    SPEAK.rec.start();
+  }
+  $("#spState").innerHTML = SPEAK.rec ? `<span class="recdot"></span> 录音中 · recording` : "请开始说 · speak now (no microphone, not recorded)";
+  $("#spCtl").innerHTML = `<button class="btn small primary" id="spDone">说完了 · Done</button>`;
+  speakCountdown(part.answerSeconds, "回答", speakFinish);
+}
+function speakFinish() {
+  clearInterval(SPEAK.timer);
+  const t = SPEAK.tasks[SPEAK.i];
+  const review = () => {
+    const ref = t.part.type === "repeat" ? t.u.text : t.u.model;
+    $("#spCount").textContent = "";
+    $("#spState").textContent = "回顾 · review";
+    $("#spCtl").innerHTML = `${t.url ? `<p><audio controls src="${t.url}"></audio></p>` : ""}
+      ${t.part.type === "repeat" ? `<button class="playbtn" id="spReplay">▶ 再听一遍 replay</button>` : ""}
+      <details ${t.part.type === "repeat" ? "open" : ""}><summary>${t.part.type === "repeat" ? "原文 what was said" : "参考答案 model answer"}</summary><div class="transcript">${esc(ref)}</div></details>
+      <p><button class="btn primary" id="spNext">${SPEAK.i + 1 < SPEAK.tasks.length ? "下一题 · Next" : "结束 · Finish"}</button></p>`;
+  };
+  if (SPEAK.rec && SPEAK.rec.state === "recording") {
+    SPEAK.rec.onstop = () => { t.url = URL.createObjectURL(new Blob(SPEAK.chunks, { type: SPEAK.rec.mimeType || "audio/webm" })); review(); };
+    SPEAK.rec.stop();
+  } else review();
+}
+function speakSummary() {
+  speakStop();
+  const used = recall("hsk-speak-used") || {};
+  SPEAK.tasks.forEach((t) => (used[t.u.id] = (used[t.u.id] || 0) + 1));
+  store("hsk-speak-used", used);
+  if (SPEAK.stream) SPEAK.stream.getTracks().forEach((tr) => tr.stop());
+  const label = (t) => t.part.type === "repeat" ? t.u.text : t.part.type === "answer" ? t.u.task : "看图说话 · picture";
+  $("#app").innerHTML = `<p><a href="#/${CFG.level}">← 返回 ${esc(CFG.short)}</a></p><h1>口语练习完成 · Speaking done</h1>
+    <p class="muted">Recordings stay in this browser tab only; download any you want to keep.</p>
+    ${SPEAK.tasks.map((t, i) => `<div class="rv"><span class="qn">${i + 1}.</span><span class="stmt">${esc(label(t))}</span>
+      ${t.url ? `<div><audio controls src="${t.url}"></audio> <a href="${t.url}" download="${CFG.level}-speaking-${i + 1}.webm">⬇ 下载</a></div>` : `<div class="small muted">no recording</div>`}
+      <details><summary>${t.part.type === "repeat" ? "原文" : "参考答案 model answer"}</summary><div class="transcript">${esc(t.part.type === "repeat" ? t.u.text : t.u.model)}</div></details></div>`).join("")}
+    <p><a class="btn" href="#/speaking/${CFG.level}">再练一次 · Again</a></p>`;
+}
+
 // ---------- router ----------
 async function route() {
   clearInterval(tick);
+  speakStop();
   window.scrollTo(0, 0);
   stopAudio();
   const h = location.hash;
@@ -1007,6 +1128,7 @@ async function route() {
   else if (page === "progress") await renderProgress(arg || "hsk4");
   else if (page === "words") await renderWords(arg || "hsk4");
   else if (page === "sheet") await renderSheet(arg);
+  else if (page === "speaking") await renderSpeaking(arg || "hsk4n");
   else if (h.startsWith("#/exam")) {
     exam = exam || recall("hsk-exam");
     if (!exam) { location.hash = "#/"; return; }
