@@ -57,14 +57,31 @@ function pickUnits(part, used) {
   if (part.kinds) return part.kinds.map((k) => byUsage(pool.filter((u) => u.kind === k), used)[0]);
   if (!part.questions) return byUsage(pool, used).slice(0, part.units);
   // Fill an exact question total with variable-size groups (e.g. 15 questions from groups of 2–3).
-  for (let attempt = 0; attempt < 200; attempt++) {
+  const min = Math.min(...part.questionsPerUnit);
+  const fill = (order) => {
     let left = part.questions; const out = [];
-    for (const u of attempt ? shuffle(pool) : byUsage(pool, used)) {
+    for (const u of order) {
       const n = nQuestions(part, u);
-      if (n <= left && (left - n === 0 || left - n >= Math.min(...part.questionsPerUnit))) { out.push(u); left -= n; }
+      if (n <= left && (left - n === 0 || left - n >= min)) { out.push(u); left -= n; }
       if (!left) return out;
     }
+    return null;
+  };
+  // Among least-used fills, prefer group sizes that are still plentiful, so a scarce size
+  // (e.g. the one 3-blank passage each paper needs) isn't used up early and items repeat sooner.
+  const low = Math.min(...pool.map((u) => used[u.id] || 0));
+  const avail = {};
+  for (const u of pool) if ((used[u.id] || 0) === low) avail[nQuestions(part, u)] = (avail[nQuestions(part, u)] || 0) + 1;
+  const cost = (out) => [out.reduce((s, u) => s + (used[u.id] || 0), 0), out.reduce((s, u) => s + 1 / (avail[nQuestions(part, u)] || 1), 0)];
+  let best = null, bestCost = null;
+  for (let attempt = 0; attempt < 40; attempt++) {
+    const out = fill(byUsage(pool, used));
+    if (!out) continue;
+    const c = cost(out);
+    if (!best || c[0] < bestCost[0] || (c[0] === bestCost[0] && c[1] < bestCost[1])) { best = out; bestCost = c; }
   }
+  if (best) return best;
+  for (let attempt = 0; attempt < 200; attempt++) { const out = fill(shuffle(pool)); if (out) return out; }
   return [];
 }
 
