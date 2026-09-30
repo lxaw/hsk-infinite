@@ -8,7 +8,7 @@
 ```
 
 **HSK 4 / 5 / 6 mock exams, a fresh paper every time.** Each paper is drawn at random from a bank of
-original questions (about ten full papers per level before any item repeats; HSK 2.0 format, 300
+original questions (15 full papers per level before any item repeats; HSK 2.0 format, 300
 points, 180 to pass), with spoken listening audio, timed sections and instant scoring in your browser. Free writing (HSK 4 看图造句, HSK 5 短文, HSK 6 缩写) is graded by
 [Claude Code](https://claude.com/claude-code) against the exam rubrics.
 
@@ -111,11 +111,12 @@ depending on the part; after listening there are 3 minutes to check answers.
 
 ## Question bank
 
-Each level's bank holds enough units for about 10 complete papers without repeating an item
+Each level's bank holds enough units for 15 complete papers without repeating an item
 (new papers draw the least-used units first; after that, items start to recur). Ambiguity-prone
-items (HSK 5 cloze and statement-matching, HSK 6 病句, word-set cloze and sentence insertion)
+items (HSK 4 word banks, A/B/C ordering and word arrangement, HSK 5 cloze, statement-matching
+and word arrangement, HSK 6 病句, word-set cloze and sentence insertion)
 were checked by an independent blind solve against shuffled options; every mismatch or
-second defensible answer was rewritten. HSK 6 has 10 original 缩写 stories.
+second defensible answer was rewritten. HSK 6 has 15 original 缩写 stories.
 
 ## Rebuilding the banks and media
 
