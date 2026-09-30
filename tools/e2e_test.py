@@ -173,6 +173,58 @@ def main():
         pg.goto(URL + f"#/{LEVEL}")
         pg.wait_for_selector(".hist")
         check(str(200 + auto_w + grade_w) in pg.inner_text(".hist"), "history table shows the graded total")
+
+        print(f"[{LEVEL}] 5. drill, progress, missed words, answer sheet, exam day")
+        fresh(pg)
+        pg.click('[data-drill="R1"]')
+        pg.wait_for_selector("[data-check]")
+        n_checks = pg.locator("[data-check]").count()
+        pg.click("[data-check] >> nth=0")
+        pg.wait_for_selector(".drillfb .rv")
+        check(pg.locator("fieldset.blk[disabled]").count() == 1 and pg.locator("[data-check]").count() == n_checks - 1, "drill: Check locks the block and shows the review")
+        pg.screenshot(path=SHOTS / f"{LEVEL}_drill.png", full_page=False)
+        pg.click("#finishBottom")
+        pg.click("#finishBottom")
+        pg.wait_for_selector(".scores", timeout=10000)
+        created.append(pg.url.split("/")[-1])
+        check("drill" in pg.inner_text("main"), "drill result is labelled as a drill")
+
+        pg.goto(URL + f"#/progress/{LEVEL}")
+        pg.wait_for_selector("svg.chart")
+        groups = len({p["group"] for p in PARTS.values()})
+        check(pg.locator("table.parts tr").count() == groups + 1, f"progress: one row per part ({groups})")
+        box = pg.locator("#hit").bounding_box()
+        pg.mouse.move(box["x"] + box["width"] - 5, box["y"] + box["height"] / 2)
+        check(pg.locator("#tip").is_visible(), "progress: hovering the chart shows a tooltip")
+        pg.screenshot(path=SHOTS / f"{LEVEL}_progress.png", full_page=True)
+
+        pg.goto(URL + f"#/words/{LEVEL}")
+        pg.wait_for_selector("table.words")
+        rows = pg.locator("table.words tr").count() - 1
+        check(rows > 0, f"missed words: {rows} words from the all-wrong paper")
+        with pg.expect_download() as dl:
+            pg.click("#wexport")
+        text = Path(dl.value.path()).read_text(encoding="utf-8")
+        check(text.startswith("#separator:tab") and len(text.strip().splitlines()) == rows + 4, "Anki export has the header and one line per word")
+        pg.screenshot(path=SHOTS / f"{LEVEL}_words.png")
+
+        pg.goto(URL + f"#/sheet/{att}")
+        pg.wait_for_selector(".sheet")
+        check(pg.locator(".bub.on").count() > 0 and pg.locator(".grid .gr").count() > 0, "answer sheet shows filled bubbles and writing grids")
+        pg.screenshot(path=SHOTS / f"{LEVEL}_sheet.png", full_page=True)
+
+        pg.goto(URL + f"#/examday/{LEVEL}")
+        pg.wait_for_selector("#beginExam")
+        check(pg.locator("#beginExam").is_disabled(), "exam day: Begin is locked until the checklist is done")
+        pg.click("#soundTest")
+        for k in ("quiet", "time", "rules"):
+            pg.check(f'[data-ck="{k}"]')
+        check(pg.locator("#beginExam").is_enabled(), "exam day: checklist complete unlocks Begin")
+        pg.screenshot(path=SHOTS / f"{LEVEL}_examday.png")
+        pg.click("#beginExam")
+        pg.wait_for_selector("#startAudio")
+        check(pg.locator("#finishSection").is_disabled(), "exam day: listening can't be finished before the recording ends")
+        pg.evaluate("localStorage.clear()")
         b.close()
 
     if "--keep" not in args:

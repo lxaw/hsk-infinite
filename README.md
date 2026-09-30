@@ -86,6 +86,25 @@ itself within a few seconds.
 
 ![Graded writing with feedback and corrections](docs/screenshots/8-feedback.png)
 
+### 7. Drills, progress, missed words and exam day
+
+The home page of each level also has:
+
+- **单项练习 Drill one part**: one part of a paper (e.g. only HSK 6 病句 or HSK 5 cloze), untimed.
+  Press **检查 Check** under an item to lock it and see the answer, the transcript, or the 病句
+  explanation straight away. Drills are saved like any paper and count toward "least-seen first".
+- **📈 进度 Progress**: section scores over time (exam and practice papers marked differently),
+  accuracy by part with your weakest part called out, and a Drill button on every part.
+- **📝 生词本 Missed words**: words from the questions you got wrong, tagged by HSK level with pinyin,
+  meaning, how often you missed them and an example sentence. Tick ✓ for words you know, and
+  **导出 Anki** downloads a tab-separated file for Anki's *File → Import*.
+- **🎯 模拟考试日 Exam day**: a full paper under real conditions. A checklist (sound test, quiet
+  room, time) comes first; after that there is no pausing, the listening section can't be ended
+  before the recording finishes, an interrupted recording resumes at the *next* question, and
+  leaving the tab is counted on the result.
+- **🖨 答题卡 Answer sheet**: a printable HSK-style answer sheet with bubbles and 方格纸 writing
+  grids, blank from the exam-day checklist or filled in from any result page.
+
 More details:
 
 - Each paper prefers the questions you've seen least, and answer options are reshuffled every time.
@@ -135,7 +154,8 @@ tools/
   build_audio.py   edge-tts listening audio (cached; voices in audio_config.json)
   build_images.py  Z-Image-Turbo pictures (local, Apple Silicon; model in models/)
   add_batch.py / fix.py   add items / apply text fixes
-  e2e_test.py      headless-Chrome test of a full exam per level
+  build_vocab.py   site/vocab.json (level, pinyin, meaning) for the missed-words list
+  e2e_test.py      headless-Chrome test of a full exam per level, plus drill/progress/words/sheet/exam day
 site/            the web app; audio/<level>/, images/<level>/
 submissions/     attempts/ (your answers), pending/ (writing to grade), graded/ (Claude's grades)
 server.py        local server + JSON API
@@ -143,6 +163,9 @@ server.py        local server + JSON API
 
 ## Sources
 
+- Word meanings and pinyin in the missed-words list: the complete-hsk-vocabulary data (meanings from
+  [CC-CEDICT](https://cc-cedict.org/), CC BY-SA 4.0); about 200 words missing there have glosses
+  written for this project (`data/gloss_extra.tsv`). Pinyin for multi-reading words may list both.
 - Vocabulary: official HSK 2.0 (2012) word lists, levels 1–6. HSK 4 was cross-checked word by
   word against the vocabulary appendices of 《HSK标准教程4》上/下 (596 of 602 match).
 - Grammar points and topics: the tables of contents of 《HSK标准教程》4上/4下/5上/6上.
