@@ -16,3 +16,4 @@ submissions/server.log
 # vocabulary notes derived from the (copyrighted) textbooks
 data/textbook_hsk4.txt
 data/textbook_hsk4_extra.tsv
+data/cedict.txt

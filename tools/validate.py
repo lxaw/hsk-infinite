@@ -25,8 +25,8 @@ MARK = re.compile(r"\[(\d+)\]")
 
 args = sys.argv[1:]
 LEVEL = args[args.index("--level") + 1] if "--level" in args else "hsk4"
-N = int(LEVEL[-1])
 CFG = json.loads((ROOT / "levels" / f"{LEVEL}.json").read_text())
+N = CFG.get("num") or int(LEVEL[-1])
 PARTS = {p["id"]: {**p, "section": s["key"]} for s in CFG["sections"] for p in s["parts"]}
 BANK = ROOT / "bank" / LEVEL
 
@@ -35,7 +35,7 @@ def words(path):
     return {l.strip() for l in path.read_text(encoding="utf-8-sig").splitlines() if l.strip() and not l.startswith("#")}
 
 
-WL = ROOT / "data" / "wordlists"
+WL = ROOT / "data" / ("wordlists_v3" if CFG.get("syllabus") == "v3" else "wordlists")  # HSK 3.0 (2025) or 2.0 (2012) lists
 OFFICIAL = {i: words(WL / f"L{i}.txt") for i in range(1, 7)}
 ALLOWED = set().union(*(OFFICIAL[i] for i in range(1, N + 1)))
 LEVEL_WORDS = OFFICIAL[N]
@@ -84,7 +84,7 @@ def oov(text):
 
 def texts(part, u):
     t = part["type"]
-    for k in ("passage", "statement", "question", "title", "story", "word", "A", "B", "C", "answer"):
+    for k in ("passage", "statement", "question", "title", "story", "word", "task", "A", "B", "C", "answer"):
         if isinstance(u.get(k), str):
             yield MARK.sub("", u[k])
     for d in u.get("dialogue", []):
@@ -99,7 +99,8 @@ def texts(part, u):
             yield q["question"]
         yield from q["options"]
     if t == "wordbank":
-        yield u["example"]["text"]
+        if u.get("example"):
+            yield u["example"]["text"]
         for it in u["items"]:
             yield it["text"]
 
@@ -177,12 +178,14 @@ def check(part, u, errs, ans):
                 errs.append(f"{i}.{k}: needs question")
             check_mcq(q, f"{i}.{k}", errs, ans)
     elif t == "wordbank":
-        used = [u["example"]["answer"]] + [it["answer"] for it in u["items"]]
+        # HSK 2.0: an example uses the sixth word. HSK 3.0: no example, the sixth word is a distractor.
+        ex = [u["example"]] if u.get("example") else []
+        used = [e["answer"] for e in ex] + [it["answer"] for it in u["items"]]
         if len(u["bank"]) != 6 or len(set(u["bank"])) != 6 or len(u["items"]) != 5:
             errs.append(f"{i}: bank needs 6 distinct words and 5 items")
-        if sorted(used) != list(range(6)):
-            errs.append(f"{i}: each bank word must be used exactly once (got {used})")
-        for it in [u["example"]] + u["items"]:
+        if len(set(used)) != len(used) or len(used) != (6 if ex else 5) or not all(0 <= a < 6 for a in used):
+            errs.append(f"{i}: each bank word may be used at most once (got {used})")
+        for it in ex + u["items"]:
             if it["text"].count("（ ）") != 1:
                 errs.append(f"{i}: exactly one （ ） blank per item: {it['text'][:20]}")
         ans.extend(it["answer"] for it in u["items"])
@@ -210,7 +213,7 @@ def check(part, u, errs, ans):
     elif t == "free":
         k = part["kind"]
         need = {"picture_sentence": ["word", "scene", "models"], "essay_words": ["words", "model"],
-                "essay_picture": ["scene", "model"], "summary": ["title", "story", "model"]}[k]
+                "essay_picture": ["scene", "model"], "essay_topic": ["task", "model"], "summary": ["title", "story", "model"]}[k]
         for f in need:
             if not u.get(f):
                 errs.append(f"{i}: {k} needs {f}")
@@ -224,6 +227,10 @@ def check(part, u, errs, ans):
             for w in u.get("words", []):
                 if w not in u.get("model", ""):
                     errs.append(f"{i}: model essay missing word {w}")
+        if k == "essay_topic" and part.get("targetChars"):
+            m = len(re.sub(r"\s", "", u.get("model", "")))
+            if m < part["targetChars"]:
+                errs.append(f"{i}: model essay is {m} characters (needs at least {part['targetChars']})")
         if k == "summary":
             n = len(re.sub(r"\s", "", u.get("story", "")))  # incl. punctuation
             m = len(re.sub(r"\s", "", u.get("model", "")))

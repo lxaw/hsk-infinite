@@ -25,7 +25,8 @@ SAFE_ID = re.compile(r"^[A-Za-z0-9_-]{1,64}$")
 
 
 def levels():
-    return {p.stem: json.loads(p.read_text()) for p in sorted(LEVELS.glob("*.json"))}
+    cfgs = [json.loads(p.read_text()) for p in LEVELS.glob("*.json")]
+    return {c["level"]: c for c in sorted(cfgs, key=lambda c: (c.get("order", 0), c["level"]))}
 
 
 def parts_of(cfg):
@@ -65,7 +66,7 @@ def grading_request(att):
             it["targetChars"] = pt["targetChars"]
         if pt.get("prompt"):
             it["prompt"] = pt["prompt"]
-        for k in ("word", "words", "scene", "title", "story", "models", "model"):
+        for k in ("word", "words", "task", "scene", "title", "story", "models", "model"):
             if k in u:
                 it[k] = u[k]
         if pt["kind"] in ("picture_sentence", "essay_picture"):

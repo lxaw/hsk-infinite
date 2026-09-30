@@ -2,7 +2,8 @@
 
 Levels come from data/wordlists/L1-L6.txt. Pinyin and English glosses come from the
 complete-hsk-vocabulary data in ../shared/ref/<n>.json (meanings from CC-CEDICT, CC BY-SA 4.0);
-the ~200 words missing there use data/gloss_extra.tsv.
+the ~200 words missing there use data/gloss_extra.tsv. Also writes site/vocab_v3.json for the
+HSK 3.0 (2025) lists (data/wordlists_v3), with CC-CEDICT (data/cedict.txt, optional) for the rest.
 The site uses this file to tag missed words and export them to Anki.
 
     .venv/bin/python tools/build_vocab.py
@@ -54,3 +55,36 @@ for lvl in range(1, 7):
 out = ROOT / "site" / "vocab.json"
 out.write_text(json.dumps(vocab, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 print(f"{len(vocab)} words -> {out} ({missing} without a gloss)")
+
+# CC-CEDICT (optional, gitignored: data/cedict.txt from mdbg.net) fills meanings the sources above lack.
+cedict = {}
+cf = ROOT / "data" / "cedict.txt"
+if cf.exists():
+    import re
+    for line in cf.read_text(encoding="utf-8").splitlines():
+        m = re.match(r"^\S+ (\S+) \[([^\]]+)\] /(.*)/$", line)
+        if not m or m.group(2)[:1].isupper():  # skip proper-noun readings
+            continue
+        senses = [x for x in m.group(3).split("/") if not x.startswith(("variant of", "old variant", "CL:", "see ", "used in"))]
+        if senses and m.group(1) not in cedict:
+            cedict[m.group(1)] = "; ".join(senses[:3])
+
+# HSK 3.0 (2025) lists, levels 1-6: level and pinyin from the syllabus; meanings as above.
+v3, missing = {}, []
+for line in (ROOT / "data" / "wordlists_v3" / "words.tsv").read_text(encoding="utf-8").splitlines():
+    _, lvl, w, pinyin, _ = (line.split("\t") + [""] * 5)[:5]
+    if lvl not in "123456" or w in v3:
+        continue
+    gloss = vocab[w][2] if w in vocab else ""
+    if not gloss and w in ref:
+        gloss = "; ".join(m for f in ref[w]["forms"][:2] for m in f["meanings"])[:120]
+    if not gloss:
+        gloss = extra.get(w, "").strip() or cedict.get(w, "")
+    if not gloss:
+        missing.append(w)
+    v3[w] = [int(lvl), pinyin, gloss]
+out = ROOT / "site" / "vocab_v3.json"
+out.write_text(json.dumps(v3, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+print(f"{len(v3)} words (HSK 3.0) -> {out} ({len(missing)} without a gloss)")
+if missing:
+    print("  no gloss:", " ".join(missing))

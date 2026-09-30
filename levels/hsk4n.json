@@ -1,0 +1,148 @@
+{
+  "level": "hsk4n",
+  "name": "新 HSK 四级（3.0）",
+  "short": "新HSK 4",
+  "num": 4,
+  "syllabus": "v3",
+  "order": 10,
+  "pass": 180,
+  "passEstimated": true,
+  "note": "New HSK (3.0) format from the official 2026 sample paper: 70 questions, about 85 minutes. The speaking paper (HSK四级口语) is separate. Section scores out of 100 and the 180 pass mark are estimates; the new pass mark has not been published.",
+  "sections": [
+    {
+      "key": "listening",
+      "name": "听力 Listening",
+      "first": 1,
+      "count": 32,
+      "reviewMinutes": 5,
+      "intro": "大家好！欢迎参加HSK四级考试。HSK四级听力考试分两部分，共32题。请大家注意，听力考试现在开始。",
+      "parts": [
+        {
+          "id": "L1",
+          "type": "mcq",
+          "units": 14,
+          "group": "L1",
+          "pause": 10,
+          "title": "第一部分",
+          "desc": "第1～14题：听对话，请选出正确答案。",
+          "audioIntro": "第一部分，第1到14题。听对话，选择正确答案。每题听一次。"
+        },
+        {
+          "id": "L2a",
+          "type": "mcq",
+          "units": 5,
+          "group": "L2",
+          "pause": 12,
+          "title": "第二部分",
+          "desc": "第15～32题：听一段话，请选出正确答案。",
+          "audioIntro": "第二部分，第15到32题。听一段话，选择正确答案。每题听一次。"
+        },
+        {
+          "id": "L2b",
+          "type": "mcq_group",
+          "units": 5,
+          "group": "L2",
+          "pause": 12,
+          "questionsPerUnit": [2],
+          "rangeIntro": "第{a}到{b}题是根据下面一段话。"
+        },
+        {
+          "id": "L2c",
+          "type": "mcq_group",
+          "units": 1,
+          "group": "L2",
+          "pause": 12,
+          "questionsPerUnit": [3],
+          "rangeIntro": "第{a}到{b}题是根据下面一段话。"
+        }
+      ]
+    },
+    {
+      "key": "reading",
+      "name": "阅读 Reading",
+      "first": 33,
+      "count": 32,
+      "minutes": 30,
+      "parts": [
+        {
+          "id": "R1",
+          "type": "wordbank",
+          "units": 2,
+          "group": "R1",
+          "kinds": ["sentence", "dialogue"],
+          "title": "第一部分",
+          "desc": "选词填空。请注意：其中一个选项为干扰项，需排除。"
+        },
+        {
+          "id": "R2a",
+          "type": "mcq",
+          "units": 8,
+          "group": "R2",
+          "title": "第二部分",
+          "desc": "请选出正确答案。"
+        },
+        {
+          "id": "R2b",
+          "type": "mcq_group",
+          "units": 2,
+          "group": "R2",
+          "questionsPerUnit": [2]
+        },
+        {
+          "id": "R2c",
+          "type": "mcq_group",
+          "units": 1,
+          "group": "R2",
+          "questionsPerUnit": [3]
+        },
+        {
+          "id": "R3a",
+          "type": "insert",
+          "units": 1,
+          "group": "R3",
+          "title": "第三部分",
+          "desc": "选句填空。"
+        },
+        {
+          "id": "R3b",
+          "type": "insert",
+          "units": 1,
+          "group": "R3"
+        }
+      ]
+    },
+    {
+      "key": "writing",
+      "name": "写作 Writing",
+      "first": 65,
+      "count": 6,
+      "minutes": 25,
+      "parts": [
+        {
+          "id": "W1",
+          "type": "free",
+          "kind": "picture_sentence",
+          "units": 5,
+          "group": "W1",
+          "points": 10,
+          "title": "第一部分",
+          "desc": "看图，用词造句。",
+          "rubric": "Score 0-10:\n10 = target word used correctly; sentence clearly describes the picture; grammatical and natural; richer than the bare minimum\n8 = correct and relevant but very simple, or one minor slip (wrong measure word, missing 了, one wrong character)\n5 = target word used and relevant, but noticeable grammar errors that do not block meaning\n2 = target word misused, or sentence barely relates to the picture, or serious errors\n0 = blank, target word missing, or unintelligible\nDeduct 1 for each wrongly written character (错别字), minimum 0."
+        },
+        {
+          "id": "W2",
+          "type": "free",
+          "kind": "essay_topic",
+          "units": 1,
+          "group": "W2",
+          "points": 50,
+          "targetChars": 80,
+          "title": "第二部分",
+          "desc": "写短文。",
+          "prompt": "请写一篇不少于80字的短文。",
+          "rubric": "Score 0-50 (new HSK 4 short essay on the given topic, at least 80 characters; count every character incl. punctuation, as on the answer sheet):\n45-50 = fully on topic; clear beginning, details and ending; varied HSK 4-level vocabulary and grammar used correctly; almost no errors; 80+ characters\n35-44 = on topic and coherent; some minor grammar or word-choice errors; length about right\n25-34 = on topic but thin or loosely organised; several errors that rarely block meaning\n12-24 = only partly on topic, or many errors that sometimes block meaning, or well under 60 characters\n1-11 = very little relevant, correct Chinese\n0 = blank or not Chinese\nDeduct 1 per wrongly written character (max 5)."
+        }
+      ]
+    }
+  ]
+}

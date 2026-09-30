@@ -166,11 +166,13 @@ function renderBlock(b) {
         b.qnums.map((n) => { const q = qById(n), Q = u.questions[q.sub]; return `<div class="q" id="q${n}"><span class="qn">${n}.</span>${Q.question ? `<span class="stmt">★ ${esc(Q.question)}</span>` : ""}${choiceBtns(q, Q.options)}</div>`; }).join("");
     }
     case "wordbank": {
-      const bankHtml = b.bankOrder.map((bi, di) => `<span class="${bi === u.example.answer ? "used" : ""}"><span class="L">${LET[di]}</span>${esc(u.bank[bi])}</span>`).join("");
-      const exLetter = LET[b.bankOrder.indexOf(u.example.answer)];
-      const sel = (q) => `<select data-q="${q.qnum}"><option value="">—</option>${b.bankOrder.map((bi, di) => bi === u.example.answer ? "" : `<option ${q.response === LET[di] ? "selected" : ""}>${LET[di]}</option>`).join("")}</select>`;
+      // HSK 2.0 banks have a worked example; HSK 3.0 banks have none and one distractor word instead.
+      const exAns = u.example ? u.example.answer : -1;
+      const bankHtml = b.bankOrder.map((bi, di) => `<span class="${bi === exAns ? "used" : ""}"><span class="L">${LET[di]}</span>${esc(u.bank[bi])}</span>`).join("");
+      const sel = (q) => `<select data-q="${q.qnum}"><option value="">—</option>${b.bankOrder.map((bi, di) => bi === exAns ? "" : `<option ${q.response === LET[di] ? "selected" : ""}>${LET[di]}</option>`).join("")}</select>`;
+      const example = u.example ? `<div class="q"><span class="qn muted">例如：</span><span class="passage">${esc(u.example.text.replace("（ ）", `（ ${LET[b.bankOrder.indexOf(exAns)]} ）`))}</span></div>` : "";
       return `<div class="bank">${bankHtml}</div>
-        <div class="q"><span class="qn muted">例如：</span><span class="passage">${esc(u.example.text.replace("（ ）", `（ ${exLetter} ）`))}</span></div>
+        ${example}
         ${b.qnums.map((n) => { const q = qById(n); return `<div class="q blankrow" id="q${n}"><span class="qn">${n}.</span>${sel(q)}<span class="passage">${esc(u.items[q.sub].text)}</span></div>`; }).join("")}`;
     }
     case "insert": {
@@ -201,6 +203,8 @@ function renderFree(part, u, q) {
     return `<div class="q w2" id="q${q.qnum}"><img src="${image(u.id)}" alt=""><div><span class="qn">${q.qnum}.</span><div class="word">${esc(u.word)}</div>${box}</div></div>`;
   if (part.kind === "essay_picture")
     return `<div class="q" id="q${q.qnum}"><span class="qn">${q.qnum}.</span><span class="muted">${esc(part.prompt)}</span><div class="w2"><img src="${image(u.id)}" alt=""><div>${box}</div></div></div>`;
+  if (part.kind === "essay_topic")
+    return `<div class="q" id="q${q.qnum}"><span class="qn">${q.qnum}.</span><span class="stmt">${esc(u.task)}</span>${box}</div>`;
   if (part.kind === "essay_words")
     return `<div class="q" id="q${q.qnum}"><span class="qn">${q.qnum}.</span><span class="muted">${esc(part.prompt)}</span>
       <div class="bank">${u.words.map((w) => `<span>${esc(w)}</span>`).join("")}</div>${box}</div>`;
@@ -479,7 +483,7 @@ function shortDesc(p) {
   if (p.type === "order") return "put A B C in order";
   if (p.type === "insert") return "sentence insertion";
   if (p.type === "arrange") return "arrange the words";
-  if (p.type === "free") return { picture_sentence: "picture + word → sentence", essay_words: "short essays", essay_picture: "short essays", summary: "缩写 summary" }[p.kind] || "writing";
+  if (p.type === "free") return { picture_sentence: "picture + word → sentence", essay_topic: "short essay on a topic", essay_words: "short essays", essay_picture: "short essays", summary: "缩写 summary" }[p.kind] || "writing";
   if (p.cloze) return "cloze passages";
   if (p.type === "mcq_group") return L ? (group.some((x) => (x.questionsPerUnit || []).includes(5)) ? "interviews" : "long dialogues & passages") : "reading passages";
   if (L) return group.length > 1 ? "dialogues & passages" : "short items";
@@ -518,7 +522,7 @@ async function renderHome(level) {
   const mins = (k) => { const s = sectionCfg(k); return s.minutes ? `${(s.readMinutes || 0) + s.minutes} min` : "~30 min"; };
   const total = CFG.sections.reduce((s, x) => s + (x.minutes ? x.minutes + (x.readMinutes || 0) : 35), 0);
   let html = `<nav class="tabs">${tabs}</nav><h1>${esc(CFG.name)}模拟考试</h1>
-    <p class="muted">每次随机组卷 · every paper is drawn at random from the bank, preferring questions you haven't seen. Bank ≈ ${papersAvailable()} full papers.</p>`;
+    <p class="muted">每次随机组卷 · every paper is drawn at random from the bank, preferring questions you haven't seen. Bank ≈ ${papersAvailable()} full papers.</p>${CFG.note ? `<p class="small muted">${esc(CFG.note)}</p>` : ""}`;
   if (saved) html += `<div class="notice">有一份未完成的试卷 · You have an unfinished ${esc((LEVELS.find((l) => l.level === saved.level) || {}).short || "")} paper (${esc(saved.mode)}). <button class="btn small" id="resume">继续 Resume</button> <button class="btn small" id="discard">放弃 Discard</button></div>`;
   html += `<div class="cards"><button class="card" data-mode="full"><div class="t">完整考试</div><div class="d">Full exam · ${CFG.sections.reduce((s, x) => s + x.count, 0)} 题 · ~${total} min</div></button>
     ${CFG.sections.map((s) => `<button class="card" data-mode="${s.key}"><div class="t">${esc(s.name.split(" ")[0])}</div><div class="d">${esc(s.name.split(" ").slice(1).join(" "))} · ${s.count} 题 · ${mins(s.key)}</div></button>`).join("")}</div>
@@ -581,7 +585,7 @@ async function renderResult(id) {
     const sub = key !== "writing" ? `${v.right}/${v.of} correct` : v.free === null ? `auto ${v.auto} · Claude grading pending` : `auto ${v.auto} + Claude ${v.free}`;
     html += `<div class="score"><div class="k">${S.name}</div><div class="v">${val}</div><div class="small muted">${sub}</div></div>`;
   }
-  if (full) html += `<div class="score total"><div class="k">总分 Total</div><div class="v">${total ?? "…"}<small> / ${CFG.sections.length * 100}</small></div><div class="small muted">${total === null ? "writing pending" : total >= CFG.pass ? `合格 pass (≥${CFG.pass})` : `未合格 below ${CFG.pass}`}</div></div>`;
+  if (full) html += `<div class="score total"><div class="k">总分 Total</div><div class="v">${total ?? "…"}<small> / ${CFG.sections.length * 100}</small></div><div class="small muted">${total === null ? "writing pending" : total >= CFG.pass ? `合格 pass (≥${CFG.pass}${CFG.passEstimated ? ", estimated" : ""})` : `未合格 below ${CFG.pass}${CFG.passEstimated ? " (estimated)" : ""}`}</div></div>`;
   html += `</div>`;
   const hasFree = a.questions.some((q) => partCfg(q.part).type === "free");
   if (hasFree && !a.claudeGrade) html += `<div class="notice">书写 is waiting for grading. In Claude Code (in <code>~/Desktop/hsk</code>) say: <code>grade my HSK writing</code>. This page updates by itself when the grade arrives.</div>`;
@@ -638,7 +642,7 @@ function reviewQ(a, q) {
     case "free": {
       const g = a.claudeGrade && a.claudeGrade.items.find((x) => x.qnum === q.qnum);
       const pic = ["picture_sentence", "essay_picture"].includes(part.kind) ? `<img src="${image(u.id)}" alt="">` : "";
-      const head = part.kind === "picture_sentence" ? `<div class="word">${esc(u.word)}</div>` : part.kind === "essay_words" ? `<div class="bank">${u.words.map((w) => `<span>${esc(w)}</span>`).join("")}</div>` : "";
+      const head = part.kind === "picture_sentence" ? `<div class="word">${esc(u.word)}</div>` : part.kind === "essay_topic" ? `<div class="stmt">${esc(u.task)}</div>` : part.kind === "essay_words" ? `<div class="bank">${u.words.map((w) => `<span>${esc(w)}</span>`).join("")}</div>` : "";
       const models = u.models ? u.models.join("\n") : u.model || "";
       body = `<div class="${pic ? "w2" : ""}">${pic}<div>${head}<div class="passage">${esc(q.response || "—")}</div><div class="small muted">${hanCount(q.response)} 字${part.targetChars ? ` / 目标 ${part.targetChars}` : ""}</div>
         ${g ? `<div class="fb"><b>${g.score}/${part.points}</b> · ${esc(g.feedback)}${g.corrected ? `<br>修改：${esc(g.corrected)}` : ""}</div>` : `<div class="small muted">待批改 · waiting for Claude</div>`}
@@ -748,11 +752,14 @@ async function renderSheet(id) {
 }
 
 // ---------- missed words (生词本) ----------
-let VOCAB = null, VOCAB_MAX = 1;
+// Levels on the HSK 3.0 syllabus tag words with the 2025 lists (vocab_v3.json), the others with the 2012 lists.
+let VOCAB = null, VOCAB_MAX = 1, VOCAB_FILE = "";
 async function loadVocab() {
-  if (!VOCAB) { VOCAB = await api("vocab.json"); VOCAB_MAX = Math.min(8, Math.max(...Object.keys(VOCAB).map((w) => w.length))); }
+  const file = CFG.syllabus === "v3" ? "vocab_v3.json" : "vocab.json";
+  if (VOCAB_FILE !== file) { VOCAB = await api(file); VOCAB_FILE = file; VOCAB_MAX = Math.min(8, Math.max(...Object.keys(VOCAB).map((w) => w.length))); }
   return VOCAB;
 }
+const levelNum = (cfg = CFG) => cfg.num || +cfg.level.replace(/\D/g, "");
 // Forward maximum matching against the HSK word list: good enough to tag words, no dictionary server needed.
 // SEG_SKIP are common compounds that aren't list words; matching them first stops 一个人 → 一 + 个人.
 const SEG_SKIP = new Set("一个 这个 那个 每个 几个 两个 哪个 整个 一种 这种 那种 各种 一些 这些 那些 一天 一次 有人 没人".split(" "));
@@ -793,7 +800,7 @@ function exampleFor(w, texts) {
   return "";
 }
 function collectMissed(level) {
-  const L = +level.replace(/\D/g, ""), words = {};
+  const L = levelNum(), words = {};
   for (const a of ATTEMPTS.filter((x) => (x.level || "hsk4") === level)) {
     for (const q of a.questions) {
       if (isCorrect(q) !== false) continue;
@@ -836,7 +843,7 @@ async function renderWords(level) {
     st.list = list;
   };
   $("#app").innerHTML = `<p><a href="#/${CFG.level}">← 返回 ${esc(CFG.short)}</a></p><h1>生词本 · Missed words</h1>
-    <p class="muted">${esc(CFG.short)} · words from the questions you got wrong, tagged by HSK level (the question's own words from HSK ${Math.max(1, +CFG.level.replace(/\D/g, "") - 1)} up, longer passages from HSK ${CFG.level.replace(/\D/g, "")} up). Export makes a tab-separated file for Anki's File → Import.</p><div id="wordsBody"></div>`;
+    <p class="muted">${esc(CFG.short)} · words from the questions you got wrong, tagged by HSK level${CFG.syllabus === "v3" ? " on the 2025 (3.0) word lists" : ""} (the question's own words from HSK ${Math.max(1, levelNum() - 1)} up, longer passages from HSK ${levelNum()} up). Export makes a tab-separated file for Anki's File → Import.</p><div id="wordsBody"></div>`;
   draw();
   $("#app").onclick = (e) => {
     const t = e.target.closest("button");

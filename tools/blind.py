@@ -43,8 +43,11 @@ def dump(level, parts, ids):
                                 "options": {LET[i]: s for i, s in enumerate(u["sentences"])}})
             elif "bank" in u:  # HSK 4 word bank
                 for k, it in enumerate(u["items"]):
-                    out.append({"qid": f"{u['id']}#{k}", "passage": it["text"], "question": "Which word fills （ ）? (each word used once in the block; the example uses one)",
-                                "options": {LET[i]: w for i, w in enumerate(u["bank"]) if i != u["example"]["answer"]}})
+                    ex = u.get("example")
+                    task = ("Which word fills （ ）? (each word used once in the block; the example uses one)" if ex else
+                            "Which word fills （ ）? (each word at most once in the block; exactly one of the six words is a distractor that fits no blank)")
+                    out.append({"qid": f"{u['id']}#{k}", "passage": it["text"], "question": task,
+                                "options": {LET[i]: w for i, w in enumerate(u["bank"]) if not ex or i != ex["answer"]}})
             elif "A" in u:  # ordering
                 out.append({"qid": u["id"], "question": "Put A, B, C in the only natural order", "options": {k: u[k] for k in "ABC"}})
     # Shuffle option letters so answer position gives nothing away; keep the mapping private.
