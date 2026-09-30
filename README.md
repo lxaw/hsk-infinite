@@ -154,6 +154,8 @@ second defensible answer was rewritten. HSK 6 has 15 original 缩写 stories.
 The build and test tools need `python3 -m venv .venv && .venv/bin/pip install -r requirements.txt`
 plus `ffmpeg` (audio). Pictures use Z-Image-Turbo through mflux on Apple Silicon; the ~10 GB model
 is not in the repo — `build_images.py` explains how to fetch and quantize it.
+`tools/build_vocab.py` (word meanings for the missed-words list) reads the HSK word data in
+`../shared/ref` and, optionally, CC-CEDICT saved as `data/cedict.txt`; its outputs `site/vocab*.json` are committed.
 
 ## Layout
 
