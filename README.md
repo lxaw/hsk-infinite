@@ -1,34 +1,94 @@
-# HSK practice exams — HSK 4, 5, 6
+```text
+██╗  ██╗███████╗██╗  ██╗     ██╗███╗   ██╗███████╗██╗███╗   ██╗██╗████████╗███████╗
+██║  ██║██╔════╝██║ ██╔╝     ██║████╗  ██║██╔════╝██║████╗  ██║██║╚══██╔══╝██╔════╝
+███████║███████╗█████╔╝█████╗██║██╔██╗ ██║█████╗  ██║██╔██╗ ██║██║   ██║   █████╗  
+██╔══██║╚════██║██╔═██╗╚════╝██║██║╚██╗██║██╔══╝  ██║██║╚██╗██║██║   ██║   ██╔══╝  
+██║  ██║███████║██║  ██╗     ██║██║ ╚████║██║     ██║██║ ╚████║██║   ██║   ███████╗
+╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝     ╚═╝╚═╝  ╚═══╝╚═╝     ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝   ╚══════╝
+```
 
-Randomly generated HSK mock exams (HSK 2.0 format: 300 points, 180 to pass), graded in the browser.
-Free writing (HSK 4 看图造句, HSK 5 短文, HSK 6 缩写) is graded by Claude Code.
+**HSK 4 / 5 / 6 mock exams, a fresh paper every time.** Each paper is drawn at random from a bank of
+original questions (about ten full papers per level before any item repeats; HSK 2.0 format, 300
+points, 180 to pass), with spoken listening audio, timed sections and instant scoring in your browser. Free writing (HSK 4 看图造句, HSK 5 短文, HSK 6 缩写) is graded by
+[Claude Code](https://claude.com/claude-code) against the exam rubrics.
 
-## Run it
+## Quick start
 
-**Mac:** double-click **HSK Exams.app** (keep it in this folder; dragging it to the Dock just adds a shortcut). It starts
-the local server if it isn't running and opens http://localhost:8004 in your browser. The server
-keeps running in the background; to stop it, run `pkill -f server.py`.
+**Mac:** double-click **HSK Exams.app** in this folder. It starts a small local server and opens
+the exams in your browser. That's it — no installs, no accounts, nothing leaves your computer.
 
-Or from a terminal (any Python 3.9+, no packages needed):
+<p align="center"><img src="docs/screenshots/0-app-icon.png" width="230" alt="The HSK Exams app icon"></p>
+
+Keep the app inside this folder (dragging it to the Dock just adds a shortcut). If macOS says it
+"can't be opened" — which only happens when you download the repo as a zip instead of cloning —
+right-click it → **Open** once. The server keeps running in the background; stop it with
+`pkill -f server.py`.
+
+**Any OS:** with Python 3.9+ (no packages needed):
 
 ```sh
 python3 server.py
-# open http://localhost:8004  — pick HSK 4 / 5 / 6 at the top
+# then open http://localhost:8004
 ```
 
-If macOS says the app "can't be opened" (only happens when it was downloaded as a zip rather
-than cloned), right-click it → **Open** once.
+## How to use it
 
-- **Full exam** or one section. Exam mode is timed and plays the listening once, continuously,
-  like the real test (then 3 minutes to check answers). **Practice mode** has no timer and lets
-  you replay any clip; for HSK 6 缩写 the story stays visible.
-- HSK 6 缩写 in exam mode: 10 minutes reading, then the story disappears and 35 minutes of writing
-  start, with a character counter.
-- Each paper draws questions at random, preferring the ones you've seen least; answer options are
-  reshuffled every time.
-- Results: section scores, every answer, listening transcripts with audio, 病句 explanations.
-- **Grading writing**: after finishing, open Claude Code in `~/Desktop/hsk` and say
-  *"grade my HSK writing"*. The results page updates by itself.
+### 1. Pick a level and a mode
+
+Choose HSK 4, 5 or 6 at the top, then a full exam or a single section. **Exam mode** is timed and
+plays the listening once, straight through, like the real test. Tick **practice mode** for no
+timer and free replay. Your past scores are listed under 历史成绩 · History.
+
+![Home page: level tabs, exam modes and score history](docs/screenshots/1-home.png)
+
+### 2. Listening
+
+In exam mode press 开始 · Start listening: the narrator announces each question, plays the
+recording and pauses for you to answer, while the bar shows where you are. In practice mode every
+question gets its own ▶ 播放 button.
+
+![HSK 4 listening in exam mode](docs/screenshots/2-listening.png)
+
+### 3. Reading
+
+All the HSK 2.0 reading question types are covered, from word banks and cloze passages…
+
+![HSK 5 reading: cloze passage](docs/screenshots/3-reading-hsk5.png)
+
+…through to HSK 6 病句, word-set cloze and sentence insertion.
+
+![HSK 6 reading: sentence insertion](docs/screenshots/4-reading-hsk6.png)
+
+### 4. Writing
+
+HSK 4 asks for a sentence about each picture using the given word; HSK 5 for two short essays.
+
+![HSK 4 writing: picture + word → sentence](docs/screenshots/6-writing-hsk4.png)
+
+HSK 6 缩写 works like the real exam: 10 minutes to read the story, then it disappears and you
+have 35 minutes to retell it in ~400 字, with a live character counter.
+
+![HSK 6 缩写 reading phase](docs/screenshots/5-summary-hsk6.png)
+
+### 5. Results
+
+Press 交卷 · Finish section (click twice to confirm). Listening and reading are scored instantly;
+you can review every answer, open listening transcripts, and read the explanation for each 病句.
+
+![Results: section scores and answer review](docs/screenshots/7-results.png)
+
+### 6. Get your writing graded
+
+Open [Claude Code](https://claude.com/claude-code) in this folder and say
+*"grade my HSK writing"*. Claude looks at each picture, scores your answers with the official-style
+rubric, and writes feedback plus a corrected version. The results page picks up the grade by
+itself within a few seconds.
+
+![Graded writing with feedback and corrections](docs/screenshots/8-feedback.png)
+
+More details:
+
+- Each paper prefers the questions you've seen least, and answer options are reshuffled every time.
 - Voice samples: http://localhost:8004/voices.html
 
 ## Exam formats used

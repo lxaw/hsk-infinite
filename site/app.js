@@ -343,6 +343,12 @@ function startListening() {
 }
 
 // ---------- section flow ----------
+let armTimer = null;
+function disarm() {
+  armedUntil = 0;
+  clearTimeout(armTimer);
+  [$("#finishSection"), $("#finishBottom")].filter(Boolean).forEach((b) => { if (b.dataset.label) b.textContent = b.dataset.label; });
+}
 function finishSection(auto) {
   if (auto !== true && Date.now() > armedUntil) {
     // Inline confirmation (no browser dialogs): first click arms, second click within 4 s confirms.
@@ -350,12 +356,13 @@ function finishSection(auto) {
     const sec = exam.sections[exam.secIndex];
     const left = exam.questions.filter((q) => sectionOf(q.qnum) === sec && (q.response === null || q.response === "")).length;
     const msg = left ? `还有 ${left} 题未答 · click again to finish` : "确定交卷？· click again to finish";
-    const btns = [$("#finishSection"), $("#finishBottom")].filter(Boolean), old = btns.map((b) => b.textContent);
-    btns.forEach((b) => (b.textContent = msg));
-    setTimeout(() => btns.forEach((b, i) => (b.textContent = old[i])), 4000);
+    const btns = [$("#finishSection"), $("#finishBottom")].filter(Boolean);
+    btns.forEach((b) => { b.dataset.label ??= b.textContent; b.textContent = msg; });
+    clearTimeout(armTimer);
+    armTimer = setTimeout(disarm, 4000);
     return;
   }
-  armedUntil = 0;
+  disarm();
   clearInterval(tick);
   stopAudio();
   Object.assign(exam, { deadline: null, listenState: null, phase: null });
