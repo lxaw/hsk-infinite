@@ -59,7 +59,8 @@
           ],
           "rangeIntro": "第{a}到{b}题是根据下面一段话。"
         }
-      ]
+      ],
+      "approxMinutes": 25
     },
     {
       "key": "reading",

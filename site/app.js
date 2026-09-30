@@ -519,8 +519,8 @@ async function renderHome(level) {
   ATTEMPTS = await api("/api/attempts").catch(() => []);
   const saved = recall("hsk-exam");
   const tabs = LEVELS.map((l) => `<a href="#/${l.level}" class="tab ${l.level === CFG.level ? "on" : ""}">${esc(l.short)}</a>`).join("");
-  const mins = (k) => { const s = sectionCfg(k); return s.minutes ? `${(s.readMinutes || 0) + s.minutes} min` : "~30 min"; };
-  const total = CFG.sections.reduce((s, x) => s + (x.minutes ? x.minutes + (x.readMinutes || 0) : 35), 0);
+  const mins = (k) => { const s = sectionCfg(k); return s.minutes ? `${(s.readMinutes || 0) + s.minutes} min` : `~${s.approxMinutes || 30} min`; };
+  const total = CFG.sections.reduce((s, x) => s + (x.minutes ? x.minutes + (x.readMinutes || 0) : x.approxMinutes || 35), 0);
   let html = `<nav class="tabs">${tabs}</nav><h1>${esc(CFG.name)}模拟考试</h1>
     <p class="muted">每次随机组卷 · every paper is drawn at random from the bank, preferring questions you haven't seen. Bank ≈ ${papersAvailable()} full papers.</p>${CFG.note ? `<p class="small muted">${esc(CFG.note)}</p>` : ""}`;
   if (saved) html += `<div class="notice">有一份未完成的试卷 · You have an unfinished ${esc((LEVELS.find((l) => l.level === saved.level) || {}).short || "")} paper (${esc(saved.mode)}). <button class="btn small" id="resume">继续 Resume</button> <button class="btn small" id="discard">放弃 Discard</button></div>`;
@@ -680,8 +680,8 @@ async function renderExamDay(level) {
     try { exam = { ...buildPaper("full", false), examDay: true, started: false, leftCount: 0 }; } catch (err) { $("#app").innerHTML = `<div class="notice">${esc(err.message)}</div>`; return; }
     save();
   }
-  const row = (s) => `<tr><td>${esc(s.name)}</td><td>${s.count} 题</td><td>${s.minutes ? `${(s.readMinutes || 0) + s.minutes} min${s.readMinutes ? ` (阅读 ${s.readMinutes} + 写 ${s.minutes})` : ""}` : `~${sectionCfg(s.key).count > 40 ? 35 : 30} min + ${s.reviewMinutes || 3} min 检查`}</td></tr>`;
-  const total = CFG.sections.reduce((t, s) => t + (s.minutes ? s.minutes + (s.readMinutes || 0) : 35), 0);
+  const row = (s) => `<tr><td>${esc(s.name)}</td><td>${s.count} 题</td><td>${s.minutes ? `${(s.readMinutes || 0) + s.minutes} min${s.readMinutes ? ` (阅读 ${s.readMinutes} + 写 ${s.minutes})` : ""}` : `~${s.approxMinutes ? s.approxMinutes - (s.reviewMinutes || 3) : sectionCfg(s.key).count > 40 ? 35 : 30} min + ${s.reviewMinutes || 3} min 检查`}</td></tr>`;
+  const total = CFG.sections.reduce((t, s) => t + (s.minutes ? s.minutes + (s.readMinutes || 0) : s.approxMinutes || 35), 0);
   const items = [
     ["sound", "耳机或音箱已测试 · headphones/speakers tested", `<button class="btn small" id="soundTest">▶ 试音 Sound test</button>`],
     ["quiet", "安静的房间，手机静音、关闭通知 · quiet room, phone silenced, notifications off", ""],

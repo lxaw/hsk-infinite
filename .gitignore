@@ -17,3 +17,6 @@ submissions/server.log
 data/textbook_hsk4.txt
 data/textbook_hsk4_extra.tsv
 data/cedict.txt
+
+# HSK 3.0 levels 7-9 list: the PDF parse is incomplete (10920/11000 rows overall)
+data/wordlists_v3/L7-9.txt
