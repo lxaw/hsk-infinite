@@ -1,0 +1,128 @@
+{
+  "level": "hsk6",
+  "name": "HSK 六级",
+  "short": "HSK 6",
+  "pass": 180,
+  "sections": [
+    {
+      "key": "listening",
+      "name": "听力 Listening",
+      "first": 1,
+      "count": 50,
+      "reviewMinutes": 3,
+      "intro": "大家好！欢迎参加HSK六级考试。HSK六级听力考试分三部分，共50题。请大家注意，听力考试现在开始。",
+      "parts": [
+        {
+          "id": "L1",
+          "type": "mcq",
+          "units": 15,
+          "group": "L1",
+          "pause": 12,
+          "noQuestion": true,
+          "title": "第一部分",
+          "desc": "请选出与所听内容一致的一项。",
+          "audioIntro": "第一部分，共15题。每题听一次。每题都是一段话，请选出与所听内容一致的一项。"
+        },
+        {
+          "id": "L2",
+          "type": "mcq_group",
+          "units": 3,
+          "group": "L2",
+          "pause": 14,
+          "questionsPerUnit": [
+            5
+          ],
+          "title": "第二部分",
+          "desc": "请选出正确答案。",
+          "audioIntro": "第二部分，共15题。每题听一次。每题都是一段采访，采访后有几个问题，请选出正确答案。",
+          "rangeIntro": "第{a}到{b}题是根据下面一段采访："
+        },
+        {
+          "id": "L3",
+          "type": "mcq_group",
+          "questions": 20,
+          "group": "L3",
+          "pause": 14,
+          "questionsPerUnit": [
+            3,
+            4
+          ],
+          "title": "第三部分",
+          "desc": "请选出正确答案。",
+          "audioIntro": "第三部分，共20题。每题听一次。每题都是一段话，这段话后有几个问题，请选出正确答案。",
+          "rangeIntro": "第{a}到{b}题是根据下面一段话："
+        }
+      ]
+    },
+    {
+      "key": "reading",
+      "name": "阅读 Reading",
+      "first": 51,
+      "count": 50,
+      "minutes": 50,
+      "parts": [
+        {
+          "id": "R1",
+          "type": "mcq",
+          "units": 10,
+          "group": "R1",
+          "noQuestion": true,
+          "explain": true,
+          "title": "第一部分",
+          "desc": "请选出有语病的一项。"
+        },
+        {
+          "id": "R2",
+          "type": "mcq",
+          "units": 10,
+          "group": "R2",
+          "noQuestion": true,
+          "title": "第二部分",
+          "desc": "选词填空。选出最恰当的一组词语。"
+        },
+        {
+          "id": "R3",
+          "type": "insert",
+          "units": 2,
+          "group": "R3",
+          "title": "第三部分",
+          "desc": "选句填空。"
+        },
+        {
+          "id": "R4",
+          "type": "mcq_group",
+          "units": 5,
+          "group": "R4",
+          "questionsPerUnit": [
+            4
+          ],
+          "title": "第四部分",
+          "desc": "请选出正确答案。"
+        }
+      ]
+    },
+    {
+      "key": "writing",
+      "name": "书写 Writing",
+      "first": 101,
+      "count": 1,
+      "minutes": 35,
+      "readMinutes": 10,
+      "parts": [
+        {
+          "id": "W1",
+          "type": "free",
+          "kind": "summary",
+          "units": 1,
+          "group": "W1",
+          "points": 100,
+          "targetChars": 400,
+          "title": "缩写",
+          "desc": "先用10分钟阅读文章，阅读时不能抄写、记录。10分钟后文章收回，用35分钟把这篇文章缩写成一篇400字左右的短文，标题自拟。只需复述文章内容，不需要加入自己的观点。",
+          "prompt": "请把这篇文章缩写成一篇400字左右的短文，标题自拟。",
+          "rubric": "Score 0-100 (HSK 6 缩写: retell a ~1000-character story in ~400 characters incl. punctuation, own title, no own opinions):\n90-100 = has a title; keeps all the key events in order and the story's point; clear, coherent, well-paced summary; varied, accurate grammar and vocabulary; almost no errors; 350-450 characters\n75-89 = title; nearly all key events, coherent; a few minor errors; length roughly right\n60-74 = main story recognisable but some key events missing or out of order; several errors; or length clearly off (250-350 or 500+)\n40-59 = only part of the story; frequent errors; hard to follow in places; or under 250 characters\n20-39 = fragments of the story, many errors\n1-19 = very little relevant content\n0 = blank or unrelated\nDeduct 5 if there is no title. Deduct 5 if the learner adds their own opinions/commentary. Deduct 1 per wrongly written character (max 10). Copying long phrases verbatim from the source is fine at HSK 6; inventing events that are not in the story is not."
+        }
+      ]
+    }
+  ]
+}

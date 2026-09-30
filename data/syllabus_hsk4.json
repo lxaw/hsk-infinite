@@ -1,0 +1,12594 @@
+{
+"words": [
+{
+"w": "爱",
+"level": 1,
+"lesson": null,
+"pinyin": "ài",
+"gloss": "to love; to be fond of; to like; affection; to be inclined (to do sth); to tend to (happen)",
+"pos": [
+"v",
+"vn",
+"b"
+]
+},
+{
+"w": "八",
+"level": 1,
+"lesson": null,
+"pinyin": "bā",
+"gloss": "eight; 8",
+"pos": [
+"m",
+"t"
+]
+},
+{
+"w": "爸爸",
+"level": 1,
+"lesson": null,
+"pinyin": "bà ba",
+"gloss": "(coll.) father; dad",
+"pos": [
+"n"
+]
+},
+{
+"w": "杯子",
+"level": 1,
+"lesson": null,
+"pinyin": "bēi zi",
+"gloss": "cup; glass",
+"pos": [
+"n"
+]
+},
+{
+"w": "北京",
+"level": 1,
+"lesson": null,
+"pinyin": "Běi jīng",
+"gloss": "Beijing, capital of the People's Republic of China",
+"pos": [
+"ns"
+]
+},
+{
+"w": "本",
+"level": 1,
+"lesson": null,
+"pinyin": "běn",
+"gloss": "root; stem; origin; source; this; the current; original; inherent; originally; classifier for books, periodicals, files ",
+"pos": [
+"r",
+"q",
+"d",
+"n"
+]
+},
+{
+"w": "不",
+"level": 1,
+"lesson": null,
+"pinyin": "bù",
+"gloss": "no; not so; (bound form) not; un-",
+"pos": [
+"d"
+]
+},
+{
+"w": "不客气",
+"level": 1,
+"lesson": null,
+"pinyin": "bù kè qi",
+"gloss": "you're welcome; don't mention it; impolite; rude; blunt",
+"pos": []
+},
+{
+"w": "菜",
+"level": 1,
+"lesson": null,
+"pinyin": "cài",
+"gloss": "dish (type of food); vegetable; cuisine; (coll.) (one's) type; (of one's skills etc) weak; poor",
+"pos": [
+"n"
+]
+},
+{
+"w": "茶",
+"level": 1,
+"lesson": null,
+"pinyin": "chá",
+"gloss": "tea; tea plant",
+"pos": [
+"n",
+"g"
+]
+},
+{
+"w": "吃",
+"level": 1,
+"lesson": null,
+"pinyin": "chī",
+"gloss": "to eat; to consume; to eat at (a cafeteria etc); to eradicate; to destroy; to absorb; to suffer (shock, injury, defeat e",
+"pos": [
+"v"
+]
+},
+{
+"w": "出租车",
+"level": 1,
+"lesson": null,
+"pinyin": "chū zū chē",
+"gloss": "taxi; (Tw) rental car",
+"pos": [
+"n"
+]
+},
+{
+"w": "打电话",
+"level": 1,
+"lesson": null,
+"pinyin": "dǎ diàn huà",
+"gloss": "to make a telephone call",
+"pos": [
+"v"
+]
+},
+{
+"w": "大",
+"level": 1,
+"lesson": null,
+"pinyin": "dà",
+"gloss": "big; large; great; older (than another person); eldest (as in 姐); greatly; freely; fully; (dialect) father; (dialect) un",
+"pos": [
+"a",
+"d",
+"n",
+"g"
+]
+},
+{
+"w": "的",
+"level": 1,
+"lesson": null,
+"pinyin": "de",
+"gloss": "of; ~'s (possessive particle); (used after an attribute); (used to form a nominal expression); (used at the end of a dec",
+"pos": [
+"u",
+"n"
+]
+},
+{
+"w": "点",
+"level": 1,
+"lesson": null,
+"pinyin": "diǎn",
+"gloss": "point; dot; drop; speck; o'clock; point (in space or time); to draw a dot; to check on a list; to choose; to order (food",
+"pos": [
+"qt",
+"n",
+"t",
+"v"
+]
+},
+{
+"w": "电脑",
+"level": 1,
+"lesson": null,
+"pinyin": "diàn nǎo",
+"gloss": "computer",
+"pos": [
+"n"
+]
+},
+{
+"w": "电视",
+"level": 1,
+"lesson": null,
+"pinyin": "diàn shì",
+"gloss": "television; TV",
+"pos": [
+"n"
+]
+},
+{
+"w": "电影",
+"level": 1,
+"lesson": null,
+"pinyin": "diàn yǐng",
+"gloss": "movie; film",
+"pos": [
+"n"
+]
+},
+{
+"w": "东西",
+"level": 1,
+"lesson": null,
+"pinyin": "dōng xī",
+"gloss": "east and west",
+"pos": [
+"n",
+"f",
+"nr"
+]
+},
+{
+"w": "都",
+"level": 1,
+"lesson": null,
+"pinyin": "Dū",
+"gloss": "surname Du",
+"pos": [
+"d",
+"g"
+]
+},
+{
+"w": "读",
+"level": 1,
+"lesson": null,
+"pinyin": "dòu",
+"gloss": "comma; phrase marked by pause",
+"pos": [
+"v"
+]
+},
+{
+"w": "对不起",
+"level": 1,
+"lesson": null,
+"pinyin": "duì bu qǐ",
+"gloss": "I'm sorry; excuse me; I beg your pardon; to let (sb) down; to disappoint",
+"pos": [
+"v"
+]
+},
+{
+"w": "多",
+"level": 1,
+"lesson": null,
+"pinyin": "duō",
+"gloss": "many; much; too many; in excess; (after a numeral) ... odd; how (to what extent) (Taiwan pr. [duó]); (bound form) multi-",
+"pos": [
+"a",
+"m",
+"ad",
+"d",
+"v",
+"g"
+]
+},
+{
+"w": "多少",
+"level": 1,
+"lesson": null,
+"pinyin": "duō shǎo",
+"gloss": "number; amount; somewhat",
+"pos": [
+"r"
+]
+},
+{
+"w": "儿子",
+"level": 1,
+"lesson": null,
+"pinyin": "ér zi",
+"gloss": "son",
+"pos": [
+"n"
+]
+},
+{
+"w": "二",
+"level": 1,
+"lesson": null,
+"pinyin": "èr",
+"gloss": "two; 2; (Beijing dialect) stupid",
+"pos": [
+"m",
+"t"
+]
+},
+{
+"w": "饭店",
+"level": 1,
+"lesson": null,
+"pinyin": "fàn diàn"
+},
+{
+"w": "飞机",
+"level": 1,
+"lesson": null,
+"pinyin": "fēi jī",
+"gloss": "airplane",
+"pos": [
+"n"
+]
+},
+{
+"w": "分钟",
+"level": 1,
+"lesson": null,
+"pinyin": "fēn zhōng",
+"gloss": "minute",
+"pos": [
+"qt"
+]
+},
+{
+"w": "高兴",
+"level": 1,
+"lesson": null,
+"pinyin": "gāo xìng",
+"gloss": "happy; glad; willing (to do sth); in a cheerful mood",
+"pos": [
+"a",
+"an"
+]
+},
+{
+"w": "个",
+"level": 1,
+"lesson": null,
+"pinyin": "gě",
+"gloss": "used in 自个儿",
+"pos": [
+"q",
+"g"
+]
+},
+{
+"w": "工作",
+"level": 1,
+"lesson": null,
+"pinyin": "gōng zuò",
+"gloss": "to work; (of a machine) to operate; job; work; task",
+"pos": [
+"vn",
+"v",
+"n"
+]
+},
+{
+"w": "狗",
+"level": 1,
+"lesson": null,
+"pinyin": "gǒu",
+"gloss": "dog",
+"pos": [
+"n"
+]
+},
+{
+"w": "汉语",
+"level": 1,
+"lesson": null,
+"pinyin": "Hàn yǔ",
+"gloss": "Chinese language",
+"pos": [
+"nz"
+]
+},
+{
+"w": "好",
+"level": 1,
+"lesson": null,
+"pinyin": "hǎo",
+"gloss": "good; appropriate; proper; all right!; (before a verb) easy to; (before a verb) good to; (before an adjective for exclam",
+"pos": [
+"a",
+"d",
+"v"
+]
+},
+{
+"w": "号",
+"level": 1,
+"lesson": null,
+"pinyin": "háo",
+"gloss": "roar; cry",
+"pos": [
+"q",
+"n",
+"v"
+]
+},
+{
+"w": "喝",
+"level": 1,
+"lesson": null,
+"pinyin": "hē",
+"gloss": "to drink; variant of 嗬",
+"pos": [
+"g",
+"vn"
+]
+},
+{
+"w": "和",
+"level": 1,
+"lesson": null,
+"pinyin": "hé",
+"gloss": "old variant of 和",
+"pos": [
+"cc",
+"p",
+"v",
+"qv",
+"g",
+"n"
+]
+},
+{
+"w": "很",
+"level": 1,
+"lesson": null,
+"pinyin": "hěn",
+"gloss": "(adverb of degree); quite; very; awfully",
+"pos": [
+"d"
+]
+},
+{
+"w": "后面",
+"level": 1,
+"lesson": null,
+"pinyin": "hòu mian",
+"gloss": "the back; the rear; the last bit; behind; near the end; at the back; later; afterwards",
+"pos": [
+"f"
+]
+},
+{
+"w": "回",
+"level": 1,
+"lesson": null,
+"pinyin": "huí",
+"gloss": "to circle; to go back; to turn around; to answer; to return; to revolve; Hui ethnic group (Chinese Muslims); time; class",
+"pos": [
+"v",
+"qv"
+]
+},
+{
+"w": "会",
+"level": 1,
+"lesson": null,
+"pinyin": "huì",
+"gloss": "can; to have the skill; to know how to; to be likely to; to be sure to; to meet; to get together; meeting; gathering; (s",
+"pos": [
+"v",
+"n"
+]
+},
+{
+"w": "几",
+"level": 1,
+"lesson": null,
+"pinyin": "jī",
+"gloss": "small table",
+"pos": [
+"m",
+"d"
+]
+},
+{
+"w": "家",
+"level": 1,
+"lesson": null,
+"pinyin": "jiā",
+"gloss": "used in 家伙 and 家俱",
+"pos": [
+"n",
+"q"
+]
+},
+{
+"w": "叫",
+"level": 1,
+"lesson": null,
+"pinyin": "jiào",
+"gloss": "to shout; to call; to order; to ask; to be called; by (indicates agent in the passive mood)",
+"pos": [
+"v",
+"p",
+"n"
+]
+},
+{
+"w": "今天",
+"level": 1,
+"lesson": null,
+"pinyin": "jīn tiān",
+"gloss": "today; at the present; now",
+"pos": [
+"t"
+]
+},
+{
+"w": "九",
+"level": 1,
+"lesson": null,
+"pinyin": "jiǔ",
+"gloss": "nine; 9",
+"pos": [
+"m",
+"t",
+"b"
+]
+},
+{
+"w": "开",
+"level": 1,
+"lesson": null,
+"pinyin": "kāi",
+"gloss": "to open (transitive or intransitive); (of ships, vehicles, troops etc) to start; to turn on; to put in operation; to ope",
+"pos": [
+"v",
+"q"
+]
+},
+{
+"w": "看",
+"level": 1,
+"lesson": null,
+"pinyin": "kān",
+"gloss": "to look after; to take care of; to watch; to guard",
+"pos": [
+"v",
+"u"
+]
+},
+{
+"w": "看见",
+"level": 1,
+"lesson": null,
+"pinyin": "kàn jiàn",
+"gloss": "to see; to catch sight of",
+"pos": [
+"v"
+]
+},
+{
+"w": "块",
+"level": 1,
+"lesson": null,
+"pinyin": "kuài",
+"gloss": "lump; chunk; piece; classifier for pieces of cloth, cake, soap etc; (coll.) classifier for money and currency units",
+"pos": [
+"q",
+"g"
+]
+},
+{
+"w": "来",
+"level": 1,
+"lesson": null,
+"pinyin": "lái",
+"gloss": "to come; (used as a substitute for a more specific verb); hither (directional complement for motion toward the speaker, ",
+"pos": [
+"v",
+"f",
+"m",
+"u",
+"y"
+]
+},
+{
+"w": "老师",
+"level": 1,
+"lesson": null,
+"pinyin": "lǎo shī",
+"gloss": "teacher",
+"pos": [
+"n"
+]
+},
+{
+"w": "了",
+"level": 1,
+"lesson": null,
+"pinyin": "le",
+"gloss": "(completed action marker); (modal particle indicating change of state, situation now); (modal particle intensifying prec",
+"pos": [
+"y",
+"u",
+"v"
+]
+},
+{
+"w": "冷",
+"level": 1,
+"lesson": null,
+"pinyin": "Lěng",
+"gloss": "surname Leng",
+"pos": [
+"a",
+"ad",
+"g"
+]
+},
+{
+"w": "里",
+"level": 1,
+"lesson": null,
+"pinyin": "lǐ",
+"gloss": "variant of 里",
+"pos": [
+"f",
+"q"
+]
+},
+{
+"w": "六",
+"level": 1,
+"lesson": null,
+"pinyin": "liù",
+"gloss": "six; 6",
+"pos": [
+"m",
+"t"
+]
+},
+{
+"w": "妈妈",
+"level": 1,
+"lesson": null,
+"pinyin": "mā ma",
+"gloss": "mama; mommy; mother",
+"pos": [
+"n"
+]
+},
+{
+"w": "吗",
+"level": 1,
+"lesson": null,
+"pinyin": "má",
+"gloss": "(coll.) what?",
+"pos": [
+"y"
+]
+},
+{
+"w": "买",
+"level": 1,
+"lesson": null,
+"pinyin": "mǎi",
+"gloss": "to buy; to purchase",
+"pos": [
+"v"
+]
+},
+{
+"w": "猫",
+"level": 1,
+"lesson": null,
+"pinyin": "māo",
+"gloss": "cat; (dialect) to hide oneself; (coll.) modem",
+"pos": [
+"n",
+"v"
+]
+},
+{
+"w": "没关系",
+"level": 1,
+"lesson": null,
+"pinyin": "méi guān xi",
+"gloss": "it doesn't matter",
+"pos": [
+"v"
+]
+},
+{
+"w": "没有",
+"level": 1,
+"lesson": null,
+"pinyin": "méi yǒu"
+},
+{
+"w": "米饭",
+"level": 1,
+"lesson": null,
+"pinyin": "mǐ fàn",
+"gloss": "(cooked) rice",
+"pos": [
+"n"
+]
+},
+{
+"w": "名字",
+"level": 1,
+"lesson": null,
+"pinyin": "míng zi",
+"gloss": "name (of a person or thing)",
+"pos": [
+"n"
+]
+},
+{
+"w": "明天",
+"level": 1,
+"lesson": null,
+"pinyin": "míng tiān",
+"gloss": "tomorrow",
+"pos": [
+"t"
+]
+},
+{
+"w": "哪",
+"level": 1,
+"lesson": null,
+"pinyin": "nǎ",
+"gloss": "how; which",
+"pos": [
+"r",
+"y"
+]
+},
+{
+"w": "哪儿",
+"level": 1,
+"lesson": null,
+"pinyin": "nǎ ér"
+},
+{
+"w": "那",
+"level": 1,
+"lesson": null,
+"pinyin": "Nā",
+"gloss": "surname Na",
+"pos": [
+"r",
+"c"
+]
+},
+{
+"w": "呢",
+"level": 1,
+"lesson": null,
+"pinyin": "ne",
+"gloss": "particle indicating that a previously asked question is to be applied to the preceding word (\"What about ...?\", \"And ...",
+"pos": [
+"y"
+]
+},
+{
+"w": "能",
+"level": 1,
+"lesson": null,
+"pinyin": "Néng",
+"gloss": "surname Neng",
+"pos": [
+"v",
+"g"
+]
+},
+{
+"w": "你",
+"level": 1,
+"lesson": null,
+"pinyin": "nǐ",
+"gloss": "you (informal, as opposed to courteous 您)",
+"pos": [
+"r"
+]
+},
+{
+"w": "年",
+"level": 1,
+"lesson": null,
+"pinyin": "Nián",
+"gloss": "surname Nian",
+"pos": [
+"qt",
+"t",
+"n"
+]
+},
+{
+"w": "女儿",
+"level": 1,
+"lesson": null,
+"pinyin": "nǚ ér",
+"gloss": "daughter",
+"pos": [
+"n"
+]
+},
+{
+"w": "朋友",
+"level": 1,
+"lesson": null,
+"pinyin": "péng you",
+"gloss": "friend",
+"pos": [
+"n"
+]
+},
+{
+"w": "漂亮",
+"level": 1,
+"lesson": null,
+"pinyin": "piào liang",
+"gloss": "pretty; beautiful",
+"pos": [
+"a"
+]
+},
+{
+"w": "苹果",
+"level": 1,
+"lesson": null,
+"pinyin": "píng guǒ",
+"gloss": "apple",
+"pos": [
+"n"
+]
+},
+{
+"w": "七",
+"level": 1,
+"lesson": null,
+"pinyin": "qī",
+"gloss": "seven; 7",
+"pos": [
+"m",
+"t"
+]
+},
+{
+"w": "前面",
+"level": 1,
+"lesson": null,
+"pinyin": "qián miàn",
+"gloss": "ahead; in front; preceding; above; also pr. [qián mian]",
+"pos": [
+"f"
+]
+},
+{
+"w": "钱",
+"level": 1,
+"lesson": null,
+"pinyin": "Qián",
+"gloss": "surname Qian",
+"pos": [
+"n",
+"nr"
+]
+},
+{
+"w": "请",
+"level": 1,
+"lesson": null,
+"pinyin": "qǐng",
+"gloss": "to ask; to invite; please (do sth); to treat (to a meal etc); to request",
+"pos": [
+"v"
+]
+},
+{
+"w": "去",
+"level": 1,
+"lesson": null,
+"pinyin": "qù",
+"gloss": "to go; to go to (a place); (of a time etc) last; just passed; to send; to remove; to get rid of; to reduce; to be apart ",
+"pos": [
+"v"
+]
+},
+{
+"w": "热",
+"level": 1,
+"lesson": null,
+"pinyin": "rè",
+"gloss": "to warm up; to heat up; hot (of weather); heat; fervent",
+"pos": [
+"a",
+"n",
+"k",
+"v",
+"ad",
+"an"
+]
+},
+{
+"w": "人",
+"level": 1,
+"lesson": null,
+"pinyin": "rén",
+"gloss": "person; people",
+"pos": [
+"n"
+]
+},
+{
+"w": "认识",
+"level": 1,
+"lesson": null,
+"pinyin": "rèn shi",
+"gloss": "to know; to recognize; to be familiar with; to get acquainted with sb; knowledge; understanding; awareness; cognition",
+"pos": [
+"v",
+"n",
+"vn"
+]
+},
+{
+"w": "三",
+"level": 1,
+"lesson": null,
+"pinyin": "Sān",
+"gloss": "surname San",
+"pos": [
+"m",
+"t"
+]
+},
+{
+"w": "商店",
+"level": 1,
+"lesson": null,
+"pinyin": "shāng diàn",
+"gloss": "store; shop",
+"pos": [
+"n"
+]
+},
+{
+"w": "上",
+"level": 1,
+"lesson": null,
+"pinyin": "shǎng",
+"gloss": "used in 上声",
+"pos": [
+"f",
+"v",
+"g"
+]
+},
+{
+"w": "上午",
+"level": 1,
+"lesson": null,
+"pinyin": "shàng wǔ",
+"gloss": "morning",
+"pos": [
+"t"
+]
+},
+{
+"w": "少",
+"level": 1,
+"lesson": null,
+"pinyin": "shǎo",
+"gloss": "few; less; to lack; to be missing; to stop (doing sth); seldom",
+"pos": [
+"a",
+"ad",
+"v",
+"d",
+"g"
+]
+},
+{
+"w": "谁",
+"level": 1,
+"lesson": null,
+"pinyin": "shéi",
+"gloss": "who; also pr. [shuí]",
+"pos": [
+"r"
+]
+},
+{
+"w": "什么",
+"level": 1,
+"lesson": null,
+"pinyin": "shén me",
+"gloss": "what?; something; anything",
+"pos": [
+"r"
+]
+},
+{
+"w": "十",
+"level": 1,
+"lesson": null,
+"pinyin": "shí",
+"gloss": "ten; 10",
+"pos": [
+"m",
+"t"
+]
+},
+{
+"w": "时候",
+"level": 1,
+"lesson": null,
+"pinyin": "shí hou",
+"gloss": "time; length of time; moment; period",
+"pos": [
+"n"
+]
+},
+{
+"w": "是",
+"level": 1,
+"lesson": null,
+"pinyin": "shì",
+"gloss": "to be (followed by substantives only); correct; right; true; (respectful acknowledgement of a command) very well; (adver",
+"pos": [
+"v"
+]
+},
+{
+"w": "书",
+"level": 1,
+"lesson": null,
+"pinyin": "Shū",
+"gloss": "abbr. for 书经",
+"pos": [
+"n",
+"g"
+]
+},
+{
+"w": "水",
+"level": 1,
+"lesson": null,
+"pinyin": "Shuǐ",
+"gloss": "surname Shui",
+"pos": [
+"n"
+]
+},
+{
+"w": "水果",
+"level": 1,
+"lesson": null,
+"pinyin": "shuǐ guǒ",
+"gloss": "fruit",
+"pos": [
+"n"
+]
+},
+{
+"w": "睡觉",
+"level": 1,
+"lesson": null,
+"pinyin": "shuì jiào",
+"gloss": "to go to bed; to sleep",
+"pos": [
+"v"
+]
+},
+{
+"w": "说",
+"level": 1,
+"lesson": null,
+"pinyin": "shuō"
+},
+{
+"w": "四",
+"level": 1,
+"lesson": null,
+"pinyin": "sì",
+"gloss": "four; 4",
+"pos": [
+"m",
+"t"
+]
+},
+{
+"w": "岁",
+"level": 1,
+"lesson": null,
+"pinyin": "suì",
+"gloss": "variant of 岁, year; years old",
+"pos": [
+"qt"
+]
+},
+{
+"w": "他",
+"level": 1,
+"lesson": null,
+"pinyin": "tā",
+"gloss": "he; him (used for either sex when the sex is unknown or unimportant); (used before sb's name for emphasis); (used as a m",
+"pos": [
+"r"
+]
+},
+{
+"w": "她",
+"level": 1,
+"lesson": null,
+"pinyin": "tā",
+"gloss": "she",
+"pos": [
+"r"
+]
+},
+{
+"w": "太",
+"level": 1,
+"lesson": null,
+"pinyin": "tài",
+"gloss": "highest; greatest; too (much); very; extremely",
+"pos": [
+"d",
+"b"
+]
+},
+{
+"w": "天气",
+"level": 1,
+"lesson": null,
+"pinyin": "tiān qì",
+"gloss": "weather",
+"pos": [
+"n"
+]
+},
+{
+"w": "听",
+"level": 1,
+"lesson": null,
+"pinyin": "yǐn",
+"gloss": "smile (archaic)",
+"pos": [
+"v"
+]
+},
+{
+"w": "同学",
+"level": 1,
+"lesson": null,
+"pinyin": "tóng xué",
+"gloss": "to study at the same school; fellow student; classmate",
+"pos": [
+"n"
+]
+},
+{
+"w": "喂",
+"level": 1,
+"lesson": null,
+"pinyin": "wéi",
+"gloss": "hello (when answering the phone)",
+"pos": [
+"v",
+"e"
+]
+},
+{
+"w": "我",
+"level": 1,
+"lesson": null,
+"pinyin": "wǒ",
+"gloss": "I; me; my",
+"pos": [
+"r"
+]
+},
+{
+"w": "我们",
+"level": 1,
+"lesson": null,
+"pinyin": "wǒ men",
+"gloss": "we; us; ourselves; our",
+"pos": [
+"r"
+]
+},
+{
+"w": "五",
+"level": 1,
+"lesson": null,
+"pinyin": "wǔ",
+"gloss": "five; 5",
+"pos": [
+"m",
+"t"
+]
+},
+{
+"w": "喜欢",
+"level": 1,
+"lesson": null,
+"pinyin": "xǐ huan",
+"gloss": "to like; to be fond of",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "下",
+"level": 1,
+"lesson": null,
+"pinyin": "xià",
+"gloss": "down; downwards; below; lower; later; next (week etc); second (of two parts); to decline; to go down; to arrive at (a de",
+"pos": [
+"v",
+"f",
+"qt",
+"g"
+]
+},
+{
+"w": "下午",
+"level": 1,
+"lesson": null,
+"pinyin": "xià wǔ",
+"gloss": "afternoon; p.m.",
+"pos": [
+"t"
+]
+},
+{
+"w": "下雨",
+"level": 1,
+"lesson": null,
+"pinyin": "xià yǔ",
+"gloss": "to rain",
+"pos": [
+"v"
+]
+},
+{
+"w": "先生",
+"level": 1,
+"lesson": null,
+"pinyin": "xiān sheng",
+"gloss": "teacher; gentleman; sir; mister (Mr.); husband; (dialect) doctor",
+"pos": [
+"n"
+]
+},
+{
+"w": "现在",
+"level": 1,
+"lesson": null,
+"pinyin": "xiàn zài",
+"gloss": "now; at present; at the moment; modern; current; nowadays",
+"pos": [
+"t"
+]
+},
+{
+"w": "想",
+"level": 1,
+"lesson": null,
+"pinyin": "xiǎng",
+"gloss": "to think (about); to think of; to devise; to think (that); to believe (that); to desire; to want (to); to miss (feel wis",
+"pos": [
+"v"
+]
+},
+{
+"w": "小",
+"level": 1,
+"lesson": null,
+"pinyin": "xiǎo",
+"gloss": "small; tiny; few; young",
+"pos": [
+"a",
+"ad"
+]
+},
+{
+"w": "小姐",
+"level": 1,
+"lesson": null,
+"pinyin": "xiǎo jie",
+"gloss": "young lady; miss; (slang) prostitute",
+"pos": [
+"n"
+]
+},
+{
+"w": "些",
+"level": 1,
+"lesson": null,
+"pinyin": "xiē",
+"gloss": "classifier indicating a small amount or small number greater than 1: some, a few, several",
+"pos": [
+"q"
+]
+},
+{
+"w": "写",
+"level": 1,
+"lesson": null,
+"pinyin": "xiě",
+"gloss": "to write",
+"pos": [
+"v"
+]
+},
+{
+"w": "谢谢",
+"level": 1,
+"lesson": null,
+"pinyin": "xiè xie",
+"gloss": "to thank; thanks; thank you",
+"pos": [
+"v"
+]
+},
+{
+"w": "星期",
+"level": 1,
+"lesson": null,
+"pinyin": "xīng qī",
+"gloss": "week; day of the week; Sunday",
+"pos": [
+"n"
+]
+},
+{
+"w": "学生",
+"level": 1,
+"lesson": null,
+"pinyin": "xué sheng",
+"gloss": "student; schoolchild",
+"pos": [
+"n"
+]
+},
+{
+"w": "学习",
+"level": 1,
+"lesson": null,
+"pinyin": "xué xí",
+"gloss": "to learn; to study",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "学校",
+"level": 1,
+"lesson": null,
+"pinyin": "xué xiào",
+"gloss": "school",
+"pos": [
+"n"
+]
+},
+{
+"w": "一",
+"level": 1,
+"lesson": null,
+"pinyin": "yī",
+"gloss": "one; single; a (article); as soon as; entire; whole; all; throughout; \"one\" radical in Chinese characters (Kangxi radica",
+"pos": [
+"m",
+"d",
+"t"
+]
+},
+{
+"w": "一点儿",
+"level": 1,
+"lesson": null,
+"pinyin": "yì diǎn ér"
+},
+{
+"w": "衣服",
+"level": 1,
+"lesson": null,
+"pinyin": "yī fu",
+"gloss": "clothes",
+"pos": [
+"n"
+]
+},
+{
+"w": "医生",
+"level": 1,
+"lesson": null,
+"pinyin": "yī shēng",
+"gloss": "doctor",
+"pos": [
+"n"
+]
+},
+{
+"w": "医院",
+"level": 1,
+"lesson": null,
+"pinyin": "yī yuàn",
+"gloss": "hospital",
+"pos": [
+"n"
+]
+},
+{
+"w": "椅子",
+"level": 1,
+"lesson": null,
+"pinyin": "yǐ zi",
+"gloss": "chair",
+"pos": [
+"n"
+]
+},
+{
+"w": "有",
+"level": 1,
+"lesson": null,
+"pinyin": "yǒu",
+"gloss": "to have; there is; (bound form) having; with; -ful; -ed; -al (as in 意 intentional)",
+"pos": [
+"v"
+]
+},
+{
+"w": "月",
+"level": 1,
+"lesson": null,
+"pinyin": "yuè",
+"gloss": "moon; month; monthly",
+"pos": [
+"n",
+"t"
+]
+},
+{
+"w": "再见",
+"level": 1,
+"lesson": null,
+"pinyin": "zài jiàn",
+"gloss": "goodbye; see you again later",
+"pos": [
+"v"
+]
+},
+{
+"w": "在",
+"level": 1,
+"lesson": null,
+"pinyin": "zài",
+"gloss": "to exist; to be alive; (of sb or sth) to be (located) at; (used before a verb to indicate an action in progress)",
+"pos": [
+"p",
+"v",
+"d"
+]
+},
+{
+"w": "怎么",
+"level": 1,
+"lesson": null,
+"pinyin": "zěn me",
+"gloss": "how?; what?; why?",
+"pos": [
+"r"
+]
+},
+{
+"w": "怎么样",
+"level": 1,
+"lesson": null,
+"pinyin": "zěn me yàng",
+"gloss": "how?; how about?; how was it?; how are things?",
+"pos": [
+"r"
+]
+},
+{
+"w": "这",
+"level": 1,
+"lesson": null,
+"pinyin": "zhè",
+"gloss": "(pronoun) this; these; (bound form) this; the (followed by a noun); (bound form) this; these (followed by a classifier) ",
+"pos": [
+"r"
+]
+},
+{
+"w": "中国",
+"level": 1,
+"lesson": null,
+"pinyin": "Zhōng guó",
+"gloss": "China",
+"pos": [
+"ns"
+]
+},
+{
+"w": "中午",
+"level": 1,
+"lesson": null,
+"pinyin": "zhōng wǔ",
+"gloss": "noon; midday",
+"pos": [
+"t"
+]
+},
+{
+"w": "住",
+"level": 1,
+"lesson": null,
+"pinyin": "zhù",
+"gloss": "to live; to dwell; to stay; to reside; to stop; (suffix indicating firmness, steadiness, or coming to a halt)",
+"pos": [
+"v"
+]
+},
+{
+"w": "桌子",
+"level": 1,
+"lesson": null,
+"pinyin": "zhuō zi",
+"gloss": "table; desk",
+"pos": [
+"n"
+]
+},
+{
+"w": "字",
+"level": 1,
+"lesson": null,
+"pinyin": "zì",
+"gloss": "letter; symbol; character; word; courtesy or style name traditionally given to males aged 20 in dynastic China",
+"pos": [
+"n"
+]
+},
+{
+"w": "昨天",
+"level": 1,
+"lesson": null,
+"pinyin": "zuó tiān",
+"gloss": "yesterday",
+"pos": [
+"t"
+]
+},
+{
+"w": "坐",
+"level": 1,
+"lesson": null,
+"pinyin": "Zuò",
+"gloss": "surname Zuo",
+"pos": [
+"v"
+]
+},
+{
+"w": "做",
+"level": 1,
+"lesson": null,
+"pinyin": "zuò",
+"gloss": "to make; to produce; to write; to compose; to do; to engage in; to hold (a party etc); (of a person) to be (an intermedi",
+"pos": [
+"v"
+]
+},
+{
+"w": "吧",
+"level": 2,
+"lesson": null,
+"pinyin": "bā",
+"gloss": "bar (loanword) (serving drinks, or providing Internet access etc); to puff (on a pipe etc); (onom.) bang; abbr. for 贴吧",
+"pos": [
+"y"
+]
+},
+{
+"w": "白",
+"level": 2,
+"lesson": null,
+"pinyin": "Bái",
+"gloss": "surname Bai",
+"pos": [
+"a",
+"nr",
+"d",
+"b",
+"v",
+"g"
+]
+},
+{
+"w": "百",
+"level": 2,
+"lesson": null,
+"pinyin": "Bǎi",
+"gloss": "surname Bai",
+"pos": [
+"m",
+"t"
+]
+},
+{
+"w": "帮助",
+"level": 2,
+"lesson": null,
+"pinyin": "bāng zhù",
+"gloss": "assistance; aid; to help; to assist",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "报纸",
+"level": 2,
+"lesson": null,
+"pinyin": "bào zhǐ",
+"gloss": "newspaper; newsprint",
+"pos": [
+"n"
+]
+},
+{
+"w": "比",
+"level": 2,
+"lesson": null,
+"pinyin": "Bǐ",
+"gloss": "Belgium; Belgian; abbr. for 比利时",
+"pos": [
+"p",
+"v",
+"n",
+"b"
+]
+},
+{
+"w": "别",
+"level": 2,
+"lesson": null,
+"pinyin": "Bié",
+"gloss": "surname Bie",
+"pos": [
+"d",
+"v",
+"r",
+"vn"
+]
+},
+{
+"w": "宾馆",
+"level": 2,
+"lesson": null,
+"pinyin": "bīn guǎn",
+"gloss": "guesthouse; lodge; hotel",
+"pos": [
+"n"
+]
+},
+{
+"w": "长",
+"level": 2,
+"lesson": null,
+"pinyin": "cháng",
+"gloss": "length; long; forever; always; constantly",
+"pos": [
+"a",
+"v",
+"ad",
+"g"
+]
+},
+{
+"w": "唱歌",
+"level": 2,
+"lesson": null,
+"pinyin": "chàng gē",
+"gloss": "to sing a song",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "出",
+"level": 2,
+"lesson": null,
+"pinyin": "chū",
+"gloss": "to go out; to come out; to occur; to produce; to go beyond; to rise; to put forth; to happen; (used after a verb to indi",
+"pos": [
+"v",
+"q"
+]
+},
+{
+"w": "穿",
+"level": 2,
+"lesson": null,
+"pinyin": "chuān",
+"gloss": "to wear; to put on; to dress; to bore through; to pierce; to perforate; to penetrate; to pass through; to thread",
+"pos": [
+"v"
+]
+},
+{
+"w": "次",
+"level": 2,
+"lesson": null,
+"pinyin": "cì",
+"gloss": "next in sequence; second; the second (day, time etc); secondary; vice-; sub-; infra-; inferior quality; substandard; ord",
+"pos": [
+"qv",
+"a",
+"g"
+]
+},
+{
+"w": "从",
+"level": 2,
+"lesson": null,
+"pinyin": "cóng",
+"gloss": "variant of 从",
+"pos": [
+"p",
+"g"
+]
+},
+{
+"w": "错",
+"level": 2,
+"lesson": null,
+"pinyin": "Cuò",
+"gloss": "surname Cuo",
+"pos": [
+"v",
+"n"
+]
+},
+{
+"w": "打篮球",
+"level": 2,
+"lesson": null,
+"pinyin": "dǎ lán qiú",
+"gloss": "to play basketball",
+"pos": []
+},
+{
+"w": "大家",
+"level": 2,
+"lesson": null,
+"pinyin": "dà jiā",
+"gloss": "everyone; influential family; great expert",
+"pos": [
+"r",
+"n"
+]
+},
+{
+"w": "到",
+"level": 2,
+"lesson": null,
+"pinyin": "dào",
+"gloss": "to reach; to arrive; to leave for; to go to; to (a place); until (a time); up to (a point); (verb complement indicating ",
+"pos": [
+"v",
+"p"
+]
+},
+{
+"w": "得",
+"level": 2,
+"lesson": 9,
+"pinyin": "dé",
+"gloss": "to obtain; to get; to gain; to catch (a disease); proper; suitable; proud; contented; to allow; to permit; ready; finish",
+"pos": [
+"u",
+"v"
+]
+},
+{
+"w": "等",
+"level": 2,
+"lesson": 10,
+"pinyin": "děng",
+"gloss": "class; rank; grade; equal to; same as; to wait for; to await; et cetera; and so on; et al. (and other authors); after; a",
+"pos": [
+"v",
+"u"
+]
+},
+{
+"w": "弟弟",
+"level": 2,
+"lesson": null,
+"pinyin": "dì di",
+"gloss": "younger brother",
+"pos": [
+"n"
+]
+},
+{
+"w": "第一",
+"level": 2,
+"lesson": null,
+"pinyin": "dì yī",
+"gloss": "first; number one; primary",
+"pos": [
+"m"
+]
+},
+{
+"w": "懂",
+"level": 2,
+"lesson": null,
+"pinyin": "dǒng",
+"gloss": "to understand; to comprehend",
+"pos": [
+"v"
+]
+},
+{
+"w": "对",
+"level": 2,
+"lesson": null,
+"pinyin": "duì",
+"gloss": "right; correct; towards; at; for; concerning; regarding; to treat (sb a certain way); to face; (bound form) opposite; fa",
+"pos": [
+"p",
+"v",
+"q",
+"a"
+]
+},
+{
+"w": "房间",
+"level": 2,
+"lesson": null,
+"pinyin": "fáng jiān",
+"gloss": "room",
+"pos": [
+"n"
+]
+},
+{
+"w": "非常",
+"level": 2,
+"lesson": null,
+"pinyin": "fēi cháng",
+"gloss": "very; really; unusual; extraordinary",
+"pos": [
+"d",
+"b"
+]
+},
+{
+"w": "服务员",
+"level": 2,
+"lesson": null,
+"pinyin": "fú wù yuán",
+"gloss": "waiter; waitress; attendant; customer service personnel",
+"pos": [
+"n"
+]
+},
+{
+"w": "高",
+"level": 2,
+"lesson": null,
+"pinyin": "Gāo",
+"gloss": "surname Gao",
+"pos": [
+"a",
+"ad",
+"v",
+"g"
+]
+},
+{
+"w": "告诉",
+"level": 2,
+"lesson": null,
+"pinyin": "gào sù",
+"gloss": "to press charges; to file a complaint",
+"pos": [
+"v"
+]
+},
+{
+"w": "哥哥",
+"level": 2,
+"lesson": null,
+"pinyin": "gē ge",
+"gloss": "older brother",
+"pos": [
+"n"
+]
+},
+{
+"w": "给",
+"level": 2,
+"lesson": null,
+"pinyin": "gěi",
+"gloss": "to; for; for the benefit of; to give; to allow; to do sth (for sb); (grammatical equivalent of 被); (grammatical equivale",
+"pos": [
+"p",
+"v",
+"u"
+]
+},
+{
+"w": "公共汽车",
+"level": 2,
+"lesson": null,
+"pinyin": "gōng gòng qì chē",
+"gloss": "bus",
+"pos": []
+},
+{
+"w": "公司",
+"level": 2,
+"lesson": null,
+"pinyin": "gōng sī",
+"gloss": "company; firm; corporation",
+"pos": [
+"n"
+]
+},
+{
+"w": "贵",
+"level": 2,
+"lesson": null,
+"pinyin": "guì",
+"gloss": "expensive; noble; precious; (honorific) your",
+"pos": [
+"a",
+"r",
+"b",
+"g"
+]
+},
+{
+"w": "过",
+"level": 2,
+"lesson": null,
+"pinyin": "Guō",
+"gloss": "surname Guo",
+"pos": [
+"u",
+"v",
+"d",
+"g"
+]
+},
+{
+"w": "还",
+"level": 2,
+"lesson": null,
+"pinyin": "Huán",
+"gloss": "surname Huan",
+"pos": [
+"d",
+"v"
+]
+},
+{
+"w": "孩子",
+"level": 2,
+"lesson": null,
+"pinyin": "hái zi",
+"gloss": "child",
+"pos": [
+"n"
+]
+},
+{
+"w": "好吃",
+"level": 2,
+"lesson": null,
+"pinyin": "hǎo chī",
+"gloss": "tasty; delicious",
+"pos": [
+"a"
+]
+},
+{
+"w": "黑",
+"level": 2,
+"lesson": null,
+"pinyin": "Hēi",
+"gloss": "abbr. for Heilongjiang province 黑龙江",
+"pos": [
+"a",
+"g",
+"b"
+]
+},
+{
+"w": "红",
+"level": 2,
+"lesson": null,
+"pinyin": "Hóng",
+"gloss": "surname Hong",
+"pos": [
+"a",
+"v",
+"g"
+]
+},
+{
+"w": "火车站",
+"level": 2,
+"lesson": null,
+"pinyin": "huǒ chē zhàn",
+"gloss": "train station",
+"pos": [
+"n"
+]
+},
+{
+"w": "机场",
+"level": 2,
+"lesson": null,
+"pinyin": "jī chǎng",
+"gloss": "airport; airfield; (slang) service provider for Shadowsocks or similar software for circumventing Internet censorship",
+"pos": [
+"n"
+]
+},
+{
+"w": "鸡蛋",
+"level": 2,
+"lesson": null,
+"pinyin": "jī dàn",
+"gloss": "(chicken) egg; hen's egg",
+"pos": [
+"n"
+]
+},
+{
+"w": "件",
+"level": 2,
+"lesson": null,
+"pinyin": "jiàn",
+"gloss": "item; component; classifier for events, things, clothes etc",
+"pos": [
+"q",
+"g"
+]
+},
+{
+"w": "教室",
+"level": 2,
+"lesson": null,
+"pinyin": "jiào shì",
+"gloss": "classroom",
+"pos": [
+"n"
+]
+},
+{
+"w": "姐姐",
+"level": 2,
+"lesson": null,
+"pinyin": "jiě jie",
+"gloss": "older sister",
+"pos": [
+"n"
+]
+},
+{
+"w": "介绍",
+"level": 2,
+"lesson": null,
+"pinyin": "jiè shào",
+"gloss": "to introduce (sb to sb); to give a presentation; to present (sb for a job etc); introduction",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "进",
+"level": 2,
+"lesson": null,
+"pinyin": "jìn",
+"gloss": "to go forward; to advance; to go in; to enter; to put in; to submit; to take in; to admit; (math.) base of a number syst",
+"pos": [
+"v"
+]
+},
+{
+"w": "近",
+"level": 2,
+"lesson": null,
+"pinyin": "jìn",
+"gloss": "near; close to; approximately",
+"pos": [
+"a",
+"v"
+]
+},
+{
+"w": "就",
+"level": 2,
+"lesson": null,
+"pinyin": "jiù",
+"gloss": "(after a suppositional clause) in that case; then; (after a clause of action) as soon as; immediately after; (same as 是)",
+"pos": [
+"d",
+"p",
+"c",
+"v"
+]
+},
+{
+"w": "觉得",
+"level": 2,
+"lesson": null,
+"pinyin": "jué de",
+"gloss": "to think that ...; to feel that ...; to feel (uncomfortable etc)",
+"pos": [
+"v"
+]
+},
+{
+"w": "咖啡",
+"level": 2,
+"lesson": null,
+"pinyin": "kā fēi",
+"gloss": "coffee (loanword)",
+"pos": [
+"n"
+]
+},
+{
+"w": "开始",
+"level": 2,
+"lesson": null,
+"pinyin": "kāi shǐ",
+"gloss": "to begin; beginning; to start; initial",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "考试",
+"level": 2,
+"lesson": null,
+"pinyin": "kǎo shì",
+"gloss": "to take an exam; exam",
+"pos": [
+"vn",
+"v"
+]
+},
+{
+"w": "可能",
+"level": 2,
+"lesson": null,
+"pinyin": "kě néng",
+"gloss": "might (happen); possible; probable; possibility; probability; maybe; perhaps",
+"pos": [
+"v",
+"n"
+]
+},
+{
+"w": "可以",
+"level": 2,
+"lesson": null,
+"pinyin": "kě yǐ",
+"gloss": "can; may; possible; able to; not bad; pretty good",
+"pos": [
+"v"
+]
+},
+{
+"w": "课",
+"level": 2,
+"lesson": null,
+"pinyin": "kè",
+"gloss": "subject; course; class; lesson; to levy; tax; form of divination",
+"pos": [
+"n"
+]
+},
+{
+"w": "快",
+"level": 2,
+"lesson": null,
+"pinyin": "kuài",
+"gloss": "rapid; quick; speed; rate; soon; almost; to make haste; clever; sharp (of knives or wits); forthright; plainspoken; grat",
+"pos": [
+"a",
+"d",
+"g"
+]
+},
+{
+"w": "快乐",
+"level": 2,
+"lesson": null,
+"pinyin": "kuài lè",
+"gloss": "happy; joyful",
+"pos": [
+"a",
+"an"
+]
+},
+{
+"w": "累",
+"level": 2,
+"lesson": null,
+"pinyin": "lěi",
+"gloss": "to accumulate; to involve or implicate (Taiwan pr. [lèi]); continuous; repeated",
+"pos": [
+"a",
+"v",
+"an"
+]
+},
+{
+"w": "离",
+"level": 2,
+"lesson": null,
+"pinyin": "chī",
+"gloss": "mythical beast (archaic)",
+"pos": [
+"v",
+"p"
+]
+},
+{
+"w": "两",
+"level": 2,
+"lesson": null,
+"pinyin": "liǎng",
+"gloss": "two; both; some; a few; tael, unit of weight equal to 50 grams (modern) or 1⁄16 of a catty 斤 (old)",
+"pos": [
+"m",
+"t"
+]
+},
+{
+"w": "零",
+"level": 2,
+"lesson": null,
+"pinyin": "líng",
+"gloss": "zero; nought; zero sign; fractional; fragmentary; odd (of numbers); (placed between two numbers to indicate a smaller qu",
+"pos": [
+"m",
+"t",
+"g"
+]
+},
+{
+"w": "路",
+"level": 2,
+"lesson": null,
+"pinyin": "Lù",
+"gloss": "surname Lu",
+"pos": [
+"n",
+"qv"
+]
+},
+{
+"w": "旅游",
+"level": 2,
+"lesson": null,
+"pinyin": "lǚ yóu",
+"gloss": "trip; journey; tourism; travel; tour; to travel",
+"pos": [
+"vn",
+"v"
+]
+},
+{
+"w": "卖",
+"level": 2,
+"lesson": null,
+"pinyin": "mài",
+"gloss": "to sell; to betray; to spare no effort; to show off or flaunt",
+"pos": [
+"v"
+]
+},
+{
+"w": "慢",
+"level": 2,
+"lesson": null,
+"pinyin": "màn",
+"gloss": "slow",
+"pos": [
+"a",
+"ad"
+]
+},
+{
+"w": "忙",
+"level": 2,
+"lesson": null,
+"pinyin": "máng",
+"gloss": "busy; hurriedly; to hurry; to rush",
+"pos": [
+"v",
+"a",
+"ad",
+"g",
+"an"
+]
+},
+{
+"w": "每",
+"level": 2,
+"lesson": null,
+"pinyin": "měi",
+"gloss": "each; every",
+"pos": [
+"r"
+]
+},
+{
+"w": "妹妹",
+"level": 2,
+"lesson": null,
+"pinyin": "mèi mei",
+"gloss": "younger sister; young woman",
+"pos": [
+"n"
+]
+},
+{
+"w": "门",
+"level": 2,
+"lesson": null,
+"pinyin": "Mén",
+"gloss": "surname Men",
+"pos": [
+"n",
+"q"
+]
+},
+{
+"w": "面条",
+"level": 2,
+"lesson": null,
+"pinyin": "miàn tiáo",
+"gloss": "noodles",
+"pos": [
+"n"
+]
+},
+{
+"w": "男",
+"level": 2,
+"lesson": null,
+"pinyin": "nán"
+},
+{
+"w": "您",
+"level": 2,
+"lesson": null,
+"pinyin": "nín",
+"gloss": "you (courteous, as opposed to informal 你)",
+"pos": [
+"r"
+]
+},
+{
+"w": "牛奶",
+"level": 2,
+"lesson": null,
+"pinyin": "niú nǎi",
+"gloss": "cow's milk",
+"pos": [
+"n"
+]
+},
+{
+"w": "女",
+"level": 2,
+"lesson": null,
+"pinyin": "nǚ"
+},
+{
+"w": "旁边",
+"level": 2,
+"lesson": null,
+"pinyin": "páng biān",
+"gloss": "side; adjacent place",
+"pos": [
+"f"
+]
+},
+{
+"w": "跑步",
+"level": 2,
+"lesson": null,
+"pinyin": "pǎo bù",
+"gloss": "to run; to jog; (military) to march at the double",
+"pos": [
+"v"
+]
+},
+{
+"w": "便宜",
+"level": 2,
+"lesson": null,
+"pinyin": "biàn yí",
+"gloss": "convenient",
+"pos": [
+"a",
+"v",
+"an"
+]
+},
+{
+"w": "票",
+"level": 2,
+"lesson": null,
+"pinyin": "piào",
+"gloss": "ticket; ballot; banknote; person held for ransom; amateur performance of Chinese opera; classifier for groups, batches, ",
+"pos": [
+"n",
+"q"
+]
+},
+{
+"w": "妻子",
+"level": 2,
+"lesson": null,
+"pinyin": "qī zǐ",
+"gloss": "wife and children",
+"pos": [
+"n"
+]
+},
+{
+"w": "起床",
+"level": 2,
+"lesson": null,
+"pinyin": "qǐ chuáng",
+"gloss": "to get out of bed; to get up",
+"pos": [
+"v"
+]
+},
+{
+"w": "千",
+"level": 2,
+"lesson": null,
+"pinyin": "qiān",
+"gloss": "thousand",
+"pos": [
+"m",
+"t"
+]
+},
+{
+"w": "铅笔",
+"level": 2,
+"lesson": null,
+"pinyin": "qiān bǐ",
+"gloss": "(lead) pencil",
+"pos": [
+"n"
+]
+},
+{
+"w": "晴",
+"level": 2,
+"lesson": null,
+"pinyin": "qíng",
+"gloss": "clear; fine (weather)",
+"pos": [
+"v"
+]
+},
+{
+"w": "去年",
+"level": 2,
+"lesson": null,
+"pinyin": "qù nián",
+"gloss": "last year",
+"pos": [
+"t"
+]
+},
+{
+"w": "让",
+"level": 2,
+"lesson": null,
+"pinyin": "ràng",
+"gloss": "to yield; to permit; to let sb do sth; to have sb do sth; to make sb (feel sad etc); by (indicates the agent in a passiv",
+"pos": [
+"v"
+]
+},
+{
+"w": "日",
+"level": 2,
+"lesson": null,
+"pinyin": "Rì",
+"gloss": "abbr. for 本, Japan",
+"pos": [
+"t",
+"g",
+"b",
+"qt"
+]
+},
+{
+"w": "上班",
+"level": 2,
+"lesson": null,
+"pinyin": "shàng bān",
+"gloss": "to go to work; to be on duty; to start work; to go to the office",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "身体",
+"level": 2,
+"lesson": null,
+"pinyin": "shēn tǐ",
+"gloss": "the body; one's health; in person",
+"pos": [
+"n"
+]
+},
+{
+"w": "生病",
+"level": 2,
+"lesson": null,
+"pinyin": "shēng bìng",
+"gloss": "to fall ill",
+"pos": [
+"v"
+]
+},
+{
+"w": "生日",
+"level": 2,
+"lesson": null,
+"pinyin": "shēng rì",
+"gloss": "birthday",
+"pos": [
+"n"
+]
+},
+{
+"w": "时间",
+"level": 2,
+"lesson": null,
+"pinyin": "shí jiān",
+"gloss": "time; period",
+"pos": [
+"n"
+]
+},
+{
+"w": "事情",
+"level": 2,
+"lesson": null,
+"pinyin": "shì qing",
+"gloss": "affair; matter; thing; business",
+"pos": [
+"n"
+]
+},
+{
+"w": "手表",
+"level": 2,
+"lesson": null,
+"pinyin": "shǒu biǎo",
+"gloss": "wristwatch",
+"pos": [
+"n"
+]
+},
+{
+"w": "手机",
+"level": 2,
+"lesson": null,
+"pinyin": "shǒu jī",
+"gloss": "cell phone; mobile phone",
+"pos": [
+"n"
+]
+},
+{
+"w": "说话",
+"level": 2,
+"lesson": null,
+"pinyin": "shuō huà",
+"gloss": "to speak; to say; to talk; to gossip; to tell stories; talk; word",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "送",
+"level": 2,
+"lesson": null,
+"pinyin": "sòng",
+"gloss": "to send; to deliver; to transmit; to give (as a present); to see (sb) off; to accompany; to go along with",
+"pos": [
+"v"
+]
+},
+{
+"w": "虽然",
+"level": 2,
+"lesson": null,
+"pinyin": "suī rán",
+"gloss": "although; even though (often used correlatively with 是 or 是 etc)",
+"pos": [
+"c"
+]
+},
+{
+"w": "但是",
+"level": 2,
+"lesson": null,
+"pinyin": "dàn shì",
+"gloss": "but; however",
+"pos": [
+"c"
+]
+},
+{
+"w": "它",
+"level": 2,
+"lesson": null,
+"pinyin": "tā",
+"gloss": "it",
+"pos": [
+"r"
+]
+},
+{
+"w": "踢足球",
+"level": 2,
+"lesson": null,
+"pinyin": "tī zú qiú"
+},
+{
+"w": "题",
+"level": 2,
+"lesson": null,
+"pinyin": "Tí",
+"gloss": "surname Ti",
+"pos": [
+"n",
+"v"
+]
+},
+{
+"w": "跳舞",
+"level": 2,
+"lesson": null,
+"pinyin": "tiào wǔ",
+"gloss": "to dance",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "外",
+"level": 2,
+"lesson": null,
+"pinyin": "wài",
+"gloss": "outside; in addition; foreign; external",
+"pos": [
+"f"
+]
+},
+{
+"w": "完",
+"level": 2,
+"lesson": null,
+"pinyin": "wán",
+"gloss": "to finish; to be over; whole; complete; entire",
+"pos": [
+"v"
+]
+},
+{
+"w": "玩",
+"level": 2,
+"lesson": null,
+"pinyin": "wán",
+"gloss": "to play; to have fun; to trifle with; toy; sth used for amusement; curio or antique (Taiwan pr. [wàn]); to keep sth for ",
+"pos": [
+"v"
+]
+},
+{
+"w": "晚上",
+"level": 2,
+"lesson": null,
+"pinyin": "wǎn shang",
+"gloss": "evening; night; in the evening",
+"pos": [
+"t"
+]
+},
+{
+"w": "往",
+"level": 2,
+"lesson": null,
+"pinyin": "wǎng",
+"gloss": "to go (in a direction); to; towards; (of a train) bound for; past; previous",
+"pos": [
+"p",
+"v"
+]
+},
+{
+"w": "为什么",
+"level": 2,
+"lesson": null,
+"pinyin": "wèi shén me",
+"gloss": "why?; for what reason?",
+"pos": [
+"r"
+]
+},
+{
+"w": "问",
+"level": 2,
+"lesson": null,
+"pinyin": "wèn",
+"gloss": "to ask; to inquire",
+"pos": [
+"v",
+"g",
+"vn"
+]
+},
+{
+"w": "问题",
+"level": 2,
+"lesson": null,
+"pinyin": "wèn tí",
+"gloss": "question; problem; issue; topic",
+"pos": [
+"n"
+]
+},
+{
+"w": "西瓜",
+"level": 2,
+"lesson": null,
+"pinyin": "xī guā",
+"gloss": "watermelon",
+"pos": [
+"n"
+]
+},
+{
+"w": "希望",
+"level": 2,
+"lesson": null,
+"pinyin": "xī wàng",
+"gloss": "to hope; a hope; a wish",
+"pos": [
+"v",
+"n",
+"vn"
+]
+},
+{
+"w": "洗",
+"level": 2,
+"lesson": null,
+"pinyin": "xǐ",
+"gloss": "to wash; to bathe; to develop (photographs); to shuffle (cards etc); to erase (a recording)",
+"pos": [
+"v"
+]
+},
+{
+"w": "小时",
+"level": 2,
+"lesson": null,
+"pinyin": "xiǎo shí",
+"gloss": "hour",
+"pos": [
+"n",
+"q"
+]
+},
+{
+"w": "笑",
+"level": 2,
+"lesson": null,
+"pinyin": "xiào",
+"gloss": "old variant of 笑",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "新",
+"level": 2,
+"lesson": null,
+"pinyin": "Xīn",
+"gloss": "abbr. for Xinjiang 疆 or Singapore 坡; surname Xin",
+"pos": [
+"a",
+"d",
+"b"
+]
+},
+{
+"w": "姓",
+"level": 2,
+"lesson": null,
+"pinyin": "xìng",
+"gloss": "family name; surname; to be surnamed",
+"pos": [
+"v",
+"n"
+]
+},
+{
+"w": "休息",
+"level": 2,
+"lesson": null,
+"pinyin": "xiū xi",
+"gloss": "rest; to rest",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "雪",
+"level": 2,
+"lesson": null,
+"pinyin": "Xuě",
+"gloss": "surname Xue",
+"pos": [
+"n"
+]
+},
+{
+"w": "颜色",
+"level": 2,
+"lesson": null,
+"pinyin": "yán sè",
+"gloss": "color; countenance; appearance; facial expression; pigment; dyestuff",
+"pos": [
+"n"
+]
+},
+{
+"w": "眼睛",
+"level": 2,
+"lesson": null,
+"pinyin": "yǎn jing",
+"gloss": "eye",
+"pos": [
+"n"
+]
+},
+{
+"w": "羊肉",
+"level": 2,
+"lesson": null,
+"pinyin": "yáng ròu",
+"gloss": "mutton; goat meat",
+"pos": [
+"n"
+]
+},
+{
+"w": "药",
+"level": 2,
+"lesson": null,
+"pinyin": "yào",
+"gloss": "leaf of the iris; variant of 药",
+"pos": [
+"n"
+]
+},
+{
+"w": "要",
+"level": 2,
+"lesson": null,
+"pinyin": "yāo",
+"gloss": "(bound form) to demand; to coerce",
+"pos": [
+"v"
+]
+},
+{
+"w": "也",
+"level": 2,
+"lesson": null,
+"pinyin": "Yě",
+"gloss": "surname Ye",
+"pos": [
+"d",
+"y",
+"u",
+"b"
+]
+},
+{
+"w": "一起",
+"level": 2,
+"lesson": null,
+"pinyin": "yī qǐ",
+"gloss": "in the same place; together; with; altogether (in total)",
+"pos": [
+"s",
+"d",
+"nr"
+]
+},
+{
+"w": "一下",
+"level": 2,
+"lesson": null,
+"pinyin": "yī xià"
+},
+{
+"w": "已经",
+"level": 2,
+"lesson": null,
+"pinyin": "yǐ jīng",
+"gloss": "already",
+"pos": [
+"d"
+]
+},
+{
+"w": "意思",
+"level": 2,
+"lesson": null,
+"pinyin": "yì si",
+"gloss": "idea; opinion; meaning; wish; desire; interest; fun; token of appreciation, affection etc; to give as a small token; to ",
+"pos": [
+"n",
+"v"
+]
+},
+{
+"w": "因为",
+"level": 2,
+"lesson": null,
+"pinyin": "yīn wèi",
+"gloss": "because; owing to; on account of",
+"pos": [
+"p",
+"c"
+]
+},
+{
+"w": "所以",
+"level": 2,
+"lesson": null,
+"pinyin": "suǒ yǐ",
+"gloss": "therefore; as a result; so; the reason why",
+"pos": [
+"c"
+]
+},
+{
+"w": "阴",
+"level": 2,
+"lesson": null,
+"pinyin": "Yīn",
+"gloss": "surname Yin",
+"pos": [
+"a",
+"g",
+"ad",
+"b"
+]
+},
+{
+"w": "游泳",
+"level": 2,
+"lesson": null,
+"pinyin": "yóu yǒng",
+"gloss": "swimming; to swim",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "右边",
+"level": 2,
+"lesson": null,
+"pinyin": "yòu bian",
+"gloss": "right side; right, to the right",
+"pos": [
+"f"
+]
+},
+{
+"w": "鱼",
+"level": 2,
+"lesson": null,
+"pinyin": "Yú",
+"gloss": "surname Yu",
+"pos": [
+"n"
+]
+},
+{
+"w": "远",
+"level": 2,
+"lesson": null,
+"pinyin": "yuǎn",
+"gloss": "far; distant; remote; (intensifier in a comparison) by far; much (lower etc)",
+"pos": [
+"a",
+"ad"
+]
+},
+{
+"w": "运动",
+"level": 2,
+"lesson": null,
+"pinyin": "yùn dòng",
+"gloss": "to move; to exercise; sports; exercise; motion; movement; campaign",
+"pos": [
+"vn",
+"n",
+"v"
+]
+},
+{
+"w": "再",
+"level": 2,
+"lesson": null,
+"pinyin": "zài",
+"gloss": "again; once more; re-; second; another; then (after sth, and not until then); no matter how ... (followed by an adjectiv",
+"pos": [
+"d",
+"g"
+]
+},
+{
+"w": "早上",
+"level": 2,
+"lesson": null,
+"pinyin": "zǎo shang",
+"gloss": "early morning",
+"pos": [
+"t"
+]
+},
+{
+"w": "丈夫",
+"level": 2,
+"lesson": null,
+"pinyin": "zhàng fu",
+"gloss": "husband",
+"pos": [
+"n"
+]
+},
+{
+"w": "找",
+"level": 2,
+"lesson": null,
+"pinyin": "zhǎo",
+"gloss": "to try to find; to look for; to call on sb; to find; to seek; to return; to give change",
+"pos": [
+"v"
+]
+},
+{
+"w": "着",
+"level": 2,
+"lesson": null,
+"pinyin": "zhāo",
+"gloss": "(chess) move; trick; all right!; (dialect) to add",
+"pos": [
+"u",
+"v",
+"n",
+"q"
+]
+},
+{
+"w": "真",
+"level": 2,
+"lesson": null,
+"pinyin": "zhēn",
+"gloss": "really; truly; indeed; real; true; genuine",
+"pos": [
+"d",
+"a",
+"g"
+]
+},
+{
+"w": "正在",
+"level": 2,
+"lesson": null,
+"pinyin": "zhèng zài",
+"gloss": "just at (that time); right in (that place); right in the middle of (doing sth)",
+"pos": [
+"d"
+]
+},
+{
+"w": "知道",
+"level": 2,
+"lesson": null,
+"pinyin": "zhī dào",
+"gloss": "to know; to become aware of; also pr. [zhī dao]",
+"pos": [
+"v"
+]
+},
+{
+"w": "准备",
+"level": 2,
+"lesson": null,
+"pinyin": "zhǔn bèi",
+"gloss": "preparation; to prepare; to intend; to be about to; reserve (fund)",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "走",
+"level": 2,
+"lesson": null,
+"pinyin": "zǒu",
+"gloss": "to walk; to go; to run; to move (of vehicle); to visit; to leave; to go away; to die (euph.); from; through; away (in co",
+"pos": [
+"v"
+]
+},
+{
+"w": "最",
+"level": 2,
+"lesson": null,
+"pinyin": "zuì",
+"gloss": "variant of 最",
+"pos": [
+"d",
+"g"
+]
+},
+{
+"w": "左边",
+"level": 2,
+"lesson": null,
+"pinyin": "zuǒ bian",
+"gloss": "left; the left side; to the left of",
+"pos": [
+"f"
+]
+},
+{
+"w": "阿姨",
+"level": 3,
+"lesson": null,
+"pinyin": "ā yí",
+"gloss": "maternal aunt; step-mother; childcare worker; nursemaid; woman of similar age to one's parents (term of address used by ",
+"pos": [
+"n"
+]
+},
+{
+"w": "啊",
+"level": 3,
+"lesson": null,
+"pinyin": "ā",
+"gloss": "interjection of surprise; Ah!; Oh!",
+"pos": [
+"y",
+"e"
+]
+},
+{
+"w": "矮",
+"level": 3,
+"lesson": null,
+"pinyin": "ǎi",
+"gloss": "low; short (in length)",
+"pos": [
+"a",
+"v"
+]
+},
+{
+"w": "爱好",
+"level": 3,
+"lesson": null,
+"pinyin": "ài hào",
+"gloss": "to like; to be fond of; to take pleasure in; to be keen on; interest; hobby",
+"pos": [
+"n",
+"v"
+]
+},
+{
+"w": "安静",
+"level": 3,
+"lesson": null,
+"pinyin": "ān jìng",
+"gloss": "quiet; peaceful; calm",
+"pos": [
+"a"
+]
+},
+{
+"w": "把",
+"level": 3,
+"lesson": null,
+"pinyin": "bǎ",
+"gloss": "to hold; to grasp; to hold a baby in position to help it urinate or defecate; handlebar; classifier: handful, bundle, bu",
+"pos": [
+"p",
+"qv",
+"v",
+"m"
+]
+},
+{
+"w": "班",
+"level": 3,
+"lesson": null,
+"pinyin": "Bān",
+"gloss": "surname Ban",
+"pos": [
+"n",
+"q",
+"nr"
+]
+},
+{
+"w": "搬",
+"level": 3,
+"lesson": null,
+"pinyin": "bān",
+"gloss": "to move (i.e. relocate oneself); to move (sth relatively heavy or bulky); to shift; to copy indiscriminately",
+"pos": [
+"v"
+]
+},
+{
+"w": "办法",
+"level": 3,
+"lesson": null,
+"pinyin": "bàn fǎ",
+"gloss": "means; method; way (of doing sth)",
+"pos": [
+"n"
+]
+},
+{
+"w": "办公室",
+"level": 3,
+"lesson": null,
+"pinyin": "bàn gōng shì",
+"gloss": "office; business premises; bureau",
+"pos": [
+"n"
+]
+},
+{
+"w": "半",
+"level": 3,
+"lesson": null,
+"pinyin": "bàn",
+"gloss": "half; semi-; incomplete; (after a number) and a half",
+"pos": [
+"m"
+]
+},
+{
+"w": "帮忙",
+"level": 3,
+"lesson": null,
+"pinyin": "bāng máng",
+"gloss": "to help; to lend a hand; to do a favor; to do a good turn",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "包",
+"level": 3,
+"lesson": null,
+"pinyin": "Bāo",
+"gloss": "surname Bao",
+"pos": [
+"v",
+"n",
+"q"
+]
+},
+{
+"w": "饱",
+"level": 3,
+"lesson": null,
+"pinyin": "bǎo",
+"gloss": "to eat till full; satisfied",
+"pos": [
+"a",
+"ad",
+"v"
+]
+},
+{
+"w": "北方",
+"level": 3,
+"lesson": null,
+"pinyin": "běi fāng",
+"gloss": "north; the northern part a country; China north of the Yellow River",
+"pos": [
+"s",
+"f"
+]
+},
+{
+"w": "被",
+"level": 3,
+"lesson": null,
+"pinyin": "bèi",
+"gloss": "quilt; to cover (with); (literary) to suffer (a misfortune); used to indicate passive voice (placed before the doer of t",
+"pos": [
+"p",
+"g",
+"d"
+]
+},
+{
+"w": "鼻子",
+"level": 3,
+"lesson": null,
+"pinyin": "bí zi",
+"gloss": "nose",
+"pos": [
+"n"
+]
+},
+{
+"w": "比较",
+"level": 3,
+"lesson": null,
+"pinyin": "bǐ jiào",
+"gloss": "to compare; to contrast; comparatively; relatively; quite; comparison",
+"pos": [
+"d",
+"vn",
+"v"
+]
+},
+{
+"w": "比赛",
+"level": 3,
+"lesson": null,
+"pinyin": "bǐ sài",
+"gloss": "competition (sports etc); match; to compete",
+"pos": [
+"vn",
+"v"
+]
+},
+{
+"w": "笔记本",
+"level": 3,
+"lesson": null,
+"pinyin": "bǐ jì běn",
+"gloss": "notebook (stationery); notebook (computing)",
+"pos": [
+"n"
+]
+},
+{
+"w": "必须",
+"level": 3,
+"lesson": null,
+"pinyin": "bì xū",
+"gloss": "to have to; must; compulsory; necessarily",
+"pos": [
+"d"
+]
+},
+{
+"w": "变化",
+"level": 3,
+"lesson": null,
+"pinyin": "biàn huà",
+"gloss": "(intransitive) to change; to vary; change; variation",
+"pos": [
+"vn",
+"v"
+]
+},
+{
+"w": "别人",
+"level": 3,
+"lesson": null,
+"pinyin": "bié ren",
+"gloss": "other people; others; other person",
+"pos": [
+"r"
+]
+},
+{
+"w": "冰箱",
+"level": 3,
+"lesson": null,
+"pinyin": "bīng xiāng",
+"gloss": "icebox; freezer cabinet; refrigerator",
+"pos": [
+"n"
+]
+},
+{
+"w": "不但",
+"level": 3,
+"lesson": null,
+"pinyin": "bù dàn",
+"gloss": "not only (... but also ...)",
+"pos": [
+"c"
+]
+},
+{
+"w": "而且",
+"level": 3,
+"lesson": null,
+"pinyin": "ér qiě",
+"gloss": "(not only ...) but also; moreover; in addition; furthermore",
+"pos": [
+"c"
+]
+},
+{
+"w": "菜单",
+"level": 3,
+"lesson": null,
+"pinyin": "cài dān",
+"gloss": "menu",
+"pos": [
+"n"
+]
+},
+{
+"w": "参加",
+"level": 3,
+"lesson": null,
+"pinyin": "cān jiā",
+"gloss": "to participate; to take part; to join",
+"pos": [
+"v"
+]
+},
+{
+"w": "草",
+"level": 3,
+"lesson": null,
+"pinyin": "cǎo",
+"gloss": "variant of 草",
+"pos": [
+"n"
+]
+},
+{
+"w": "层",
+"level": 3,
+"lesson": null,
+"pinyin": "céng",
+"gloss": "to pile on top of one another; layer; stratum; floor (of a building); story; (math.) sheaf; classifier for layers",
+"pos": [
+"qv",
+"n"
+]
+},
+{
+"w": "差",
+"level": 3,
+"lesson": null,
+"pinyin": "chā",
+"gloss": "difference; discrepancy; (math.) difference (amount remaining after a subtraction); (literary) a little; somewhat; sligh",
+"pos": [
+"a",
+"v",
+"g"
+]
+},
+{
+"w": "超市",
+"level": 3,
+"lesson": null,
+"pinyin": "chāo shì",
+"gloss": "supermarket (abbr. for 超级市场)",
+"pos": [
+"n"
+]
+},
+{
+"w": "衬衫",
+"level": 3,
+"lesson": null,
+"pinyin": "chèn shān",
+"gloss": "shirt; blouse",
+"pos": [
+"n"
+]
+},
+{
+"w": "成绩",
+"level": 3,
+"lesson": null,
+"pinyin": "chéng jì",
+"gloss": "achievement; performance records; grades",
+"pos": [
+"n"
+]
+},
+{
+"w": "城市",
+"level": 3,
+"lesson": null,
+"pinyin": "chéng shì",
+"gloss": "city; town",
+"pos": [
+"n"
+]
+},
+{
+"w": "迟到",
+"level": 3,
+"lesson": null,
+"pinyin": "chí dào",
+"gloss": "to arrive late",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "除了",
+"level": 3,
+"lesson": null,
+"pinyin": "chú le",
+"gloss": "besides; apart from (... also...); in addition to; except (for)",
+"pos": [
+"p"
+]
+},
+{
+"w": "船",
+"level": 3,
+"lesson": null,
+"pinyin": "chuán",
+"gloss": "variant of 船",
+"pos": [
+"n"
+]
+},
+{
+"w": "春",
+"level": 3,
+"lesson": null,
+"pinyin": "chūn",
+"gloss": "old variant of 春",
+"pos": [
+"tg"
+]
+},
+{
+"w": "词典",
+"level": 3,
+"lesson": null,
+"pinyin": "cí diǎn",
+"gloss": "dictionary; also written 辞典",
+"pos": [
+"n"
+]
+},
+{
+"w": "聪明",
+"level": 3,
+"lesson": null,
+"pinyin": "cōng ming",
+"gloss": "intelligent; clever; bright; smart; acute (of sight and hearing)",
+"pos": [
+"a",
+"an"
+]
+},
+{
+"w": "打扫",
+"level": 3,
+"lesson": null,
+"pinyin": "dǎ sǎo",
+"gloss": "to clean; to sweep",
+"pos": [
+"v"
+]
+},
+{
+"w": "打算",
+"level": 3,
+"lesson": null,
+"pinyin": "dǎ suàn",
+"gloss": "to plan; to intend; to calculate; plan; intention; calculation",
+"pos": [
+"v",
+"n",
+"vn"
+]
+},
+{
+"w": "带",
+"level": 3,
+"lesson": null,
+"pinyin": "dài",
+"gloss": "band; belt; girdle; ribbon; tire; area; zone; region; to wear; to carry; to take along; to bear (i.e. to have); to lead;",
+"pos": [
+"v"
+]
+},
+{
+"w": "担心",
+"level": 3,
+"lesson": null,
+"pinyin": "dān xīn",
+"gloss": "anxious; worried; uneasy; to worry; to be anxious",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "蛋糕",
+"level": 3,
+"lesson": null,
+"pinyin": "dàn gāo",
+"gloss": "cake",
+"pos": [
+"n"
+]
+},
+{
+"w": "当然",
+"level": 3,
+"lesson": null,
+"pinyin": "dāng rán",
+"gloss": "only natural; as it should be; certainly; of course; without doubt",
+"pos": [
+"d",
+"b"
+]
+},
+{
+"w": "地",
+"level": 3,
+"lesson": null,
+"pinyin": "de",
+"gloss": "-ly; structural particle: used before a verb or adjective, linking it to preceding modifying adverbial adjunct",
+"pos": [
+"u",
+"n"
+]
+},
+{
+"w": "灯",
+"level": 3,
+"lesson": null,
+"pinyin": "dēng",
+"gloss": "lamp; light; lantern",
+"pos": [
+"n"
+]
+},
+{
+"w": "地方",
+"level": 3,
+"lesson": null,
+"pinyin": "dì fāng",
+"gloss": "region; regional (away from the central administration); local",
+"pos": [
+"n"
+]
+},
+{
+"w": "地铁",
+"level": 3,
+"lesson": null,
+"pinyin": "dì tiě",
+"gloss": "underground railway; subway; subway train",
+"pos": [
+"n"
+]
+},
+{
+"w": "地图",
+"level": 3,
+"lesson": null,
+"pinyin": "dì tú",
+"gloss": "map",
+"pos": [
+"n"
+]
+},
+{
+"w": "电梯",
+"level": 3,
+"lesson": null,
+"pinyin": "diàn tī",
+"gloss": "elevator; escalator",
+"pos": [
+"n"
+]
+},
+{
+"w": "电子邮件",
+"level": 3,
+"lesson": null,
+"pinyin": "diàn zi yóu jiàn"
+},
+{
+"w": "东",
+"level": 3,
+"lesson": null,
+"pinyin": "Dōng",
+"gloss": "surname Dong",
+"pos": [
+"f",
+"b"
+]
+},
+{
+"w": "冬",
+"level": 3,
+"lesson": null,
+"pinyin": "dōng",
+"gloss": "winter",
+"pos": [
+"tg"
+]
+},
+{
+"w": "动物",
+"level": 3,
+"lesson": null,
+"pinyin": "dòng wù",
+"gloss": "animal",
+"pos": [
+"n"
+]
+},
+{
+"w": "短",
+"level": 3,
+"lesson": null,
+"pinyin": "duǎn",
+"gloss": "short; brief; to lack; weak point; fault",
+"pos": [
+"a"
+]
+},
+{
+"w": "段",
+"level": 3,
+"lesson": null,
+"pinyin": "Duàn",
+"gloss": "surname Duan",
+"pos": [
+"q",
+"g"
+]
+},
+{
+"w": "锻炼",
+"level": 3,
+"lesson": null,
+"pinyin": "duàn liàn",
+"gloss": "to toughen; to temper; to engage in physical exercise; to work out; (fig.) to develop one's skills; to train oneself",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "多么",
+"level": 3,
+"lesson": null,
+"pinyin": "duō me",
+"gloss": "how (wonderful etc); what (a great idea etc); however (difficult it may be etc); (in interrogative sentences) how (much ",
+"pos": [
+"d",
+"a"
+]
+},
+{
+"w": "饿",
+"level": 3,
+"lesson": null,
+"pinyin": "è",
+"gloss": "to be hungry; hungry; to starve (sb)",
+"pos": [
+"v",
+"a"
+]
+},
+{
+"w": "耳朵",
+"level": 3,
+"lesson": null,
+"pinyin": "ěr duo",
+"gloss": "ear; handle (on a cup)",
+"pos": [
+"n"
+]
+},
+{
+"w": "发",
+"level": 3,
+"lesson": null,
+"pinyin": "fā",
+"gloss": "to send out; to show (one's feeling); to issue; to develop; to make a bundle of money; classifier for gunshots (rounds)",
+"pos": [
+"v",
+"q"
+]
+},
+{
+"w": "发烧",
+"level": 3,
+"lesson": null,
+"pinyin": "fā shāo",
+"gloss": "to have a high temperature (from illness); to have a fever",
+"pos": [
+"v",
+"vn",
+"b"
+]
+},
+{
+"w": "发现",
+"level": 3,
+"lesson": null,
+"pinyin": "fā xiàn",
+"gloss": "to notice; to become aware of; to discover; to find; to detect; a discovery",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "方便",
+"level": 3,
+"lesson": null,
+"pinyin": "fāng biàn",
+"gloss": "convenient; suitable; to facilitate; to make things easy; having money to spare; (euphemism) to relieve oneself",
+"pos": [
+"v",
+"a",
+"an"
+]
+},
+{
+"w": "放",
+"level": 3,
+"lesson": null,
+"pinyin": "fàng",
+"gloss": "to put; to place; to release; to free; to let go; to let out; to set off (fireworks)",
+"pos": [
+"v"
+]
+},
+{
+"w": "放心",
+"level": 3,
+"lesson": null,
+"pinyin": "fàng xīn",
+"gloss": "to feel relieved; to feel reassured; to be at ease",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "分",
+"level": 3,
+"lesson": null,
+"pinyin": "fēn",
+"gloss": "to divide; to separate; to distribute; to allocate; to distinguish (good and bad); (bound form) branch of (an organizati",
+"pos": [
+"t",
+"qt",
+"v",
+"g",
+"n",
+"d"
+]
+},
+{
+"w": "附近",
+"level": 3,
+"lesson": null,
+"pinyin": "fù jìn",
+"gloss": "nearby; neighboring; (in the) vicinity (of); neighborhood",
+"pos": [
+"f"
+]
+},
+{
+"w": "复习",
+"level": 3,
+"lesson": null,
+"pinyin": "fù xí",
+"gloss": "to review; revision",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "干净",
+"level": 3,
+"lesson": null,
+"pinyin": "gān jìng",
+"gloss": "clean; neat",
+"pos": [
+"a",
+"ad"
+]
+},
+{
+"w": "感冒",
+"level": 3,
+"lesson": null,
+"pinyin": "gǎn mào",
+"gloss": "to catch cold; (common) cold; (coll.) to be interested in (often used in the negative); (Tw) to detest; can't stand",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "感兴趣",
+"level": 3,
+"lesson": null,
+"pinyin": "gǎn xìng qù"
+},
+{
+"w": "刚才",
+"level": 3,
+"lesson": null,
+"pinyin": "gāng cái",
+"gloss": "just now; a moment ago",
+"pos": [
+"t"
+]
+},
+{
+"w": "个子",
+"level": 3,
+"lesson": null,
+"pinyin": "gè zi",
+"gloss": "height; stature; build; size",
+"pos": [
+"n"
+]
+},
+{
+"w": "根据",
+"level": 3,
+"lesson": null,
+"pinyin": "gēn jù",
+"gloss": "according to; based on; basis; foundation",
+"pos": [
+"p",
+"n",
+"v"
+]
+},
+{
+"w": "跟",
+"level": 3,
+"lesson": null,
+"pinyin": "gēn",
+"gloss": "heel; to follow closely; to go with; (of a woman) to marry sb; with; compared with; to; towards; and (joining two nouns)",
+"pos": [
+"p",
+"v"
+]
+},
+{
+"w": "更",
+"level": 3,
+"lesson": null,
+"pinyin": "gēng",
+"gloss": "to change or replace; to experience; one of the five two-hour periods into which the night was formerly divided; watch (",
+"pos": [
+"d"
+]
+},
+{
+"w": "公斤",
+"level": 3,
+"lesson": null,
+"pinyin": "gōng jīn",
+"gloss": "kilogram (kg)",
+"pos": [
+"q"
+]
+},
+{
+"w": "公园",
+"level": 3,
+"lesson": null,
+"pinyin": "gōng yuán",
+"gloss": "park (for public recreation)",
+"pos": [
+"n"
+]
+},
+{
+"w": "故事",
+"level": 3,
+"lesson": null,
+"pinyin": "gù shì",
+"gloss": "old practice",
+"pos": [
+"n"
+]
+},
+{
+"w": "刮风",
+"level": 3,
+"lesson": null,
+"pinyin": "guā fēng"
+},
+{
+"w": "关",
+"level": 3,
+"lesson": null,
+"pinyin": "Guān",
+"gloss": "surname Guan",
+"pos": [
+"v",
+"n",
+"nr"
+]
+},
+{
+"w": "关系",
+"level": 3,
+"lesson": null,
+"pinyin": "guān xi",
+"gloss": "relation; relationship; to concern; to affect; to have to do with; guanxi",
+"pos": [
+"n",
+"v"
+]
+},
+{
+"w": "关心",
+"level": 3,
+"lesson": null,
+"pinyin": "guān xīn",
+"gloss": "to be concerned about; to care about",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "关于",
+"level": 3,
+"lesson": null,
+"pinyin": "guān yú",
+"gloss": "pertaining to; concerning; with regard to; about; a matter of",
+"pos": [
+"p"
+]
+},
+{
+"w": "国家",
+"level": 3,
+"lesson": null,
+"pinyin": "guó jiā",
+"gloss": "country; nation; state",
+"pos": [
+"n"
+]
+},
+{
+"w": "过去",
+"level": 3,
+"lesson": null,
+"pinyin": "guò qù",
+"gloss": "(in the) past; former; previous; to go over; to pass by",
+"pos": [
+"v",
+"t"
+]
+},
+{
+"w": "还是",
+"level": 3,
+"lesson": null,
+"pinyin": "hái shi",
+"gloss": "still (as before); had better; unexpectedly; or",
+"pos": [
+"c",
+"d",
+"v"
+]
+},
+{
+"w": "害怕",
+"level": 3,
+"lesson": null,
+"pinyin": "hài pà",
+"gloss": "to be afraid; to be scared",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "黑板",
+"level": 3,
+"lesson": null,
+"pinyin": "hēi bǎn",
+"gloss": "blackboard",
+"pos": [
+"n"
+]
+},
+{
+"w": "后来",
+"level": 3,
+"lesson": null,
+"pinyin": "hòu lái",
+"gloss": "afterwards; later; newly arrived",
+"pos": [
+"t"
+]
+},
+{
+"w": "护照",
+"level": 3,
+"lesson": null,
+"pinyin": "hù zhào",
+"gloss": "passport",
+"pos": [
+"n"
+]
+},
+{
+"w": "花",
+"level": 3,
+"lesson": null,
+"pinyin": "Huā",
+"gloss": "surname Hua",
+"pos": [
+"v",
+"n",
+"a"
+]
+},
+{
+"w": "画",
+"level": 3,
+"lesson": null,
+"pinyin": "huà",
+"gloss": "to draw; to paint; picture; painting; to draw (a line) (variant of 划); stroke of a Chinese character (variant of 划); (ca",
+"pos": [
+"n",
+"v",
+"q"
+]
+},
+{
+"w": "坏",
+"level": 3,
+"lesson": null,
+"pinyin": "huài",
+"gloss": "bad; spoiled; broken; to break down; (suffix) to the utmost",
+"pos": [
+"a",
+"v"
+]
+},
+{
+"w": "欢迎",
+"level": 3,
+"lesson": null,
+"pinyin": "huān yíng",
+"gloss": "to welcome; welcome",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "环境",
+"level": 3,
+"lesson": null,
+"pinyin": "huán jìng",
+"gloss": "environment; circumstances; surroundings; ambient",
+"pos": [
+"n"
+]
+},
+{
+"w": "换",
+"level": 3,
+"lesson": null,
+"pinyin": "huàn",
+"gloss": "to exchange; to change (clothes etc); to substitute; to switch; to convert (currency)",
+"pos": [
+"v"
+]
+},
+{
+"w": "黄河",
+"level": 3,
+"lesson": null,
+"pinyin": "huáng hé"
+},
+{
+"w": "回答",
+"level": 3,
+"lesson": null,
+"pinyin": "huí dá",
+"gloss": "to reply; to answer; reply; answer",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "会议",
+"level": 3,
+"lesson": null,
+"pinyin": "huì yì",
+"gloss": "meeting; conference",
+"pos": [
+"n"
+]
+},
+{
+"w": "或者",
+"level": 3,
+"lesson": null,
+"pinyin": "huò zhě",
+"gloss": "or; possibly; maybe; perhaps",
+"pos": [
+"c",
+"d"
+]
+},
+{
+"w": "几乎",
+"level": 3,
+"lesson": null,
+"pinyin": "jī hū",
+"gloss": "almost; nearly; practically",
+"pos": [
+"d"
+]
+},
+{
+"w": "机会",
+"level": 3,
+"lesson": null,
+"pinyin": "jī huì",
+"gloss": "opportunity; chance; occasion",
+"pos": [
+"n"
+]
+},
+{
+"w": "极",
+"level": 3,
+"lesson": null,
+"pinyin": "jí",
+"gloss": "extremely; pole (geography, physics); utmost; top",
+"pos": [
+"d",
+"g"
+]
+},
+{
+"w": "记得",
+"level": 3,
+"lesson": null,
+"pinyin": "jì de",
+"gloss": "to remember",
+"pos": [
+"v"
+]
+},
+{
+"w": "季节",
+"level": 3,
+"lesson": null,
+"pinyin": "jì jié",
+"gloss": "time; season; period",
+"pos": [
+"n"
+]
+},
+{
+"w": "检查",
+"level": 3,
+"lesson": null,
+"pinyin": "jiǎn chá",
+"gloss": "inspection; to examine; to inspect",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "简单",
+"level": 3,
+"lesson": null,
+"pinyin": "jiǎn dān",
+"gloss": "simple; not complicated",
+"pos": [
+"a",
+"ad"
+]
+},
+{
+"w": "见面",
+"level": 3,
+"lesson": null,
+"pinyin": "jiàn miàn",
+"gloss": "to meet; to see each other",
+"pos": [
+"v"
+]
+},
+{
+"w": "健康",
+"level": 3,
+"lesson": null,
+"pinyin": "jiàn kāng",
+"gloss": "health; healthy",
+"pos": [
+"a",
+"an",
+"ad"
+]
+},
+{
+"w": "讲",
+"level": 3,
+"lesson": null,
+"pinyin": "jiǎng",
+"gloss": "to speak; to explain; to negotiate; to emphasize; to be particular about; as far as sth is concerned; speech; lecture",
+"pos": [
+"v"
+]
+},
+{
+"w": "教",
+"level": 3,
+"lesson": null,
+"pinyin": "Jiào",
+"gloss": "surname Jiao",
+"pos": [
+"v",
+"g"
+]
+},
+{
+"w": "角",
+"level": 3,
+"lesson": null,
+"pinyin": "Jué",
+"gloss": "surname Jue",
+"pos": [
+"n",
+"q",
+"g"
+]
+},
+{
+"w": "脚",
+"level": 3,
+"lesson": null,
+"pinyin": "jiǎo",
+"gloss": "foot; leg (of an animal or an object); base (of an object); classifier for kicks",
+"pos": [
+"n",
+"q"
+]
+},
+{
+"w": "接",
+"level": 3,
+"lesson": null,
+"pinyin": "jiē",
+"gloss": "to receive; to answer (the phone); to meet or welcome sb; to connect; to catch; to join; to extend; to take one's turn o",
+"pos": [
+"v"
+]
+},
+{
+"w": "街道",
+"level": 3,
+"lesson": null,
+"pinyin": "jiē dào",
+"gloss": "street; subdistrict; residential district",
+"pos": [
+"n"
+]
+},
+{
+"w": "节目",
+"level": 3,
+"lesson": null,
+"pinyin": "jié mù",
+"gloss": "program; item (on a program)",
+"pos": [
+"n"
+]
+},
+{
+"w": "节日",
+"level": 3,
+"lesson": null,
+"pinyin": "jié rì",
+"gloss": "holiday; festival",
+"pos": [
+"n"
+]
+},
+{
+"w": "结婚",
+"level": 3,
+"lesson": null,
+"pinyin": "jié hūn",
+"gloss": "to marry; to get married",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "结束",
+"level": 3,
+"lesson": null,
+"pinyin": "jié shù",
+"gloss": "termination; to finish; to end; to conclude; to close",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "解决",
+"level": 3,
+"lesson": null,
+"pinyin": "jiě jué",
+"gloss": "to solve; to resolve; to settle (a problem); to eliminate; to wipe out (an enemy, bandits etc)",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "借",
+"level": 3,
+"lesson": null,
+"pinyin": "jiè",
+"gloss": "to lend; to borrow; by means of; to take (an opportunity)",
+"pos": [
+"v",
+"p"
+]
+},
+{
+"w": "经常",
+"level": 3,
+"lesson": null,
+"pinyin": "jīng cháng",
+"gloss": "frequently; constantly; regularly; often; day-to-day; everyday; daily",
+"pos": [
+"d",
+"b"
+]
+},
+{
+"w": "经过",
+"level": 3,
+"lesson": null,
+"pinyin": "jīng guò",
+"gloss": "to pass; to go through; process; course",
+"pos": [
+"p",
+"v",
+"n"
+]
+},
+{
+"w": "经理",
+"level": 3,
+"lesson": null,
+"pinyin": "jīng lǐ",
+"gloss": "manager; director",
+"pos": [
+"n"
+]
+},
+{
+"w": "久",
+"level": 3,
+"lesson": null,
+"pinyin": "jiǔ",
+"gloss": "(long) time; (long) duration of time",
+"pos": [
+"a",
+"g",
+"ad"
+]
+},
+{
+"w": "旧",
+"level": 3,
+"lesson": null,
+"pinyin": "jiù",
+"gloss": "old; opposite: new 新; former; worn (with age)",
+"pos": [
+"a",
+"g"
+]
+},
+{
+"w": "句子",
+"level": 3,
+"lesson": null,
+"pinyin": "jù zi",
+"gloss": "sentence",
+"pos": [
+"n"
+]
+},
+{
+"w": "决定",
+"level": 3,
+"lesson": null,
+"pinyin": "jué dìng",
+"gloss": "to decide (to do something); to resolve; decision; certainly",
+"pos": [
+"v",
+"n"
+]
+},
+{
+"w": "可爱",
+"level": 3,
+"lesson": null,
+"pinyin": "kě ài",
+"gloss": "adorable; cute; lovely",
+"pos": [
+"a"
+]
+},
+{
+"w": "渴",
+"level": 3,
+"lesson": null,
+"pinyin": "kě",
+"gloss": "thirsty",
+"pos": [
+"a",
+"v"
+]
+},
+{
+"w": "刻",
+"level": 3,
+"lesson": null,
+"pinyin": "kè",
+"gloss": "quarter (hour); moment; to carve; to engrave; to cut; oppressive; classifier for short time intervals",
+"pos": [
+"v",
+"qt"
+]
+},
+{
+"w": "客人",
+"level": 3,
+"lesson": null,
+"pinyin": "kè rén",
+"gloss": "visitor; guest; customer; client",
+"pos": [
+"n"
+]
+},
+{
+"w": "空调",
+"level": 3,
+"lesson": null,
+"pinyin": "kōng tiáo",
+"gloss": "air conditioning; air conditioner (including units that have a heating mode)",
+"pos": [
+"n"
+]
+},
+{
+"w": "口",
+"level": 3,
+"lesson": null,
+"pinyin": "kǒu",
+"gloss": "mouth; classifier for things with mouths (people, domestic animals, cannons, wells etc); classifier for bites or mouthfu",
+"pos": [
+"q",
+"n"
+]
+},
+{
+"w": "哭",
+"level": 3,
+"lesson": null,
+"pinyin": "kū",
+"gloss": "to cry; to weep",
+"pos": [
+"v"
+]
+},
+{
+"w": "裤子",
+"level": 3,
+"lesson": null,
+"pinyin": "kù zi",
+"gloss": "variant of 裤子, trousers; pants",
+"pos": [
+"n"
+]
+},
+{
+"w": "筷子",
+"level": 3,
+"lesson": null,
+"pinyin": "kuài zi",
+"gloss": "chopsticks",
+"pos": [
+"n"
+]
+},
+{
+"w": "蓝",
+"level": 3,
+"lesson": null,
+"pinyin": "Lán",
+"gloss": "surname Lan",
+"pos": [
+"a",
+"g"
+]
+},
+{
+"w": "老",
+"level": 3,
+"lesson": null,
+"pinyin": "lǎo",
+"gloss": "prefix used before the surname of a person or a numeral indicating the order of birth of the children in a family or to ",
+"pos": [
+"a",
+"d",
+"g"
+]
+},
+{
+"w": "离开",
+"level": 3,
+"lesson": null,
+"pinyin": "lí kāi",
+"gloss": "to depart; to leave",
+"pos": [
+"v"
+]
+},
+{
+"w": "礼物",
+"level": 3,
+"lesson": null,
+"pinyin": "lǐ wù",
+"gloss": "gift; present",
+"pos": [
+"n"
+]
+},
+{
+"w": "历史",
+"level": 3,
+"lesson": null,
+"pinyin": "lì shǐ",
+"gloss": "history",
+"pos": [
+"n"
+]
+},
+{
+"w": "脸",
+"level": 3,
+"lesson": null,
+"pinyin": "liǎn",
+"gloss": "face",
+"pos": [
+"n",
+"q"
+]
+},
+{
+"w": "练习",
+"level": 3,
+"lesson": null,
+"pinyin": "liàn xí",
+"gloss": "to practice; exercise; drill; practice",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "辆",
+"level": 3,
+"lesson": null,
+"pinyin": "liàng",
+"gloss": "classifier for vehicles",
+"pos": [
+"q"
+]
+},
+{
+"w": "聊天",
+"level": 3,
+"lesson": null,
+"pinyin": "liáo tiān",
+"gloss": "to chat; to gossip",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "了解",
+"level": 3,
+"lesson": null,
+"pinyin": "liǎo jiě",
+"gloss": "to understand; to realize; to find out",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "邻居",
+"level": 3,
+"lesson": null,
+"pinyin": "lín jū",
+"gloss": "neighbor; next door",
+"pos": [
+"n"
+]
+},
+{
+"w": "留学",
+"level": 3,
+"lesson": null,
+"pinyin": "liú xué",
+"gloss": "to study abroad",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "楼",
+"level": 3,
+"lesson": null,
+"pinyin": "Lóu",
+"gloss": "surname Lou",
+"pos": [
+"n"
+]
+},
+{
+"w": "绿",
+"level": 3,
+"lesson": null,
+"pinyin": "lǜ",
+"gloss": "green; (slang) (derived from 绿帽子) to cheat on (one's spouse or boyfriend or girlfriend)",
+"pos": [
+"a",
+"an"
+]
+},
+{
+"w": "马",
+"level": 3,
+"lesson": null,
+"pinyin": "Mǎ",
+"gloss": "surname Ma; abbr. for Malaysia 马来西亚",
+"pos": [
+"n",
+"nr",
+"b"
+]
+},
+{
+"w": "马上",
+"level": 3,
+"lesson": null,
+"pinyin": "mǎ shàng",
+"gloss": "at once; right away; immediately; on horseback (i.e. by military force)",
+"pos": [
+"d",
+"s"
+]
+},
+{
+"w": "满意",
+"level": 3,
+"lesson": null,
+"pinyin": "mǎn yì",
+"gloss": "satisfied; pleased; to one's satisfaction",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "帽子",
+"level": 3,
+"lesson": null,
+"pinyin": "mào zi",
+"gloss": "hat; cap; (fig.) label; bad name",
+"pos": [
+"n"
+]
+},
+{
+"w": "米",
+"level": 3,
+"lesson": null,
+"pinyin": "Mǐ",
+"gloss": "surname Mi",
+"pos": [
+"n",
+"q"
+]
+},
+{
+"w": "面包",
+"level": 3,
+"lesson": null,
+"pinyin": "miàn bāo",
+"gloss": "bread",
+"pos": [
+"n"
+]
+},
+{
+"w": "明白",
+"level": 3,
+"lesson": null,
+"pinyin": "míng bai",
+"gloss": "clear; obvious; unequivocal; to understand; to realize",
+"pos": [
+"v",
+"a",
+"an"
+]
+},
+{
+"w": "拿",
+"level": 3,
+"lesson": null,
+"pinyin": "ná",
+"gloss": "old variant of 拿",
+"pos": [
+"v"
+]
+},
+{
+"w": "奶奶",
+"level": 3,
+"lesson": null,
+"pinyin": "nǎi nai",
+"gloss": "(informal) grandma (paternal grandmother); (respectful) mistress of the house; (coll.) boobies; breasts",
+"pos": [
+"n"
+]
+},
+{
+"w": "南",
+"level": 3,
+"lesson": null,
+"pinyin": "Nán",
+"gloss": "surname Nan",
+"pos": [
+"b",
+"f"
+]
+},
+{
+"w": "难",
+"level": 3,
+"lesson": null,
+"pinyin": "nán",
+"gloss": "difficult (to...); problem; difficulty; difficult; not good",
+"pos": [
+"ad",
+"a",
+"v",
+"g"
+]
+},
+{
+"w": "难过",
+"level": 3,
+"lesson": null,
+"pinyin": "nán guò",
+"gloss": "to feel sad; to feel unwell; (of life) to be difficult",
+"pos": [
+"a"
+]
+},
+{
+"w": "年级",
+"level": 3,
+"lesson": null,
+"pinyin": "nián jí",
+"gloss": "grade; year (in school, college etc)",
+"pos": [
+"n"
+]
+},
+{
+"w": "年轻",
+"level": 3,
+"lesson": null,
+"pinyin": "nián qīng",
+"gloss": "young",
+"pos": [
+"a"
+]
+},
+{
+"w": "鸟",
+"level": 3,
+"lesson": null,
+"pinyin": "diǎo",
+"gloss": "variant of 屌; penis",
+"pos": [
+"n"
+]
+},
+{
+"w": "努力",
+"level": 3,
+"lesson": null,
+"pinyin": "nǔ lì",
+"gloss": "to make an effort; to try hard; to strive; hard-working; conscientious",
+"pos": [
+"ad",
+"an",
+"a"
+]
+},
+{
+"w": "爬山",
+"level": 3,
+"lesson": null,
+"pinyin": "pá shān",
+"gloss": "to climb a mountain; to mountaineer; hiking; mountaineering",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "盘子",
+"level": 3,
+"lesson": null,
+"pinyin": "pán zi",
+"gloss": "tray; plate; dish",
+"pos": [
+"n"
+]
+},
+{
+"w": "胖",
+"level": 3,
+"lesson": null,
+"pinyin": "pán",
+"gloss": "healthy; at ease",
+"pos": [
+"a"
+]
+},
+{
+"w": "皮鞋",
+"level": 3,
+"lesson": null,
+"pinyin": "pí xié"
+},
+{
+"w": "啤酒",
+"level": 3,
+"lesson": null,
+"pinyin": "pí jiǔ",
+"gloss": "beer (loanword)",
+"pos": [
+"n"
+]
+},
+{
+"w": "瓶子",
+"level": 3,
+"lesson": null,
+"pinyin": "píng zi",
+"gloss": "bottle",
+"pos": [
+"n"
+]
+},
+{
+"w": "其实",
+"level": 3,
+"lesson": null,
+"pinyin": "qí shí",
+"gloss": "actually; in fact; really",
+"pos": [
+"d"
+]
+},
+{
+"w": "其他",
+"level": 3,
+"lesson": null,
+"pinyin": "qí tā",
+"gloss": "other; (sth or sb) else; the rest",
+"pos": [
+"r"
+]
+},
+{
+"w": "奇怪",
+"level": 3,
+"lesson": null,
+"pinyin": "qí guài",
+"gloss": "strange; odd; to marvel; to be baffled",
+"pos": [
+"v",
+"a"
+]
+},
+{
+"w": "骑",
+"level": 3,
+"lesson": null,
+"pinyin": "jì",
+"gloss": "(Tw) saddle horse; mounted soldier",
+"pos": [
+"v"
+]
+},
+{
+"w": "起飞",
+"level": 3,
+"lesson": null,
+"pinyin": "qǐ fēi",
+"gloss": "(of an aircraft) to take off",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "起来",
+"level": 3,
+"lesson": null,
+"pinyin": "qǐ lai",
+"gloss": "to stand up; to get up; also pr. [qǐ lái]",
+"pos": [
+"v"
+]
+},
+{
+"w": "清楚",
+"level": 3,
+"lesson": null,
+"pinyin": "qīng chu",
+"gloss": "clear; distinct; to understand thoroughly; to be clear about",
+"pos": [
+"a",
+"v",
+"ad"
+]
+},
+{
+"w": "请假",
+"level": 3,
+"lesson": null,
+"pinyin": "qǐng jià",
+"gloss": "to request leave of absence",
+"pos": [
+"v"
+]
+},
+{
+"w": "秋",
+"level": 3,
+"lesson": null,
+"pinyin": "Qiū",
+"gloss": "surname Qiu",
+"pos": [
+"tg",
+"g"
+]
+},
+{
+"w": "裙子",
+"level": 3,
+"lesson": null,
+"pinyin": "qún zi",
+"gloss": "skirt",
+"pos": [
+"n"
+]
+},
+{
+"w": "然后",
+"level": 3,
+"lesson": null,
+"pinyin": "rán hòu",
+"gloss": "then; after that; afterwards",
+"pos": [
+"c"
+]
+},
+{
+"w": "热情",
+"level": 3,
+"lesson": null,
+"pinyin": "rè qíng",
+"gloss": "cordial; enthusiastic; passion; passionate; passionately",
+"pos": [
+"an",
+"a",
+"ad"
+]
+},
+{
+"w": "认为",
+"level": 3,
+"lesson": null,
+"pinyin": "rèn wéi",
+"gloss": "to believe; to think; to consider; to feel",
+"pos": [
+"v"
+]
+},
+{
+"w": "认真",
+"level": 3,
+"lesson": null,
+"pinyin": "rèn zhēn",
+"gloss": "conscientious; earnest; serious; to take seriously; to take to heart",
+"pos": [
+"a",
+"ad"
+]
+},
+{
+"w": "容易",
+"level": 3,
+"lesson": null,
+"pinyin": "róng yì",
+"gloss": "easy; straightforward; likely; liable to; apt to",
+"pos": [
+"a",
+"ad"
+]
+},
+{
+"w": "如果",
+"level": 3,
+"lesson": null,
+"pinyin": "rú guǒ",
+"gloss": "if; in case; in the event that",
+"pos": [
+"c",
+"v"
+]
+},
+{
+"w": "伞",
+"level": 3,
+"lesson": null,
+"pinyin": "sǎn",
+"gloss": "umbrella; parasol",
+"pos": [
+"n"
+]
+},
+{
+"w": "上网",
+"level": 3,
+"lesson": null,
+"pinyin": "shàng wǎng",
+"gloss": "to go online; to connect to the Internet; (of a document etc) to be uploaded to the Internet; (tennis, volleyball etc) t",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "生气",
+"level": 3,
+"lesson": null,
+"pinyin": "shēng qì",
+"gloss": "to get angry; to take offense; angry; vitality; liveliness",
+"pos": [
+"a",
+"n",
+"v",
+"an"
+]
+},
+{
+"w": "声音",
+"level": 3,
+"lesson": null,
+"pinyin": "shēng yīn",
+"gloss": "voice; sound",
+"pos": [
+"n"
+]
+},
+{
+"w": "世界",
+"level": 3,
+"lesson": null,
+"pinyin": "shì jiè",
+"gloss": "world",
+"pos": [
+"n"
+]
+},
+{
+"w": "试",
+"level": 3,
+"lesson": null,
+"pinyin": "shì",
+"gloss": "to test; to try; experiment; examination; test",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "瘦",
+"level": 3,
+"lesson": null,
+"pinyin": "shòu",
+"gloss": "thin; to lose weight; (of clothing) tight; (of meat) lean; (of land) unproductive",
+"pos": [
+"a"
+]
+},
+{
+"w": "叔叔",
+"level": 3,
+"lesson": null,
+"pinyin": "shū shu",
+"gloss": "father's younger brother; uncle; Taiwan pr. [shú shu]",
+"pos": [
+"n"
+]
+},
+{
+"w": "舒服",
+"level": 3,
+"lesson": null,
+"pinyin": "shū fu",
+"gloss": "comfortable; feeling well",
+"pos": [
+"a"
+]
+},
+{
+"w": "树",
+"level": 3,
+"lesson": null,
+"pinyin": "shù",
+"gloss": "tree; to cultivate; to set up",
+"pos": [
+"n",
+"v"
+]
+},
+{
+"w": "数学",
+"level": 3,
+"lesson": null,
+"pinyin": "shù xué",
+"gloss": "mathematics; mathematical",
+"pos": [
+"n"
+]
+},
+{
+"w": "刷牙",
+"level": 3,
+"lesson": null,
+"pinyin": "shuā yá"
+},
+{
+"w": "双",
+"level": 3,
+"lesson": null,
+"pinyin": "Shuāng",
+"gloss": "surname Shuang",
+"pos": [
+"m",
+"q"
+]
+},
+{
+"w": "水平",
+"level": 3,
+"lesson": null,
+"pinyin": "shuǐ píng",
+"gloss": "level (of achievement etc); standard; horizontal",
+"pos": [
+"n"
+]
+},
+{
+"w": "司机",
+"level": 3,
+"lesson": null,
+"pinyin": "sī jī",
+"gloss": "chauffeur; driver",
+"pos": [
+"n"
+]
+},
+{
+"w": "太阳",
+"level": 3,
+"lesson": null,
+"pinyin": "tài yang",
+"gloss": "sun; abbr. for 太阳穴",
+"pos": [
+"n"
+]
+},
+{
+"w": "特别",
+"level": 3,
+"lesson": null,
+"pinyin": "tè bié",
+"gloss": "unusual; special; very; especially; particularly; expressly; for a specific purpose; (often followed by 是) in particular",
+"pos": [
+"d",
+"a"
+]
+},
+{
+"w": "疼",
+"level": 3,
+"lesson": null,
+"pinyin": "téng",
+"gloss": "(it) hurts; sore; to love dearly",
+"pos": [
+"v",
+"a"
+]
+},
+{
+"w": "提高",
+"level": 3,
+"lesson": null,
+"pinyin": "tí gāo",
+"gloss": "to raise; to increase; to improve",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "体育",
+"level": 3,
+"lesson": null,
+"pinyin": "tǐ yù",
+"gloss": "sports; physical education",
+"pos": [
+"n"
+]
+},
+{
+"w": "甜",
+"level": 3,
+"lesson": null,
+"pinyin": "tián",
+"gloss": "sweet",
+"pos": [
+"a"
+]
+},
+{
+"w": "条",
+"level": 3,
+"lesson": null,
+"pinyin": "tiáo",
+"gloss": "strip; item; article; clause (of law or treaty); classifier for long thin things (ribbon, river, road, trousers etc)",
+"pos": [
+"q"
+]
+},
+{
+"w": "同事",
+"level": 3,
+"lesson": null,
+"pinyin": "tóng shì",
+"gloss": "colleague; co-worker",
+"pos": [
+"n"
+]
+},
+{
+"w": "同意",
+"level": 3,
+"lesson": null,
+"pinyin": "tóng yì",
+"gloss": "to agree; to consent; to approve",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "头发",
+"level": 3,
+"lesson": null,
+"pinyin": "tóu fa",
+"gloss": "hair (on the head)",
+"pos": [
+"n"
+]
+},
+{
+"w": "突然",
+"level": 3,
+"lesson": null,
+"pinyin": "tū rán",
+"gloss": "sudden; abrupt; unexpected",
+"pos": [
+"ad",
+"a"
+]
+},
+{
+"w": "图书馆",
+"level": 3,
+"lesson": null,
+"pinyin": "tú shū guǎn",
+"gloss": "library",
+"pos": [
+"n"
+]
+},
+{
+"w": "腿",
+"level": 3,
+"lesson": null,
+"pinyin": "tuǐ",
+"gloss": "leg",
+"pos": [
+"n"
+]
+},
+{
+"w": "完成",
+"level": 3,
+"lesson": null,
+"pinyin": "wán chéng",
+"gloss": "to complete; to accomplish",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "碗",
+"level": 3,
+"lesson": null,
+"pinyin": "wǎn",
+"gloss": "variant of 碗",
+"pos": [
+"n",
+"q"
+]
+},
+{
+"w": "万",
+"level": 3,
+"lesson": null,
+"pinyin": "mò",
+"gloss": "used in 俟",
+"pos": [
+"m",
+"t"
+]
+},
+{
+"w": "忘记",
+"level": 3,
+"lesson": null,
+"pinyin": "wàng jì",
+"gloss": "to forget",
+"pos": [
+"v"
+]
+},
+{
+"w": "为",
+"level": 3,
+"lesson": null,
+"pinyin": "wéi",
+"gloss": "as (in the capacity of); to take sth as; to act as; to serve as; to behave as; to become; to be; to do; by (in the passi",
+"pos": [
+"p",
+"v"
+]
+},
+{
+"w": "为了",
+"level": 3,
+"lesson": null,
+"pinyin": "wèi le",
+"gloss": "for; for the purpose of; in order to",
+"pos": [
+"p",
+"v"
+]
+},
+{
+"w": "位",
+"level": 3,
+"lesson": null,
+"pinyin": "wèi",
+"gloss": "position; location; place; seat; classifier for people (honorific); classifier for binary bits (e.g. 十六位 16-bit or 2 byt",
+"pos": [
+"q",
+"g"
+]
+},
+{
+"w": "文化",
+"level": 3,
+"lesson": null,
+"pinyin": "wén huà",
+"gloss": "culture; civilization; cultural",
+"pos": [
+"n"
+]
+},
+{
+"w": "西",
+"level": 3,
+"lesson": null,
+"pinyin": "Xī",
+"gloss": "the West; abbr. for Spain 牙; Spanish",
+"pos": [
+"f",
+"b"
+]
+},
+{
+"w": "习惯",
+"level": 3,
+"lesson": null,
+"pinyin": "xí guàn",
+"gloss": "habit; custom; usual practice; to be used to",
+"pos": [
+"n",
+"v"
+]
+},
+{
+"w": "洗手间",
+"level": 3,
+"lesson": null,
+"pinyin": "xǐ shǒu jiān",
+"gloss": "toilet; lavatory; washroom",
+"pos": [
+"n"
+]
+},
+{
+"w": "洗澡",
+"level": 3,
+"lesson": null,
+"pinyin": "xǐ zǎo",
+"gloss": "to bathe; to take a shower",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "夏",
+"level": 3,
+"lesson": null,
+"pinyin": "Xià",
+"gloss": "the Xia or Hsia dynasty c. 2000 BC; Xia of the Sixteen Kingdoms (407-432); surname Xia",
+"pos": [
+"tg",
+"g",
+"nr"
+]
+},
+{
+"w": "先",
+"level": 3,
+"lesson": null,
+"pinyin": "xiān",
+"gloss": "early; prior; former; in advance; first",
+"pos": [
+"d",
+"g"
+]
+},
+{
+"w": "相信",
+"level": 3,
+"lesson": null,
+"pinyin": "xiāng xìn",
+"gloss": "to be convinced (that sth is true); to believe; to accept sth as true",
+"pos": [
+"v"
+]
+},
+{
+"w": "香蕉",
+"level": 3,
+"lesson": null,
+"pinyin": "xiāng jiāo",
+"gloss": "banana",
+"pos": [
+"n"
+]
+},
+{
+"w": "向",
+"level": 3,
+"lesson": null,
+"pinyin": "Xiàng",
+"gloss": "surname Xiang",
+"pos": [
+"p",
+"v",
+"g"
+]
+},
+{
+"w": "像",
+"level": 3,
+"lesson": null,
+"pinyin": "xiàng",
+"gloss": "to resemble; to be like; to look as if; such as; appearance; image; portrait; image under a mapping (math.)",
+"pos": [
+"v",
+"p",
+"n",
+"d"
+]
+},
+{
+"w": "小心",
+"level": 3,
+"lesson": null,
+"pinyin": "xiǎo xīn",
+"gloss": "to be careful; to take care",
+"pos": [
+"a",
+"v",
+"ad"
+]
+},
+{
+"w": "校长",
+"level": 3,
+"lesson": null,
+"pinyin": "xiào zhǎng",
+"gloss": "(college, university) president; headmaster",
+"pos": [
+"n"
+]
+},
+{
+"w": "新闻",
+"level": 3,
+"lesson": null,
+"pinyin": "xīn wén",
+"gloss": "news",
+"pos": [
+"n"
+]
+},
+{
+"w": "新鲜",
+"level": 3,
+"lesson": null,
+"pinyin": "xīn xiān",
+"gloss": "fresh (experience, food etc); freshness; novel; uncommon",
+"pos": [
+"a"
+]
+},
+{
+"w": "信用卡",
+"level": 3,
+"lesson": null,
+"pinyin": "xìn yòng kǎ",
+"gloss": "credit card",
+"pos": [
+"n"
+]
+},
+{
+"w": "行李箱",
+"level": 3,
+"lesson": null,
+"pinyin": "xíng li xiāng",
+"gloss": "suitcase; baggage compartment; overhead bin; (car) trunk; boot",
+"pos": [
+"n"
+]
+},
+{
+"w": "熊猫",
+"level": 3,
+"lesson": null,
+"pinyin": "xióng māo",
+"gloss": "panda",
+"pos": [
+"n",
+"nz"
+]
+},
+{
+"w": "需要",
+"level": 3,
+"lesson": null,
+"pinyin": "xū yào",
+"gloss": "to need; to want; to demand; to require; needs",
+"pos": [
+"v",
+"n",
+"vn"
+]
+},
+{
+"w": "选择",
+"level": 3,
+"lesson": null,
+"pinyin": "xuǎn zé",
+"gloss": "to select; to pick; choice; option; alternative",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "要求",
+"level": 3,
+"lesson": null,
+"pinyin": "yāo qiú",
+"gloss": "to request; to require; requirement; to stake a claim; to ask; to demand",
+"pos": [
+"v",
+"n"
+]
+},
+{
+"w": "爷爷",
+"level": 3,
+"lesson": null,
+"pinyin": "yé ye",
+"gloss": "(coll.) father's father; paternal grandfather",
+"pos": [
+"n"
+]
+},
+{
+"w": "一般",
+"level": 3,
+"lesson": null,
+"pinyin": "yī bān",
+"gloss": "same; ordinary; so-so; common; general; generally; in general",
+"pos": [
+"a",
+"ad",
+"u"
+]
+},
+{
+"w": "一边",
+"level": 3,
+"lesson": null,
+"pinyin": "yī biān",
+"gloss": "one side; either side; on the one hand; on the other hand; doing while",
+"pos": [
+"d",
+"f"
+]
+},
+{
+"w": "一定",
+"level": 3,
+"lesson": null,
+"pinyin": "yī dìng",
+"gloss": "surely; certainly; necessarily; fixed; a certain (extent etc); given; particular; must",
+"pos": [
+"d",
+"b"
+]
+},
+{
+"w": "一共",
+"level": 3,
+"lesson": null,
+"pinyin": "yī gòng",
+"gloss": "altogether",
+"pos": [
+"d"
+]
+},
+{
+"w": "一会儿",
+"level": 3,
+"lesson": null,
+"pinyin": "yī huì r",
+"gloss": "a moment; a while; in a moment; now...now...; also pr. [yī huǐ r]",
+"pos": [
+"mq"
+]
+},
+{
+"w": "一样",
+"level": 3,
+"lesson": null,
+"pinyin": "yī yàng",
+"gloss": "same; like; equal to; the same as; just like",
+"pos": [
+"u",
+"a",
+"ad"
+]
+},
+{
+"w": "一直",
+"level": 3,
+"lesson": null,
+"pinyin": "yī zhí",
+"gloss": "straight (in a straight line); continuously; always; all the way through",
+"pos": [
+"d"
+]
+},
+{
+"w": "以前",
+"level": 3,
+"lesson": null,
+"pinyin": "yǐ qián",
+"gloss": "before; formerly; previous; ago",
+"pos": [
+"f"
+]
+},
+{
+"w": "音乐",
+"level": 3,
+"lesson": null,
+"pinyin": "yīn yuè",
+"gloss": "music",
+"pos": [
+"n"
+]
+},
+{
+"w": "银行",
+"level": 3,
+"lesson": null,
+"pinyin": "yín háng",
+"gloss": "bank",
+"pos": [
+"n"
+]
+},
+{
+"w": "饮料",
+"level": 3,
+"lesson": null,
+"pinyin": "yǐn liào",
+"gloss": "drink; beverage",
+"pos": [
+"n"
+]
+},
+{
+"w": "应该",
+"level": 3,
+"lesson": null,
+"pinyin": "yīng gāi",
+"gloss": "ought to; should; must",
+"pos": [
+"v"
+]
+},
+{
+"w": "影响",
+"level": 3,
+"lesson": null,
+"pinyin": "yǐng xiǎng",
+"gloss": "influence; effect; to influence; to affect (usually adversely); to disturb",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "用",
+"level": 3,
+"lesson": null,
+"pinyin": "yòng",
+"gloss": "to use; to employ; to have to; to eat or drink; expense or outlay; usefulness; hence; therefore",
+"pos": [
+"v",
+"p",
+"g"
+]
+},
+{
+"w": "游戏",
+"level": 3,
+"lesson": null,
+"pinyin": "yóu xì",
+"gloss": "game; to play",
+"pos": [
+"n",
+"v"
+]
+},
+{
+"w": "有名",
+"level": 3,
+"lesson": null,
+"pinyin": "yǒu míng",
+"gloss": "famous; well-known",
+"pos": [
+"a"
+]
+},
+{
+"w": "又",
+"level": 3,
+"lesson": null,
+"pinyin": "yòu",
+"gloss": "(once) again; also; both... and...; and yet; (used for emphasis) anyway",
+"pos": [
+"d",
+"c"
+]
+},
+{
+"w": "遇到",
+"level": 3,
+"lesson": null,
+"pinyin": "yù dào",
+"gloss": "to meet; to run into; to come across",
+"pos": [
+"v"
+]
+},
+{
+"w": "元",
+"level": 3,
+"lesson": null,
+"pinyin": "Yuán",
+"gloss": "surname Yuan; the Yuan or Mongol dynasty (1279-1368)",
+"pos": [
+"q",
+"tg"
+]
+},
+{
+"w": "愿意",
+"level": 3,
+"lesson": null,
+"pinyin": "yuàn yì",
+"gloss": "to wish; to want; ready; willing (to do sth)",
+"pos": [
+"v"
+]
+},
+{
+"w": "月亮",
+"level": 3,
+"lesson": null,
+"pinyin": "yuè liang",
+"gloss": "the moon",
+"pos": [
+"n"
+]
+},
+{
+"w": "越",
+"level": 3,
+"lesson": null,
+"pinyin": "Yuè",
+"gloss": "generic word for peoples or states of south China or south Asia at different historical periods; abbr. for Vietnam 越南",
+"pos": [
+"d",
+"g",
+"b"
+]
+},
+{
+"w": "站",
+"level": 3,
+"lesson": null,
+"pinyin": "zhàn",
+"gloss": "station; to stand; to halt; to stop; branch of a company or organization; website",
+"pos": [
+"v",
+"n",
+"q"
+]
+},
+{
+"w": "张",
+"level": 3,
+"lesson": null,
+"pinyin": "Zhāng",
+"gloss": "surname Zhang",
+"pos": [
+"q",
+"nr",
+"v",
+"g"
+]
+},
+{
+"w": "着急",
+"level": 3,
+"lesson": null,
+"pinyin": "zháo jí",
+"gloss": "to worry; to feel anxious; to feel a sense of urgency; to be in a hurry; Taiwan pr. [zhāo jí]",
+"pos": [
+"a",
+"ad"
+]
+},
+{
+"w": "照顾",
+"level": 3,
+"lesson": null,
+"pinyin": "zhào gu",
+"gloss": "to take care of; to show consideration; to attend to; to look after",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "照片",
+"level": 3,
+"lesson": null,
+"pinyin": "zhào piàn",
+"gloss": "photograph; picture",
+"pos": [
+"n"
+]
+},
+{
+"w": "照相机",
+"level": 3,
+"lesson": null,
+"pinyin": "zhào xiàng jī",
+"gloss": "camera",
+"pos": [
+"n"
+]
+},
+{
+"w": "只",
+"level": 3,
+"lesson": null,
+"pinyin": "zhǐ",
+"gloss": "only; merely; just; but",
+"pos": [
+"d",
+"q"
+]
+},
+{
+"w": "只有",
+"level": 3,
+"lesson": null,
+"pinyin": "zhǐ yǒu"
+},
+{
+"w": "才",
+"level": 3,
+"lesson": null,
+"pinyin": "cái",
+"gloss": "ability; talent; sb of a certain type; a capable individual; then and only then; just now; (before an expression of quan",
+"pos": [
+"d",
+"c",
+"n"
+]
+},
+{
+"w": "中间",
+"level": 3,
+"lesson": null,
+"pinyin": "zhōng jiān",
+"gloss": "the middle; the inside; in the middle; within; between; among; during; in the meantime",
+"pos": [
+"f"
+]
+},
+{
+"w": "中文",
+"level": 3,
+"lesson": null,
+"pinyin": "Zhōng wén",
+"gloss": "Chinese language",
+"pos": [
+"nz"
+]
+},
+{
+"w": "终于",
+"level": 3,
+"lesson": null,
+"pinyin": "zhōng yú",
+"gloss": "at last; in the end; finally; eventually",
+"pos": [
+"d"
+]
+},
+{
+"w": "种",
+"level": 3,
+"lesson": null,
+"pinyin": "zhǒng",
+"gloss": "seed; species; kind; type; classifier for types, kinds, sorts",
+"pos": [
+"q",
+"v",
+"g"
+]
+},
+{
+"w": "重要",
+"level": 3,
+"lesson": null,
+"pinyin": "zhòng yào",
+"gloss": "important; significant; major",
+"pos": [
+"a"
+]
+},
+{
+"w": "周末",
+"level": 3,
+"lesson": null,
+"pinyin": "zhōu mò",
+"gloss": "weekend",
+"pos": [
+"t"
+]
+},
+{
+"w": "主要",
+"level": 3,
+"lesson": null,
+"pinyin": "zhǔ yào",
+"gloss": "main; principal; major; primary",
+"pos": [
+"b",
+"d"
+]
+},
+{
+"w": "注意",
+"level": 3,
+"lesson": null,
+"pinyin": "zhù yì",
+"gloss": "to take note of; to pay attention to",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "自己",
+"level": 3,
+"lesson": null,
+"pinyin": "zì jǐ",
+"gloss": "oneself; one's own",
+"pos": [
+"r",
+"v"
+]
+},
+{
+"w": "自行车",
+"level": 3,
+"lesson": null,
+"pinyin": "zì xíng chē",
+"gloss": "bicycle; bike",
+"pos": [
+"n"
+]
+},
+{
+"w": "总是",
+"level": 3,
+"lesson": null,
+"pinyin": "zǒng shì",
+"gloss": "always",
+"pos": [
+"d",
+"v"
+]
+},
+{
+"w": "嘴",
+"level": 3,
+"lesson": null,
+"pinyin": "zuǐ",
+"gloss": "mouth; beak; nozzle; spout (of teapot etc)",
+"pos": [
+"n"
+]
+},
+{
+"w": "最后",
+"level": 3,
+"lesson": null,
+"pinyin": "zuì hòu",
+"gloss": "final; last; finally; ultimate",
+"pos": [
+"f"
+]
+},
+{
+"w": "最近",
+"level": 3,
+"lesson": null,
+"pinyin": "zuì jìn",
+"gloss": "recently; soon; nearest",
+"pos": [
+"t"
+]
+},
+{
+"w": "作业",
+"level": 3,
+"lesson": null,
+"pinyin": "zuò yè",
+"gloss": "school assignment; homework; work; task; operation; to operate",
+"pos": [
+"n",
+"v",
+"vn"
+]
+},
+{
+"w": "爱情",
+"level": 4,
+"lesson": 1,
+"pinyin": "ài qíng",
+"gloss": "romance; love (romantic)",
+"pos": [
+"n"
+]
+},
+{
+"w": "安排",
+"level": 4,
+"lesson": 3,
+"pinyin": "ān pái",
+"gloss": "to arrange; to plan; to set up; arrangements; plans",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "安全",
+"level": 4,
+"lesson": 18,
+"pinyin": "ān quán",
+"gloss": "safe; secure; safety; security",
+"pos": [
+"an",
+"a",
+"ad",
+"n"
+]
+},
+{
+"w": "按时",
+"level": 4,
+"lesson": 4,
+"pinyin": "àn shí",
+"gloss": "on time; before deadline; on schedule",
+"pos": [
+"d"
+]
+},
+{
+"w": "按照",
+"level": 4,
+"lesson": 4,
+"pinyin": "àn zhào",
+"gloss": "according to; in accordance with; in the light of; on the basis of",
+"pos": [
+"p",
+"v"
+]
+},
+{
+"w": "百分之",
+"level": 4,
+"lesson": 6,
+"pinyin": "bǎi fēn zhī"
+},
+{
+"w": "棒",
+"level": 4,
+"lesson": 15,
+"pinyin": "bàng"
+},
+{
+"w": "包子",
+"level": 4,
+"lesson": 19,
+"pinyin": "bāo zi"
+},
+{
+"w": "保护",
+"level": 4,
+"lesson": 12,
+"pinyin": "bǎo hù",
+"gloss": "to protect; to defend; to safeguard; protection",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "保证",
+"level": 4,
+"lesson": 4,
+"pinyin": "bǎo zhèng",
+"gloss": "guarantee; to guarantee; to ensure; to safeguard; to pledge",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "报名",
+"level": 4,
+"lesson": 16,
+"pinyin": "bào míng",
+"gloss": "to sign up; to enter one's name; to apply; to register; to enroll; to enlist",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "抱",
+"level": 4,
+"lesson": 17,
+"pinyin": "bào",
+"gloss": "to hold; to carry (in one's arms); to hug; to embrace; to surround; to cherish; (coll.) (of clothes) to fit nicely",
+"pos": [
+"v"
+]
+},
+{
+"w": "抱歉",
+"level": 4,
+"lesson": 14,
+"pinyin": "bào qiàn",
+"gloss": "to be sorry; to feel apologetic; sorry!",
+"pos": [
+"a",
+"an",
+"ad"
+]
+},
+{
+"w": "倍",
+"level": 4,
+"lesson": 6,
+"pinyin": "bèi",
+"gloss": "(two, three etc) -fold; times (multiplier); double; to increase or multiply",
+"pos": [
+"q",
+"d"
+]
+},
+{
+"w": "本来",
+"level": 4,
+"lesson": 3,
+"pinyin": "běn lái",
+"gloss": "original; originally; at first; it goes without saying; of course",
+"pos": [
+"d",
+"b"
+]
+},
+{
+"w": "笨",
+"level": 4,
+"lesson": 15,
+"pinyin": "bèn",
+"gloss": "stupid; foolish; silly; slow-witted; clumsy",
+"pos": [
+"a",
+"an"
+]
+},
+{
+"w": "比如",
+"level": 4,
+"lesson": 10,
+"pinyin": "bǐ rú"
+},
+{
+"w": "毕业",
+"level": 4,
+"lesson": 2,
+"pinyin": "bì yè",
+"gloss": "graduation; to graduate; to finish school",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "遍",
+"level": 4,
+"lesson": 13,
+"pinyin": "biàn",
+"gloss": "variant of 遍",
+"pos": [
+"qv",
+"v",
+"d",
+"a"
+]
+},
+{
+"w": "标准",
+"level": 4,
+"lesson": 5,
+"pinyin": "biāo zhǔn",
+"gloss": "standard; norm; criterion; (adjective) standard; good; correct; conforming to a standard",
+"pos": [
+"n",
+"a"
+]
+},
+{
+"w": "表格",
+"level": 4,
+"lesson": 16,
+"pinyin": "biǎo gé",
+"gloss": "form; table",
+"pos": [
+"n"
+]
+},
+{
+"w": "表示",
+"level": 4,
+"lesson": 11,
+"pinyin": "biǎo shì",
+"gloss": "to express; to show; to say; to state; to indicate; to mean",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "表演",
+"level": 4,
+"lesson": 13,
+"pinyin": "biǎo yǎn",
+"gloss": "play; show; performance; exhibition; to perform; to act; to demonstrate",
+"pos": [
+"vn",
+"v"
+]
+},
+{
+"w": "表扬",
+"level": 4,
+"lesson": 15,
+"pinyin": "biǎo yáng",
+"gloss": "to praise; to commend",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "饼干",
+"level": 4,
+"lesson": 9,
+"pinyin": "bǐng gān",
+"gloss": "biscuit; cracker; cookie",
+"pos": [
+"n"
+]
+},
+{
+"w": "并且",
+"level": 4,
+"lesson": 12,
+"pinyin": "bìng qiě",
+"gloss": "and; besides; moreover; furthermore; in addition",
+"pos": [
+"c"
+]
+},
+{
+"w": "博士",
+"level": 4,
+"lesson": 16,
+"pinyin": "bó shì",
+"gloss": "doctor; court academician (in feudal China); Ph.D.",
+"pos": [
+"n"
+]
+},
+{
+"w": "不得不",
+"level": 4,
+"lesson": 4,
+"pinyin": "bù dé bù",
+"gloss": "have no choice or option but to; cannot but; have to; can't help it; can't avoid",
+"pos": [
+"d"
+]
+},
+{
+"w": "不管",
+"level": 4,
+"lesson": 3,
+"pinyin": "bù guǎn",
+"gloss": "not to be concerned; regardless of; no matter",
+"pos": [
+"c",
+"v"
+]
+},
+{
+"w": "不过",
+"level": 4,
+"lesson": 10,
+"pinyin": "bù guò",
+"gloss": "only; merely; no more than; but; however; anyway (to get back to a previous topic); cannot be more (after adjectival)",
+"pos": [
+"c",
+"d",
+"u"
+]
+},
+{
+"w": "不仅",
+"level": 4,
+"lesson": 1,
+"pinyin": "bù jǐn",
+"gloss": "not just; not limited to; (as a correlative conjunction) not only (..., but also ...)",
+"pos": [
+"c"
+]
+},
+{
+"w": "部分",
+"level": 4,
+"lesson": 13,
+"pinyin": "bù fen",
+"gloss": "part; share; section; piece",
+"pos": [
+"n",
+"m"
+]
+},
+{
+"w": "擦",
+"level": 4,
+"lesson": 7,
+"pinyin": "cā",
+"gloss": "to rub; to scratch; to towel; to wipe with a towel; to apply (lipstick, lotion etc); to touch; to brush (past); to shred",
+"pos": [
+"v"
+]
+},
+{
+"w": "猜",
+"level": 4,
+"lesson": 11,
+"pinyin": "cāi",
+"gloss": "to guess",
+"pos": [
+"v"
+]
+},
+{
+"w": "材料",
+"level": 4,
+"lesson": 3,
+"pinyin": "cái liào",
+"gloss": "(raw) material; data; (fig.) person who has the potential to do the job",
+"pos": [
+"n"
+]
+},
+{
+"w": "参观",
+"level": 4,
+"lesson": 16,
+"pinyin": "cān guān",
+"gloss": "to look around; to tour; to visit",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "餐厅",
+"level": 4,
+"lesson": 13,
+"pinyin": "cān tīng"
+},
+{
+"w": "厕所",
+"level": 4,
+"lesson": 15,
+"pinyin": "cè suǒ"
+},
+{
+"w": "差不多",
+"level": 4,
+"lesson": 2,
+"pinyin": "chà bu duō",
+"gloss": "almost; nearly; more or less; about the same; good enough; not bad",
+"pos": [
+"l"
+]
+},
+{
+"w": "长城",
+"level": 4,
+"lesson": 17,
+"pinyin": "Cháng chéng",
+"gloss": "the Great Wall",
+"pos": [
+"ns"
+]
+},
+{
+"w": "长江",
+"level": 4,
+"lesson": 20,
+"pinyin": "Cháng Jiāng",
+"gloss": "Yangtze River, or Chang Jiang",
+"pos": [
+"ns"
+]
+},
+{
+"w": "尝",
+"level": 4,
+"lesson": 6,
+"pinyin": "cháng",
+"gloss": "to taste; to try (food); to experience; (literary) ever; once",
+"pos": [
+"v"
+]
+},
+{
+"w": "场",
+"level": 4,
+"lesson": 19,
+"pinyin": "cháng",
+"gloss": "threshing floor; classifier for events and happenings: spell, episode, bout",
+"pos": [
+"qv",
+"g"
+]
+},
+{
+"w": "超过",
+"level": 4,
+"lesson": 7,
+"pinyin": "chāo guò",
+"gloss": "to surpass; to exceed; to outstrip",
+"pos": [
+"v"
+]
+},
+{
+"w": "成功",
+"level": 4,
+"lesson": 4,
+"pinyin": "Chéng gōng",
+"gloss": "Chenggong or Chengkung town in Taitung County 台东县, southeast Taiwan",
+"pos": [
+"a",
+"an",
+"ad"
+]
+},
+{
+"w": "成为",
+"level": 4,
+"lesson": 8,
+"pinyin": "chéng wéi",
+"gloss": "to become; to turn into",
+"pos": [
+"v"
+]
+},
+{
+"w": "诚实",
+"level": 4,
+"lesson": 3,
+"pinyin": "chéng shí",
+"gloss": "honest",
+"pos": [
+"a",
+"ad",
+"an"
+]
+},
+{
+"w": "乘坐",
+"level": 4,
+"lesson": 14,
+"pinyin": "chéng zuò",
+"gloss": "to ride (in a vehicle)",
+"pos": [
+"v"
+]
+},
+{
+"w": "吃惊",
+"level": 4,
+"lesson": 13,
+"pinyin": "chī jīng",
+"gloss": "to be startled; to be shocked; to be amazed",
+"pos": [
+"a"
+]
+},
+{
+"w": "重新",
+"level": 4,
+"lesson": 2,
+"pinyin": "chóng xīn",
+"gloss": "again; once more; re-",
+"pos": [
+"d"
+]
+},
+{
+"w": "抽烟",
+"level": 4,
+"lesson": 7,
+"pinyin": "chōu yān",
+"gloss": "to smoke (a cigarette, tobacco)",
+"pos": [
+"v"
+]
+},
+{
+"w": "出差",
+"level": 4,
+"lesson": 14,
+"pinyin": "chū chāi",
+"gloss": "to go on an official or business trip",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "出发",
+"level": 4,
+"lesson": 20,
+"pinyin": "chū fā",
+"gloss": "to set off; to start (on a journey)",
+"pos": [
+"v"
+]
+},
+{
+"w": "出生",
+"level": 4,
+"lesson": 19,
+"pinyin": "chū shēng",
+"gloss": "to be born",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "出现",
+"level": 4,
+"lesson": 7,
+"pinyin": "chū xiàn",
+"gloss": "to appear; to arise; to emerge; to show up",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "厨房",
+"level": 4,
+"lesson": 19,
+"pinyin": "chú fáng",
+"gloss": "kitchen",
+"pos": [
+"n"
+]
+},
+{
+"w": "传真",
+"level": 4,
+"lesson": 16,
+"pinyin": "chuán zhēn",
+"gloss": "fax; facsimile",
+"pos": [
+"n",
+"v"
+]
+},
+{
+"w": "窗户",
+"level": 4,
+"lesson": 7,
+"pinyin": "chuāng hu",
+"gloss": "window",
+"pos": [
+"n"
+]
+},
+{
+"w": "词语",
+"level": 4,
+"lesson": 11,
+"pinyin": "cí yǔ",
+"gloss": "word (general term including monosyllables through to short phrases); term (e.g. technical term); expression",
+"pos": [
+"n"
+]
+},
+{
+"w": "从来",
+"level": 4,
+"lesson": 1,
+"pinyin": "cóng lái",
+"gloss": "always; at all times; never (if used in negative sentence)",
+"pos": [
+"d"
+]
+},
+{
+"w": "粗心",
+"level": 4,
+"lesson": 15,
+"pinyin": "cū xīn",
+"gloss": "careless; thoughtless",
+"pos": [
+"a",
+"an"
+]
+},
+{
+"w": "存",
+"level": 4,
+"lesson": 20,
+"pinyin": "cún"
+},
+{
+"w": "错误",
+"level": 4,
+"lesson": 13,
+"pinyin": "cuò wù"
+},
+{
+"w": "答案",
+"level": 4,
+"lesson": 10,
+"pinyin": "dá àn",
+"gloss": "answer; solution",
+"pos": [
+"n"
+]
+},
+{
+"w": "打扮",
+"level": 4,
+"lesson": 20,
+"pinyin": "dǎ ban",
+"gloss": "to decorate; to dress; to make up; to adorn; manner of dressing; style of dress",
+"pos": [
+"v",
+"n"
+]
+},
+{
+"w": "打扰",
+"level": 4,
+"lesson": 6,
+"pinyin": "dǎ rǎo",
+"gloss": "to disturb; to bother; to trouble",
+"pos": [
+"v"
+]
+},
+{
+"w": "打印",
+"level": 4,
+"lesson": 19,
+"pinyin": "dǎ yìn",
+"gloss": "to affix a seal; to stamp; to print out (with a printer)",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "打招呼",
+"level": 4,
+"lesson": 19,
+"pinyin": "dǎ zhāo hū"
+},
+{
+"w": "打折",
+"level": 4,
+"lesson": 5,
+"pinyin": "dǎ zhé",
+"gloss": "to give a discount",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "打针",
+"level": 4,
+"lesson": 15,
+"pinyin": "dǎ zhēn",
+"gloss": "to give or have an injection",
+"pos": [
+"v"
+]
+},
+{
+"w": "大概",
+"level": 4,
+"lesson": 13,
+"pinyin": "dà gài",
+"gloss": "roughly; probably; rough; approximate; about; general idea",
+"pos": [
+"d",
+"n"
+]
+},
+{
+"w": "大使馆",
+"level": 4,
+"lesson": 8,
+"pinyin": "dà shǐ guǎn",
+"gloss": "embassy",
+"pos": [
+"n"
+]
+},
+{
+"w": "大约",
+"level": 4,
+"lesson": 13,
+"pinyin": "dà yuē",
+"gloss": "approximately; probably",
+"pos": [
+"d"
+]
+},
+{
+"w": "大夫",
+"level": 4,
+"lesson": 7,
+"pinyin": "dà fū",
+"gloss": "senior official (in imperial China)",
+"pos": [
+"n"
+]
+},
+{
+"w": "戴",
+"level": 4,
+"lesson": 19,
+"pinyin": "Dài",
+"gloss": "surname Dai",
+"pos": [
+"v",
+"nr"
+]
+},
+{
+"w": "当",
+"level": 4,
+"lesson": 2,
+"pinyin": "dāng",
+"gloss": "(onom.) dong; ding dong (bell)",
+"pos": [
+"p",
+"v"
+]
+},
+{
+"w": "当时",
+"level": 4,
+"lesson": 9,
+"pinyin": "dāng shí",
+"gloss": "then; at that time; while",
+"pos": [
+"t"
+]
+},
+{
+"w": "刀",
+"level": 4,
+"lesson": 19,
+"pinyin": "Dāo",
+"gloss": "surname Dao",
+"pos": [
+"n",
+"q"
+]
+},
+{
+"w": "导游",
+"level": 4,
+"lesson": 16,
+"pinyin": "dǎo yóu",
+"gloss": "tour guide; guidebook; to conduct a tour",
+"pos": [
+"n"
+]
+},
+{
+"w": "到处",
+"level": 4,
+"lesson": 8,
+"pinyin": "dào chù",
+"gloss": "everywhere",
+"pos": [
+"d"
+]
+},
+{
+"w": "到底",
+"level": 4,
+"lesson": 16,
+"pinyin": "dào dǐ",
+"gloss": "finally; in the end; when all is said and done; after all; to the end; to the last",
+"pos": [
+"d",
+"v"
+]
+},
+{
+"w": "倒",
+"level": 4,
+"lesson": 17,
+"pinyin": "dào"
+},
+{
+"w": "道歉",
+"level": 4,
+"lesson": 19,
+"pinyin": "dào qiàn",
+"gloss": "to apologize",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "得意",
+"level": 4,
+"lesson": 14,
+"pinyin": "dé yì",
+"gloss": "proud of oneself; pleased with oneself; complacent",
+"pos": [
+"a",
+"an"
+]
+},
+{
+"w": "登机牌",
+"level": 4,
+"lesson": 20,
+"pinyin": "dēng jī pái"
+},
+{
+"w": "低",
+"level": 4,
+"lesson": 10,
+"pinyin": "dī",
+"gloss": "low; beneath; to lower (one's head); to let droop; to hang down; to incline",
+"pos": [
+"a",
+"ad",
+"v"
+]
+},
+{
+"w": "底",
+"level": 4,
+"lesson": 17,
+"pinyin": "de",
+"gloss": "(equivalent to 的 as possessive particle)",
+"pos": [
+"f",
+"n"
+]
+},
+{
+"w": "地点",
+"level": 4,
+"lesson": 18,
+"pinyin": "dì diǎn"
+},
+{
+"w": "地球",
+"level": 4,
+"lesson": 14,
+"pinyin": "dì qiú",
+"gloss": "the earth",
+"pos": [
+"n"
+]
+},
+{
+"w": "地址",
+"level": 4,
+"lesson": 18,
+"pinyin": "dì zhǐ",
+"gloss": "address",
+"pos": [
+"n"
+]
+},
+{
+"w": "调查",
+"level": 4,
+"lesson": 4,
+"pinyin": "diào chá",
+"gloss": "investigation; inquiry; to investigate; to survey; survey; (opinion) poll",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "掉",
+"level": 4,
+"lesson": 7,
+"pinyin": "diào",
+"gloss": "to fall; to drop; to lag behind; to lose; to go missing; to reduce; fall (in prices); to lose (value, weight etc); to wa",
+"pos": [
+"v"
+]
+},
+{
+"w": "丢",
+"level": 4,
+"lesson": 14,
+"pinyin": "diū",
+"gloss": "to lose; to put aside; to throw",
+"pos": [
+"v"
+]
+},
+{
+"w": "动作",
+"level": 4,
+"lesson": 7,
+"pinyin": "dòng zuò",
+"gloss": "movement; motion; action; to act; to move",
+"pos": [
+"n",
+"v"
+]
+},
+{
+"w": "堵车",
+"level": 4,
+"lesson": 8,
+"pinyin": "dǔ chē",
+"gloss": "traffic jam; (of traffic) to get congested",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "肚子",
+"level": 4,
+"lesson": 7,
+"pinyin": "dù zi",
+"gloss": "belly; abdomen; stomach",
+"pos": [
+"n",
+"q"
+]
+},
+{
+"w": "短信",
+"level": 4,
+"lesson": 2,
+"pinyin": "duǎn xìn"
+},
+{
+"w": "对话",
+"level": 4,
+"lesson": 20,
+"pinyin": "duì huà",
+"gloss": "to talk (with sb); dialogue; conversation",
+"pos": [
+"vn",
+"v"
+]
+},
+{
+"w": "对面",
+"level": 4,
+"lesson": 20,
+"pinyin": "duì miàn",
+"gloss": "(sitting) opposite; across (the street); directly in front; to be face to face",
+"pos": [
+"f",
+"n",
+"v"
+]
+},
+{
+"w": "对于",
+"level": 4,
+"lesson": 12,
+"pinyin": "duì yú"
+},
+{
+"w": "儿童",
+"level": 4,
+"lesson": 15,
+"pinyin": "ér tóng",
+"gloss": "child",
+"pos": [
+"n"
+]
+},
+{
+"w": "而",
+"level": 4,
+"lesson": 2,
+"pinyin": "ér",
+"gloss": "and; as well as; and so; but (not); yet (not); (indicates causal relation); (indicates change of state); (indicates cont",
+"pos": [
+"cc",
+"u"
+]
+},
+{
+"w": "发生",
+"level": 4,
+"lesson": 8,
+"pinyin": "fā shēng",
+"gloss": "to happen; to occur; to take place; to break out",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "发展",
+"level": 4,
+"lesson": 10,
+"pinyin": "fā zhǎn",
+"gloss": "development; growth; to develop; to grow; to expand",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "法律",
+"level": 4,
+"lesson": 1,
+"pinyin": "fǎ lǜ",
+"gloss": "law",
+"pos": [
+"n"
+]
+},
+{
+"w": "翻译",
+"level": 4,
+"lesson": 10,
+"pinyin": "fān yì",
+"gloss": "to translate; to interpret; translator; interpreter; translation; interpretation",
+"pos": []
+},
+{
+"w": "烦恼",
+"level": 4,
+"lesson": 7,
+"pinyin": "fán nǎo",
+"gloss": "to be worried; to be distressed; worries",
+"pos": [
+"an",
+"a"
+]
+},
+{
+"w": "反对",
+"level": 4,
+"lesson": 7,
+"pinyin": "fǎn duì",
+"gloss": "to oppose; to be against; to object to",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "方法",
+"level": 4,
+"lesson": 4,
+"pinyin": "fāng fǎ",
+"gloss": "method; way; means",
+"pos": [
+"n"
+]
+},
+{
+"w": "方面",
+"level": 4,
+"lesson": 6,
+"pinyin": "fāng miàn",
+"gloss": "respect; aspect; field; side",
+"pos": [
+"n"
+]
+},
+{
+"w": "方向",
+"level": 4,
+"lesson": 10,
+"pinyin": "fāng xiàng",
+"gloss": "direction; orientation",
+"pos": [
+"n"
+]
+},
+{
+"w": "房东",
+"level": 4,
+"lesson": 19,
+"pinyin": "fáng dōng"
+},
+{
+"w": "放弃",
+"level": 4,
+"lesson": 9,
+"pinyin": "fàng qì",
+"gloss": "to renounce; to abandon; to give up",
+"pos": [
+"v"
+]
+},
+{
+"w": "放暑假",
+"level": 4,
+"lesson": 17,
+"pinyin": "fàng shǔ jià",
+"gloss": "to be on summer vacation",
+"pos": []
+},
+{
+"w": "放松",
+"level": 4,
+"lesson": 8,
+"pinyin": "fàng sōng"
+},
+{
+"w": "份",
+"level": 4,
+"lesson": 4,
+"pinyin": "fèn",
+"gloss": "classifier for gifts, newspaper, magazine, papers, reports, contracts etc; variant of 分",
+"pos": [
+"q"
+]
+},
+{
+"w": "丰富",
+"level": 4,
+"lesson": 2,
+"pinyin": "fēng fù",
+"gloss": "to enrich; rich; plentiful; abundant",
+"pos": [
+"a",
+"v"
+]
+},
+{
+"w": "否则",
+"level": 4,
+"lesson": 11,
+"pinyin": "fǒu zé",
+"gloss": "otherwise; if not; or (else)",
+"pos": [
+"c"
+]
+},
+{
+"w": "符合",
+"level": 4,
+"lesson": 3,
+"pinyin": "fú hé",
+"gloss": "in keeping with; in accordance with; tallying with; in line with; to agree with; to accord with; to conform to; to corre",
+"pos": [
+"v"
+]
+},
+{
+"w": "父亲",
+"level": 4,
+"lesson": 15,
+"pinyin": "fù qīn",
+"gloss": "father; also pr. [fù qin]",
+"pos": [
+"n"
+]
+},
+{
+"w": "付款",
+"level": 4,
+"lesson": 18,
+"pinyin": "fù kuǎn"
+},
+{
+"w": "负责",
+"level": 4,
+"lesson": 3,
+"pinyin": "fù zé",
+"gloss": "to be in charge of; to take responsibility for; to be to blame; conscientious",
+"pos": [
+"v",
+"vn",
+"a"
+]
+},
+{
+"w": "复印",
+"level": 4,
+"lesson": 19,
+"pinyin": "fù yìn",
+"gloss": "to photocopy; to duplicate a document",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "复杂",
+"level": 4,
+"lesson": 11,
+"pinyin": "fù zá",
+"gloss": "complicated; complex",
+"pos": [
+"a"
+]
+},
+{
+"w": "富",
+"level": 4,
+"lesson": 10,
+"pinyin": "Fù",
+"gloss": "surname Fu",
+"pos": [
+"g",
+"a"
+]
+},
+{
+"w": "改变",
+"level": 4,
+"lesson": 3,
+"pinyin": "gǎi biàn",
+"gloss": "to change; to alter; to transform",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "干杯",
+"level": 4,
+"lesson": 20,
+"pinyin": "gān bēi",
+"gloss": "to drink a toast; Cheers! (proposing a toast); Here's to you!; Bottoms up!; lit. dry cup",
+"pos": [
+"v"
+]
+},
+{
+"w": "赶",
+"level": 4,
+"lesson": 15,
+"pinyin": "gǎn"
+},
+{
+"w": "敢",
+"level": 4,
+"lesson": 16,
+"pinyin": "gǎn",
+"gloss": "to dare; daring; (polite) may I venture",
+"pos": [
+"v",
+"g"
+]
+},
+{
+"w": "感动",
+"level": 4,
+"lesson": 1,
+"pinyin": "gǎn dòng",
+"gloss": "to move (sb); to touch (sb emotionally); moving",
+"pos": [
+"v",
+"a",
+"vn",
+"an"
+]
+},
+{
+"w": "感觉",
+"level": 4,
+"lesson": 3,
+"pinyin": "gǎn jué",
+"gloss": "feeling; impression; sensation; to feel; to perceive",
+"pos": [
+"n",
+"v"
+]
+},
+{
+"w": "感情",
+"level": 4,
+"lesson": 7,
+"pinyin": "gǎn qíng",
+"gloss": "emotion; sentiment; affection; feelings between two persons",
+"pos": [
+"n"
+]
+},
+{
+"w": "感谢",
+"level": 4,
+"lesson": 4,
+"pinyin": "gǎn xiè",
+"gloss": "(express) thanks; gratitude; grateful; thankful; thanks",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "干",
+"level": 4,
+"lesson": 17,
+"pinyin": "gān",
+"gloss": "old variant of 干",
+"pos": [
+"v",
+"a"
+]
+},
+{
+"w": "刚",
+"level": 4,
+"lesson": 1,
+"pinyin": "gāng"
+},
+{
+"w": "高速公路",
+"level": 4,
+"lesson": 20,
+"pinyin": "gāo sù gōng lù"
+},
+{
+"w": "胳膊",
+"level": 4,
+"lesson": 19,
+"pinyin": "gē bó"
+},
+{
+"w": "各",
+"level": 4,
+"lesson": 6,
+"pinyin": "gè",
+"gloss": "each; every",
+"pos": [
+"r"
+]
+},
+{
+"w": "工资",
+"level": 4,
+"lesson": 4,
+"pinyin": "gōng zī",
+"gloss": "wages; pay",
+"pos": [
+"n"
+]
+},
+{
+"w": "公里",
+"level": 4,
+"lesson": 17,
+"pinyin": "gōng lǐ",
+"gloss": "kilometer",
+"pos": [
+"q",
+"n"
+]
+},
+{
+"w": "功夫",
+"level": 4,
+"lesson": 19,
+"pinyin": "gōng fu"
+},
+{
+"w": "共同",
+"level": 4,
+"lesson": 1,
+"pinyin": "gòng tóng",
+"gloss": "common; joint; jointly; together; collaborative",
+"pos": [
+"d",
+"b"
+]
+},
+{
+"w": "购物",
+"level": 4,
+"lesson": 5,
+"pinyin": "gòu wù",
+"gloss": "shopping",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "够",
+"level": 4,
+"lesson": 1,
+"pinyin": "gòu",
+"gloss": "enough (sufficient); enough (too much); (coll.) (before adj.) really; (coll.) to reach by stretching out",
+"pos": [
+"v",
+"d"
+]
+},
+{
+"w": "估计",
+"level": 4,
+"lesson": 7,
+"pinyin": "gū jì",
+"gloss": "to estimate; to reckon; (coll.) to suppose",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "鼓励",
+"level": 4,
+"lesson": 14,
+"pinyin": "gǔ lì",
+"gloss": "to encourage",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "故意",
+"level": 4,
+"lesson": 15,
+"pinyin": "gù yì",
+"gloss": "deliberately; on purpose",
+"pos": [
+"d",
+"b"
+]
+},
+{
+"w": "顾客",
+"level": 4,
+"lesson": 3,
+"pinyin": "gù kè",
+"gloss": "customer; client",
+"pos": [
+"n"
+]
+},
+{
+"w": "挂",
+"level": 4,
+"lesson": 16,
+"pinyin": "guà",
+"gloss": "to hang or suspend (from a hook etc); to hang up (the phone); (of a line) to be dead; to be worried or concerned; to mak",
+"pos": [
+"v",
+"q"
+]
+},
+{
+"w": "关键",
+"level": 4,
+"lesson": 10,
+"pinyin": "guān jiàn",
+"gloss": "crucial point; crux; key; crucial; pivotal",
+"pos": [
+"n",
+"a"
+]
+},
+{
+"w": "观众",
+"level": 4,
+"lesson": 13,
+"pinyin": "guān zhòng",
+"gloss": "spectators; audience; visitors (to an exhibition etc)",
+"pos": [
+"n"
+]
+},
+{
+"w": "管理",
+"level": 4,
+"lesson": 15,
+"pinyin": "guǎn lǐ",
+"gloss": "to supervise; to manage; to administer; management; administration",
+"pos": [
+"vn",
+"v"
+]
+},
+{
+"w": "光",
+"level": 4,
+"lesson": 5,
+"pinyin": "guāng",
+"gloss": "light; ray; bright; shiny; only; merely; used up; finished; to leave (a part of the body) uncovered",
+"pos": [
+"n",
+"d",
+"v",
+"a"
+]
+},
+{
+"w": "广播",
+"level": 4,
+"lesson": 17,
+"pinyin": "guǎng bō",
+"gloss": "broadcast; broadcasting; to broadcast; (formal) to propagate; to publicize",
+"pos": [
+"vn",
+"n",
+"v"
+]
+},
+{
+"w": "广告",
+"level": 4,
+"lesson": 5,
+"pinyin": "guǎng gào",
+"gloss": "to advertise; a commercial; advertisement",
+"pos": [
+"n"
+]
+},
+{
+"w": "逛",
+"level": 4,
+"lesson": 2,
+"pinyin": "guàng",
+"gloss": "to stroll; to visit",
+"pos": [
+"v"
+]
+},
+{
+"w": "规定",
+"level": 4,
+"lesson": 12,
+"pinyin": "guī dìng",
+"gloss": "to stipulate; to specify; to prescribe; to fix (a price); to set (a quota); regulations; rules; provisions; stipulations",
+"pos": [
+"n",
+"v"
+]
+},
+{
+"w": "国籍",
+"level": 4,
+"lesson": 19,
+"pinyin": "guó jí"
+},
+{
+"w": "国际",
+"level": 4,
+"lesson": 9,
+"pinyin": "guó jì",
+"gloss": "international",
+"pos": [
+"n"
+]
+},
+{
+"w": "果汁",
+"level": 4,
+"lesson": 6,
+"pinyin": "guǒ zhī",
+"gloss": "fruit juice",
+"pos": [
+"n"
+]
+},
+{
+"w": "过程",
+"level": 4,
+"lesson": 9,
+"pinyin": "guò chéng",
+"gloss": "course of events; process",
+"pos": [
+"n"
+]
+},
+{
+"w": "海洋",
+"level": 4,
+"lesson": 17,
+"pinyin": "hǎi yáng",
+"gloss": "ocean",
+"pos": [
+"n"
+]
+},
+{
+"w": "害羞",
+"level": 4,
+"lesson": 15,
+"pinyin": "hài xiū",
+"gloss": "shy; embarrassed; bashful",
+"pos": [
+"a"
+]
+},
+{
+"w": "寒假",
+"level": 4,
+"lesson": 15,
+"pinyin": "hán jià",
+"gloss": "winter vacation",
+"pos": [
+"t"
+]
+},
+{
+"w": "汗",
+"level": 4,
+"lesson": 9,
+"pinyin": "hán",
+"gloss": "see 汗, 汗国",
+"pos": [
+"n"
+]
+},
+{
+"w": "航班",
+"level": 4,
+"lesson": 20,
+"pinyin": "háng bān",
+"gloss": "(scheduled) flight; (scheduled) sailing",
+"pos": [
+"n"
+]
+},
+{
+"w": "好处",
+"level": 4,
+"lesson": 6,
+"pinyin": "hǎo chǔ",
+"gloss": "easy to get along with",
+"pos": [
+"n"
+]
+},
+{
+"w": "好像",
+"level": 4,
+"lesson": 2,
+"pinyin": "hǎo xiàng",
+"gloss": "as if; to seem like",
+"pos": [
+"v"
+]
+},
+{
+"w": "号码",
+"level": 4,
+"lesson": 16,
+"pinyin": "hào mǎ",
+"gloss": "number",
+"pos": [
+"n"
+]
+},
+{
+"w": "合格",
+"level": 4,
+"lesson": 20,
+"pinyin": "hé gé",
+"gloss": "to meet the standard required; qualified; eligible (voter etc)",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "合适",
+"level": 4,
+"lesson": 15,
+"pinyin": "hé shì",
+"gloss": "suitable; fitting; appropriate",
+"pos": [
+"a"
+]
+},
+{
+"w": "盒子",
+"level": 4,
+"lesson": 14,
+"pinyin": "hé zi",
+"gloss": "box; case",
+"pos": [
+"n"
+]
+},
+{
+"w": "后悔",
+"level": 4,
+"lesson": 7,
+"pinyin": "hòu huǐ",
+"gloss": "to regret; to feel remorse",
+"pos": [
+"v",
+"vn",
+"a"
+]
+},
+{
+"w": "厚",
+"level": 4,
+"lesson": 13,
+"pinyin": "hòu",
+"gloss": "thick; deep or profound; kind; generous; rich or strong in flavor; to favor; to stress",
+"pos": [
+"a"
+]
+},
+{
+"w": "互联网",
+"level": 4,
+"lesson": 13,
+"pinyin": "hù lián wǎng"
+},
+{
+"w": "互相",
+"level": 4,
+"lesson": 1,
+"pinyin": "hù xiāng",
+"gloss": "each other; mutually; mutual",
+"pos": [
+"d",
+"b"
+]
+},
+{
+"w": "护士",
+"level": 4,
+"lesson": 15,
+"pinyin": "hù shi",
+"gloss": "nurse",
+"pos": [
+"n"
+]
+},
+{
+"w": "怀疑",
+"level": 4,
+"lesson": 15,
+"pinyin": "huái yí",
+"gloss": "to doubt (sth); to be skeptical of; to have one's doubts; to harbor suspicions; to suspect that",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "回忆",
+"level": 4,
+"lesson": 8,
+"pinyin": "huí yì",
+"gloss": "to recall; memories",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "活动",
+"level": 4,
+"lesson": 6,
+"pinyin": "huó dòng",
+"gloss": "to exercise; to move about; to operate; to use connections (personal influence); loose; shaky; active; movable; activity",
+"pos": [
+"vn",
+"v"
+]
+},
+{
+"w": "活泼",
+"level": 4,
+"lesson": 17,
+"pinyin": "huó po",
+"gloss": "lively; vivacious; brisk; active; (chemistry) reactive",
+"pos": [
+"a"
+]
+},
+{
+"w": "火",
+"level": 4,
+"lesson": 18,
+"pinyin": "Huǒ",
+"gloss": "surname Huo",
+"pos": [
+"n",
+"a",
+"v"
+]
+},
+{
+"w": "获得",
+"level": 4,
+"lesson": 6,
+"pinyin": "huò dé",
+"gloss": "to obtain; to receive; to get",
+"pos": [
+"v"
+]
+},
+{
+"w": "积极",
+"level": 4,
+"lesson": 8,
+"pinyin": "jī jí",
+"gloss": "active; energetic; vigorous; positive (outlook); proactive",
+"pos": [
+"a",
+"ad"
+]
+},
+{
+"w": "积累",
+"level": 4,
+"lesson": 4,
+"pinyin": "jī lěi",
+"gloss": "to accumulate; accumulation; cumulative; cumulatively",
+"pos": [
+"v",
+"vn",
+"n"
+]
+},
+{
+"w": "基础",
+"level": 4,
+"lesson": 13,
+"pinyin": "jī chǔ",
+"gloss": "base; foundation; basis; basic; fundamental",
+"pos": [
+"n"
+]
+},
+{
+"w": "激动",
+"level": 4,
+"lesson": 16,
+"pinyin": "jī dòng",
+"gloss": "to move emotionally; to stir up (emotions); to excite",
+"pos": [
+"a",
+"an"
+]
+},
+{
+"w": "及时",
+"level": 4,
+"lesson": 2,
+"pinyin": "jí shí",
+"gloss": "timely; at the right time; promptly; without delay",
+"pos": [
+"ad",
+"a"
+]
+},
+{
+"w": "即使",
+"level": 4,
+"lesson": 1,
+"pinyin": "jí shǐ",
+"gloss": "even if; even though",
+"pos": [
+"c"
+]
+},
+{
+"w": "计划",
+"level": 4,
+"lesson": 4,
+"pinyin": "jì huà",
+"gloss": "plan; project; program; to plan; to map out",
+"pos": [
+"n",
+"v"
+]
+},
+{
+"w": "记者",
+"level": 4,
+"lesson": 16,
+"pinyin": "jì zhě",
+"gloss": "reporter; journalist",
+"pos": [
+"n"
+]
+},
+{
+"w": "技术",
+"level": 4,
+"lesson": 18,
+"pinyin": "jì shù",
+"gloss": "technology; technique; skill",
+"pos": [
+"n"
+]
+},
+{
+"w": "既然",
+"level": 4,
+"lesson": 14,
+"pinyin": "jì rán",
+"gloss": "since; as; this being the case",
+"pos": [
+"c"
+]
+},
+{
+"w": "继续",
+"level": 4,
+"lesson": 13,
+"pinyin": "jì xù",
+"gloss": "to continue; to proceed with; to go on with",
+"pos": [
+"v"
+]
+},
+{
+"w": "寄",
+"level": 4,
+"lesson": 5,
+"pinyin": "jì",
+"gloss": "to send; to mail; to entrust; to depend on; to attach oneself to; to live (in a house); to lodge; foster (son etc)",
+"pos": [
+"v"
+]
+},
+{
+"w": "加班",
+"level": 4,
+"lesson": 1,
+"pinyin": "jiā bān",
+"gloss": "to work overtime",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "加油站",
+"level": 4,
+"lesson": 20,
+"pinyin": "jiā yóu zhàn",
+"gloss": "gas station",
+"pos": [
+"n"
+]
+},
+{
+"w": "家具",
+"level": 4,
+"lesson": 5,
+"pinyin": "jiā jù",
+"gloss": "furniture",
+"pos": [
+"n"
+]
+},
+{
+"w": "假",
+"level": 4,
+"lesson": 15,
+"pinyin": "gēi",
+"gloss": "used in 掰",
+"pos": [
+"a",
+"ad",
+"n",
+"g"
+]
+},
+{
+"w": "价格",
+"level": 4,
+"lesson": 5,
+"pinyin": "jià gé",
+"gloss": "price",
+"pos": [
+"n"
+]
+},
+{
+"w": "坚持",
+"level": 4,
+"lesson": 9,
+"pinyin": "jiān chí",
+"gloss": "to persevere with; to persist in; to insist on",
+"pos": [
+"v"
+]
+},
+{
+"w": "减肥",
+"level": 4,
+"lesson": 7,
+"pinyin": "jiǎn féi",
+"gloss": "to lose weight",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "减少",
+"level": 4,
+"lesson": 14,
+"pinyin": "jiǎn shǎo",
+"gloss": "to lessen; to decrease; to reduce; to lower",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "建议",
+"level": 4,
+"lesson": 10,
+"pinyin": "jiàn yì"
+},
+{
+"w": "将来",
+"level": 4,
+"lesson": 10,
+"pinyin": "jiāng lái",
+"gloss": "in the future; future; the future",
+"pos": [
+"t"
+]
+},
+{
+"w": "奖金",
+"level": 4,
+"lesson": 4,
+"pinyin": "jiǎng jīn",
+"gloss": "premium; award money; bonus",
+"pos": [
+"n"
+]
+},
+{
+"w": "降低",
+"level": 4,
+"lesson": 6,
+"pinyin": "jiàng dī",
+"gloss": "to reduce; to lower; to bring down",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "降落",
+"level": 4,
+"lesson": 18,
+"pinyin": "jiàng luò"
+},
+{
+"w": "交",
+"level": 4,
+"lesson": 2,
+"pinyin": "jiāo",
+"gloss": "to hand over; to deliver; to pay (money); to turn over; to make friends; to intersect (lines); variant of 跤",
+"pos": [
+"v",
+"g"
+]
+},
+{
+"w": "交流",
+"level": 4,
+"lesson": 2,
+"pinyin": "jiāo liú",
+"gloss": "to exchange; exchange; communication; interaction; to have social contact (with sb)",
+"pos": [
+"vn",
+"v"
+]
+},
+{
+"w": "交通",
+"level": 4,
+"lesson": 18,
+"pinyin": "jiāo tōng",
+"gloss": "to be connected; traffic; transportation; communications; liaison",
+"pos": [
+"n"
+]
+},
+{
+"w": "郊区",
+"level": 4,
+"lesson": 16,
+"pinyin": "jiāo qū"
+},
+{
+"w": "骄傲",
+"level": 4,
+"lesson": 15,
+"pinyin": "jiāo ào",
+"gloss": "pride; arrogance; conceited; proud of sth",
+"pos": [
+"an",
+"a"
+]
+},
+{
+"w": "饺子",
+"level": 4,
+"lesson": 19,
+"pinyin": "jiǎo zi",
+"gloss": "dumpling; pot-sticker",
+"pos": [
+"n"
+]
+},
+{
+"w": "教授",
+"level": 4,
+"lesson": 7,
+"pinyin": "jiào shòu",
+"gloss": "professor; to instruct; to lecture on",
+"pos": [
+"n",
+"v"
+]
+},
+{
+"w": "教育",
+"level": 4,
+"lesson": 12,
+"pinyin": "jiào yù",
+"gloss": "to educate; to teach; education",
+"pos": [
+"vn",
+"v"
+]
+},
+{
+"w": "接受",
+"level": 4,
+"lesson": 1,
+"pinyin": "jiē shòu",
+"gloss": "to accept; to receive",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "接着",
+"level": 4,
+"lesson": 18,
+"pinyin": "jiē zhe"
+},
+{
+"w": "节",
+"level": 4,
+"lesson": 12,
+"pinyin": "jié"
+},
+{
+"w": "节约",
+"level": 4,
+"lesson": 12,
+"pinyin": "jié yuē",
+"gloss": "to economize; to conserve (resources); economy; frugal",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "结果",
+"level": 4,
+"lesson": 9,
+"pinyin": "jiē guǒ",
+"gloss": "to bear fruit",
+"pos": [
+"n",
+"d"
+]
+},
+{
+"w": "解释",
+"level": 4,
+"lesson": 12,
+"pinyin": "jiě shì",
+"gloss": "explanation; to explain; to interpret; to resolve",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "尽管",
+"level": 4,
+"lesson": 2,
+"pinyin": "jǐn guǎn",
+"gloss": "despite; although; even though; in spite of; unhesitatingly; do not hesitate (to ask, complain etc); (go ahead and do it",
+"pos": [
+"c",
+"d"
+]
+},
+{
+"w": "紧张",
+"level": 4,
+"lesson": 3,
+"pinyin": "jǐn zhāng",
+"gloss": "nervous; keyed up; intense; tense; strained; in short supply; scarce",
+"pos": [
+"a",
+"ad",
+"an"
+]
+},
+{
+"w": "进行",
+"level": 4,
+"lesson": 13,
+"pinyin": "jìn xíng",
+"gloss": "to advance; to conduct; underway; in progress; to do; to carry out; to carry on; to execute",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "禁止",
+"level": 4,
+"lesson": 19,
+"pinyin": "jìn zhǐ",
+"gloss": "to prohibit; to forbid; to ban",
+"pos": [
+"v"
+]
+},
+{
+"w": "京剧",
+"level": 4,
+"lesson": 13,
+"pinyin": "Jīng jù",
+"gloss": "Beijing opera",
+"pos": [
+"n"
+]
+},
+{
+"w": "经济",
+"level": 4,
+"lesson": 10,
+"pinyin": "jīng jì",
+"gloss": "economy; economic",
+"pos": [
+"n"
+]
+},
+{
+"w": "经历",
+"level": 4,
+"lesson": 9,
+"pinyin": "jīng lì",
+"gloss": "experience; to experience; to go through",
+"pos": [
+"v",
+"n"
+]
+},
+{
+"w": "经验",
+"level": 4,
+"lesson": 4,
+"pinyin": "jīng yàn",
+"gloss": "experience; to experience",
+"pos": [
+"n",
+"v"
+]
+},
+{
+"w": "精彩",
+"level": 4,
+"lesson": 11,
+"pinyin": "jīng cǎi",
+"gloss": "wonderful; marvelous; brilliant",
+"pos": [
+"a"
+]
+},
+{
+"w": "景色",
+"level": 4,
+"lesson": 8,
+"pinyin": "jǐng sè"
+},
+{
+"w": "警察",
+"level": 4,
+"lesson": 18,
+"pinyin": "jǐng chá",
+"gloss": "police; police officer",
+"pos": [
+"n"
+]
+},
+{
+"w": "竞争",
+"level": 4,
+"lesson": 17,
+"pinyin": "jìng zhēng",
+"gloss": "to compete; competition",
+"pos": [
+"vn",
+"v"
+]
+},
+{
+"w": "竟然",
+"level": 4,
+"lesson": 6,
+"pinyin": "jìng rán",
+"gloss": "unexpectedly; to one's surprise; in spite of everything; in that crazy way; actually; to go as far as to",
+"pos": [
+"d"
+]
+},
+{
+"w": "镜子",
+"level": 4,
+"lesson": 2,
+"pinyin": "jìng zi",
+"gloss": "mirror",
+"pos": [
+"n"
+]
+},
+{
+"w": "究竟",
+"level": 4,
+"lesson": 20,
+"pinyin": "jiū jìng",
+"gloss": "to go to the bottom of a matter; after all; when all is said and done; (in an interrogative sentence) finally; outcome; ",
+"pos": [
+"d",
+"n"
+]
+},
+{
+"w": "举",
+"level": 4,
+"lesson": 18,
+"pinyin": "jǔ"
+},
+{
+"w": "举办",
+"level": 4,
+"lesson": 6,
+"pinyin": "jǔ bàn",
+"gloss": "to conduct; to hold",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "举行",
+"level": 4,
+"lesson": 6,
+"pinyin": "jǔ xíng",
+"gloss": "to hold (a meeting, ceremony etc)",
+"pos": [
+"v"
+]
+},
+{
+"w": "拒绝",
+"level": 4,
+"lesson": 14,
+"pinyin": "jù jué",
+"gloss": "to refuse; to decline; to reject",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "距离",
+"level": 4,
+"lesson": 8,
+"pinyin": "jù lí",
+"gloss": "distance; to be apart from",
+"pos": [
+"n",
+"p"
+]
+},
+{
+"w": "聚会",
+"level": 4,
+"lesson": 2,
+"pinyin": "jù huì"
+},
+{
+"w": "开玩笑",
+"level": 4,
+"lesson": 1,
+"pinyin": "kāi wán xiào",
+"gloss": "to play a joke; to make fun of; to joke",
+"pos": [
+"v"
+]
+},
+{
+"w": "开心",
+"level": 4,
+"lesson": 13,
+"pinyin": "kāi xīn"
+},
+{
+"w": "看法",
+"level": 4,
+"lesson": 11,
+"pinyin": "kàn fǎ",
+"gloss": "way of looking at a thing; view; opinion",
+"pos": [
+"n"
+]
+},
+{
+"w": "考虑",
+"level": 4,
+"lesson": 5,
+"pinyin": "kǎo lǜ",
+"gloss": "to think over; to consider; consideration",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "烤鸭",
+"level": 4,
+"lesson": 20,
+"pinyin": "kǎo yā"
+},
+{
+"w": "科学",
+"level": 4,
+"lesson": 8,
+"pinyin": "kē xué",
+"gloss": "science; scientific knowledge; scientific; rational",
+"pos": [
+"n",
+"a",
+"ad"
+]
+},
+{
+"w": "棵",
+"level": 4,
+"lesson": 20,
+"pinyin": "kē",
+"gloss": "classifier for trees, cabbages, plants etc",
+"pos": [
+"q"
+]
+},
+{
+"w": "咳嗽",
+"level": 4,
+"lesson": 7,
+"pinyin": "ké sou",
+"gloss": "to cough",
+"pos": [
+"v"
+]
+},
+{
+"w": "可怜",
+"level": 4,
+"lesson": 20,
+"pinyin": "kě lián",
+"gloss": "pitiful; pathetic; to have pity on",
+"pos": [
+"v",
+"a",
+"vn"
+]
+},
+{
+"w": "可是",
+"level": 4,
+"lesson": 9,
+"pinyin": "kě shì",
+"gloss": "but; however; (used for emphasis) indeed",
+"pos": [
+"c",
+"d",
+"v"
+]
+},
+{
+"w": "可惜",
+"level": 4,
+"lesson": 12,
+"pinyin": "kě xī",
+"gloss": "it is a pity; what a pity; unfortunately",
+"pos": [
+"v",
+"a"
+]
+},
+{
+"w": "客厅",
+"level": 4,
+"lesson": 11,
+"pinyin": "kè tīng"
+},
+{
+"w": "肯定",
+"level": 4,
+"lesson": 5,
+"pinyin": "kěn dìng",
+"gloss": "to be certain; to be positive; assuredly; definitely; to give recognition; to affirm; affirmative (answer)",
+"pos": [
+"d",
+"v",
+"vn",
+"a"
+]
+},
+{
+"w": "空",
+"level": 4,
+"lesson": 14,
+"pinyin": "kōng"
+},
+{
+"w": "空气",
+"level": 4,
+"lesson": 7,
+"pinyin": "kōng qì",
+"gloss": "air; atmosphere",
+"pos": [
+"n"
+]
+},
+{
+"w": "恐怕",
+"level": 4,
+"lesson": 16,
+"pinyin": "kǒng pà",
+"gloss": "fear; to dread; I'm afraid that...; perhaps; maybe",
+"pos": [
+"d"
+]
+},
+{
+"w": "苦",
+"level": 4,
+"lesson": 13,
+"pinyin": "kǔ",
+"gloss": "bitter; hardship; pain; to suffer; to bring suffering to; painstakingly",
+"pos": [
+"a",
+"an",
+"ad",
+"v"
+]
+},
+{
+"w": "矿泉水",
+"level": 4,
+"lesson": 18,
+"pinyin": "kuàng quán shuǐ"
+},
+{
+"w": "困",
+"level": 4,
+"lesson": 10,
+"pinyin": "kùn",
+"gloss": "to trap; to surround; hard-pressed; stranded; destitute",
+"pos": [
+"v",
+"an",
+"a",
+"vn"
+]
+},
+{
+"w": "困难",
+"level": 4,
+"lesson": 2,
+"pinyin": "kùn nan",
+"gloss": "difficult; challenging; straitened circumstances; difficult situation",
+"pos": [
+"a",
+"an"
+]
+},
+{
+"w": "垃圾桶",
+"level": 4,
+"lesson": 14,
+"pinyin": "lā jī tǒng",
+"gloss": "rubbish bin; trash can; garbage can; Taiwan pr. [lè sè tǒng]",
+"pos": [
+"n"
+]
+},
+{
+"w": "拉",
+"level": 4,
+"lesson": 10,
+"pinyin": "lā",
+"gloss": "to pull; to play (a bowed instrument); to drag; to draw; to chat; (coll.) to empty one's bowels",
+"pos": [
+"v",
+"b"
+]
+},
+{
+"w": "辣",
+"level": 4,
+"lesson": 20,
+"pinyin": "là",
+"gloss": "old variant of 辣",
+"pos": [
+"a",
+"an",
+"v"
+]
+},
+{
+"w": "来不及",
+"level": 4,
+"lesson": 7,
+"pinyin": "lái bu jí",
+"gloss": "there's not enough time (to do sth); it's too late (to do sth)",
+"pos": [
+"v"
+]
+},
+{
+"w": "来得及",
+"level": 4,
+"lesson": 11,
+"pinyin": "lái de jí",
+"gloss": "to have enough time; can do it in time; can still make it",
+"pos": [
+"v"
+]
+},
+{
+"w": "来自",
+"level": 4,
+"lesson": 13,
+"pinyin": "lái zì"
+},
+{
+"w": "懒",
+"level": 4,
+"lesson": 15,
+"pinyin": "lǎn",
+"gloss": "variant of 懒",
+"pos": [
+"a"
+]
+},
+{
+"w": "浪费",
+"level": 4,
+"lesson": 5,
+"pinyin": "làng fèi",
+"gloss": "to waste; to squander",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "浪漫",
+"level": 4,
+"lesson": 1,
+"pinyin": "làng màn",
+"gloss": "romantic",
+"pos": [
+"a",
+"an"
+]
+},
+{
+"w": "老虎",
+"level": 4,
+"lesson": 17,
+"pinyin": "lǎo hǔ",
+"gloss": "tiger",
+"pos": [
+"n"
+]
+},
+{
+"w": "冷静",
+"level": 4,
+"lesson": 16,
+"pinyin": "lěng jìng",
+"gloss": "calm; cool-headed; dispassionate; (of a place) deserted; quiet",
+"pos": [
+"a",
+"ad",
+"an"
+]
+},
+{
+"w": "礼拜天",
+"level": 4,
+"lesson": 10,
+"pinyin": "lǐ bài tiān"
+},
+{
+"w": "礼貌",
+"level": 4,
+"lesson": 16,
+"pinyin": "lǐ mào",
+"gloss": "courtesy; politeness; manners; courteous; polite",
+"pos": [
+"an",
+"a",
+"ad"
+]
+},
+{
+"w": "理发",
+"level": 4,
+"lesson": 19,
+"pinyin": "lǐ fà",
+"gloss": "to get a haircut; to have one's hair done; to cut (sb's) hair; to give (sb) a haircut",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "理解",
+"level": 4,
+"lesson": 2,
+"pinyin": "lǐ jiě",
+"gloss": "to comprehend; to understand",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "理想",
+"level": 4,
+"lesson": 9,
+"pinyin": "lǐ xiǎng",
+"gloss": "an ideal; a dream; ideal; perfect",
+"pos": [
+"n",
+"a"
+]
+},
+{
+"w": "力气",
+"level": 4,
+"lesson": 12,
+"pinyin": "lì qi",
+"gloss": "strength",
+"pos": [
+"n"
+]
+},
+{
+"w": "厉害",
+"level": 4,
+"lesson": 11,
+"pinyin": "lì hai",
+"gloss": "(used to describe sb or sth that makes a very strong impression, whether favorable or unfavorable) terrible; intense; se",
+"pos": [
+"a",
+"an"
+]
+},
+{
+"w": "例如",
+"level": 4,
+"lesson": 6,
+"pinyin": "lì rú",
+"gloss": "for example; for instance; such as",
+"pos": [
+"v"
+]
+},
+{
+"w": "俩",
+"level": 4,
+"lesson": 1,
+"pinyin": "liǎ",
+"gloss": "two (colloquial equivalent of 两个); both; some",
+"pos": [
+"m"
+]
+},
+{
+"w": "连",
+"level": 4,
+"lesson": 11,
+"pinyin": "Lián",
+"gloss": "surname Lian",
+"pos": [
+"u",
+"d",
+"v",
+"n"
+]
+},
+{
+"w": "联系",
+"level": 4,
+"lesson": 2,
+"pinyin": "lián xì",
+"gloss": "variant of 联系",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "凉快",
+"level": 4,
+"lesson": 17,
+"pinyin": "liáng kuai",
+"gloss": "nice and cold; pleasantly cool",
+"pos": [
+"a"
+]
+},
+{
+"w": "零钱",
+"level": 4,
+"lesson": 19,
+"pinyin": "líng qián"
+},
+{
+"w": "另外",
+"level": 4,
+"lesson": 3,
+"pinyin": "lìng wài",
+"gloss": "additional; in addition; besides; separate; other; moreover; furthermore",
+"pos": [
+"r",
+"c",
+"d"
+]
+},
+{
+"w": "留",
+"level": 4,
+"lesson": 3,
+"pinyin": "liú",
+"gloss": "old variant of 留",
+"pos": [
+"v"
+]
+},
+{
+"w": "流利",
+"level": 4,
+"lesson": 11,
+"pinyin": "liú lì",
+"gloss": "fluent",
+"pos": [
+"a",
+"ad"
+]
+},
+{
+"w": "流行",
+"level": 4,
+"lesson": 5,
+"pinyin": "liú xíng",
+"gloss": "(of a contagious disease etc) to spread; to propagate; (of a style of clothing, song etc) popular; fashionable",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "旅行",
+"level": 4,
+"lesson": 20,
+"pinyin": "lǚ xíng"
+},
+{
+"w": "律师",
+"level": 4,
+"lesson": 3,
+"pinyin": "lǜ shī",
+"gloss": "lawyer",
+"pos": [
+"n"
+]
+},
+{
+"w": "乱",
+"level": 4,
+"lesson": 4,
+"pinyin": "luàn",
+"gloss": "in confusion or disorder; in a confused state of mind; disorder; upheaval; riot; illicit sexual relations; to throw into",
+"pos": [
+"d",
+"a",
+"v"
+]
+},
+{
+"w": "麻烦",
+"level": 4,
+"lesson": 2,
+"pinyin": "má fan",
+"gloss": "trouble; inconvenience; inconvenient; troublesome; annoying; to bother sb; to put sb to trouble",
+"pos": [
+"an",
+"a",
+"v",
+"n"
+]
+},
+{
+"w": "马虎",
+"level": 4,
+"lesson": 16,
+"pinyin": "mǎ hu",
+"gloss": "careless; sloppy; negligent; skimpy",
+"pos": [
+"a",
+"an"
+]
+},
+{
+"w": "满",
+"level": 4,
+"lesson": 6,
+"pinyin": "Mǎn",
+"gloss": "Manchu ethnic group",
+"pos": [
+"a",
+"v",
+"d",
+"b"
+]
+},
+{
+"w": "毛",
+"level": 4,
+"lesson": 17,
+"pinyin": "máo"
+},
+{
+"w": "毛巾",
+"level": 4,
+"lesson": 14,
+"pinyin": "máo jīn",
+"gloss": "towel",
+"pos": [
+"n"
+]
+},
+{
+"w": "美丽",
+"level": 4,
+"lesson": 14,
+"pinyin": "měi lì",
+"gloss": "beautiful",
+"pos": [
+"a",
+"an"
+]
+},
+{
+"w": "梦",
+"level": 4,
+"lesson": 17,
+"pinyin": "mèng",
+"gloss": "dream; (bound form) to dream",
+"pos": [
+"n",
+"g"
+]
+},
+{
+"w": "迷路",
+"level": 4,
+"lesson": 18,
+"pinyin": "mí lù"
+},
+{
+"w": "密码",
+"level": 4,
+"lesson": 18,
+"pinyin": "mì mǎ",
+"gloss": "cipher; secret code; password; PIN",
+"pos": [
+"n"
+]
+},
+{
+"w": "免费",
+"level": 4,
+"lesson": 6,
+"pinyin": "miǎn fèi",
+"gloss": "free (of charge)",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "秒",
+"level": 4,
+"lesson": 18,
+"pinyin": "miǎo"
+},
+{
+"w": "民族",
+"level": 4,
+"lesson": 20,
+"pinyin": "mín zú",
+"gloss": "nationality; ethnic group",
+"pos": [
+"n"
+]
+},
+{
+"w": "母亲",
+"level": 4,
+"lesson": 10,
+"pinyin": "mǔ qīn",
+"gloss": "mother; also pr. [mǔ qin]",
+"pos": [
+"n"
+]
+},
+{
+"w": "目的",
+"level": 4,
+"lesson": 14,
+"pinyin": "mù dì",
+"gloss": "purpose; aim; goal; target; objective",
+"pos": [
+"n"
+]
+},
+{
+"w": "耐心",
+"level": 4,
+"lesson": 8,
+"pinyin": "nài xīn",
+"gloss": "to be patient; patience",
+"pos": [
+"a",
+"ad",
+"an"
+]
+},
+{
+"w": "难道",
+"level": 4,
+"lesson": 9,
+"pinyin": "nán dào",
+"gloss": "don't tell me ...; could it be that...?",
+"pos": [
+"d"
+]
+},
+{
+"w": "难受",
+"level": 4,
+"lesson": 17,
+"pinyin": "nán shòu",
+"gloss": "to feel unwell; to suffer pain; to be difficult to bear",
+"pos": [
+"a"
+]
+},
+{
+"w": "内",
+"level": 4,
+"lesson": 6,
+"pinyin": "nèi",
+"gloss": "inside; inner; internal; within; interior",
+"pos": [
+"f"
+]
+},
+{
+"w": "内容",
+"level": 4,
+"lesson": 11,
+"pinyin": "nèi róng",
+"gloss": "content; substance; details",
+"pos": [
+"n"
+]
+},
+{
+"w": "能力",
+"level": 4,
+"lesson": 3,
+"pinyin": "néng lì",
+"gloss": "capability; ability",
+"pos": [
+"n"
+]
+},
+{
+"w": "年龄",
+"level": 4,
+"lesson": 5,
+"pinyin": "nián líng",
+"gloss": "(a person's) age",
+"pos": [
+"n"
+]
+},
+{
+"w": "弄",
+"level": 4,
+"lesson": 15,
+"pinyin": "lòng",
+"gloss": "lane; alley",
+"pos": [
+"v"
+]
+},
+{
+"w": "暖和",
+"level": 4,
+"lesson": 17,
+"pinyin": "nuǎn huo",
+"gloss": "warm; nice and warm",
+"pos": [
+"a",
+"v"
+]
+},
+{
+"w": "偶尔",
+"level": 4,
+"lesson": 13,
+"pinyin": "ǒu ěr",
+"gloss": "occasionally; once in a while; sometimes",
+"pos": [
+"d",
+"b"
+]
+},
+{
+"w": "排队",
+"level": 4,
+"lesson": 17,
+"pinyin": "pái duì"
+},
+{
+"w": "排列",
+"level": 4,
+"lesson": 17,
+"pinyin": "pái liè",
+"gloss": "to arrange in order; (math.) permutation",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "判断",
+"level": 4,
+"lesson": 3,
+"pinyin": "pàn duàn",
+"gloss": "to judge; to determine; judgment",
+"pos": [
+"v",
+"vn",
+"n"
+]
+},
+{
+"w": "陪",
+"level": 4,
+"lesson": 2,
+"pinyin": "péi",
+"gloss": "to accompany; to keep sb company; to assist; old variant of 赔",
+"pos": [
+"v"
+]
+},
+{
+"w": "批评",
+"level": 4,
+"lesson": 15,
+"pinyin": "pī píng",
+"gloss": "to criticize; criticism",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "皮肤",
+"level": 4,
+"lesson": 6,
+"pinyin": "pí fū",
+"gloss": "skin",
+"pos": [
+"n"
+]
+},
+{
+"w": "脾气",
+"level": 4,
+"lesson": 1,
+"pinyin": "pí qi",
+"gloss": "character; temperament; disposition; bad temper",
+"pos": [
+"n"
+]
+},
+{
+"w": "篇",
+"level": 4,
+"lesson": 9,
+"pinyin": "piān",
+"gloss": "sheet; piece of writing; bound set of bamboo slips used for record keeping (old); classifier for written items: chapter,",
+"pos": [
+"q",
+"g"
+]
+},
+{
+"w": "骗",
+"level": 4,
+"lesson": 15,
+"pinyin": "piàn",
+"gloss": "to cheat; to swindle; to deceive; to get on (a horse etc) by swinging one leg over",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "乒乓球",
+"level": 4,
+"lesson": 19,
+"pinyin": "pīng pāng qiú",
+"gloss": "table tennis; ping-pong; table tennis ball",
+"pos": [
+"n"
+]
+},
+{
+"w": "平时",
+"level": 4,
+"lesson": 2,
+"pinyin": "píng shí",
+"gloss": "ordinarily; in normal times; in peacetime",
+"pos": [
+"t"
+]
+},
+{
+"w": "破",
+"level": 4,
+"lesson": 19,
+"pinyin": "pò",
+"gloss": "broken; damaged; worn out; lousy; rotten; to break, split or cleave; to get rid of; to destroy; to break with; to defeat",
+"pos": [
+"v",
+"a"
+]
+},
+{
+"w": "葡萄",
+"level": 4,
+"lesson": 5,
+"pinyin": "pú tao",
+"gloss": "grape",
+"pos": [
+"n"
+]
+},
+{
+"w": "普遍",
+"level": 4,
+"lesson": 13,
+"pinyin": "pǔ biàn",
+"gloss": "universal; general; widespread; common",
+"pos": [
+"a",
+"ad"
+]
+},
+{
+"w": "普通话",
+"level": 4,
+"lesson": 20,
+"pinyin": "pǔ tōng huà",
+"gloss": "Mandarin (common language); Putonghua (common speech of the Chinese language); ordinary speech",
+"pos": [
+"n"
+]
+},
+{
+"w": "其次",
+"level": 4,
+"lesson": 3,
+"pinyin": "qí cì",
+"gloss": "next; secondly",
+"pos": [
+"c",
+"r"
+]
+},
+{
+"w": "其中",
+"level": 4,
+"lesson": 6,
+"pinyin": "qí zhōng",
+"gloss": "among; in; included among these",
+"pos": [
+"r"
+]
+},
+{
+"w": "气候",
+"level": 4,
+"lesson": 7,
+"pinyin": "qì hòu",
+"gloss": "(meteorology) climate; (fig.) climate; prevailing conditions (in human affairs)",
+"pos": [
+"n"
+]
+},
+{
+"w": "千万",
+"level": 4,
+"lesson": 15,
+"pinyin": "qiān wàn",
+"gloss": "ten million; countless; many; one must by all means",
+"pos": [
+"m",
+"t"
+]
+},
+{
+"w": "签证",
+"level": 4,
+"lesson": 16,
+"pinyin": "qiān zhèng",
+"gloss": "visa; to issue a visa",
+"pos": [
+"n"
+]
+},
+{
+"w": "敲",
+"level": 4,
+"lesson": 15,
+"pinyin": "qiāo",
+"gloss": "to hit; to strike; to tap; to rap; to knock; to rip sb off; to overcharge",
+"pos": [
+"v"
+]
+},
+{
+"w": "桥",
+"level": 4,
+"lesson": 18,
+"pinyin": "qiáo",
+"gloss": "bridge",
+"pos": [
+"n"
+]
+},
+{
+"w": "巧克力",
+"level": 4,
+"lesson": 8,
+"pinyin": "qiǎo kè lì",
+"gloss": "chocolate (loanword)",
+"pos": [
+"n"
+]
+},
+{
+"w": "亲戚",
+"level": 4,
+"lesson": 8,
+"pinyin": "qīn qi",
+"gloss": "a relative (i.e. family relation)",
+"pos": [
+"n"
+]
+},
+{
+"w": "轻",
+"level": 4,
+"lesson": 6,
+"pinyin": "qīng",
+"gloss": "light; easy; gentle; soft; reckless; unimportant; frivolous; small in number; unstressed; neutral; to disparage",
+"pos": [
+"a",
+"ad",
+"v",
+"g"
+]
+},
+{
+"w": "轻松",
+"level": 4,
+"lesson": 9,
+"pinyin": "qīng sōng",
+"gloss": "light; gentle; relaxed; effortless; uncomplicated; to relax; to take things less seriously",
+"pos": [
+"a",
+"ad"
+]
+},
+{
+"w": "情况",
+"level": 4,
+"lesson": 6,
+"pinyin": "qíng kuàng",
+"gloss": "circumstances; state of affairs; situation",
+"pos": [
+"n"
+]
+},
+{
+"w": "穷",
+"level": 4,
+"lesson": 10,
+"pinyin": "qióng",
+"gloss": "poor; destitute; to use up; to exhaust; thoroughly; extremely; (coll.) persistently and pointlessly",
+"pos": [
+"a",
+"d",
+"g"
+]
+},
+{
+"w": "区别",
+"level": 4,
+"lesson": 9,
+"pinyin": "qū bié",
+"gloss": "difference; to distinguish; to discriminate; to make a distinction",
+"pos": [
+"n",
+"v"
+]
+},
+{
+"w": "取",
+"level": 4,
+"lesson": 9,
+"pinyin": "qǔ",
+"gloss": "to take; to get; to choose; to fetch",
+"pos": [
+"v"
+]
+},
+{
+"w": "全部",
+"level": 4,
+"lesson": 12,
+"pinyin": "quán bù",
+"gloss": "whole; all",
+"pos": [
+"m"
+]
+},
+{
+"w": "缺点",
+"level": 4,
+"lesson": 1,
+"pinyin": "quē diǎn",
+"gloss": "weak point; fault; shortcoming; disadvantage",
+"pos": [
+"n"
+]
+},
+{
+"w": "缺少",
+"level": 4,
+"lesson": 8,
+"pinyin": "quē shǎo",
+"gloss": "lack; shortage of; shortfall; to be short (of); to lack",
+"pos": [
+"v"
+]
+},
+{
+"w": "却",
+"level": 4,
+"lesson": 2,
+"pinyin": "què",
+"gloss": "old variant of 却",
+"pos": [
+"d"
+]
+},
+{
+"w": "确实",
+"level": 4,
+"lesson": 10,
+"pinyin": "què shí",
+"gloss": "indeed; really; reliable; real; true",
+"pos": [
+"ad",
+"a",
+"d"
+]
+},
+{
+"w": "然而",
+"level": 4,
+"lesson": 11,
+"pinyin": "rán ér",
+"gloss": "however; yet; but",
+"pos": [
+"c"
+]
+},
+{
+"w": "热闹",
+"level": 4,
+"lesson": 17,
+"pinyin": "rè nao",
+"gloss": "bustling with noise and excitement; lively",
+"pos": [
+"a"
+]
+},
+{
+"w": "任何",
+"level": 4,
+"lesson": 5,
+"pinyin": "rèn hé",
+"gloss": "any; whatever; whichever; whatsoever",
+"pos": [
+"r"
+]
+},
+{
+"w": "任务",
+"level": 4,
+"lesson": 12,
+"pinyin": "rèn wu",
+"gloss": "mission; assignment; task; duty; role",
+"pos": [
+"n"
+]
+},
+{
+"w": "扔",
+"level": 4,
+"lesson": 14,
+"pinyin": "rēng",
+"gloss": "to throw; to throw away",
+"pos": [
+"v"
+]
+},
+{
+"w": "仍然",
+"level": 4,
+"lesson": 17,
+"pinyin": "réng rán",
+"gloss": "still; as before; yet",
+"pos": [
+"d"
+]
+},
+{
+"w": "日记",
+"level": 4,
+"lesson": 18,
+"pinyin": "rì jì",
+"gloss": "diary",
+"pos": [
+"n"
+]
+},
+{
+"w": "入口",
+"level": 4,
+"lesson": 17,
+"pinyin": "rù kǒu",
+"gloss": "entrance; to import",
+"pos": [
+"n",
+"v"
+]
+},
+{
+"w": "散步",
+"level": 4,
+"lesson": 7,
+"pinyin": "sàn bù",
+"gloss": "to take a walk; to go for a walk",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "森林",
+"level": 4,
+"lesson": 17,
+"pinyin": "sēn lín",
+"gloss": "forest",
+"pos": [
+"n"
+]
+},
+{
+"w": "沙发",
+"level": 4,
+"lesson": 5,
+"pinyin": "shā fā",
+"gloss": "sofa (loanword); (Internet slang) the first reply or replier to a forum post",
+"pos": [
+"n"
+]
+},
+{
+"w": "伤心",
+"level": 4,
+"lesson": 8,
+"pinyin": "shāng xīn",
+"gloss": "to grieve; to be broken-hearted; to feel deeply hurt",
+"pos": [
+"a"
+]
+},
+{
+"w": "商量",
+"level": 4,
+"lesson": 12,
+"pinyin": "shāng liang",
+"gloss": "to consult; to talk over; to discuss",
+"pos": [
+"v"
+]
+},
+{
+"w": "稍微",
+"level": 4,
+"lesson": 13,
+"pinyin": "shāo wēi",
+"gloss": "a little bit",
+"pos": [
+"d"
+]
+},
+{
+"w": "勺子",
+"level": 4,
+"lesson": 12,
+"pinyin": "sháo zi"
+},
+{
+"w": "社会",
+"level": 4,
+"lesson": 17,
+"pinyin": "shè huì",
+"gloss": "society",
+"pos": [
+"n"
+]
+},
+{
+"w": "申请",
+"level": 4,
+"lesson": 13,
+"pinyin": "shēn qǐng",
+"gloss": "to apply for sth; application form",
+"pos": [
+"v",
+"n",
+"vn"
+]
+},
+{
+"w": "深",
+"level": 4,
+"lesson": 1,
+"pinyin": "shēn",
+"gloss": "old variant of 深",
+"pos": [
+"a",
+"d",
+"g",
+"b"
+]
+},
+{
+"w": "甚至",
+"level": 4,
+"lesson": 4,
+"pinyin": "shèn zhì",
+"gloss": "even; so much so that",
+"pos": [
+"d",
+"c"
+]
+},
+{
+"w": "生活",
+"level": 4,
+"lesson": 1,
+"pinyin": "shēng huó",
+"gloss": "to live; life; livelihood",
+"pos": [
+"vn",
+"v"
+]
+},
+{
+"w": "生命",
+"level": 4,
+"lesson": 8,
+"pinyin": "shēng mìng",
+"gloss": "life (as the characteristic of living beings); living being; creature",
+"pos": [
+"n"
+]
+},
+{
+"w": "生意",
+"level": 4,
+"lesson": 4,
+"pinyin": "shēng yì"
+},
+{
+"w": "省",
+"level": 4,
+"lesson": 13,
+"pinyin": "shěng",
+"gloss": "to save; to economize; to be frugal; to omit; to delete; to leave out; province; provincial capital; a ministry (of the ",
+"pos": [
+"n",
+"v"
+]
+},
+{
+"w": "剩",
+"level": 4,
+"lesson": 17,
+"pinyin": "shèng",
+"gloss": "to remain; to be left; to have as remainder",
+"pos": [
+"v"
+]
+},
+{
+"w": "失败",
+"level": 4,
+"lesson": 9,
+"pinyin": "shī bài",
+"gloss": "to be defeated; to lose; to fail (e.g. experiments); failure; defeat",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "失望",
+"level": 4,
+"lesson": 16,
+"pinyin": "shī wàng",
+"gloss": "disappointed; to lose hope; to despair",
+"pos": [
+"a",
+"an",
+"ad"
+]
+},
+{
+"w": "师傅",
+"level": 4,
+"lesson": 8,
+"pinyin": "shī fu",
+"gloss": "master; qualified worker; respectful form of address for older men",
+"pos": [
+"n"
+]
+},
+{
+"w": "十分",
+"level": 4,
+"lesson": 13,
+"pinyin": "shí fēn",
+"gloss": "very; completely; utterly; extremely; absolutely; hundred percent; to divide into ten equal parts",
+"pos": [
+"d"
+]
+},
+{
+"w": "实际",
+"level": 4,
+"lesson": 5,
+"pinyin": "shí jì",
+"gloss": "reality; practice; practical; realistic; real; actual",
+"pos": [
+"n",
+"a",
+"ad"
+]
+},
+{
+"w": "实在",
+"level": 4,
+"lesson": 5,
+"pinyin": "shí zài",
+"gloss": "really; actually; indeed; true; real; honest; dependable; (philosophy) reality",
+"pos": [
+"d",
+"a"
+]
+},
+{
+"w": "使",
+"level": 4,
+"lesson": 8,
+"pinyin": "shǐ",
+"gloss": "to make; to cause; to enable; to use; to employ; to send; to instruct sb to do sth; envoy; messenger",
+"pos": [
+"v"
+]
+},
+{
+"w": "使用",
+"level": 4,
+"lesson": 12,
+"pinyin": "shǐ yòng",
+"gloss": "to use; to employ; to apply; to make use of",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "世纪",
+"level": 4,
+"lesson": 18,
+"pinyin": "shì jì",
+"gloss": "century",
+"pos": [
+"n"
+]
+},
+{
+"w": "是否",
+"level": 4,
+"lesson": 18,
+"pinyin": "shì fǒu"
+},
+{
+"w": "适合",
+"level": 4,
+"lesson": 1,
+"pinyin": "shì hé",
+"gloss": "to fit; to suit",
+"pos": [
+"v"
+]
+},
+{
+"w": "适应",
+"level": 4,
+"lesson": 2,
+"pinyin": "shì yìng",
+"gloss": "to adapt; to fit; to suit",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "收",
+"level": 4,
+"lesson": 18,
+"pinyin": "shōu",
+"gloss": "to receive; to accept; to collect; to put away; to restrain; to stop; in care of (used on address line after name)",
+"pos": [
+"v"
+]
+},
+{
+"w": "收入",
+"level": 4,
+"lesson": 3,
+"pinyin": "shōu rù",
+"gloss": "to take in; income; revenue",
+"pos": [
+"n",
+"v"
+]
+},
+{
+"w": "收拾",
+"level": 4,
+"lesson": 20,
+"pinyin": "shōu shi",
+"gloss": "to put in order; to tidy up; to pack; to repair; (coll.) to sort sb out; to fix sb",
+"pos": [
+"v"
+]
+},
+{
+"w": "首都",
+"level": 4,
+"lesson": 20,
+"pinyin": "shǒu dū",
+"gloss": "capital (city)",
+"pos": [
+"n"
+]
+},
+{
+"w": "首先",
+"level": 4,
+"lesson": 3,
+"pinyin": "shǒu xiān",
+"gloss": "first (of all); in the first place",
+"pos": [
+"d",
+"c"
+]
+},
+{
+"w": "受不了",
+"level": 4,
+"lesson": 18,
+"pinyin": "shòu bù liǎo",
+"gloss": "unbearable; unable to endure; can't stand",
+"pos": [
+"l"
+]
+},
+{
+"w": "受到",
+"level": 4,
+"lesson": 5,
+"pinyin": "shòu dào",
+"gloss": "to receive (praise, an education, punishment etc); to be ...ed (praised, educated, punished etc)",
+"pos": [
+"v"
+]
+},
+{
+"w": "售货员",
+"level": 4,
+"lesson": 6,
+"pinyin": "shòu huò yuán",
+"gloss": "salesperson",
+"pos": [
+"n"
+]
+},
+{
+"w": "输",
+"level": 4,
+"lesson": 16,
+"pinyin": "shū",
+"gloss": "to lose; to be beaten; (bound form) to transport; (literary) to donate; to contribute; (coll.) to enter (a password)",
+"pos": [
+"v"
+]
+},
+{
+"w": "熟悉",
+"level": 4,
+"lesson": 1,
+"pinyin": "shú xī",
+"gloss": "to be familiar with; to know well",
+"pos": [
+"v",
+"vn",
+"a"
+]
+},
+{
+"w": "数量",
+"level": 4,
+"lesson": 14,
+"pinyin": "shù liàng",
+"gloss": "amount; quantity; quantitative",
+"pos": [
+"n"
+]
+},
+{
+"w": "数字",
+"level": 4,
+"lesson": 7,
+"pinyin": "shù zì",
+"gloss": "numeral; digit; number; figure; amount; digital (electronics etc)",
+"pos": [
+"n"
+]
+},
+{
+"w": "帅",
+"level": 4,
+"lesson": 7,
+"pinyin": "Shuài",
+"gloss": "surname Shuai",
+"pos": [
+"nr",
+"g"
+]
+},
+{
+"w": "顺便",
+"level": 4,
+"lesson": 5,
+"pinyin": "shùn biàn",
+"gloss": "conveniently; in passing; without much extra effort",
+"pos": [
+"d"
+]
+},
+{
+"w": "顺利",
+"level": 4,
+"lesson": 4,
+"pinyin": "shùn lì",
+"gloss": "smoothly; without a hitch",
+"pos": [
+"a",
+"ad"
+]
+},
+{
+"w": "顺序",
+"level": 4,
+"lesson": 11,
+"pinyin": "shùn xù",
+"gloss": "sequence; order",
+"pos": [
+"n"
+]
+},
+{
+"w": "说明",
+"level": 4,
+"lesson": 7,
+"pinyin": "shuō míng",
+"gloss": "to explain; to illustrate; to indicate; to show; to prove; explanation; directions; caption",
+"pos": [
+"v",
+"vn",
+"n"
+]
+},
+{
+"w": "硕士",
+"level": 4,
+"lesson": 10,
+"pinyin": "shuò shì",
+"gloss": "master's degree; person who has a master's degree; learned person",
+"pos": [
+"n"
+]
+},
+{
+"w": "死",
+"level": 4,
+"lesson": 12,
+"pinyin": "sǐ",
+"gloss": "to die; impassable; uncrossable; inflexible; rigid; extremely; damned",
+"pos": [
+"v",
+"a",
+"vn",
+"d"
+]
+},
+{
+"w": "速度",
+"level": 4,
+"lesson": 14,
+"pinyin": "sù dù",
+"gloss": "speed; rate; velocity; (music) tempo",
+"pos": [
+"n"
+]
+},
+{
+"w": "塑料袋",
+"level": 4,
+"lesson": 14,
+"pinyin": "sù liào dài",
+"gloss": "plastic bag",
+"pos": [
+"n"
+]
+},
+{
+"w": "酸",
+"level": 4,
+"lesson": 20,
+"pinyin": "suān",
+"gloss": "sour; tart; sick at heart; grieved; sore; aching; pedantic; impractical; to make sarcastic remarks about sb; an acid",
+"pos": [
+"a",
+"n"
+]
+},
+{
+"w": "随便",
+"level": 4,
+"lesson": 9,
+"pinyin": "suí biàn",
+"gloss": "as one wishes; as one pleases; at random; negligent; casual; wanton",
+"pos": [
+"ad",
+"a",
+"v"
+]
+},
+{
+"w": "随着",
+"level": 4,
+"lesson": 13,
+"pinyin": "suí zhe",
+"gloss": "along with; in the wake of; following",
+"pos": [
+"p"
+]
+},
+{
+"w": "孙子",
+"level": 4,
+"lesson": 15,
+"pinyin": "Sūn zǐ",
+"gloss": "Sun Tzu, also known as Sun Wu 孙武 (c. 500 BC, dates of birth and death uncertain), general, strategist and philosopher of",
+"pos": [
+"n",
+"nr"
+]
+},
+{
+"w": "所有",
+"level": 4,
+"lesson": 6,
+"pinyin": "suǒ yǒu",
+"gloss": "all; to have; to possess; to own",
+"pos": [
+"b",
+"v"
+]
+},
+{
+"w": "台",
+"level": 4,
+"lesson": 5,
+"pinyin": "Tái",
+"gloss": "Taiwan (abbr.); surname Tai",
+"pos": [
+"q",
+"n",
+"b"
+]
+},
+{
+"w": "抬",
+"level": 4,
+"lesson": 19,
+"pinyin": "tái",
+"gloss": "to lift; to raise; (of two or more persons) to carry",
+"pos": [
+"v"
+]
+},
+{
+"w": "态度",
+"level": 4,
+"lesson": 8,
+"pinyin": "tài du",
+"gloss": "manner; bearing; attitude; approach",
+"pos": [
+"n"
+]
+},
+{
+"w": "谈",
+"level": 4,
+"lesson": 4,
+"pinyin": "Tán",
+"gloss": "surname Tan",
+"pos": [
+"v",
+"g"
+]
+},
+{
+"w": "弹钢琴",
+"level": 4,
+"lesson": 15,
+"pinyin": "tán gāng qín"
+},
+{
+"w": "汤",
+"level": 4,
+"lesson": 20,
+"pinyin": "Tāng",
+"gloss": "surname Tang",
+"pos": [
+"n",
+"nr"
+]
+},
+{
+"w": "糖",
+"level": 4,
+"lesson": 10,
+"pinyin": "táng",
+"gloss": "sugar; sweets; candy",
+"pos": [
+"n"
+]
+},
+{
+"w": "躺",
+"level": 4,
+"lesson": 10,
+"pinyin": "tǎng",
+"gloss": "to recline; to lie down",
+"pos": [
+"v"
+]
+},
+{
+"w": "趟",
+"level": 4,
+"lesson": 17,
+"pinyin": "tāng",
+"gloss": "old variant of 趟",
+"pos": [
+"qv",
+"v"
+]
+},
+{
+"w": "讨论",
+"level": 4,
+"lesson": 13,
+"pinyin": "tǎo lùn",
+"gloss": "to discuss; to talk over",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "讨厌",
+"level": 4,
+"lesson": 2,
+"pinyin": "tǎo yàn",
+"gloss": "to dislike; to loathe; disagreeable; troublesome; annoying",
+"pos": [
+"v"
+]
+},
+{
+"w": "特点",
+"level": 4,
+"lesson": 8,
+"pinyin": "tè diǎn",
+"gloss": "characteristic (feature); trait; feature",
+"pos": [
+"n"
+]
+},
+{
+"w": "提",
+"level": 4,
+"lesson": 4,
+"pinyin": "tí"
+},
+{
+"w": "提供",
+"level": 4,
+"lesson": 3,
+"pinyin": "tí gōng",
+"gloss": "to offer; to supply; to provide; to furnish",
+"pos": [
+"v"
+]
+},
+{
+"w": "提前",
+"level": 4,
+"lesson": 4,
+"pinyin": "tí qián",
+"gloss": "to shift to an earlier date; to do sth ahead of time; in advance",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "提醒",
+"level": 4,
+"lesson": 4,
+"pinyin": "tí xǐng",
+"gloss": "to remind; to call attention to; to warn of",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "填空",
+"level": 4,
+"lesson": 11,
+"pinyin": "tián kòng",
+"gloss": "to fill a job vacancy; to fill in a blank (e.g. on questionnaire or exam paper)",
+"pos": [
+"v"
+]
+},
+{
+"w": "条件",
+"level": 4,
+"lesson": 10,
+"pinyin": "tiáo jiàn",
+"gloss": "condition; circumstance; term; factor; requirement; prerequisite; qualification; situation; state; condition",
+"pos": [
+"n"
+]
+},
+{
+"w": "停",
+"level": 4,
+"lesson": 14,
+"pinyin": "tíng"
+},
+{
+"w": "挺",
+"level": 4,
+"lesson": 3,
+"pinyin": "tǐng",
+"gloss": "straight; erect; to stick out (a part of the body); to (physically) straighten up; to support; to withstand; outstanding",
+"pos": [
+"d",
+"v",
+"g",
+"q"
+]
+},
+{
+"w": "通过",
+"level": 4,
+"lesson": 9,
+"pinyin": "tōng guò",
+"gloss": "to pass through; to get through; to adopt (a resolution); to pass (legislation); to pass (a test); by means of; through;",
+"pos": [
+"p",
+"v",
+"vn"
+]
+},
+{
+"w": "通知",
+"level": 4,
+"lesson": 3,
+"pinyin": "tōng zhī",
+"gloss": "to notify; to inform; notice; notification",
+"pos": [
+"n",
+"v"
+]
+},
+{
+"w": "同情",
+"level": 4,
+"lesson": 16,
+"pinyin": "tóng qíng",
+"gloss": "to sympathize with; sympathy",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "同时",
+"level": 4,
+"lesson": 11,
+"pinyin": "tóng shí"
+},
+{
+"w": "推",
+"level": 4,
+"lesson": 16,
+"pinyin": "tuī",
+"gloss": "to push; to cut; to refuse; to reject; to decline; to shirk (responsibility); to put off; to delay; to push forward; to ",
+"pos": [
+"v"
+]
+},
+{
+"w": "推迟",
+"level": 4,
+"lesson": 20,
+"pinyin": "tuī chí",
+"gloss": "to postpone; to put off; to defer",
+"pos": [
+"v"
+]
+},
+{
+"w": "脱",
+"level": 4,
+"lesson": 19,
+"pinyin": "tuō",
+"gloss": "to shed; to take off; to escape; to get away from",
+"pos": [
+"v"
+]
+},
+{
+"w": "袜子",
+"level": 4,
+"lesson": 6,
+"pinyin": "wà zi",
+"gloss": "socks; stockings",
+"pos": [
+"n"
+]
+},
+{
+"w": "完全",
+"level": 4,
+"lesson": 4,
+"pinyin": "wán quán",
+"gloss": "complete; whole; totally; entirely",
+"pos": [
+"ad",
+"a"
+]
+},
+{
+"w": "网球",
+"level": 4,
+"lesson": 9,
+"pinyin": "wǎng qiú",
+"gloss": "tennis; tennis ball",
+"pos": [
+"n"
+]
+},
+{
+"w": "网站",
+"level": 4,
+"lesson": 18,
+"pinyin": "wǎng zhàn",
+"gloss": "website; network station; node",
+"pos": [
+"n"
+]
+},
+{
+"w": "往往",
+"level": 4,
+"lesson": 8,
+"pinyin": "wǎng wǎng",
+"gloss": "usually; in many cases; more often than not",
+"pos": [
+"d"
+]
+},
+{
+"w": "危险",
+"level": 4,
+"lesson": 18,
+"pinyin": "wēi xiǎn",
+"gloss": "danger; dangerous",
+"pos": [
+"a",
+"an",
+"n"
+]
+},
+{
+"w": "卫生间",
+"level": 4,
+"lesson": 14,
+"pinyin": "wèi shēng jiān"
+},
+{
+"w": "味道",
+"level": 4,
+"lesson": 5,
+"pinyin": "wèi dao",
+"gloss": "flavor; taste; (fig.) feeling (of ...); sense (of ...); hint (of ...); (fig.) interest; delight; (dialect) smell; odor",
+"pos": [
+"n"
+]
+},
+{
+"w": "温度",
+"level": 4,
+"lesson": 14,
+"pinyin": "wēn dù",
+"gloss": "temperature",
+"pos": [
+"n"
+]
+},
+{
+"w": "文章",
+"level": 4,
+"lesson": 11,
+"pinyin": "wén zhāng",
+"gloss": "article; essay; literary works; writings; hidden meaning",
+"pos": [
+"n"
+]
+},
+{
+"w": "污染",
+"level": 4,
+"lesson": 14,
+"pinyin": "wū rǎn",
+"gloss": "to pollute; to contaminate (lit. and fig.)",
+"pos": [
+"vn",
+"v"
+]
+},
+{
+"w": "无",
+"level": 4,
+"lesson": 12,
+"pinyin": "wú",
+"gloss": "not to have; no; none; not; to lack; un-; -less",
+"pos": [
+"v"
+]
+},
+{
+"w": "无聊",
+"level": 4,
+"lesson": 2,
+"pinyin": "wú liáo",
+"gloss": "bored; boring; senseless",
+"pos": [
+"a",
+"an"
+]
+},
+{
+"w": "无论",
+"level": 4,
+"lesson": 11,
+"pinyin": "wú lùn",
+"gloss": "no matter what or how; regardless of whether...",
+"pos": [
+"c"
+]
+},
+{
+"w": "误会",
+"level": 4,
+"lesson": 12,
+"pinyin": "wù huì",
+"gloss": "to misunderstand; to mistake; misunderstanding",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "西红柿",
+"level": 4,
+"lesson": 6,
+"pinyin": "xī hóng shì",
+"gloss": "tomato",
+"pos": [
+"n"
+]
+},
+{
+"w": "吸引",
+"level": 4,
+"lesson": 1,
+"pinyin": "xī yǐn",
+"gloss": "to attract; to appeal to; to fascinate",
+"pos": [
+"v"
+]
+},
+{
+"w": "咸",
+"level": 4,
+"lesson": 18,
+"pinyin": "Xián",
+"gloss": "surname Xian",
+"pos": [
+"a"
+]
+},
+{
+"w": "现金",
+"level": 4,
+"lesson": 5,
+"pinyin": "xiàn jīn"
+},
+{
+"w": "羡慕",
+"level": 4,
+"lesson": 1,
+"pinyin": "xiàn mù",
+"gloss": "to envy; to admire",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "相反",
+"level": 4,
+"lesson": 12,
+"pinyin": "xiāng fǎn",
+"gloss": "opposite; contrary",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "相同",
+"level": 4,
+"lesson": 11,
+"pinyin": "xiāng tóng",
+"gloss": "identical; same",
+"pos": [
+"a"
+]
+},
+{
+"w": "香",
+"level": 4,
+"lesson": 20,
+"pinyin": "xiāng",
+"gloss": "fragrant; sweet smelling; aromatic; savory or appetizing; (to eat) with relish; (of sleep) sound; perfume or spice; joss",
+"pos": [
+"n",
+"a",
+"v"
+]
+},
+{
+"w": "详细",
+"level": 4,
+"lesson": 12,
+"pinyin": "xiáng xì",
+"gloss": "detailed; in detail; minute",
+"pos": [
+"a",
+"ad"
+]
+},
+{
+"w": "响",
+"level": 4,
+"lesson": 15,
+"pinyin": "xiǎng",
+"gloss": "echo; sound; noise; to make a sound; to sound; to ring; loud; classifier for noises",
+"pos": [
+"v",
+"a",
+"q"
+]
+},
+{
+"w": "橡皮",
+"level": 4,
+"lesson": 10,
+"pinyin": "xiàng pí"
+},
+{
+"w": "消息",
+"level": 4,
+"lesson": 4,
+"pinyin": "xiāo xi",
+"gloss": "news; information",
+"pos": [
+"n"
+]
+},
+{
+"w": "小吃",
+"level": 4,
+"lesson": 20,
+"pinyin": "xiǎo chī"
+},
+{
+"w": "小伙子",
+"level": 4,
+"lesson": 16,
+"pinyin": "xiǎo huǒ zi"
+},
+{
+"w": "小说",
+"level": 4,
+"lesson": 6,
+"pinyin": "xiǎo shuō",
+"gloss": "novel; fiction",
+"pos": [
+"n"
+]
+},
+{
+"w": "笑话",
+"level": 4,
+"lesson": 20,
+"pinyin": "xiào hua",
+"gloss": "joke; jest; to laugh at; to mock",
+"pos": [
+"n"
+]
+},
+{
+"w": "效果",
+"level": 4,
+"lesson": 5,
+"pinyin": "xiào guǒ",
+"gloss": "result; effect; efficacy; (theater) sound or visual effects",
+"pos": [
+"n"
+]
+},
+{
+"w": "心情",
+"level": 4,
+"lesson": 8,
+"pinyin": "xīn qíng",
+"gloss": "mood; frame of mind",
+"pos": [
+"n"
+]
+},
+{
+"w": "辛苦",
+"level": 4,
+"lesson": 7,
+"pinyin": "xīn kǔ",
+"gloss": "exhausting; hard; tough; arduous; to work hard; to go to a lot of trouble; hardship(s)",
+"pos": [
+"a",
+"v",
+"ad",
+"an"
+]
+},
+{
+"w": "信封",
+"level": 4,
+"lesson": 18,
+"pinyin": "xìn fēng"
+},
+{
+"w": "信息",
+"level": 4,
+"lesson": 18,
+"pinyin": "xìn xī"
+},
+{
+"w": "信心",
+"level": 4,
+"lesson": 3,
+"pinyin": "xìn xīn",
+"gloss": "confidence; faith (in sb or sth)",
+"pos": [
+"n"
+]
+},
+{
+"w": "兴奋",
+"level": 4,
+"lesson": 10,
+"pinyin": "xīng fèn",
+"gloss": "excited; excitement; (physiology) excitation",
+"pos": [
+"v",
+"a",
+"an"
+]
+},
+{
+"w": "行",
+"level": 4,
+"lesson": 14,
+"pinyin": "háng",
+"gloss": "row; line; commercial firm; line of business; profession; to rank (first, second etc) among one's siblings (by age); (in",
+"pos": [
+"v",
+"g",
+"q",
+"a",
+"n"
+]
+},
+{
+"w": "醒",
+"level": 4,
+"lesson": 15,
+"pinyin": "xǐng",
+"gloss": "to wake up; to be awake; to become aware; to sober up; to come to",
+"pos": [
+"v",
+"g",
+"vn"
+]
+},
+{
+"w": "幸福",
+"level": 4,
+"lesson": 1,
+"pinyin": "xìng fú",
+"gloss": "happiness; happy; blessed",
+"pos": [
+"a",
+"an",
+"nz"
+]
+},
+{
+"w": "性别",
+"level": 4,
+"lesson": 19,
+"pinyin": "xìng bié",
+"gloss": "gender; sex",
+"pos": [
+"n"
+]
+},
+{
+"w": "性格",
+"level": 4,
+"lesson": 1,
+"pinyin": "xìng gé",
+"gloss": "nature; disposition; temperament; character",
+"pos": [
+"n"
+]
+},
+{
+"w": "修理",
+"level": 4,
+"lesson": 6,
+"pinyin": "xiū lǐ"
+},
+{
+"w": "许多",
+"level": 4,
+"lesson": 9,
+"pinyin": "xǔ duō",
+"gloss": "many; a lot of; much",
+"pos": [
+"m"
+]
+},
+{
+"w": "学期",
+"level": 4,
+"lesson": 19,
+"pinyin": "xué qī"
+},
+{
+"w": "压力",
+"level": 4,
+"lesson": 8,
+"pinyin": "yā lì",
+"gloss": "pressure",
+"pos": [
+"n"
+]
+},
+{
+"w": "呀",
+"level": 4,
+"lesson": 16,
+"pinyin": "ya",
+"gloss": "(particle equivalent to 啊 after a vowel, expressing surprise or doubt)",
+"pos": [
+"y"
+]
+},
+{
+"w": "牙膏",
+"level": 4,
+"lesson": 14,
+"pinyin": "yá gāo",
+"gloss": "toothpaste",
+"pos": [
+"n"
+]
+},
+{
+"w": "亚洲",
+"level": 4,
+"lesson": 17,
+"pinyin": "Yà zhōu",
+"gloss": "Asia (abbr. for 亚细亚洲)",
+"pos": [
+"ns"
+]
+},
+{
+"w": "严格",
+"level": 4,
+"lesson": 17,
+"pinyin": "yán gé",
+"gloss": "strict; stringent; tight; rigorous",
+"pos": [
+"a",
+"ad",
+"v"
+]
+},
+{
+"w": "严重",
+"level": 4,
+"lesson": 7,
+"pinyin": "yán zhòng",
+"gloss": "grave; serious; severe; critical",
+"pos": [
+"a",
+"ad"
+]
+},
+{
+"w": "研究",
+"level": 4,
+"lesson": 7,
+"pinyin": "yán jiū"
+},
+{
+"w": "盐",
+"level": 4,
+"lesson": 12,
+"pinyin": "yán",
+"gloss": "salt",
+"pos": [
+"n"
+]
+},
+{
+"w": "眼镜",
+"level": 4,
+"lesson": 19,
+"pinyin": "yǎn jìng",
+"gloss": "spectacles; eyeglasses",
+"pos": [
+"n"
+]
+},
+{
+"w": "演出",
+"level": 4,
+"lesson": 13,
+"pinyin": "yǎn chū",
+"gloss": "to act (in a play); to perform; to put on (a performance); performance; concert; show",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "演员",
+"level": 4,
+"lesson": 13,
+"pinyin": "yǎn yuán",
+"gloss": "actor or actress; performer",
+"pos": [
+"n"
+]
+},
+{
+"w": "阳光",
+"level": 4,
+"lesson": 8,
+"pinyin": "yáng guāng",
+"gloss": "sunshine; (of personality) upbeat; energetic; transparent (open to public scrutiny)",
+"pos": [
+"n",
+"nz"
+]
+},
+{
+"w": "养成",
+"level": 4,
+"lesson": 11,
+"pinyin": "yǎng chéng",
+"gloss": "to cultivate; to raise; to form (a habit); to acquire",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "样子",
+"level": 4,
+"lesson": 5,
+"pinyin": "yàng zi",
+"gloss": "appearance; manner; pattern; model",
+"pos": [
+"n"
+]
+},
+{
+"w": "邀请",
+"level": 4,
+"lesson": 5,
+"pinyin": "yāo qǐng",
+"gloss": "to invite; invitation",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "要是",
+"level": 4,
+"lesson": 7,
+"pinyin": "yào shì"
+},
+{
+"w": "钥匙",
+"level": 4,
+"lesson": 20,
+"pinyin": "yào shi",
+"gloss": "key",
+"pos": [
+"n"
+]
+},
+{
+"w": "也许",
+"level": 4,
+"lesson": 12,
+"pinyin": "yě xǔ",
+"gloss": "perhaps; maybe",
+"pos": [
+"d"
+]
+},
+{
+"w": "叶子",
+"level": 4,
+"lesson": 12,
+"pinyin": "yè zi",
+"gloss": "leaf; (slang) marijuana",
+"pos": [
+"n",
+"nr"
+]
+},
+{
+"w": "页",
+"level": 4,
+"lesson": 11,
+"pinyin": "xié",
+"gloss": "head",
+"pos": [
+"q",
+"g"
+]
+},
+{
+"w": "一切",
+"level": 4,
+"lesson": 4,
+"pinyin": "yī qiè",
+"gloss": "everything; every; all",
+"pos": [
+"r"
+]
+},
+{
+"w": "以",
+"level": 4,
+"lesson": 14,
+"pinyin": "yǐ",
+"gloss": "old variant of 以",
+"pos": [
+"p",
+"c",
+"b"
+]
+},
+{
+"w": "以为",
+"level": 4,
+"lesson": 4,
+"pinyin": "yǐ wéi",
+"gloss": "to think (i.e. to take it to be true that ...) (Usually there is an implication that the notion is mistaken – except whe",
+"pos": [
+"v"
+]
+},
+{
+"w": "艺术",
+"level": 4,
+"lesson": 5,
+"pinyin": "yì shù",
+"gloss": "art",
+"pos": [
+"n"
+]
+},
+{
+"w": "意见",
+"level": 4,
+"lesson": 12,
+"pinyin": "yì jiàn",
+"gloss": "idea; opinion; suggestion; objection; complaint",
+"pos": [
+"n"
+]
+},
+{
+"w": "因此",
+"level": 4,
+"lesson": 8,
+"pinyin": "yīn cǐ",
+"gloss": "thus; consequently; as a result",
+"pos": [
+"c"
+]
+},
+{
+"w": "引起",
+"level": 4,
+"lesson": 12,
+"pinyin": "yǐn qǐ",
+"gloss": "to give rise to; to lead to; to cause; to arouse",
+"pos": [
+"v"
+]
+},
+{
+"w": "印象",
+"level": 4,
+"lesson": 1,
+"pinyin": "yìn xiàng",
+"gloss": "impression (sth that stays in one's mind); a memory",
+"pos": [
+"n"
+]
+},
+{
+"w": "赢",
+"level": 4,
+"lesson": 9,
+"pinyin": "yíng",
+"gloss": "to beat; to win; to profit",
+"pos": [
+"v"
+]
+},
+{
+"w": "应聘",
+"level": 4,
+"lesson": 3,
+"pinyin": "yìng pìn"
+},
+{
+"w": "永远",
+"level": 4,
+"lesson": 10,
+"pinyin": "yǒng yuǎn",
+"gloss": "forever; eternal",
+"pos": [
+"d",
+"b"
+]
+},
+{
+"w": "勇敢",
+"level": 4,
+"lesson": 9,
+"pinyin": "yǒng gǎn",
+"gloss": "brave; courageous",
+"pos": [
+"a",
+"ad",
+"an"
+]
+},
+{
+"w": "优点",
+"level": 4,
+"lesson": 5,
+"pinyin": "yōu diǎn",
+"gloss": "merit; benefit; strong point; advantage",
+"pos": [
+"n"
+]
+},
+{
+"w": "优秀",
+"level": 4,
+"lesson": 10,
+"pinyin": "yōu xiù",
+"gloss": "outstanding; excellent",
+"pos": [
+"a"
+]
+},
+{
+"w": "幽默",
+"level": 4,
+"lesson": 1,
+"pinyin": "yōu mò",
+"gloss": "(loanword) humor; humorous",
+"pos": [
+"a",
+"an"
+]
+},
+{
+"w": "尤其",
+"level": 4,
+"lesson": 5,
+"pinyin": "yóu qí",
+"gloss": "especially; particularly",
+"pos": [
+"d"
+]
+},
+{
+"w": "由",
+"level": 4,
+"lesson": 13,
+"pinyin": "yóu",
+"gloss": "to follow; from; because of; due to; by; via; through; (before a noun and a verb) it is for ... to ...",
+"pos": [
+"p",
+"v"
+]
+},
+{
+"w": "由于",
+"level": 4,
+"lesson": 10,
+"pinyin": "yóu yú",
+"gloss": "due to; as a result of; thanks to; owing to; since; because",
+"pos": [
+"p",
+"c"
+]
+},
+{
+"w": "邮局",
+"level": 4,
+"lesson": 18,
+"pinyin": "yóu jú"
+},
+{
+"w": "友好",
+"level": 4,
+"lesson": 12,
+"pinyin": "Yǒu hǎo",
+"gloss": "Youhao district of Yichun city 市, Heilongjiang",
+"pos": [
+"a",
+"ad"
+]
+},
+{
+"w": "友谊",
+"level": 4,
+"lesson": 2,
+"pinyin": "yǒu yì",
+"gloss": "companionship; fellowship; friendship",
+"pos": [
+"n"
+]
+},
+{
+"w": "有趣",
+"level": 4,
+"lesson": 13,
+"pinyin": "yǒu qù",
+"gloss": "interesting; fascinating; amusing",
+"pos": [
+"a"
+]
+},
+{
+"w": "于是",
+"level": 4,
+"lesson": 14,
+"pinyin": "yú shì",
+"gloss": "thereupon; as a result; consequently; thus; hence",
+"pos": [
+"cc"
+]
+},
+{
+"w": "愉快",
+"level": 4,
+"lesson": 8,
+"pinyin": "yú kuài",
+"gloss": "cheerful; cheerily; delightful; pleasant; pleasantly; pleasing; happy; delighted",
+"pos": [
+"a",
+"ad",
+"an"
+]
+},
+{
+"w": "与",
+"level": 4,
+"lesson": 3,
+"pinyin": "yú",
+"gloss": "variant of 欤",
+"pos": [
+"p",
+"cc"
+]
+},
+{
+"w": "羽毛球",
+"level": 4,
+"lesson": 19,
+"pinyin": "yǔ máo qiú",
+"gloss": "shuttlecock; badminton",
+"pos": [
+"n"
+]
+},
+{
+"w": "语法",
+"level": 4,
+"lesson": 11,
+"pinyin": "yǔ fǎ",
+"gloss": "grammar",
+"pos": [
+"n"
+]
+},
+{
+"w": "语言",
+"level": 4,
+"lesson": 12,
+"pinyin": "yǔ yán",
+"gloss": "language",
+"pos": [
+"n"
+]
+},
+{
+"w": "预习",
+"level": 4,
+"lesson": 16,
+"pinyin": "yù xí",
+"gloss": "to prepare a lesson",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "原来",
+"level": 4,
+"lesson": 4,
+"pinyin": "yuán lái",
+"gloss": "original; former; originally; formerly; at first; so, actually, as it turns out",
+"pos": [
+"d",
+"b"
+]
+},
+{
+"w": "原谅",
+"level": 4,
+"lesson": 16,
+"pinyin": "yuán liàng",
+"gloss": "to excuse; to forgive; to pardon",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "原因",
+"level": 4,
+"lesson": 1,
+"pinyin": "yuán yīn",
+"gloss": "cause; origin; root cause; reason",
+"pos": [
+"n"
+]
+},
+{
+"w": "约会",
+"level": 4,
+"lesson": 3,
+"pinyin": "yuē huì",
+"gloss": "appointment; engagement; date; to arrange to meet",
+"pos": [
+"v",
+"n",
+"vn"
+]
+},
+{
+"w": "阅读",
+"level": 4,
+"lesson": 11,
+"pinyin": "yuè dú",
+"gloss": "to read; reading",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "云",
+"level": 4,
+"lesson": 17,
+"pinyin": "yún",
+"gloss": "(classical) to say",
+"pos": [
+"n",
+"g",
+"b"
+]
+},
+{
+"w": "允许",
+"level": 4,
+"lesson": 18,
+"pinyin": "yǔn xǔ",
+"gloss": "to permit; to allow",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "杂志",
+"level": 4,
+"lesson": 11,
+"pinyin": "zá zhì",
+"gloss": "magazine",
+"pos": [
+"n"
+]
+},
+{
+"w": "咱们",
+"level": 4,
+"lesson": 3,
+"pinyin": "zán men",
+"gloss": "we or us (including both the speaker and the person(s) spoken to); (dialect) I or me; (dialect) (in a coaxing or familia",
+"pos": [
+"r"
+]
+},
+{
+"w": "暂时",
+"level": 4,
+"lesson": 9,
+"pinyin": "zàn shí",
+"gloss": "temporary; provisional; for the time being",
+"pos": [
+"d",
+"b"
+]
+},
+{
+"w": "脏",
+"level": 4,
+"lesson": 14,
+"pinyin": "zàng",
+"gloss": "viscera; (anatomy) organ",
+"pos": [
+"a",
+"g"
+]
+},
+{
+"w": "责任",
+"level": 4,
+"lesson": 4,
+"pinyin": "zé rèn",
+"gloss": "responsibility; blame; duty",
+"pos": [
+"n"
+]
+},
+{
+"w": "增加",
+"level": 4,
+"lesson": 11,
+"pinyin": "zēng jiā",
+"gloss": "to raise; to increase",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "占线",
+"level": 4,
+"lesson": 19,
+"pinyin": "zhàn xiàn"
+},
+{
+"w": "招聘",
+"level": 4,
+"lesson": 3,
+"pinyin": "zhāo pìn",
+"gloss": "to invite applications for a job; to recruit",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "照",
+"level": 4,
+"lesson": 17,
+"pinyin": "zhào"
+},
+{
+"w": "真正",
+"level": 4,
+"lesson": 2,
+"pinyin": "zhēn zhèng",
+"gloss": "genuine; real; true; really; indeed",
+"pos": [
+"b",
+"d"
+]
+},
+{
+"w": "整理",
+"level": 4,
+"lesson": 15,
+"pinyin": "zhěng lǐ",
+"gloss": "to arrange; to tidy up; to sort out; to straighten out; to list systematically; to collate (data, files); to pack (lugga",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "正常",
+"level": 4,
+"lesson": 13,
+"pinyin": "zhèng cháng",
+"gloss": "regular; normal; ordinary",
+"pos": [
+"a",
+"ad"
+]
+},
+{
+"w": "正好",
+"level": 4,
+"lesson": 2,
+"pinyin": "zhèng hǎo",
+"gloss": "just (in time); just right; just enough; to happen to; to chance to; by chance; it just so happens that",
+"pos": [
+"z"
+]
+},
+{
+"w": "正确",
+"level": 4,
+"lesson": 9,
+"pinyin": "zhèng què",
+"gloss": "correct; sound; right; proper",
+"pos": [
+"a",
+"ad"
+]
+},
+{
+"w": "正式",
+"level": 4,
+"lesson": 3,
+"pinyin": "zhèng shì",
+"gloss": "formal; official",
+"pos": [
+"ad",
+"a"
+]
+},
+{
+"w": "证明",
+"level": 4,
+"lesson": 8,
+"pinyin": "zhèng míng",
+"gloss": "proof; certificate; identification; testimonial; to prove; to testify; to confirm the truth of",
+"pos": [
+"v",
+"n",
+"vn"
+]
+},
+{
+"w": "之",
+"level": 4,
+"lesson": 11,
+"pinyin": "zhī",
+"gloss": "(possessive particle, literary equivalent of 的); him; her; it",
+"pos": [
+"u",
+"r",
+"g"
+]
+},
+{
+"w": "支持",
+"level": 4,
+"lesson": 6,
+"pinyin": "zhī chí",
+"gloss": "to be in favor of; to support; to back; support; backing; to stand by",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "知识",
+"level": 4,
+"lesson": 4,
+"pinyin": "zhī shi",
+"gloss": "knowledge; intellectual",
+"pos": [
+"n"
+]
+},
+{
+"w": "直接",
+"level": 4,
+"lesson": 12,
+"pinyin": "zhí jiē",
+"gloss": "direct (opposite: indirect 间接); immediate; straightforward",
+"pos": [
+"ad",
+"a"
+]
+},
+{
+"w": "值得",
+"level": 4,
+"lesson": 6,
+"pinyin": "zhí de",
+"gloss": "to be worth; to deserve",
+"pos": [
+"v"
+]
+},
+{
+"w": "职业",
+"level": 4,
+"lesson": 10,
+"pinyin": "zhí yè",
+"gloss": "occupation; profession; vocation; professional",
+"pos": [
+"n"
+]
+},
+{
+"w": "植物",
+"level": 4,
+"lesson": 7,
+"pinyin": "zhí wù",
+"gloss": "plant; vegetation",
+"pos": [
+"n"
+]
+},
+{
+"w": "只好",
+"level": 4,
+"lesson": 11,
+"pinyin": "zhǐ hǎo",
+"gloss": "to have no other option but to ...; to have to; to be forced to",
+"pos": [
+"d"
+]
+},
+{
+"w": "只要",
+"level": 4,
+"lesson": 8,
+"pinyin": "zhǐ yào",
+"gloss": "if only; so long as",
+"pos": [
+"c"
+]
+},
+{
+"w": "指",
+"level": 4,
+"lesson": 7,
+"pinyin": "zhǐ",
+"gloss": "finger; to point at or to; to indicate or refer to; to depend on; to count on; (of hair) to stand on end",
+"pos": [
+"v",
+"g"
+]
+},
+{
+"w": "至少",
+"level": 4,
+"lesson": 9,
+"pinyin": "zhì shǎo",
+"gloss": "at least; (to say the) least",
+"pos": [
+"d"
+]
+},
+{
+"w": "质量",
+"level": 4,
+"lesson": 5,
+"pinyin": "zhì liàng",
+"gloss": "quality; (physics) mass",
+"pos": [
+"n"
+]
+},
+{
+"w": "重",
+"level": 4,
+"lesson": 14,
+"pinyin": "zhòng"
+},
+{
+"w": "重点",
+"level": 4,
+"lesson": 16,
+"pinyin": "chóng diǎn",
+"gloss": "to recount (e.g. results of election); to re-evaluate",
+"pos": [
+"n",
+"d"
+]
+},
+{
+"w": "重视",
+"level": 4,
+"lesson": 16,
+"pinyin": "zhòng shì",
+"gloss": "to attach importance to sth; to value",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "周围",
+"level": 4,
+"lesson": 2,
+"pinyin": "zhōu wéi",
+"gloss": "environs; surroundings; periphery",
+"pos": [
+"f"
+]
+},
+{
+"w": "主意",
+"level": 4,
+"lesson": 9,
+"pinyin": "zhǔ yi",
+"gloss": "plan; idea; decision; Beijing pr. [zhú yi]",
+"pos": [
+"n"
+]
+},
+{
+"w": "祝贺",
+"level": 4,
+"lesson": 20,
+"pinyin": "zhù hè",
+"gloss": "to congratulate; congratulations",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "著名",
+"level": 4,
+"lesson": 11,
+"pinyin": "zhù míng",
+"gloss": "famous; noted; well-known; celebrated",
+"pos": []
+},
+{
+"w": "专门",
+"level": 4,
+"lesson": 2,
+"pinyin": "zhuān mén",
+"gloss": "specialist; specialized; customized",
+"pos": [
+"d",
+"b"
+]
+},
+{
+"w": "专业",
+"level": 4,
+"lesson": 3,
+"pinyin": "zhuān yè",
+"gloss": "specialty; specialized field; main field of study (at university); major; professional",
+"pos": [
+"n"
+]
+},
+{
+"w": "转",
+"level": 4,
+"lesson": 19,
+"pinyin": "zhuǎn"
+},
+{
+"w": "赚",
+"level": 4,
+"lesson": 4,
+"pinyin": "zhuàn",
+"gloss": "to earn; to make a profit",
+"pos": [
+"v"
+]
+},
+{
+"w": "准确",
+"level": 4,
+"lesson": 11,
+"pinyin": "zhǔn què",
+"gloss": "accurate; exact; precise",
+"pos": [
+"a",
+"ad"
+]
+},
+{
+"w": "准时",
+"level": 4,
+"lesson": 3,
+"pinyin": "zhǔn shí",
+"gloss": "on time; punctual; on schedule",
+"pos": [
+"ad",
+"a",
+"an"
+]
+},
+{
+"w": "仔细",
+"level": 4,
+"lesson": 12,
+"pinyin": "zǐ xì",
+"gloss": "careful; attentive; cautious; to be careful; to look out",
+"pos": [
+"ad",
+"a"
+]
+},
+{
+"w": "自然",
+"level": 4,
+"lesson": 1,
+"pinyin": "zì rán",
+"gloss": "nature; natural; naturally",
+"pos": [
+"n",
+"d",
+"a"
+]
+},
+{
+"w": "自信",
+"level": 4,
+"lesson": 16,
+"pinyin": "zì xìn"
+},
+{
+"w": "总结",
+"level": 4,
+"lesson": 9,
+"pinyin": "zǒng jié",
+"gloss": "to sum up; to conclude; summary; résumé",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "租",
+"level": 4,
+"lesson": 19,
+"pinyin": "zū",
+"gloss": "to hire; to rent; to charter; to rent out; to lease out; rent; land tax",
+"pos": [
+"v",
+"g"
+]
+},
+{
+"w": "最好",
+"level": 4,
+"lesson": 1,
+"pinyin": "zuì hǎo",
+"gloss": "best; (you) had better (do what we suggest)",
+"pos": [
+"d"
+]
+},
+{
+"w": "尊重",
+"level": 4,
+"lesson": 16,
+"pinyin": "zūn zhòng",
+"gloss": "to esteem; to respect; to honor; to value; eminent; serious; proper",
+"pos": [
+"v",
+"vn"
+]
+},
+{
+"w": "左右",
+"level": 4,
+"lesson": 15,
+"pinyin": "zuǒ yòu"
+},
+{
+"w": "作家",
+"level": 4,
+"lesson": 9,
+"pinyin": "zuò jiā"
+},
+{
+"w": "作用",
+"level": 4,
+"lesson": 12,
+"pinyin": "zuò yòng",
+"gloss": "to act on; to affect; action; function; activity; impact; result; effect; purpose; intent; (suffix) -ation, -tion etc, a",
+"pos": [
+"n",
+"v"
+]
+},
+{
+"w": "作者",
+"level": 4,
+"lesson": 18,
+"pinyin": "zuò zhě",
+"gloss": "author; writer",
+"pos": [
+"n"
+]
+},
+{
+"w": "座",
+"level": 4,
+"lesson": 18,
+"pinyin": "zuò",
+"gloss": "seat; base; stand; (archaic) suffix used in a respectful form of address, e.g. 师座; classifier for buildings, mountains a",
+"pos": [
+"q",
+"g"
+]
+},
+{
+"w": "座位",
+"level": 4,
+"lesson": 19,
+"pinyin": "zuò wèi",
+"gloss": "seat",
+"pos": [
+"n"
+]
+},
+{
+"w": "空儿",
+"level": 4,
+"lesson": 10,
+"pinyin": "kòng ér"
+},
+{
+"w": "暖",
+"level": 4,
+"lesson": 14,
+"pinyin": "nuǎn"
+},
+{
+"w": "无法",
+"level": 4,
+"lesson": 12,
+"pinyin": "wú fǎ"
+},
+{
+"w": "纸袋",
+"level": 4,
+"lesson": 13,
+"pinyin": "zhǐ dài"
+}
+],
+"lessons": [
+{
+"n": 1,
+"title": "简单的爱情",
+"grammar": [
+"不仅……也/还/而且……",
+"从来",
+"刚",
+"即使……也……",
+"（在）……上"
+]
+},
+{
+"n": 2,
+"title": "真正的朋友",
+"grammar": [
+"正好",
+"差不多",
+"尽管",
+"却",
+"而"
+]
+},
+{
+"n": 3,
+"title": "经理对我印象不错",
+"grammar": [
+"挺",
+"本来",
+"另外",
+"首先……其次……",
+"不管"
+]
+},
+{
+"n": 4,
+"title": "不要太着急赚钱",
+"grammar": [
+"以为",
+"原来",
+"并",
+"按照",
+"甚至"
+]
+},
+{
+"n": 5,
+"title": "只买对的，不买贵的",
+"grammar": [
+"肯定",
+"再说",
+"实际",
+"对……来说",
+"尤其"
+]
+},
+{
+"n": 6,
+"title": "一分钱一分货",
+"grammar": [
+"竟然",
+"倍",
+"值得",
+"其中",
+"（在）……下"
+]
+},
+{
+"n": 7,
+"title": "最好的医生是自己",
+"grammar": [
+"估计",
+"来不及",
+"离合词重叠",
+"要是",
+"既……又/也/还……"
+]
+},
+{
+"n": 8,
+"title": "生活中不缺少美",
+"grammar": [
+"使",
+"只要",
+"可不是",
+"因此",
+"往往"
+]
+},
+{
+"n": 9,
+"title": "阳光总在风雨后",
+"grammar": [
+"难道",
+"通过",
+"可是",
+"结果",
+"上"
+]
+},
+{
+"n": 10,
+"title": "幸福的标准",
+"grammar": [
+"不过",
+"确实",
+"在……看来",
+"由于",
+"比如"
+]
+},
+{
+"n": 11,
+"title": "读书好，读好书，好读书",
+"grammar": [
+"连",
+"否则",
+"无论",
+"然而",
+"同时"
+]
+},
+{
+"n": 12,
+"title": "用心发现世界",
+"grammar": [
+"并且",
+"再……也……",
+"对于",
+"名量词重叠",
+"相反"
+]
+},
+{
+"n": 13,
+"title": "喝着茶看京剧",
+"grammar": [
+"大概",
+"偶尔",
+"由",
+"进行",
+"随着"
+]
+},
+{
+"n": 14,
+"title": "保护地球母亲",
+"grammar": [
+"够",
+"以",
+"既然",
+"于是",
+"什么的"
+]
+},
+{
+"n": 15,
+"title": "教育孩子的艺术",
+"grammar": [
+"想起来",
+"弄",
+"千万",
+"来",
+"左右"
+]
+},
+{
+"n": 16,
+"title": "生活可以更美好",
+"grammar": [
+"可",
+"恐怕",
+"到底",
+"拿……来说",
+"敢"
+]
+},
+{
+"n": 17,
+"title": "人与自然",
+"grammar": [
+"倒",
+"干",
+"趟",
+"为了……而……",
+"仍然"
+]
+},
+{
+"n": 18,
+"title": "科技与世界",
+"grammar": [
+"是否",
+"受不了",
+"接着",
+"除此以外",
+"把……叫作……"
+]
+},
+{
+"n": 19,
+"title": "生活的味道",
+"grammar": [
+"疑问代词活用表示任指",
+"上",
+"出来",
+"总的来说",
+"在于"
+]
+},
+{
+"n": 20,
+"title": "路上的风景",
+"grammar": [
+"V着V着",
+"一……就……",
+"究竟",
+"起来",
+"V起"
+]
+}
+]
+}

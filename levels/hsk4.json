@@ -1,0 +1,134 @@
+{
+  "level": "hsk4",
+  "name": "HSK 四级",
+  "short": "HSK 4",
+  "pass": 180,
+  "sections": [
+    {
+      "key": "listening",
+      "name": "听力 Listening",
+      "first": 1,
+      "count": 45,
+      "reviewMinutes": 3,
+      "intro": "大家好！欢迎参加HSK四级考试。HSK四级听力考试分三部分，共45题。请大家注意，听力考试现在开始。",
+      "parts": [
+        {
+          "id": "L1",
+          "type": "tf",
+          "units": 10,
+          "group": "L1",
+          "pause": 8,
+          "title": "第一部分",
+          "desc": "判断对错。听录音，判断句子是否正确。",
+          "audioIntro": "第一部分，共10题。每题听一次。每题都是一个人说一段话，试卷上有一个句子，请判断对错。"
+        },
+        {
+          "id": "L2",
+          "type": "mcq",
+          "units": 15,
+          "group": "L2",
+          "pause": 10,
+          "title": "第二部分",
+          "desc": "请选出正确答案。每题是两个人的两句对话，第三个人问一个问题。",
+          "audioIntro": "第二部分，共15题。每题听一次。每题都是两个人的两句对话，第三个人根据对话问一个问题，请选出正确答案。"
+        },
+        {
+          "id": "L3a",
+          "type": "mcq",
+          "units": 10,
+          "group": "L3",
+          "pause": 12,
+          "title": "第三部分",
+          "desc": "请选出正确答案。四到五句对话，或一段话后的问题。",
+          "audioIntro": "第三部分，共20题。每题听一次。每题都是两个人的四到五句对话，或者一个人说一段话，第三个人根据对话或者这段话问一个或两个问题，请选出正确答案。"
+        },
+        {
+          "id": "L3b",
+          "type": "mcq_group",
+          "units": 5,
+          "group": "L3",
+          "pause": 12,
+          "questionsPerUnit": [
+            2
+          ],
+          "rangeIntro": "第{a}到{b}题是根据下面一段话："
+        }
+      ]
+    },
+    {
+      "key": "reading",
+      "name": "阅读 Reading",
+      "first": 46,
+      "count": 40,
+      "minutes": 40,
+      "parts": [
+        {
+          "id": "R1",
+          "type": "wordbank",
+          "units": 2,
+          "group": "R1",
+          "kinds": [
+            "sentence",
+            "dialogue"
+          ],
+          "title": "第一部分",
+          "desc": "选词填空。"
+        },
+        {
+          "id": "R2",
+          "type": "order",
+          "units": 10,
+          "group": "R2",
+          "title": "第二部分",
+          "desc": "排列顺序。"
+        },
+        {
+          "id": "R3a",
+          "type": "mcq",
+          "units": 14,
+          "group": "R3",
+          "title": "第三部分",
+          "desc": "请选出正确答案。"
+        },
+        {
+          "id": "R3b",
+          "type": "mcq_group",
+          "units": 3,
+          "group": "R3",
+          "questionsPerUnit": [
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "key": "writing",
+      "name": "书写 Writing",
+      "first": 86,
+      "count": 15,
+      "minutes": 25,
+      "parts": [
+        {
+          "id": "W1",
+          "type": "arrange",
+          "units": 10,
+          "group": "W1",
+          "points": 6,
+          "title": "第一部分",
+          "desc": "完成句子。把词语排成一个句子。"
+        },
+        {
+          "id": "W2",
+          "type": "free",
+          "kind": "picture_sentence",
+          "units": 5,
+          "group": "W2",
+          "points": 8,
+          "title": "第二部分",
+          "desc": "看图，用词造句。",
+          "rubric": "Score 0-8:\n8 = target word used correctly; sentence clearly describes the picture; grammatical and natural; richer than the bare minimum\n6 = correct and relevant but very simple, or one minor slip (wrong measure word, missing 了, one wrong character)\n4 = target word used and relevant, but noticeable grammar errors that do not block meaning\n2 = target word misused, or sentence barely relates to the picture, or serious errors\n0 = blank, target word missing, or unintelligible\nDeduct 1 for each wrongly written character (错别字), minimum 0."
+        }
+      ]
+    }
+  ]
+}

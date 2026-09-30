@@ -1,0 +1,188 @@
+"""End-to-end test in headless Chrome (needs server.py on :8004 and `pip install playwright`).
+
+    .venv/bin/python tools/e2e_test.py --level hsk4 [--keep]
+
+1. Exam-mode listening: the audio sequence starts and reaches the first question.
+2. Oracle run: a full practice paper answered through the UI with its own answer key; every
+   shuffled key is mapped back to the bank's answer. Expect listening/reading 100 and the
+   auto-scored writing parts at full marks (free writing pending).
+3. Anti-oracle run: every answer wrong -> 0 everywhere.
+4. Grading round-trip: writes a fake Claude grade (half marks) for run 2 and checks the results
+   page picks it up (writing total, grand total, history row).
+Attempts it creates are deleted afterwards unless --keep. Screenshots go to scratch/e2e/.
+"""
+import json
+import sys
+from pathlib import Path
+
+from playwright.sync_api import sync_playwright
+
+ROOT = Path(__file__).resolve().parent.parent
+SHOTS = ROOT / "scratch/e2e"
+SHOTS.mkdir(parents=True, exist_ok=True)
+URL = "http://localhost:8004/"
+LET = "ABCDEFGH"
+args = sys.argv[1:]
+LEVEL = args[args.index("--level") + 1] if "--level" in args else "hsk4"
+CFG = json.loads((ROOT / "levels" / f"{LEVEL}.json").read_text())
+PARTS = {p["id"]: {**p, "section": s["key"]} for s in CFG["sections"] for p in s["parts"]}
+BANK = {f.stem: {u["id"]: u for u in json.loads(f.read_text())} for f in (ROOT / "bank" / LEVEL).glob("*.json")}
+TITLE = {s["key"]: s["name"].split(" ")[0] for s in CFG["sections"]}
+failures, created = [], []
+
+
+def check(cond, msg):
+    print(("  ok   " if cond else "  FAIL ") + msg)
+    if not cond:
+        failures.append(msg)
+
+
+def fresh(pg):
+    pg.goto(URL + f"#/{LEVEL}")
+    pg.evaluate("localStorage.clear()")
+    pg.reload()
+    pg.wait_for_selector(".card")
+
+
+def verify_key(exam):
+    bad = 0
+    blocks = {b["unitId"]: b for b in exam["blocks"]}
+    for q in exam["questions"]:
+        t, u, b, c = PARTS[q["part"]]["type"], BANK[q["part"]][q["unitId"]], blocks[q["unitId"]], q.get("correct")
+        if t == "tf":
+            ok = c == u["answer"]
+        elif "optOrder" in q:
+            src = u["questions"][q["sub"]] if "sub" in q else u
+            ok = src["options"][q["optOrder"][c]] == src["options"][src["answer"]]
+        elif t == "wordbank":
+            ok = b["bankOrder"][LET.index(c)] == u["items"][q["sub"]]["answer"]
+        elif t == "insert":
+            ok = b["sentOrder"][LET.index(c)] == u["answers"][q["sub"]]
+        elif t == "order":
+            ok = "".join(b["order"][LET.index(L)] for L in c) == u["answer"]
+        elif t == "arrange":
+            ok = c == u["answer"]
+        else:
+            ok = True
+        bad += not ok
+    return bad
+
+
+def answer_section(pg, right):
+    exam = pg.evaluate("JSON.parse(localStorage.getItem('hsk-exam'))")
+    if exam["secIndex"] == 0:
+        check(verify_key(exam) == 0, f"all {len(exam['questions'])} shuffled answer keys map back to the bank answers")
+    sec = exam["sections"][exam["secIndex"]]
+    s = next(x for x in CFG["sections"] if x["key"] == sec)
+    if exam.get("phase") == "read":
+        pg.click("#doneReading")
+    for q in exam["questions"]:
+        n, t, c = q["qnum"], PARTS[q["part"]]["type"], q.get("correct")
+        if not s["first"] <= n < s["first"] + s["count"]:
+            continue
+        if t == "tf":
+            pg.click(f'.choice[data-q="{n}"][data-v="{str(c if right else not c).lower()}"]')
+        elif "optOrder" in q:
+            pg.click(f'.choice[data-q="{n}"][data-v="{c if right else (c + 1) % len(q["optOrder"])}"]')
+        elif t in ("wordbank", "insert"):
+            opts = [o for o in pg.eval_on_selector(f'select[data-q="{n}"]', "s => [...s.options].map(o => o.value)") if o]
+            pg.select_option(f'select[data-q="{n}"]', c if right else next(o for o in opts if o != c))
+        elif t == "order":
+            for L in (c if right else c[::-1]):
+                pg.click(f'button[data-order="{n}"][data-v="{L}"]')
+        elif t == "arrange":
+            pg.fill(f'input[data-text="{n}"]', c if right else c[::-1])
+        elif t == "free":
+            pg.fill(f'textarea[data-text="{n}"]', "他正在认真地学习。")
+    return sec
+
+
+def take_paper(pg, right, tag):
+    fresh(pg)
+    pg.check("#practice")
+    pg.click('[data-mode="full"]')
+    for _ in CFG["sections"]:
+        pg.wait_for_selector(".part")
+        sec = answer_section(pg, right)
+        pg.screenshot(path=SHOTS / f"{LEVEL}_{tag}_{sec}.png")
+        pg.click("#finishSection")
+        pg.click("#finishSection")
+        if sec != CFG["sections"][-1]["key"]:
+            pg.wait_for_function(f"!document.querySelector('h1').textContent.includes('{TITLE[sec]}')")
+    pg.wait_for_selector(".scores", timeout=10000)
+    created.append(pg.url.split("/")[-1])
+    return created[-1], scores(pg)
+
+
+def scores(pg):
+    return pg.eval_on_selector_all(".score .v", "els => els.map(e => e.innerText.replace(/\\s+/g, ' '))")
+
+
+def main():
+    errors = []
+    auto_w = sum(p.get("points", 0) * p.get("units", 0) for p in PARTS.values() if p["section"] == "writing" and p["type"] != "free")
+    free = [p for p in PARTS.values() if p["type"] == "free"]
+    grade_w = sum((p["points"] // 2) * p["units"] for p in free)
+    with sync_playwright() as p:
+        b = p.chromium.launch(channel="chrome", headless=True, args=["--autoplay-policy=no-user-gesture-required"])
+        pg = b.new_page(viewport={"width": 1100, "height": 900})
+        pg.on("pageerror", lambda e: errors.append(str(e)))
+        pg.on("console", lambda m: m.type == "error" and "404" not in m.text and errors.append(m.text))
+
+        print(f"[{LEVEL}] 1. exam-mode listening audio")
+        fresh(pg)
+        pg.click('[data-mode="listening"]')
+        pg.click("#startAudio")
+        first = CFG["sections"][0]["first"]
+        pg.wait_for_function(f"document.querySelector('#nowPlaying').textContent.includes('第 {first} 题')", timeout=90000)
+        check(True, f"audio sequence reached question {first}")
+        pg.goto(URL + f"#/{LEVEL}")
+        pg.wait_for_timeout(1500)
+
+        print(f"[{LEVEL}] 2. oracle run (all correct)")
+        att, v = take_paper(pg, True, "right")
+        print("    ", v)
+        check(v[0].startswith("100"), "listening = 100")
+        check(v[1].startswith("100"), "reading = 100")
+        check(v[2].startswith(f"{auto_w} +"), f"writing auto parts = {auto_w}, free writing pending")
+        pending = ROOT / "submissions/pending" / f"{att}.json"
+        check(pending.exists(), "pending grading request written")
+
+        print(f"[{LEVEL}] 3. anti-oracle run (all wrong)")
+        _, v2 = take_paper(pg, False, "wrong")
+        print("    ", v2)
+        check(v2[0].startswith("0"), "listening = 0")
+        check(v2[1].startswith("0"), "reading = 0")
+        check(v2[2].startswith("0 +"), "writing auto parts = 0")
+
+        print(f"[{LEVEL}] 4. grading round-trip")
+        req = json.loads(pending.read_text())
+        check(all(it.get("rubric") and it.get("max") for it in req["items"]), "request items carry rubric and max")
+        grade = {"attemptId": att, "gradedAt": "test",
+                 "items": [{"qnum": it["qnum"], "score": it["max"] // 2, "max": it["max"], "feedback": "test", "corrected": "测试。"} for it in req["items"]]}
+        (ROOT / "submissions/graded" / f"{att}.json").write_text(json.dumps(grade, ensure_ascii=False))
+        pg.goto(URL + f"#/result/{att}")
+        pg.reload()
+        pg.wait_for_selector(".scores")
+        v3 = scores(pg)
+        print("    ", v3)
+        check(v3[2].startswith(str(auto_w + grade_w)), f"writing = {auto_w} + {grade_w}")
+        check(v3[3].startswith(str(200 + auto_w + grade_w)), f"total = {200 + auto_w + grade_w}")
+        check(pg.locator(".fb").count() >= len(req["items"]), "feedback shown for each graded item")
+        pg.screenshot(path=SHOTS / f"{LEVEL}_graded_result.png")
+        pg.goto(URL + f"#/{LEVEL}")
+        pg.wait_for_selector(".hist")
+        check(str(200 + auto_w + grade_w) in pg.inner_text(".hist"), "history table shows the graded total")
+        b.close()
+
+    if "--keep" not in args:
+        for i in created:
+            for d in ("attempts", "pending", "graded"):
+                (ROOT / "submissions" / d / f"{i}.json").unlink(missing_ok=True)
+    check(not errors, f"no JS errors {errors[:3]}")
+    print("FAILED:" if failures else "ALL PASSED", failures or "")
+    sys.exit(1 if failures else 0)
+
+
+if __name__ == "__main__":
+    main()

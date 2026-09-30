@@ -1,0 +1,12 @@
+{
+  "voices": {
+    "f": "zh-CN-XiaoxiaoNeural",
+    "m": "zh-CN-YunjianNeural",
+    "n": "zh-CN-YunyangNeural",
+    "f2": "zh-CN-XiaoyiNeural",
+    "m2": "zh-CN-YunxiNeural"
+  },
+  "rate": "+0%",
+  "gap_turn_ms": 600,
+  "gap_question_ms": 900
+}

@@ -1,0 +1,11 @@
+#!/bin/bash
+# Starts the local HSK exam server (if it isn't already running) and opens it in the browser.
+DIR="$(cd "$(dirname "$0")/../../.." && pwd)"
+PORT=8004
+URL="http://localhost:$PORT"
+if ! curl -s -o /dev/null "$URL/api/levels"; then
+  PY="$DIR/.venv/bin/python"; [ -x "$PY" ] || PY="$(command -v python3 || echo /usr/bin/python3)"
+  cd "$DIR" && nohup "$PY" server.py "$PORT" > "$DIR/submissions/server.log" 2>&1 &
+  for i in $(seq 1 50); do curl -s -o /dev/null "$URL/api/levels" && break; sleep 0.2; done
+fi
+open "$URL"

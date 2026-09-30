@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voice Samples</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><a href="./" class="brand">HSK <b>4</b> <span>声音样本 · voice samples</span></a></header>
+<main>
+  <h1>声音样本 · Voice samples</h1>
+  <p class="muted">Same sentence, each edge-tts Mandarin voice at three speeds. Current choice:
+    woman = Xiaoxiao, man = Yunjian, narrator = Yunyang, normal speed. To change it, edit
+    <code>tools/audio_config.json</code> and run <code>tools/build_audio.py</code> (it regenerates everything whose settings changed).</p>
+  <p class="passage">我们本来打算坐早上八点的航班去上海，可是因为天气不好，航班推迟了三个小时。</p>
+  <table class="hist" id="t"><tr><th>Voice</th><th>Gender · style</th><th>−10%</th><th>−5%</th><th>normal</th></tr></table>
+</main>
+<script>
+const V = [
+  ["Xiaoxiao", "female · warm, news/novel"], ["Xiaoyi", "female · lively"],
+  ["Yunxi", "male · lively, sunny"], ["Yunjian", "male · energetic"],
+  ["Yunyang", "male · professional newsreader"], ["Yunxia", "male · young/cartoon"],
+];
+const t = document.getElementById("t");
+for (const [v, d] of V) {
+  const cells = ["m10", "m5", "p0"].map((r) => `<td><audio controls preload="none" src="audio/voices/${v}Neural_${r}.mp3" style="width:150px"></audio></td>`).join("");
+  t.insertAdjacentHTML("beforeend", `<tr><td><b>${v}</b></td><td class="muted small">${d}</td>${cells}</tr>`);
+}
+</script>
+</body>
+</html>

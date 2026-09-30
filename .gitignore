@@ -1,0 +1,18 @@
+# local environment and large generated/model files
+.venv/
+models/
+scratch/
+scratch_server.log
+__pycache__/
+.DS_Store
+
+# your own answers and grades stay local
+submissions/attempts/*
+submissions/pending/*
+submissions/graded/*
+submissions/server.log
+!submissions/**/.gitkeep
+
+# vocabulary notes derived from the (copyrighted) textbooks
+data/textbook_hsk4.txt
+data/textbook_hsk4_extra.tsv

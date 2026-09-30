@@ -1,0 +1,7 @@
+# Only needed for the build/test tools (the exam site itself needs no packages).
+# Audio also needs ffmpeg; pictures need Apple Silicon and the model in models/ (see build_images.py).
+edge-tts==7.2.8
+jieba==0.42.1
+mflux==0.20.0
+pillow==12.3.0
+playwright==1.63.0

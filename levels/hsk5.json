@@ -1,0 +1,134 @@
+{
+  "level": "hsk5",
+  "name": "HSK 五级",
+  "short": "HSK 5",
+  "pass": 180,
+  "sections": [
+    {
+      "key": "listening",
+      "name": "听力 Listening",
+      "first": 1,
+      "count": 45,
+      "reviewMinutes": 3,
+      "intro": "大家好！欢迎参加HSK五级考试。HSK五级听力考试分两部分，共45题。请大家注意，听力考试现在开始。",
+      "parts": [
+        {
+          "id": "L1",
+          "type": "mcq",
+          "units": 20,
+          "group": "L1",
+          "pause": 12,
+          "title": "第一部分",
+          "desc": "请选出正确答案。每题是两个人的对话，第三个人问一个问题。",
+          "audioIntro": "第一部分，共20题。每题听一次。每题都是两个人的两句对话，第三个人根据对话问一个问题，请选出正确答案。"
+        },
+        {
+          "id": "L2a",
+          "type": "mcq",
+          "units": 10,
+          "group": "L2",
+          "pause": 14,
+          "title": "第二部分",
+          "desc": "请选出正确答案。四到五句对话，或一段话后的问题。",
+          "audioIntro": "第二部分，共25题。每题听一次。每题都是两个人的四到五句对话，或者一个人说一段话，第三个人根据对话或者这段话问一个或几个问题，请选出正确答案。"
+        },
+        {
+          "id": "L2b",
+          "type": "mcq_group",
+          "questions": 15,
+          "group": "L2",
+          "pause": 14,
+          "questionsPerUnit": [
+            2,
+            3
+          ],
+          "rangeIntro": "第{a}到{b}题是根据下面一段话："
+        }
+      ]
+    },
+    {
+      "key": "reading",
+      "name": "阅读 Reading",
+      "first": 46,
+      "count": 45,
+      "minutes": 45,
+      "parts": [
+        {
+          "id": "R1",
+          "type": "mcq_group",
+          "cloze": true,
+          "questions": 15,
+          "group": "R1",
+          "questionsPerUnit": [
+            3,
+            4
+          ],
+          "title": "第一部分",
+          "desc": "选词填空。请选出正确答案。"
+        },
+        {
+          "id": "R2",
+          "type": "mcq",
+          "units": 10,
+          "group": "R2",
+          "title": "第二部分",
+          "desc": "请选出与试题内容一致的一项。",
+          "noQuestion": true
+        },
+        {
+          "id": "R3",
+          "type": "mcq_group",
+          "units": 5,
+          "group": "R3",
+          "questionsPerUnit": [
+            4
+          ],
+          "title": "第三部分",
+          "desc": "请选出正确答案。"
+        }
+      ]
+    },
+    {
+      "key": "writing",
+      "name": "书写 Writing",
+      "first": 91,
+      "count": 10,
+      "minutes": 40,
+      "parts": [
+        {
+          "id": "W1",
+          "type": "arrange",
+          "units": 8,
+          "group": "W1",
+          "points": 5,
+          "title": "第一部分",
+          "desc": "完成句子。"
+        },
+        {
+          "id": "W2a",
+          "type": "free",
+          "kind": "essay_words",
+          "units": 1,
+          "group": "W2",
+          "points": 30,
+          "targetChars": 80,
+          "title": "第二部分",
+          "desc": "写短文。",
+          "prompt": "请结合下列词语（要全部使用，顺序不分先后），写一篇80字左右的短文。",
+          "rubric": "Score 0-30 (HSK 5 essay with 5 given words, ~80 characters; count every character incl. punctuation, as on the answer sheet):\n27-30 = all 5 words used correctly and naturally; coherent, well-organised text with a clear topic; varied, level-appropriate grammar; almost no errors; 80+ characters\n21-26 = all words used, mostly correctly; coherent; some minor grammar or word-choice errors; length about right\n15-20 = most words used (4/5) or some used wrongly; understandable but loosely connected; several errors\n8-14 = only 2-3 words used, or many errors that sometimes block meaning, or well under 60 characters\n1-7 = very little relevant, correct Chinese\n0 = blank or not Chinese\nDeduct 1 per wrongly written character (max 5). Deduct 3 for each missing required word beyond the first."
+        },
+        {
+          "id": "W2b",
+          "type": "free",
+          "kind": "essay_picture",
+          "units": 1,
+          "group": "W2",
+          "points": 30,
+          "targetChars": 80,
+          "prompt": "请结合这张图片写一篇80字左右的短文。",
+          "rubric": "Score 0-30 (HSK 5 picture essay, ~80 characters; count every character incl. punctuation, as on the answer sheet):\n27-30 = clearly based on the picture and develops it into a coherent short story or description with a point; varied, level-appropriate grammar and vocabulary; almost no errors; 80+ characters\n21-26 = relevant and coherent; some minor errors; length about right\n15-20 = relevant but thin or loosely connected; several errors\n8-14 = weak link to the picture, or many errors that sometimes block meaning, or well under 60 characters\n1-7 = very little relevant, correct Chinese\n0 = blank or not Chinese\nDeduct 1 per wrongly written character (max 5)."
+        }
+      ]
+    }
+  ]
+}
