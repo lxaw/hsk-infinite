@@ -1,6 +1,6 @@
 """Parse the HSK 3.0 (2025) vocabulary from the official 《HSK考试大纲》 PDF into data/wordlists_v3/.
 
-    pdftotext -raw -f 77 -l 352 新版HSK考试大纲1219.pdf vocab_raw.txt
+    pdftotext -raw -f 77 -l 354 新版HSK考试大纲1219.pdf vocab_raw.txt
     python3 tools/parse_syllabus_v3.py vocab_raw.txt
 
 Writes L1..L6.txt and L7-9.txt (one word per line, the level where the word is first introduced)

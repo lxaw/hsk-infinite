@@ -258,3 +258,8 @@ table.parts td { vertical-align: middle; }
 .spbar .timer { font-size: 22px; }
 .recdot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); margin-right: 4px; animation: blink 1s infinite; }
 @keyframes blink { 50% { opacity: .2; } }
+
+/* HSK 3.0 higher levels */
+.story-pic img { width: 100%; max-width: 640px; border-radius: 8px; border: 1px solid var(--line); margin: 8px 0; }
+.source { font-family: Georgia, serif; font-size: 17px; line-height: 1.6; background: var(--bg); border-radius: 8px; padding: 10px 14px; margin: 8px 0; }
+input.answer.fill { max-width: 360px; display: block; margin-top: 6px; }

@@ -69,8 +69,9 @@ def segments(part, u):
         return {i: body(u) + ([] if part.get("noQuestion") else [("n", "问：" + u["question"])])}
     if part["type"] == "mcq_group":
         out = {i: body(u)}
-        for k, q in enumerate(u["questions"]):
-            out[f"{i}_q{k}"] = [("n", q["question"])]
+        if not part.get("silentQuestions"):  # printed-only statements/fill-ins (HSK 3.0 levels 7-9)
+            for k, q in enumerate(u["questions"]):
+                out[f"{i}_q{k}"] = [("n", q.get("spoken", q["question"]))]  # fill-ins print a blank but are read as a question
         return out
     if part["type"] == "repeat":  # speaking: listen and repeat
         return {i: [(u["speaker"], u["text"])]}

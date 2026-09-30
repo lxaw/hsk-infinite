@@ -103,7 +103,8 @@ function buildPaper(mode, practice) {
         switch (part.type) {
           case "tf": addQ({ correct: u.answer }); break;
           case "mcq": mcq(u); break;
-          case "mcq_group": u.questions.forEach((q, k) => mcq(q, { sub: k })); break;
+          // A question without options is a short-answer fill-in (HSK 3.0 levels 7-9), checked against answer + accepted.
+          case "mcq_group": u.questions.forEach((q, k) => q.options ? mcq(q, { sub: k }) : addQ({ sub: k, fill: true, correct: q.answer, accepted: q.accepted || [] })); break;
           case "wordbank":
             b.bankOrder = perm(u.bank.length); b.itemOrder = perm(u.items.length);
             b.itemOrder.forEach((k) => addQ({ sub: k, correct: LET[b.bankOrder.indexOf(u.items[k].answer)] }));
@@ -159,11 +160,16 @@ function renderBlock(b) {
       return `<div class="q" id="q${q0.qnum}"><span class="qn">${q0.qnum}.</span>${passage}${question}${choiceBtns(q0, u.options)}</div>`;
     }
     case "mcq_group": {
-      if (listening) return b.qnums.map((n, k) => { const q = qById(n); return `<div class="q" id="q${n}"><span class="qn">${n}.</span>${k === 0 ? playBtn(audio(u.id), "▶ 录音") : ""} ${playBtn(audio(`${u.id}_q${q.sub}`), "▶ 问题")}${choiceBtns(q, u.questions[q.sub].options)}</div>`; }).join("");
+      // Fill-ins get a text box. Listening questions are spoken unless the part prints them (printQuestions / silentQuestions).
+      const field = (q, Q) => Q.options ? choiceBtns(q, Q.options) : `<input class="answer fill" data-text="${q.qnum}" value="${esc(q.response || "")}" placeholder="${part.fillHint || "填写答案 · type the answer"}">`;
+      if (listening) return b.qnums.map((n, k) => {
+        const q = qById(n), Q = u.questions[q.sub], printed = part.printQuestions || !Q.options;
+        return `<div class="q" id="q${n}"><span class="qn">${n}.</span>${k === 0 ? playBtn(audio(u.id), "▶ 录音") : ""} ${part.silentQuestions ? "" : playBtn(audio(`${u.id}_q${q.sub}`), "▶ 问题")}${printed && Q.question ? `<span class="stmt">${esc(Q.question)}</span>` : ""}${field(q, Q)}</div>`;
+      }).join("");
       const head = `<span class="qn">${b.qnums[0]}–${b.qnums[b.qnums.length - 1]}.</span>`;
       const passage = part.cloze ? blanks(u.passage, (k) => `<b class="blank">（${b.qnums[k - 1]}）</b>`) : esc(u.passage);
       return `<div class="q"><div class="passage">${head}${u.title ? `<b>${esc(u.title)}</b>\n` : ""}${passage}</div></div>` +
-        b.qnums.map((n) => { const q = qById(n), Q = u.questions[q.sub]; return `<div class="q" id="q${n}"><span class="qn">${n}.</span>${Q.question ? `<span class="stmt">★ ${esc(Q.question)}</span>` : ""}${choiceBtns(q, Q.options)}</div>`; }).join("");
+        b.qnums.map((n) => { const q = qById(n), Q = u.questions[q.sub]; return `<div class="q" id="q${n}"><span class="qn">${n}.</span>${Q.question ? `<span class="stmt">★ ${esc(Q.question)}</span>` : ""}${field(q, Q)}</div>`; }).join("");
     }
     case "wordbank": {
       // HSK 2.0 banks have a worked example; HSK 3.0 banks have none and one distractor word instead.
@@ -203,6 +209,12 @@ function renderFree(part, u, q) {
     return `<div class="q w2" id="q${q.qnum}"><img src="${image(u.id)}" alt=""><div><span class="qn">${q.qnum}.</span><div class="word">${esc(u.word)}</div>${box}</div></div>`;
   if (part.kind === "essay_picture")
     return `<div class="q" id="q${q.qnum}"><span class="qn">${q.qnum}.</span><span class="muted">${esc(part.prompt)}</span><div class="w2"><img src="${image(u.id)}" alt=""><div>${box}</div></div></div>`;
+  if (["picture_story", "chart_essay"].includes(part.kind))
+    return `<div class="q" id="q${q.qnum}"><span class="qn">${q.qnum}.</span><span class="stmt">${esc(u.task || part.prompt || "")}</span><div class="story-pic"><img src="${image(u.id)}" alt=""></div>${box}</div>`;
+  if (part.kind === "translation")
+    return `<div class="q" id="q${q.qnum}"><span class="qn">${q.qnum}.</span><span class="muted">${esc(part.prompt || "")}</span><div class="source" lang="en">${esc(u.source)}</div>${box}</div>`;
+  if (["essay_topic", "practical"].includes(part.kind))
+    return `<div class="q" id="q${q.qnum}"><span class="qn">${q.qnum}.</span><span class="stmt">${esc(u.task)}</span>${box}</div>`;
   if (part.kind === "essay_topic")
     return `<div class="q" id="q${q.qnum}"><span class="qn">${q.qnum}.</span><span class="stmt">${esc(u.task)}</span>${box}</div>`;
   if (part.kind === "essay_words")
@@ -344,7 +356,8 @@ function listeningPlaylist() {
     if (part.type === "mcq_group") {
       const a = b.qnums[0], z = b.qnums[b.qnums.length - 1];
       seq.push({ src: audio(`fixed/range_${part.id}_${a}_${z}`), q: a }, { src: audio(b.unitId), q: a });
-      b.qnums.forEach((n) => seq.push({ src: audio(`fixed/num${n}`), q: n }, { src: audio(`${b.unitId}_q${qById(n).sub}`), q: n }, { pause: part.pause * 1000, q: n }));
+      if (part.silentQuestions) seq.push({ pause: part.pause * 1000 * b.qnums.length, q: a });  // statements are printed, one answering pause
+      else b.qnums.forEach((n) => seq.push({ src: audio(`fixed/num${n}`), q: n }, { src: audio(`${b.unitId}_q${qById(n).sub}`), q: n }, { pause: part.pause * 1000, q: n }));
     } else {
       const n = b.qnums[0];
       seq.push({ src: audio(`fixed/num${n}`), q: n }, { src: audio(b.unitId), q: n }, { pause: part.pause * 1000, q: n });
@@ -426,6 +439,7 @@ function finishSection(auto) {
 function isCorrect(q) {
   const part = partCfg(q.part);
   if (part.type === "free") return null;
+  if (q.fill) { const r = norm(q.response); return !!r && [q.correct, ...(q.accepted || [])].some((a) => norm(a) === r); }
   if (part.type === "arrange") { const r = norm(q.response); return !!r && [q.correct, ...(q.accepted || [])].some((a) => norm(a) === r); }
   return q.response === q.correct;
 }
@@ -434,7 +448,8 @@ function computeScores(att) {
   const out = {};
   for (const key of att.sections) {
     const qs = att.questions.filter((q) => sectionOf(q.qnum) === key);
-    if (key === "writing") {
+    // Sections with free writing (writing; 7-9 translation) add Claude's grades to the auto-scored points.
+    if (qs.some((q) => partCfg(q.part).type === "free")) {
       let auto = 0, free = 0, pending = false;
       for (const q of qs) {
         const part = partCfg(q.part);
@@ -443,7 +458,7 @@ function computeScores(att) {
           if (g) free += Math.min(+g.score || 0, part.points); else pending = true;
         } else if (isCorrect(q)) auto += part.points;
       }
-      out.writing = { auto, free: pending ? null : free, score: pending ? null : auto + free, provisional: auto };
+      out[key] = { auto, free: pending ? null : free, score: pending ? null : auto + free, provisional: auto };
     } else {
       const right = qs.filter(isCorrect).length;
       out[key] = { right, of: qs.length, score: Math.round((100 * right) / qs.length) };
@@ -483,7 +498,7 @@ function shortDesc(p) {
   if (p.type === "order") return "put A B C in order";
   if (p.type === "insert") return "sentence insertion";
   if (p.type === "arrange") return "arrange the words";
-  if (p.type === "free") return { picture_sentence: "picture + word → sentence", essay_topic: "short essay on a topic", essay_words: "short essays", essay_picture: "short essays", summary: "缩写 summary" }[p.kind] || "writing";
+  if (p.type === "free") return { picture_sentence: "picture + word → sentence", essay_topic: "essay on a topic", picture_story: "4-picture story", practical: "practical writing (应用文)", chart_essay: "describe a chart", translation: "translation into Chinese", essay_words: "short essays", essay_picture: "short essays", summary: "缩写 summary" }[p.kind] || "writing";
   if (p.cloze) return "cloze passages";
   if (p.type === "mcq_group") return L ? (group.some((x) => (x.questionsPerUnit || []).includes(5)) ? "interviews" : "long dialogues & passages") : "reading passages";
   if (L) return group.length > 1 ? "dialogues & passages" : "short items";
@@ -547,7 +562,7 @@ async function renderHome(level) {
       const cell = (k) => !s[k] ? "—" : a.drill ? (s[k].right !== undefined ? `${s[k].right}/${s[k].of}` : s[k].score ?? `${s[k].provisional}+?`) : (s[k].score ?? `${s[k].provisional}+?`);
       const full = a.sections.length === CFG.sections.length;
       const total = full && CFG.sections.every((x) => s[x.key].score !== null) ? CFG.sections.reduce((t, x) => t + s[x.key].score, 0) : null;
-      const tot = full ? (total === null ? `<span class="pill wait">待批改</span>` : `${total} <span class="pill ${total >= CFG.pass ? "pass" : "fail"}">${total >= CFG.pass ? "合格" : "未合格"}</span>`) : "";
+      const tot = full && !CFG.noPass ? (total === null ? `<span class="pill wait">待批改</span>` : `${total} <span class="pill ${total >= CFG.pass ? "pass" : "fail"}">${total >= CFG.pass ? "合格" : "未合格"}</span>`) : "";
       html += `<tr data-id="${esc(a.id)}"><td>${new Date(a.finishedAt).toLocaleString()}</td><td>${esc(modeLabel(a))}</td>${CFG.sections.map((x) => `<td>${cell(x.key)}</td>`).join("")}<td>${tot}</td></tr>`;
     }
     html += `</table>`;
@@ -583,10 +598,11 @@ async function renderResult(id) {
   for (const key of a.sections) {
     const v = s[key], S = sectionCfg(key);
     const val = v.score === null ? `${v.provisional}<small> + ? / 100</small>` : `${v.score}<small> / 100</small>`;
-    const sub = key !== "writing" ? `${v.right}/${v.of} correct` : v.free === null ? `auto ${v.auto} · Claude grading pending` : `auto ${v.auto} + Claude ${v.free}`;
+    const sub = v.auto === undefined ? `${v.right}/${v.of} correct` : v.free === null ? `auto ${v.auto} · Claude grading pending` : `auto ${v.auto} + Claude ${v.free}`;
     html += `<div class="score"><div class="k">${S.name}</div><div class="v">${val}</div><div class="small muted">${sub}</div></div>`;
   }
-  if (full) html += `<div class="score total"><div class="k">总分 Total</div><div class="v">${total ?? "…"}<small> / ${CFG.sections.length * 100}</small></div><div class="small muted">${total === null ? "writing pending" : total >= CFG.pass ? `合格 pass (≥${CFG.pass}${CFG.passEstimated ? ", estimated" : ""})` : `未合格 below ${CFG.pass}${CFG.passEstimated ? " (estimated)" : ""}`}</div></div>`;
+  // HSK 7-9 has no total or pass mark: the level comes from IRT scaling, so show section scores only.
+  if (full && !CFG.noPass) html += `<div class="score total"><div class="k">总分 Total</div><div class="v">${total ?? "…"}<small> / ${CFG.sections.length * 100}</small></div><div class="small muted">${total === null ? "writing pending" : total >= CFG.pass ? `合格 pass (≥${CFG.pass}${CFG.passEstimated ? ", estimated" : ""})` : `未合格 below ${CFG.pass}${CFG.passEstimated ? " (estimated)" : ""}`}</div></div>`;
   html += `</div>`;
   const hasFree = a.questions.some((q) => partCfg(q.part).type === "free");
   if (hasFree && !a.claudeGrade) html += `<div class="notice">书写 is waiting for grading. In Claude Code (in <code>~/Desktop/hsk</code>) say: <code>grade my HSK writing</code>. This page updates by itself when the grade arrives.</div>`;
@@ -632,7 +648,8 @@ function reviewQ(a, q) {
       break;
     case "mcq_group": {
       const Q = u.questions[q.sub];
-      body = (Q.question ? `<span class="stmt">★ ${esc(Q.question)}</span>` : "") + ans(opt(Q.options, q.response), opt(Q.options, q.correct));
+      body = (Q.question ? `<span class="stmt">★ ${esc(Q.question)}</span>` : "") + (Q.options ? ans(opt(Q.options, q.response), opt(Q.options, q.correct))
+        : `<div class="ans">你的答案：${esc(q.response || "—")} · 正确：${esc(q.correct)}${(q.accepted || []).length ? ` <span class="muted">（也可：${esc(q.accepted.join(" / "))}）</span>` : ""}</div>`);
       if (!listening && q.qnum === b.qnums[0]) body += `<details><summary>原文 passage</summary><div class="transcript">${esc(u.passage.replace(/\[(\d+)\]/g, (_, k) => `（${b.qnums[k - 1]}）`))}</div></details>`;
       break;
     }
@@ -642,8 +659,8 @@ function reviewQ(a, q) {
     case "arrange": body = `<div class="ans">你的答案：${esc(q.response || "—")}<br>正确：${esc(q.correct)}${(q.accepted || []).length ? ` <span class="muted">（也可：${esc(q.accepted.join(" / "))}）</span>` : ""}</div>`; break;
     case "free": {
       const g = a.claudeGrade && a.claudeGrade.items.find((x) => x.qnum === q.qnum);
-      const pic = ["picture_sentence", "essay_picture"].includes(part.kind) ? `<img src="${image(u.id)}" alt="">` : "";
-      const head = part.kind === "picture_sentence" ? `<div class="word">${esc(u.word)}</div>` : part.kind === "essay_topic" ? `<div class="stmt">${esc(u.task)}</div>` : part.kind === "essay_words" ? `<div class="bank">${u.words.map((w) => `<span>${esc(w)}</span>`).join("")}</div>` : "";
+      const pic = ["picture_sentence", "essay_picture", "picture_story", "chart_essay"].includes(part.kind) ? `<img src="${image(u.id)}" alt="">` : "";
+      const head = part.kind === "picture_sentence" ? `<div class="word">${esc(u.word)}</div>` : part.kind === "translation" ? `<div class="source" lang="en">${esc(u.source)}</div>` : u.task ? `<div class="stmt">${esc(u.task)}</div>` : part.kind === "essay_words" ? `<div class="bank">${u.words.map((w) => `<span>${esc(w)}</span>`).join("")}</div>` : "";
       const models = u.models ? u.models.join("\n") : u.model || "";
       body = `<div class="${pic ? "w2" : ""}">${pic}<div>${head}<div class="passage">${esc(q.response || "—")}</div><div class="small muted">${hanCount(q.response)} 字${part.targetChars ? ` / 目标 ${part.targetChars}` : ""}</div>
         ${g ? `<div class="fb"><b>${g.score}/${part.points}</b> · ${esc(g.feedback)}${g.corrected ? `<br>修改：${esc(g.corrected)}` : ""}</div>` : `<div class="small muted">待批改 · waiting for Claude</div>`}
@@ -690,7 +707,7 @@ async function renderExamDay(level) {
     ["rules", "我知道：开始后不能暂停；听力只放一遍；每部分时间到自动交卷 · no pausing, the recording plays once, each section ends automatically", ""],
   ];
   $("#app").innerHTML = `<p><a href="#/${CFG.level}">← 返回 ${esc(CFG.short)}</a></p><h1>模拟考试日 · Exam day</h1>
-    <p class="muted">${esc(CFG.name)} · 完整试卷 full paper under real conditions · ${CFG.sections.reduce((s, x) => s + x.count, 0)} 题 · 合格 ${CFG.pass}/${CFG.sections.length * 100}</p>
+    <p class="muted">${esc(CFG.name)} · 完整试卷 full paper under real conditions · ${CFG.sections.reduce((s, x) => s + x.count, 0)} 题${CFG.noPass ? "" : ` · 合格 ${CFG.pass}/${CFG.sections.length * 100}`}</p>
     <table class="hist"><tr><th>部分 Section</th><th>题数</th><th>时间 Time</th></tr>${CFG.sections.map(row).join("")}</table>
     <h2>考前检查 · Before you start</h2>
     <div class="checklist">${items.map(([k, t, extra]) => `<label class="ck"><input type="checkbox" data-ck="${k}" ${k === "sound" ? "disabled" : ""}> <span>${esc(t)}</span> ${extra}</label>`).join("")}</div>
@@ -726,6 +743,7 @@ async function renderSheet(id) {
       case "insert": return b.sentOrder.map((_, di) => bub(LET[di], r === LET[di])).join("");
       case "order": return [0, 1, 2].map((i) => `<span class="box">${esc((r || "")[i] || "")}</span>`).join("");
       case "arrange": return `<span class="line">${esc(r || "")}</span>`;
+      case "mcq_group": if (q.fill) return `<span class="line">${esc(r || "")}</span>`;  // falls through for choices
       default: return q.optOrder ? q.optOrder.map((_, di) => bub(LET[di], r === di)).join("") : "";
     }
   };
@@ -788,7 +806,7 @@ function missedText(u, q, part) {
   switch (part.type) {
     case "tf": return { key: u.statement, ctx };
     case "mcq": return { key: u.errorType ? u.options.join("\n") : `${u.options[u.answer]}\n${u.question || ""}`, ctx };
-    case "mcq_group": { const Q = u.questions[q.sub]; return { key: `${Q.options[Q.answer]}\n${Q.question || ""}`, ctx }; }
+    case "mcq_group": { const Q = u.questions[q.sub]; return { key: `${Q.options ? Q.options[Q.answer] : Q.answer}\n${Q.question || ""}`, ctx }; }
     case "wordbank": { const it = u.items[q.sub]; return { key: it.text.replace("（ ）", u.bank[it.answer]), ctx: "" }; }
     case "insert": return { key: u.sentences[u.answers[q.sub]], ctx };
     case "order": return { key: ["A", "B", "C"].map((k) => u[k]).join("\n"), ctx: "" };
@@ -971,7 +989,7 @@ async function renderProgress(level) {
         <div class="score"><div class="k">试卷 Papers</div><div class="v">${list.length}</div><div class="small muted">${list.filter((a) => a.drill).length} drills</div></div>
         <div class="score"><div class="k">答题 Answered</div><div class="v">${answered}</div><div class="small muted">auto-scored + graded writing</div></div>
         <div class="score"><div class="k">正确率 Accuracy</div><div class="v">${answered ? pct(right, answered) : "—"}<small>${answered ? "%" : ""}</small></div><div class="small muted">all parts</div></div>
-        <div class="score"><div class="k">最高总分 Best total</div><div class="v">${fulls.length ? Math.max(...fulls) : "—"}<small>${fulls.length ? ` / ${CFG.sections.length * 100}` : ""}</small></div><div class="small muted">${fulls.length ? `合格线 pass ${CFG.pass}` : "no graded full paper yet"}</div></div>
+        ${CFG.noPass ? "" : `<div class="score"><div class="k">最高总分 Best total</div><div class="v">${fulls.length ? Math.max(...fulls) : "—"}<small>${fulls.length ? ` / ${CFG.sections.length * 100}` : ""}</small></div><div class="small muted">${fulls.length ? `合格线 pass ${CFG.pass}` : "no graded full paper yet"}</div></div>`}
       </div>
       <h2>分数走势 · Section scores</h2>${renderProgressChart(list)}
       <h2>各部分 · By part</h2>

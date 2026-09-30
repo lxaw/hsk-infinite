@@ -38,6 +38,8 @@ def words(path):
 
 WL = ROOT / "data" / ("wordlists_v3" if CFG.get("syllabus") == "v3" else "wordlists")  # HSK 3.0 (2025) or 2.0 (2012) lists
 OFFICIAL = {i: words(WL / f"L{i}.txt") for i in range(1, 7)}
+if (WL / "L7-9.txt").exists():
+    OFFICIAL[7] = words(WL / "L7-9.txt")  # HSK 3.0 levels 7-9 share one list
 ALLOWED = set().union(*(OFFICIAL[i] for i in range(1, N + 1)))
 LEVEL_WORDS = OFFICIAL[N]
 BELOW = set().union(*(OFFICIAL[i] for i in range(1, N)))  # everything easier than this level
@@ -98,7 +100,9 @@ def texts(part, u):
     for q in u.get("questions", []):
         if q.get("question"):
             yield q["question"]
-        yield from q["options"]
+        yield from q.get("options", [])
+        if "options" not in q and isinstance(q.get("answer"), str):
+            yield q["answer"]
     if t == "wordbank":
         if u.get("example"):
             yield u["example"]["text"]
@@ -177,6 +181,12 @@ def check(part, u, errs, ans):
         for k, q in enumerate(u["questions"]):
             if not part.get("cloze") and not q.get("question"):
                 errs.append(f"{i}.{k}: needs question")
+            if "options" not in q:  # short-answer fill-in
+                if not isinstance(q.get("answer"), str) or not q["answer"].strip():
+                    errs.append(f"{i}.{k}: fill-in needs a text answer")
+                elif part.get("maxAnswerChars") and len(q["answer"]) > part["maxAnswerChars"]:
+                    errs.append(f"{i}.{k}: answer longer than {part['maxAnswerChars']} characters")
+                continue
             check_mcq(q, f"{i}.{k}", errs, ans)
     elif t == "wordbank":
         # HSK 2.0: an example uses the sixth word. HSK 3.0: no example, the sixth word is a distractor.
@@ -195,8 +205,9 @@ def check(part, u, errs, ans):
         n = len(u["answers"])
         if marks != list(range(1, n + 1)):
             errs.append(f"{i}: passage needs [1]..[{n}] in order")
-        if sorted(u["answers"]) != list(range(len(u["sentences"]))):
-            errs.append(f"{i}: answers must be a permutation of the sentences")
+        extra = len(u["sentences"]) - n  # HSK 3.0: one sentence/paragraph may be a distractor
+        if len(set(u["answers"])) != n or not all(0 <= a < len(u["sentences"]) for a in u["answers"]) or extra not in (0, part.get("distractors", 0)):
+            errs.append(f"{i}: answers must use distinct sentences ({part.get('distractors', 0)} distractor allowed)")
         ans.extend(u["answers"])
     elif t == "order":
         if sorted(u.get("answer", "")) != ["A", "B", "C"]:
@@ -218,7 +229,9 @@ def check(part, u, errs, ans):
     elif t == "free":
         k = part["kind"]
         need = {"picture_sentence": ["word", "scene", "models"], "essay_words": ["words", "model"],
-                "essay_picture": ["scene", "model"], "essay_topic": ["task", "model"], "summary": ["title", "story", "model"]}[k]
+                "essay_picture": ["scene", "model"], "essay_topic": ["task", "model"], "summary": ["title", "story", "model"],
+                "picture_story": ["scenes", "model"], "practical": ["task", "model"], "chart_essay": ["task", "chart", "model"],
+                "translation": ["source", "model"]}[k]
         for f in need:
             if not u.get(f):
                 errs.append(f"{i}: {k} needs {f}")
@@ -232,7 +245,9 @@ def check(part, u, errs, ans):
             for w in u.get("words", []):
                 if w not in u.get("model", ""):
                     errs.append(f"{i}: model essay missing word {w}")
-        if k == "essay_topic" and part.get("targetChars"):
+        if k == "picture_story" and len(u.get("scenes", [])) != 4:
+            errs.append(f"{i}: picture story needs 4 scenes")
+        if k in ("essay_topic", "picture_story", "practical", "chart_essay") and part.get("targetChars"):
             m = len(re.sub(r"\s", "", u.get("model", "")))
             if m < part["targetChars"]:
                 errs.append(f"{i}: model essay is {m} characters (needs at least {part['targetChars']})")
@@ -271,7 +286,7 @@ def main():
                 # "advanced" = multi-character words above the previous level (this level's list or beyond it)
                 d = sum(advanced(t) for t in toks) / len(toks)
                 dens.append(d)
-                if len(toks) >= 25 and d < MIN_ADV[N]:
+                if len(toks) >= 25 and d < CFG.get("minAdvanced", MIN_ADV.get(N, 0)):
                     errs.append(f"{u['id']}: few advanced words ({d:.0%}) — probably too easy for {LEVEL.upper()}")
             for piece in texts(part, u):
                 for w in oov(piece):

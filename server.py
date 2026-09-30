@@ -66,10 +66,10 @@ def grading_request(att):
             it["targetChars"] = pt["targetChars"]
         if pt.get("prompt"):
             it["prompt"] = pt["prompt"]
-        for k in ("word", "words", "task", "scene", "title", "story", "models", "model"):
+        for k in ("word", "words", "task", "source", "scene", "scenes", "chart", "title", "story", "models", "model"):
             if k in u:
                 it[k] = u[k]
-        if pt["kind"] in ("picture_sentence", "essay_picture"):
+        if pt["kind"] in ("picture_sentence", "essay_picture", "picture_story", "chart_essay"):
             it["image"] = f"site/images/{cfg['level']}/{q['unitId']}.jpg"
         items.append(it)
     return {

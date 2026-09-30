@@ -10,6 +10,7 @@ also_ok entry needs a human look (rewrite the item or confirm the key).
 """
 import json
 import random
+import re
 import sys
 from pathlib import Path
 
@@ -30,6 +31,9 @@ def dump(level, parts, ids):
             ctx = {k: u[k] for k in ("passage", "dialogue", "title") if k in u}
             if "questions" in u:
                 for k, q in enumerate(u["questions"]):
+                    if "options" not in q:  # short-answer fill-in: the solver writes the answer text
+                        out.append({"qid": f"{u['id']}#{k}", **ctx, "question": q.get("question", f"blank [{k + 1}]"), "answer_format": "text (short)"})
+                        continue
                     out.append({"qid": f"{u['id']}#{k}", **ctx, "question": q.get("question", f"blank [{k + 1}]"),
                                 "options": {LET[i]: o for i, o in enumerate(q["options"])}})
             elif "options" in u:
@@ -53,7 +57,7 @@ def dump(level, parts, ids):
     # Shuffle option letters so answer position gives nothing away; keep the mapping private.
     mapping = {}
     for q in out:
-        if q["question"].startswith("Put A, B, C"):
+        if q["question"].startswith("Put A, B, C") or "options" not in q:
             continue
         orig = list(q["options"].items())
         random.shuffle(orig)
@@ -70,7 +74,8 @@ def key(level, qid):
     part = uid.rsplit("-", 1)[0]
     u = next(x for x in units(level, part) if x["id"] == uid)
     if "questions" in u:
-        return LET[u["questions"][int(k)]["answer"]]
+        Q = u["questions"][int(k)]
+        return LET[Q["answer"]] if "options" in Q else [Q["answer"], *Q.get("accepted", [])]
     if "options" in u:
         return LET[u["answer"]]
     if "sentences" in u:
@@ -89,6 +94,12 @@ def diff(level, path):
         a = {**a, "answer": m.get(a["answer"], a["answer"]), "also_ok": [m.get(x, x) for x in a.get("also_ok", [])]}
         k = key(level, qid)
         flags = []
+        if isinstance(k, list):  # fill-in: compare ignoring punctuation and spaces
+            nrm = lambda t: re.sub(r"[\s，。？！、,.?!；;：:“”\"'（）()]", "", str(t))
+            if nrm(a["answer"]) not in {nrm(x) for x in k}:
+                bad += 1
+                print(f"{qid}: solver wrote 「{a['answer']}」, accepted {k}  — {a.get('note', '')}")
+            continue
         if a["answer"] != k:
             flags.append(f"solver {a['answer']} ≠ key {k}")
         if a.get("also_ok"):

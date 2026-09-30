@@ -69,12 +69,13 @@ if cf.exists():
         if senses and m.group(1) not in cedict:
             cedict[m.group(1)] = "; ".join(senses[:3])
 
-# HSK 3.0 (2025) lists, levels 1-6: level and pinyin from the syllabus; meanings as above.
+# HSK 3.0 (2025) lists, levels 1-6 and 7-9 (tagged 7): level and pinyin from the syllabus; meanings as above.
 v3, missing = {}, []
 for line in (ROOT / "data" / "wordlists_v3" / "words.tsv").read_text(encoding="utf-8").splitlines():
     _, lvl, w, pinyin, _ = (line.split("\t") + [""] * 5)[:5]
-    if lvl not in "123456" or w in v3:
+    if lvl not in ("1", "2", "3", "4", "5", "6", "7-9") or w in v3:
         continue
+    lvl = "7" if lvl == "7-9" else lvl  # levels 7-9 share one list
     gloss = vocab[w][2] if w in vocab else ""
     if not gloss and w in ref:
         gloss = "; ".join(m for f in ref[w]["forms"][:2] for m in f["meanings"])[:120]
