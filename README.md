@@ -24,8 +24,8 @@ the exams in your browser. That's it — no installs, no accounts, nothing leave
 
 Keep the app inside this folder (dragging it to the Dock just adds a shortcut). If macOS says it
 "can't be opened" — which only happens when you download the repo as a zip instead of cloning —
-right-click it → **Open** once. The server keeps running in the background; stop it with
-`pkill -f server.py`.
+right-click it → **Open** once. To quit, just close the browser tab: the small server notices and
+stops by itself about half a minute later.
 
 **Any OS:** with Python 3.9+ (no packages needed):
 
@@ -33,6 +33,9 @@ right-click it → **Open** once. The server keeps running in the background; st
 python3 server.py
 # then open http://localhost:8004
 ```
+
+Stop it with Ctrl+C or by closing the terminal. Add `--auto-exit` to have it stop by itself when you
+close the last browser tab, like the Mac app does.
 
 ## How to use it
 
