@@ -1,0 +1,209 @@
+{
+  "level": "hsk5n",
+  "name": "新 HSK 五级（3.0）",
+  "short": "新HSK 5",
+  "num": 5,
+  "syllabus": "v3",
+  "order": 11,
+  "pass": 180,
+  "passEstimated": true,
+  "note": "New HSK (3.0) format from the official 2026 sample paper: 72 questions, about 110 minutes. The speaking paper (HSK五级口语) is separate. Section scores out of 100, the 180 pass mark and the writing weights are estimates; the new scoring has not been published.",
+  "sections": [
+    {
+      "key": "listening",
+      "name": "听力 Listening",
+      "first": 1,
+      "count": 35,
+      "reviewMinutes": 5,
+      "approxMinutes": 30,
+      "intro": "大家好！欢迎参加HSK五级考试。HSK五级听力考试分两部分，共35题。请大家注意，听力考试现在开始。",
+      "parts": [
+        {
+          "id": "L1a",
+          "type": "mcq",
+          "units": 10,
+          "group": "L1",
+          "pause": 12,
+          "title": "第一部分",
+          "desc": "第1～19题：听对话，请选出正确答案。",
+          "audioIntro": "第一部分，第1到19题。听对话，选择正确答案。每题听一次。"
+        },
+        {
+          "id": "L1b",
+          "type": "mcq_group",
+          "units": 3,
+          "group": "L1",
+          "pause": 12,
+          "questionsPerUnit": [
+            2
+          ],
+          "rangeIntro": "第{a}到{b}题是根据下面这个对话。"
+        },
+        {
+          "id": "L1c",
+          "type": "mcq_group",
+          "units": 1,
+          "group": "L1",
+          "pause": 12,
+          "questionsPerUnit": [
+            3
+          ],
+          "rangeIntro": "第{a}到{b}题是根据下面这个对话。"
+        },
+        {
+          "id": "L2a",
+          "type": "mcq_group",
+          "units": 2,
+          "group": "L2",
+          "pause": 12,
+          "questionsPerUnit": [
+            2
+          ],
+          "title": "第二部分",
+          "desc": "第20～35题：听短文，请选出正确答案。",
+          "audioIntro": "第二部分，第20到35题。听短文，选择正确答案。每题听一次。",
+          "rangeIntro": "第{a}到{b}题是根据下面一段话。"
+        },
+        {
+          "id": "L2b",
+          "type": "mcq_group",
+          "units": 4,
+          "group": "L2",
+          "pause": 12,
+          "questionsPerUnit": [
+            3
+          ],
+          "rangeIntro": "第{a}到{b}题是根据下面一段话。"
+        }
+      ]
+    },
+    {
+      "key": "reading",
+      "name": "阅读 Reading",
+      "first": 36,
+      "count": 35,
+      "minutes": 35,
+      "parts": [
+        {
+          "id": "R1a",
+          "type": "mcq_group",
+          "cloze": true,
+          "units": 2,
+          "group": "R1",
+          "questionsPerUnit": [
+            3
+          ],
+          "title": "第一部分",
+          "desc": "请选出正确答案。"
+        },
+        {
+          "id": "R1b",
+          "type": "mcq_group",
+          "cloze": true,
+          "units": 1,
+          "group": "R1",
+          "questionsPerUnit": [
+            4
+          ]
+        },
+        {
+          "id": "R2",
+          "type": "insert",
+          "units": 2,
+          "group": "R2",
+          "ordering": true,
+          "title": "第二部分",
+          "desc": "段落排序。"
+        },
+        {
+          "id": "R3a",
+          "type": "mcq_group",
+          "units": 1,
+          "group": "R3",
+          "questionsPerUnit": [
+            3
+          ],
+          "title": "第三部分",
+          "desc": "请选出正确答案。"
+        },
+        {
+          "id": "R3b",
+          "type": "mcq_group",
+          "units": 3,
+          "group": "R3",
+          "questionsPerUnit": [
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "key": "writing",
+      "name": "写作 Writing",
+      "first": 71,
+      "count": 2,
+      "minutes": 40,
+      "parts": [
+        {
+          "id": "W1",
+          "type": "free",
+          "kind": "picture_story",
+          "units": 1,
+          "group": "W1",
+          "points": 40,
+          "targetChars": 100,
+          "title": "第一部分",
+          "desc": "看图写作。",
+          "prompt": "请根据下面四张图，写一篇不少于100字的作文。",
+          "rubric": "Score 0-40 (new HSK 5 picture story, at least 100 characters; count every character incl. punctuation):\n36-40 = tells a coherent story that follows all four pictures in order, with a clear beginning, development and ending; varied HSK 5-level vocabulary and grammar used correctly; almost no errors\n28-35 = follows the pictures and is coherent; some minor errors; length about right\n20-27 = covers most pictures but thin or loosely connected; several errors\n10-19 = misses pictures or much of the story, or many errors that sometimes block meaning, or well under 80 characters\n1-9 = very little relevant, correct Chinese\n0 = blank or not Chinese\nDeduct 1 per wrongly written character (max 5)."
+        },
+        {
+          "id": "W2",
+          "type": "free",
+          "kind": "essay_topic",
+          "units": 1,
+          "group": "W2",
+          "points": 60,
+          "targetChars": 200,
+          "title": "第二部分",
+          "desc": "话题作文。",
+          "prompt": "请写一篇不少于200字的作文。",
+          "rubric": "Score 0-60 (new HSK 5 topic essay, at least 200 characters; count every character incl. punctuation):\n54-60 = fully answers the prompt with a clear structure (opening, developed example or argument, conclusion); varied, precise HSK 5-level vocabulary and grammar; almost no errors; 200+ characters\n42-53 = answers the prompt, coherent and organised; some minor errors\n30-41 = on topic but thin, repetitive or loosely organised; several errors that rarely block meaning\n15-29 = only partly on topic, or many errors that sometimes block meaning, or well under 160 characters\n1-14 = very little relevant, correct Chinese\n0 = blank or not Chinese\nDeduct 1 per wrongly written character (max 5)."
+        }
+      ]
+    }
+  ],
+  "speaking": {
+    "name": "口语 Speaking",
+    "note": "Practice only, not scored: the real HSK五级口语 is a separate paper (5 tasks, about 23 minutes including 10 minutes of preparation). Your answers are recorded in this browser only.",
+    "parts": [
+      {
+        "id": "S1",
+        "type": "repeat",
+        "units": 2,
+        "title": "第一部分",
+        "desc": "听后复述：听一段话，然后复述。",
+        "answerSeconds": 90
+      },
+      {
+        "id": "S2",
+        "type": "picture_talk",
+        "units": 1,
+        "title": "第二部分",
+        "desc": "看图说话。",
+        "prepSeconds": 180,
+        "answerSeconds": 120
+      },
+      {
+        "id": "S3",
+        "type": "answer",
+        "units": 2,
+        "title": "第三部分",
+        "desc": "回答问题。",
+        "prepSeconds": 210,
+        "answerSeconds": 150
+      }
+    ]
+  },
+  "minAdvanced": 0.08
+}

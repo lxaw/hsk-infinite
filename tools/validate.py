@@ -223,7 +223,7 @@ def check(part, u, errs, ans):
         if not u["answer"].endswith(("。", "？", "！")):
             errs.append(f"{i}: answer needs final punctuation")
     elif t in ("repeat", "picture_talk", "answer"):  # speaking practice (not scored)
-        for f in {"repeat": ["speaker", "text"], "picture_talk": ["scene", "model"], "answer": ["task", "model"]}[t]:
+        for f in {"repeat": ["speaker", "text"], "picture_talk": ["scenes" if "scenes" in u else "scene", "model"], "answer": ["task", "model"]}[t]:
             if not u.get(f):
                 errs.append(f"{i}: {t} needs {f}")
     elif t == "free":
@@ -286,7 +286,8 @@ def main():
                 # "advanced" = multi-character words above the previous level (this level's list or beyond it)
                 d = sum(advanced(t) for t in toks) / len(toks)
                 dens.append(d)
-                if len(toks) >= 25 and d < CFG.get("minAdvanced", MIN_ADV.get(N, 0)):
+                floor = CFG.get("minAdvanced", MIN_ADV.get(N, 0)) * (0.6 if part["section"] == "speaking" else 1)  # speech runs plainer (official 口语 samples ~7-11%)
+                if len(toks) >= 25 and d < floor:
                     errs.append(f"{u['id']}: few advanced words ({d:.0%}) — probably too easy for {LEVEL.upper()}")
             for piece in texts(part, u):
                 for w in oov(piece):
