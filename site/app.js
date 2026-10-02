@@ -1041,9 +1041,11 @@ async function renderSpeaking(level) {
   const sp = CFG.speaking;
   if (!sp) { location.hash = `#/${CFG.level}`; return; }
   const used = recall("hsk-speak-used") || {};
-  const tasks = sp.parts.flatMap((p) => byUsage(BANK[p.id] || [], used).slice(0, p.units).map((u) => ({ part: p, u })));
+  // A listen-and-answer unit with several questions (HSK 7-9) becomes one task per question.
+  const tasks = sp.parts.flatMap((p) => byUsage(BANK[p.id] || [], used).slice(0, p.units).flatMap((u) => u.questions ? u.questions.map((_, k) => ({ part: p, u, k })) : [{ part: p, u }]));
   SPEAK = { tasks, i: -1, stream: null, rec: null, timer: null };
-  const row = (p) => `<tr><td>${esc(p.title)}</td><td>${esc(p.desc)}</td><td>${p.units} 题</td><td>${p.prepSeconds ? `准备 ${p.prepSeconds / 60} min · ` : ""}回答 ${p.answerSeconds >= 60 ? `${p.answerSeconds / 60} min` : `${p.answerSeconds} s`}</td></tr>`;
+  const dur = (x) => x >= 60 ? `${x / 60} min` : `${x} s`;
+  const row = (p) => `<tr><td>${esc(p.title)}</td><td>${esc(p.desc)}</td><td>${p.units * (p.questions || 1)} 题</td><td>${p.prepSeconds ? `准备 ${dur(p.prepSeconds)} · ` : ""}回答 ${p.timeNote || dur(p.answerSeconds)}</td></tr>`;
   $("#app").innerHTML = `<p><a href="#/${CFG.level}">← 返回 ${esc(CFG.short)}</a></p><h1>${esc(sp.name)} · ${esc(CFG.short)}</h1>
     <p class="muted">${esc(sp.note)}</p>
     <table class="hist"><tr><th>部分</th><th>题型</th><th>题数</th><th>时间</th></tr>${sp.parts.map(row).join("")}</table>
@@ -1062,34 +1064,46 @@ async function renderSpeaking(level) {
     } else if (t.id === "spNow") speakAnswer();
     else if (t.id === "spDone") speakFinish();
     else if (t.id === "spNext") speakTask(SPEAK.i + 1);
-    else if (t.id === "spReplay") playOnce(audio(SPEAK.tasks[SPEAK.i].u.id));
+    else if (t.id === "spReplay") playOnce(audio(speakClip(SPEAK.tasks[SPEAK.i])));
   };
 }
+// What a task plays, what was said in it, its model answer and its answering time.
+const speakHeard = (t) => t.part.type === "repeat" || t.part.type === "listen_answer";
+const speakClip = (t) => t.k === undefined ? t.u.id : `${t.u.id}_q${t.k}`;
+const speakScript = (t) => t.k === undefined ? t.u.text : (t.k === 0 ? t.u.text + "\n" : "") + t.u.questions[t.k].question;
+const speakModel = (t) => t.part.type === "repeat" ? "" : t.k === undefined ? t.u.model : t.u.questions[t.k].model;
+const speakSeconds = (t) => t.k === undefined ? t.part.answerSeconds : t.u.questions[t.k].seconds;
 function speakTask(i) {
   speakStop();
   if (i >= SPEAK.tasks.length) return speakSummary();
   SPEAK.i = i;
-  const { part, u } = SPEAK.tasks[i];
+  const task = SPEAK.tasks[i], { part, u } = task;
   const head = `<p class="muted">第 ${i + 1} / ${SPEAK.tasks.length} 题 · ${esc(part.title)} · ${esc(part.desc)}</p>`;
   const prompt = part.type === "picture_talk" ? `<div class="w2"><img src="${image(u.id)}" alt=""><div></div></div>`
-    : part.type === "answer" ? `<div class="stmt">${esc(u.task)}</div>` : `<div class="small muted">听录音，然后重复你听到的话 · listen, then say it back</div>`;
+    : part.type === "answer" ? `<div class="stmt">${esc(u.task)}</div>${u.material ? `<div class="source">${esc(u.material)}</div>` : ""}${u.source ? `<div class="source" lang="en">${esc(u.source)}</div>` : ""}`
+    : part.type === "listen_answer" ? `<div class="small muted">听录音，然后回答问题 · listen, then answer</div>`
+    : `<div class="small muted">听录音，然后重复你听到的话 · listen, then say it back</div>`;
   $("#app").innerHTML = `<h1>${esc(CFG.speaking.name)}</h1>${head}<div class="part spk">${prompt}
     <div class="spbar"><span id="spCount" class="timer"></span> <span id="spState" class="small muted"></span></div><div id="spCtl"></div></div>`;
-  if (part.type === "repeat") {
-    $("#spState").textContent = "正在播放 · playing (once)";
-    player = new Audio(audio(u.id));
-    player.onended = () => speakAnswer();
-    player.onerror = () => speakAnswer();
-    player.play().catch(() => speakAnswer());
-  } else {
-    if (part.type === "answer") playOnce(audio(u.id));
+  const prep = () => {
     $("#spState").textContent = "准备 · preparation";
     $("#spCtl").innerHTML = `<button class="btn small" id="spNow">开始回答 · Answer now</button>`;
     speakCountdown(part.prepSeconds, "准备", speakAnswer);
+  };
+  if (speakHeard(task)) {  // the recording plays once, then preparation (if the part has any) or the answer
+    const next = () => (part.prepSeconds ? prep() : speakAnswer());
+    $("#spState").textContent = "正在播放 · playing (once)";
+    player = new Audio(audio(speakClip(task)));
+    player.onended = next;
+    player.onerror = next;
+    player.play().catch(next);
+  } else {
+    if (part.type === "answer" && !part.silent) playOnce(audio(u.id));
+    prep();
   }
 }
 function speakAnswer() {
-  const { part } = SPEAK.tasks[SPEAK.i];
+  const task = SPEAK.tasks[SPEAK.i];
   stopAudio();
   SPEAK.chunks = [];
   SPEAK.rec = null;
@@ -1100,18 +1114,18 @@ function speakAnswer() {
   }
   $("#spState").innerHTML = SPEAK.rec ? `<span class="recdot"></span> 录音中 · recording` : "请开始说 · speak now (no microphone, not recorded)";
   $("#spCtl").innerHTML = `<button class="btn small primary" id="spDone">说完了 · Done</button>`;
-  speakCountdown(part.answerSeconds, "回答", speakFinish);
+  speakCountdown(speakSeconds(task), "回答", speakFinish);
 }
 function speakFinish() {
   clearInterval(SPEAK.timer);
   const t = SPEAK.tasks[SPEAK.i];
   const review = () => {
-    const ref = t.part.type === "repeat" ? t.u.text : t.u.model;
     $("#spCount").textContent = "";
     $("#spState").textContent = "回顾 · review";
     $("#spCtl").innerHTML = `${t.url ? `<p><audio controls src="${t.url}"></audio></p>` : ""}
-      ${t.part.type === "repeat" ? `<button class="playbtn" id="spReplay">▶ 再听一遍 replay</button>` : ""}
-      <details ${t.part.type === "repeat" ? "open" : ""}><summary>${t.part.type === "repeat" ? "原文 what was said" : "参考答案 model answer"}</summary><div class="transcript">${esc(ref)}</div></details>
+      ${speakHeard(t) ? `<button class="playbtn" id="spReplay">▶ 再听一遍 replay</button>
+      <details ${t.part.type === "repeat" ? "open" : ""}><summary>原文 what was said</summary><div class="transcript">${esc(speakScript(t))}</div></details>` : ""}
+      ${speakModel(t) ? `<details><summary>参考答案 model answer</summary><div class="transcript">${esc(speakModel(t))}</div></details>` : ""}
       <p><button class="btn primary" id="spNext">${SPEAK.i + 1 < SPEAK.tasks.length ? "下一题 · Next" : "结束 · Finish"}</button></p>`;
   };
   if (SPEAK.rec && SPEAK.rec.state === "recording") {
@@ -1125,12 +1139,12 @@ function speakSummary() {
   SPEAK.tasks.forEach((t) => (used[t.u.id] = (used[t.u.id] || 0) + 1));
   store("hsk-speak-used", used);
   if (SPEAK.stream) SPEAK.stream.getTracks().forEach((tr) => tr.stop());
-  const label = (t) => t.part.type === "repeat" ? t.u.text : t.part.type === "answer" ? t.u.task : "看图说话 · picture";
+  const label = (t) => speakHeard(t) ? speakScript(t) : t.part.type === "answer" ? t.u.task : "看图说话 · picture";
   $("#app").innerHTML = `<p><a href="#/${CFG.level}">← 返回 ${esc(CFG.short)}</a></p><h1>口语练习完成 · Speaking done</h1>
     <p class="muted">Recordings stay in this browser tab only; download any you want to keep.</p>
     ${SPEAK.tasks.map((t, i) => `<div class="rv"><span class="qn">${i + 1}.</span><span class="stmt">${esc(label(t))}</span>
       ${t.url ? `<div><audio controls src="${t.url}"></audio> <a href="${t.url}" download="${CFG.level}-speaking-${i + 1}.webm">⬇ 下载</a></div>` : `<div class="small muted">no recording</div>`}
-      <details><summary>${t.part.type === "repeat" ? "原文" : "参考答案 model answer"}</summary><div class="transcript">${esc(t.part.type === "repeat" ? t.u.text : t.u.model)}</div></details></div>`).join("")}
+      ${speakModel(t) ? `<details><summary>参考答案 model answer</summary><div class="transcript">${esc(speakModel(t))}</div></details>` : ""}</div>`).join("")}
     <p><a class="btn" href="#/speaking/${CFG.level}">再练一次 · Again</a></p>`;
 }
 

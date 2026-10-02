@@ -187,7 +187,7 @@ def check(part, u, errs, ans):
                 elif part.get("maxAnswerChars") and len(q["answer"]) > part["maxAnswerChars"]:
                     errs.append(f"{i}.{k}: answer longer than {part['maxAnswerChars']} characters")
                 continue
-            check_mcq(q, f"{i}.{k}", errs, ans)
+            check_mcq(q, f"{i}.{k}", errs, ans, part.get("optionCount", 4))
     elif t == "wordbank":
         # HSK 2.0: an example uses the sixth word. HSK 3.0: no example, the sixth word is a distractor.
         ex = [u["example"]] if u.get("example") else []
@@ -222,6 +222,15 @@ def check(part, u, errs, ans):
                 errs.append(f"{i}: '{s}' is not made of exactly the pieces")
         if not u["answer"].endswith(("。", "？", "！")):
             errs.append(f"{i}: answer needs final punctuation")
+    elif t == "listen_answer":  # speaking (HSK 7-9): a recording, then a question or several
+        for f in ("speaker", "text"):
+            if not u.get(f):
+                errs.append(f"{i}: listen_answer needs {f}")
+        qs = u.get("questions")
+        if qs is None and not u.get("model"):
+            errs.append(f"{i}: listen_answer needs model")
+        if qs is not None and (len(qs) != part.get("questions") or not all(q.get("question") and q.get("seconds") and q.get("model") for q in qs)):
+            errs.append(f"{i}: needs {part.get('questions')} questions with question, seconds and model")
     elif t in ("repeat", "picture_talk", "answer"):  # speaking practice (not scored)
         for f in {"repeat": ["speaker", "text"], "picture_talk": ["scenes" if "scenes" in u else "scene", "model"], "answer": ["task", "model"]}[t]:
             if not u.get(f):
@@ -287,6 +296,12 @@ def main():
                 d = sum(advanced(t) for t in toks) / len(toks)
                 dens.append(d)
                 floor = CFG.get("minAdvanced", MIN_ADV.get(N, 0)) * (0.6 if part["section"] == "speaking" else 1)  # speech runs plainer (official 口语 samples ~7-11%)
+                # Model answers show what a candidate could say or write, so they are not held to the floor
+                # (forcing list words into them reads unnaturally); only the exam's own text is.
+                # For those units the floor applies to the source text they hear or read (if any), not the task or the model.
+                own = tokens("".join(str(u.get(k, "")) for k in ("passage", "text", "story")))
+                if u.get("model") or u.get("models"):
+                    toks, d = own, (sum(advanced(t) for t in own) / len(own) if own else 0)
                 if len(toks) >= 25 and d < floor:
                     errs.append(f"{u['id']}: few advanced words ({d:.0%}) — probably too easy for {LEVEL.upper()}")
             for piece in texts(part, u):

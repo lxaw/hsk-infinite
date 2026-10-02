@@ -75,8 +75,12 @@ def segments(part, u):
         return out
     if part["type"] == "repeat":  # speaking: listen and repeat
         return {i: [(u["speaker"], u["text"])]}
-    if part["type"] == "answer":  # speaking: the question is read aloud
-        return {i: [("n", u["task"])]}
+    if part["type"] == "answer":  # speaking: the question is read aloud (not for printed-only tasks, e.g. oral translation)
+        return {} if part.get("silent") else {i: [("n", u["task"])]}
+    if part["type"] == "listen_answer":  # speaking (HSK 7-9): a recording, then one or several spoken questions
+        if not u.get("questions"):
+            return {i: [(u["speaker"], u["text"])]}
+        return {f"{i}_q{k}": ([(u["speaker"], u["text"])] if k == 0 else []) + [("n", q["question"])] for k, q in enumerate(u["questions"])}
     return {}
 
 

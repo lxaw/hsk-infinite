@@ -247,7 +247,7 @@ def main():
             pg.goto(URL + f"#/speaking/{LEVEL}")
             pg.reload()
             pg.click("#spStart")
-            n = sum(p["units"] for p in CFG["speaking"]["parts"])
+            n = sum(p["units"] * p.get("questions", 1) for p in CFG["speaking"]["parts"])
             for k in range(n):
                 pg.wait_for_selector("#spNow, #spDone", timeout=60000)
                 if pg.locator("#spNow").count():

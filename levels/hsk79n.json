@@ -1,0 +1,213 @@
+{
+  "level": "hsk79n",
+  "name": "新 HSK 七—九级（3.0）",
+  "short": "新HSK 7–9",
+  "num": 7,
+  "syllabus": "v3",
+  "order": 13,
+  "noPass": true,
+  "minAdvanced": 0.06,
+  "note": "New HSK (3.0) advanced paper from the official 2026 sample: 91 questions, about 200 minutes. One paper covers levels 7, 8 and 9 (the level is awarded from the score), so no pass mark or total is shown. Section scores out of 100 and the writing and translation weights are estimates; the scoring has not been published. Oral translation (85–86) and speaking (87–91) are practice only.",
+  "sections": [
+    {
+      "key": "listening",
+      "name": "听力 Listening",
+      "first": 1,
+      "count": 40,
+      "reviewMinutes": 0,
+      "approxMinutes": 33,
+      "intro": "大家好！欢迎参加HSK七到九级考试。听力考试分三部分，共40题。请大家注意，听力考试现在开始。",
+      "parts": [
+        {
+          "id": "L1",
+          "type": "mcq_group",
+          "units": 2,
+          "group": "L1",
+          "pause": 10,
+          "questionsPerUnit": [
+            5
+          ],
+          "judge": true,
+          "optionCount": 3,
+          "silentQuestions": true,
+          "printQuestions": true,
+          "title": "第一部分",
+          "desc": "第1～10题：请根据听到的内容，判断下列句子是否符合原文。符合原文的选“√”，不符合原文的选“×”，原文没提到的选“〇”。",
+          "audioIntro": "第一部分，第1到10题。请根据听到的内容，判断句子是否符合原文。每段新闻听一次。",
+          "rangeIntro": "第{a}到{b}题是根据下面一段新闻。"
+        },
+        {
+          "id": "L2",
+          "type": "mcq_group",
+          "units": 2,
+          "group": "L2",
+          "pause": 14,
+          "questionsPerUnit": [
+            6
+          ],
+          "fillHint": "填写答案 · fill in",
+          "title": "第二部分",
+          "desc": "第11～22题：请选出或填上正确答案。",
+          "audioIntro": "第二部分，第11到22题。请选出或填上正确答案。每段对话听一次。",
+          "rangeIntro": "第{a}到{b}题是根据下面一段对话。"
+        },
+        {
+          "id": "L3",
+          "type": "mcq_group",
+          "units": 3,
+          "group": "L3",
+          "pause": 14,
+          "questionsPerUnit": [
+            6
+          ],
+          "fillHint": "填写答案 · fill in",
+          "title": "第三部分",
+          "desc": "第23～40题：请选出或填上正确答案。",
+          "audioIntro": "第三部分，第23到40题。请选出或填上正确答案。每段话听一次。",
+          "rangeIntro": "第{a}到{b}题是根据下面一段话。"
+        }
+      ]
+    },
+    {
+      "key": "reading",
+      "name": "阅读 Reading",
+      "first": 41,
+      "count": 40,
+      "minutes": 50,
+      "parts": [
+        {
+          "id": "R1",
+          "type": "mcq_group",
+          "units": 3,
+          "group": "R1",
+          "questionsPerUnit": [
+            7
+          ],
+          "title": "第一部分",
+          "desc": "第41～61题：请选出正确答案。"
+        },
+        {
+          "id": "R2",
+          "type": "insert",
+          "units": 1,
+          "group": "R2",
+          "ordering": true,
+          "distractors": 1,
+          "title": "第二部分",
+          "desc": "第62～66题：请将下列段落重新排序，组成一篇完整的文章。其中一个段落为干扰项，需排除；一个段落的位置已经给出。"
+        },
+        {
+          "id": "R3",
+          "type": "mcq_group",
+          "units": 2,
+          "group": "R3",
+          "questionsPerUnit": [
+            7
+          ],
+          "maxAnswerChars": 10,
+          "fillHint": "十个字以内 · at most 10 characters",
+          "title": "第三部分",
+          "desc": "第67～80题：请回答下面的问题，注意答案要控制在十个字以内。"
+        }
+      ]
+    },
+    {
+      "key": "writing",
+      "name": "写作 Writing",
+      "first": 81,
+      "count": 2,
+      "minutes": 55,
+      "parts": [
+        {
+          "id": "W1",
+          "type": "free",
+          "kind": "chart_essay",
+          "units": 1,
+          "group": "W1",
+          "points": 40,
+          "targetChars": 200,
+          "title": "第一部分",
+          "desc": "第81题：请对图表进行描述与分析，写一篇不少于200字的文章（建议15分钟）。",
+          "rubric": "Score 0-40 (HSK 7-9 chart description and analysis, at least 200 characters; count every character incl. punctuation). Look at the chart image first.\n36-40 = accurately describes the main features of the chart (highest/lowest, comparisons, trends) with correct figures, adds a sensible analysis or conclusion; well organised; precise, formal advanced vocabulary; almost no errors\n28-35 = covers the main features with mostly correct figures and some analysis; minor errors\n20-27 = describes only part of the chart or merely lists numbers without comparison/analysis; several errors\n10-19 = misreads the chart or is far too short (under 150 characters) or has many errors\n1-9 = very little relevant, correct Chinese\n0 = blank or not Chinese\nDeduct 1 per wrongly written character (max 5)."
+        },
+        {
+          "id": "W2",
+          "type": "free",
+          "kind": "essay_topic",
+          "units": 1,
+          "group": "W2",
+          "points": 60,
+          "targetChars": 600,
+          "title": "第二部分",
+          "desc": "第82题：话题作文，写一篇不少于600字的文章，论证你的观点（建议40分钟）。",
+          "rubric": "Score 0-60 (HSK 7-9 argumentative essay, at least 600 characters; count every character incl. punctuation):\n54-60 = clear thesis answering the prompt; rigorous, well-developed arguments with evidence and examples, considers counter-arguments; coherent structure; rich, precise, formal advanced vocabulary (idioms, written-style connectives) and complex sentences; almost no errors\n42-53 = clear position and reasonable arguments; good organisation; advanced vocabulary with some errors that do not hinder understanding\n30-41 = position stated but arguments thin or partly off-topic; plain vocabulary; noticeable errors\n15-29 = unclear position or under 450 characters or many errors\n1-14 = very little relevant, correct Chinese\n0 = blank or not Chinese\nDeduct 1 per wrongly written character (max 5)."
+        }
+      ]
+    },
+    {
+      "key": "translation",
+      "name": "翻译 Translation",
+      "first": 83,
+      "count": 2,
+      "minutes": 35,
+      "parts": [
+        {
+          "id": "T1",
+          "type": "free",
+          "kind": "translation",
+          "units": 2,
+          "group": "T1",
+          "points": 50,
+          "title": "第一部分",
+          "desc": "第83～84题：请将下列两篇材料译写成中文（限时35分钟）。",
+          "rubric": "Score 0-50 (HSK 7-9 written translation, English into Chinese). Compare with the English `source`; `model` is one good translation, not the only one.\n45-50 = complete and accurate; natural, idiomatic written Chinese with appropriate advanced vocabulary and sentence structure; almost no errors\n35-44 = meaning conveyed with minor omissions or inaccuracies; mostly natural Chinese; a few errors\n25-34 = main ideas conveyed but several mistranslations, omissions or awkward word-for-word renderings\n10-24 = large parts missing or mistranslated; many language errors\n1-9 = very little correct, relevant Chinese\n0 = blank or not Chinese\nDeduct 1 per wrongly written character (max 5)."
+        }
+      ]
+    }
+  ],
+  "speaking": {
+    "name": "口译与口语 Interpreting & Speaking",
+    "note": "Practice only, not scored: questions 85–91 of the paper (oral translation, then speaking; about 25 minutes). Your answers are recorded in this browser only.",
+    "parts": [
+      {
+        "id": "O1",
+        "type": "answer",
+        "silent": true,
+        "units": 2,
+        "title": "翻译·第二部分",
+        "desc": "第85～86题：口译。阅读材料一分钟，然后口头译成中文。",
+        "prepSeconds": 60,
+        "answerSeconds": 120
+      },
+      {
+        "id": "S1",
+        "type": "answer",
+        "silent": true,
+        "units": 1,
+        "title": "口语·第一部分",
+        "desc": "第87题：应用读说。",
+        "prepSeconds": 180,
+        "answerSeconds": 180
+      },
+      {
+        "id": "S2",
+        "type": "listen_answer",
+        "units": 1,
+        "questions": 3,
+        "title": "口语·第二部分",
+        "desc": "第88～90题：听材料回答问题。",
+        "answerSeconds": 120,
+        "timeNote": "30 s · 30 s · 2 min"
+      },
+      {
+        "id": "S3",
+        "type": "listen_answer",
+        "units": 1,
+        "title": "口语·第三部分",
+        "desc": "第91题：观点表达。听材料，准备三分钟，然后表达你的观点。",
+        "prepSeconds": 180,
+        "answerSeconds": 180
+      }
+    ]
+  }
+}
