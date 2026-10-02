@@ -1,8 +1,8 @@
 [
-{"id": "L1-0001", "lesson": 1, "topic": "爱情", "speaker": "f", "passage": "我和丈夫是在一次朋友的聚会上认识的。那天他穿得很随便，话也不多，可是他说的每一句话都很幽默，让大家笑个不停。从那以后，我就开始注意他了。", "statement": "她丈夫在聚会上话很多。", "answer": false},
-{"id": "L1-0002", "lesson": 3, "topic": "工作", "speaker": "m", "passage": "这次来应聘的人很多，经理说，他们最需要的是有工作经验的人。我刚毕业，虽然专业符合要求，但是一点儿经验也没有，所以我对这次应聘没什么信心。", "statement": "他觉得自己应聘成功的机会不大。", "answer": true},
-{"id": "L1-0003", "lesson": 7, "topic": "健康", "speaker": "f", "passage": "医生说我咳嗽得这么厉害，跟平时抽烟太多有很大关系。他建议我最好别抽了，还要多喝水、多休息。为了身体健康，我决定从今天开始不再抽烟。", "statement": "她打算以后少抽点儿烟。", "answer": false},
-{"id": "L1-0004", "lesson": 5, "topic": "购物", "speaker": "m", "passage": "这台冰箱现在打八折，比上个月便宜了一千多块钱。售货员说这个价格只到这个周末，下周一就不打折了。我考虑了一下，还是决定今天就买。", "statement": "那台冰箱现在比上个月便宜。", "answer": true},
+{"id": "L1-0001", "lesson": 1, "topic": "爱情", "speaker": "f", "passage": "我和丈夫是在一次朋友的聚会上认识的。那天他穿得很随便，话也不多，可是他说的每一句话都很幽默，让大家笑个不停。从那以后，我就开始注意他了。", "statement": "她丈夫在聚会上话很多。", "answer": false, "explain": "She says “话也不多” (he didn't talk much); it was what he did say that was funny. The statement says the opposite."},
+{"id": "L1-0002", "lesson": 3, "topic": "工作", "speaker": "m", "passage": "这次来应聘的人很多，经理说，他们最需要的是有工作经验的人。我刚毕业，虽然专业符合要求，但是一点儿经验也没有，所以我对这次应聘没什么信心。", "statement": "他觉得自己应聘成功的机会不大。", "answer": true, "explain": "“没什么信心” = not confident, because he has no experience, the thing the manager wants most. That matches 机会不大."},
+{"id": "L1-0003", "lesson": 7, "topic": "健康", "speaker": "f", "passage": "医生说我咳嗽得这么厉害，跟平时抽烟太多有很大关系。他建议我最好别抽了，还要多喝水、多休息。为了身体健康，我决定从今天开始不再抽烟。", "statement": "她打算以后少抽点儿烟。", "answer": false, "explain": "She decides “不再抽烟” (to stop smoking altogether), which is stronger than 少抽点儿 (smoke a bit less)."},
+{"id": "L1-0004", "lesson": 5, "topic": "购物", "speaker": "m", "passage": "这台冰箱现在打八折，比上个月便宜了一千多块钱。售货员说这个价格只到这个周末，下周一就不打折了。我考虑了一下，还是决定今天就买。", "statement": "那台冰箱现在比上个月便宜。", "answer": true, "explain": "“打八折，比上个月便宜了一千多块钱” says directly that it is cheaper than last month."},
 {"id": "L1-0005", "lesson": 14, "topic": "环境", "speaker": "f", "passage": "现在很多人去超市买东西都会自己带一个袋子，不再使用塑料袋了。这样不但可以节约一点儿钱，而且可以减少污染，对保护环境很有好处。", "statement": "自己带袋子购物对环境有好处。", "answer": true},
 {"id": "L1-0006", "lesson": 20, "topic": "旅行", "speaker": "m", "passage": "我们本来打算坐早上八点的航班去上海，可是因为天气不好，航班推迟了三个小时。我们只好在机场一边吃东西一边等，到上海的时候已经是下午了。", "statement": "他们上午就到上海了。", "answer": false},
 {"id": "L1-0007", "lesson": 11, "topic": "读书", "speaker": "f", "passage": "我女儿从小就喜欢看书，尤其是小说。她每次去书店都要在那儿看上一两个小时，有时候连吃饭都忘了。现在她的阅读能力比别的孩子高很多。", "statement": "她女儿很喜欢看小说。", "answer": true},
