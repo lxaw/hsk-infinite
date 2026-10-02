@@ -1,0 +1,181 @@
+{
+  "level": "hsk6n",
+  "name": "新 HSK 六级（3.0）",
+  "short": "新HSK 6",
+  "num": 6,
+  "syllabus": "v3",
+  "order": 12,
+  "pass": 180,
+  "passEstimated": true,
+  "note": "New HSK (3.0) format from the official 2026 sample paper: 82 questions, about 125 minutes. The speaking paper (HSK六级口语) is separate. Section scores out of 100, the 180 pass mark and the writing weights are estimates; the new scoring has not been published.",
+  "sections": [
+    {
+      "key": "listening",
+      "name": "听力 Listening",
+      "first": 1,
+      "count": 40,
+      "reviewMinutes": 5,
+      "approxMinutes": 35,
+      "intro": "大家好！欢迎参加HSK六级考试。HSK六级听力考试分三部分，共40题。请大家注意，听力考试现在开始。",
+      "parts": [
+        {
+          "id": "L1",
+          "type": "mcq",
+          "units": 8,
+          "group": "L1",
+          "pause": 12,
+          "noQuestion": true,
+          "title": "第一部分",
+          "desc": "第1～8题：听一段话，请选出与所听内容一致的一项。",
+          "audioIntro": "第一部分，第1到8题。听一段话，选出与所听内容一致的一项。每题听一次。"
+        },
+        {
+          "id": "L2a",
+          "type": "mcq_group",
+          "units": 4,
+          "group": "L2",
+          "pause": 12,
+          "questionsPerUnit": [
+            3
+          ],
+          "title": "第二部分",
+          "desc": "第9～28题：听短文，请选出正确答案。",
+          "audioIntro": "第二部分，第9到28题。听短文，选择正确答案。每题听一次。",
+          "rangeIntro": "第{a}到{b}题是根据下面一段话。"
+        },
+        {
+          "id": "L2b",
+          "type": "mcq_group",
+          "units": 2,
+          "group": "L2",
+          "pause": 12,
+          "questionsPerUnit": [
+            4
+          ],
+          "rangeIntro": "第{a}到{b}题是根据下面一段话。"
+        },
+        {
+          "id": "L3",
+          "type": "mcq_group",
+          "units": 3,
+          "group": "L3",
+          "pause": 12,
+          "questionsPerUnit": [
+            4
+          ],
+          "title": "第三部分",
+          "desc": "第29～40题：听采访，请选出正确答案。",
+          "audioIntro": "第三部分，第29到40题。听采访，选择正确答案。每题听一次。",
+          "rangeIntro": "第{a}到{b}题是根据下面一段采访。"
+        }
+      ]
+    },
+    {
+      "key": "reading",
+      "name": "阅读 Reading",
+      "first": 41,
+      "count": 40,
+      "minutes": 40,
+      "parts": [
+        {
+          "id": "R1",
+          "type": "mcq_group",
+          "cloze": true,
+          "units": 2,
+          "group": "R1",
+          "questionsPerUnit": [
+            5
+          ],
+          "title": "第一部分",
+          "desc": "选词填空。"
+        },
+        {
+          "id": "R2",
+          "type": "insert",
+          "units": 2,
+          "group": "R2",
+          "distractors": 1,
+          "title": "第二部分",
+          "desc": "选句填空。注意：其中一句为干扰项，需排除。"
+        },
+        {
+          "id": "R3",
+          "type": "mcq_group",
+          "units": 5,
+          "group": "R3",
+          "questionsPerUnit": [
+            4
+          ],
+          "title": "第三部分",
+          "desc": "请选出正确答案。"
+        }
+      ]
+    },
+    {
+      "key": "writing",
+      "name": "写作 Writing",
+      "first": 81,
+      "count": 2,
+      "minutes": 45,
+      "parts": [
+        {
+          "id": "W1",
+          "type": "free",
+          "kind": "practical",
+          "units": 1,
+          "group": "W1",
+          "points": 40,
+          "targetChars": 150,
+          "title": "第一部分",
+          "desc": "应用文写作。",
+          "rubric": "Score 0-40 (new HSK 6 practical writing — notice, letter, post, application, etc. — at least 150 characters; count every character incl. punctuation):\n36-40 = does everything the task asks, in the right format and register for its purpose and reader; clear, well-organised, precise HSK 6-level language; almost no errors\n28-35 = covers the task in a suitable format; some minor errors or a small omission\n20-27 = covers most of the task but format/register is off or content thin; several errors\n10-19 = misses important parts of the task, or many errors, or well under 120 characters\n1-9 = very little relevant, correct Chinese\n0 = blank or not Chinese\nDeduct 1 per wrongly written character (max 5)."
+        },
+        {
+          "id": "W2",
+          "type": "free",
+          "kind": "essay_topic",
+          "units": 1,
+          "group": "W2",
+          "points": 60,
+          "targetChars": 300,
+          "title": "第二部分",
+          "desc": "话题作文。",
+          "rubric": "Score 0-60 (new HSK 6 argumentative essay, at least 300 characters; count every character incl. punctuation):\n54-60 = clear position answering the prompt; well-reasoned arguments with examples; logical structure and cohesion; rich, accurate HSK 6-level vocabulary and complex sentences; almost no errors; 300+ characters\n42-53 = clear position and reasonable support; organised; some minor errors\n30-41 = position present but support thin or repetitive; several errors that rarely block meaning\n15-29 = unclear position or largely off topic, or many errors, or well under 240 characters\n1-14 = very little relevant, correct Chinese\n0 = blank or not Chinese\nDeduct 1 per wrongly written character (max 5)."
+        }
+      ]
+    }
+  ],
+  "speaking": {
+    "name": "口语 Speaking",
+    "note": "Practice only, not scored: the real HSK六级口语 is a separate paper (5 tasks, about 23 minutes including 10 minutes of preparation). Your answers are recorded in this browser only.",
+    "parts": [
+      {
+        "id": "S1",
+        "type": "repeat",
+        "units": 2,
+        "title": "第一部分",
+        "desc": "听后复述：听一段话，然后复述。",
+        "answerSeconds": 90
+      },
+      {
+        "id": "S2",
+        "type": "picture_talk",
+        "units": 1,
+        "title": "第二部分",
+        "desc": "看图说话。",
+        "prepSeconds": 180,
+        "answerSeconds": 120
+      },
+      {
+        "id": "S3",
+        "type": "answer",
+        "units": 2,
+        "title": "第三部分",
+        "desc": "回答问题。",
+        "prepSeconds": 210,
+        "answerSeconds": 150
+      }
+    ]
+  },
+  "minAdvanced": 0.08
+}
