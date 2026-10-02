@@ -1,7 +1,7 @@
-# HSK practice exams (HSK 4, 5, 6)
+# HSK practice exams (HSK 4, 5, 6 and 新HSK 4, 5, 6, 7–9)
 
-Local, randomly generated HSK mock exams: HSK 4/5/6 in the HSK 2.0 format, plus 新HSK 4 (`hsk4n`)
-in the new HSK 3.0 format. See README.md for running it and
+Local, randomly generated HSK mock exams: HSK 4/5/6 in the HSK 2.0 format, plus 新HSK 4, 5, 6 and 7–9
+(`hsk4n`, `hsk5n`, `hsk6n`, `hsk79n`) in the new HSK 3.0 format. See README.md for running it and
 for how the banks are built. Each level's layout, timing, scoring and grading rubrics live in
 `levels/<level>.json`; questions live in `bank/<level>/<PART>.json` (schema: `bank/SCHEMA.md`).
 
@@ -10,6 +10,10 @@ for how the banks are built. Each level's layout, timing, scoring and grading ru
 Free-writing parts are graded by you, not by the site:
 HSK 4 看图用词造句 (5 × 0–8), HSK 5 两篇短文 (2 × 0–30), HSK 6 缩写 (0–100), and on the new-format
 新HSK 4 (level `hsk4n`, HSK 3.0) 看图用词造句 (5 × 0–10) plus one topic essay 写短文 (0–50, ≥80 字).
+新HSK 5 (`hsk5n`): four-picture story 看图写作 (0–40, ≥100 字) and a topic essay (0–60, ≥200 字).
+新HSK 6 (`hsk6n`): practical writing 应用文 (0–40, ≥150 字) and an argumentative essay (0–60, ≥300 字).
+新HSK 7–9 (`hsk79n`): chart description (0–40, ≥200 字), argumentative essay (0–60, ≥600 字) and two
+written translations English → Chinese (2 × 0–50). Its level has no total or pass mark.
 
 1. Find ungraded requests: every `submissions/pending/<id>.json` without a matching
    `submissions/graded/<id>.json` (`ls submissions/pending submissions/graded`).
@@ -19,7 +23,15 @@ HSK 4 看图用词造句 (5 × 0–8), HSK 5 两篇短文 (2 × 0–30), HSK 6 �
    - `picture_sentence` / `essay_picture`: **look at the picture first** with Read (`image`).
      `scene` is only the prompt the picture was drawn from; the picture is what counts.
    - `essay_words`: check all five `words` are used, correctly.
-   - `essay_topic` (新HSK 4): the essay must answer the `task` prompt and reach `targetChars`.
+   - `essay_topic` (新HSK levels): the essay must answer the `task` prompt and reach `targetChars`.
+   - `picture_story` (新HSK 5): **look at the picture first** — it is four panels (left to right, top
+     to bottom); the text must tell the story the panels show, in order. `scenes` are only the prompts.
+   - `practical` (新HSK 6 应用文): check the format and register fit the `task` (notice, letter, post,
+     application…) and that every point the task asks for is covered.
+   - `chart_essay` (新HSK 7–9): **look at the chart image first**; `chart` holds its data. The text must
+     describe the main features with correct figures and add analysis, not just list numbers.
+   - `translation` (新HSK 7–9): compare the Chinese with the English `source`; `model` is one good
+     translation. Judge accuracy and completeness first, then how natural the Chinese is.
    - `summary` (缩写): compare against the full source `story` (and its `title`); check key events,
      order, a title, no added opinions, ~400 characters.
    - `models`/`model` are sample answers, not the only correct ones.
@@ -55,6 +67,11 @@ Never edit `submissions/attempts/` — those are the user's answers.
   validator also flags items with too few advanced words.
 - Items with more than one defensible answer are the main risk. For word banks, cloze, tuple cloze,
   sentence insertion and 病句, try every option in every blank; for ordering, try all orders.
+- New-format levels 5, 6 and 7–9: the advanced-word floor applies to exam texts, not to model
+  answers. Don't swap in list words to raise a score if the sentence stops reading naturally —
+  a blind solver flagged exactly that; natural wording wins.
+- 新HSK 7–9 short answers (R3, listening fill-ins) are auto-checked against `answer` + `accepted`;
+  list every wording a fair examiner would accept. Charts: `tools/build_charts.py --level hsk79n`.
 - Regenerate media after edits: `tools/build_audio.py --level L` (cached) and
   `tools/build_images.py --level L` for new picture items — look at every new picture and
   rewrite the `scene` if it shows any writing or doesn't clearly show the task.

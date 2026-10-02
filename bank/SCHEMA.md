@@ -40,3 +40,15 @@ The tables above describe HSK 4. All levels use the same unit shapes by part `ty
 | `free` | by part `kind`: `picture_sentence {word, scene, models[]}`, `essay_words {words[5], model}`, `essay_picture {scene, model}`, `summary {title, story (~1000 chars), model}` |
 
 Speakers: `m`, `f`, `n` (narrator), plus `m2`/`f2` for a second man/woman.
+
+## HSK 3.0 levels (新HSK 4, 5, 6, 7–9)
+
+The new-format levels reuse the types above with a few additions (set in `levels/<level>.json`):
+
+| Where | Addition |
+|---|---|
+| `mcq_group` question | A question without `options` is a short written answer: `{question, answer, accepted[]}` (the part may set `maxAnswerChars`); `spoken` is the form read aloud for a listening fill-in whose printed `question` shows a blank. Part flags: `printQuestions`, `silentQuestions` (statements are printed, not read), `judge` + `optionCount: 3` (新HSK 7–9 part 1: √ / × / 〇, with `keepOrder` on each question). |
+| `insert` | `distractors: 1`: `sentences` has one more entry than `answers`. `ordering: true`: the passage is only the chain `[1] → [2] → …`; in 新HSK 7–9 the chain contains `〔已给出〕` and the given paragraph follows the chain. |
+| `wordbank` | no `example`; the sixth word is a distractor. |
+| `free` kinds | `essay_topic {task, model}`, `picture_story {task, scenes[4], model}` (tiled 2×2 into one picture), `practical {task, model}`, `chart_essay {task, chart, model}` (`chart`: `{type: bar\|barh\|pie\|line, title, labels, values or series, unit}`, drawn by `tools/build_charts.py`), `translation {source, model}`. |
+| speaking parts (`speaking.parts`, not scored) | `repeat {speaker, text}`; `picture_talk {scene or scenes[4], model}`; `answer {task, model, material?, source?}` (part flag `silent`: the task is not read aloud); `listen_answer {speaker, text, model}` or, with several questions on one recording, `{speaker, text, questions:[{question, seconds, model}]}`. |

@@ -5,3 +5,4 @@ jieba==0.42.1
 mflux==0.20.0
 pillow==12.3.0
 playwright==1.63.0
+matplotlib==3.10.9
