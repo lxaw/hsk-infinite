@@ -493,6 +493,7 @@ function buildDrill(partId) {
 
 function shortDesc(p) {
   const L = p.section === "listening", group = allParts().filter((x) => x.group === p.group);
+  if (p.label) return p.label;  // set in the level config where the type alone would mislead
   if (p.type === "tf") return "true / false";
   if (p.type === "wordbank") return "word bank";
   if (p.type === "order") return "put A B C in order";

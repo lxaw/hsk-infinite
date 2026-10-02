@@ -26,7 +26,8 @@
           "pause": 12,
           "title": "第一部分",
           "desc": "第1～19题：听对话，请选出正确答案。",
-          "audioIntro": "第一部分，第1到19题。听对话，选择正确答案。每题听一次。"
+          "audioIntro": "第一部分，第1到19题。听对话，选择正确答案。每题听一次。",
+          "label": "dialogues"
         },
         {
           "id": "L1b",
@@ -62,7 +63,8 @@
           "title": "第二部分",
           "desc": "第20～35题：听短文，请选出正确答案。",
           "audioIntro": "第二部分，第20到35题。听短文，选择正确答案。每题听一次。",
-          "rangeIntro": "第{a}到{b}题是根据下面一段话。"
+          "rangeIntro": "第{a}到{b}题是根据下面一段话。",
+          "label": "talks"
         },
         {
           "id": "L2b",
@@ -113,7 +115,8 @@
           "group": "R2",
           "ordering": true,
           "title": "第二部分",
-          "desc": "段落排序。"
+          "desc": "段落排序。",
+          "label": "put the paragraphs in order"
         },
         {
           "id": "R3a",

@@ -27,7 +27,8 @@
           "noQuestion": true,
           "title": "第一部分",
           "desc": "第1～8题：听一段话，请选出与所听内容一致的一项。",
-          "audioIntro": "第一部分，第1到8题。听一段话，选出与所听内容一致的一项。每题听一次。"
+          "audioIntro": "第一部分，第1到8题。听一段话，选出与所听内容一致的一项。每题听一次。",
+          "label": "match the statement"
         },
         {
           "id": "L2a",
@@ -41,7 +42,8 @@
           "title": "第二部分",
           "desc": "第9～28题：听短文，请选出正确答案。",
           "audioIntro": "第二部分，第9到28题。听短文，选择正确答案。每题听一次。",
-          "rangeIntro": "第{a}到{b}题是根据下面一段话。"
+          "rangeIntro": "第{a}到{b}题是根据下面一段话。",
+          "label": "talks"
         },
         {
           "id": "L2b",
@@ -66,7 +68,8 @@
           "title": "第三部分",
           "desc": "第29～40题：听采访，请选出正确答案。",
           "audioIntro": "第三部分，第29到40题。听采访，选择正确答案。每题听一次。",
-          "rangeIntro": "第{a}到{b}题是根据下面一段采访。"
+          "rangeIntro": "第{a}到{b}题是根据下面一段采访。",
+          "label": "interviews"
         }
       ]
     },
@@ -96,7 +99,8 @@
           "group": "R2",
           "distractors": 1,
           "title": "第二部分",
-          "desc": "选句填空。注意：其中一句为干扰项，需排除。"
+          "desc": "选句填空。注意：其中一句为干扰项，需排除。",
+          "label": "sentence insertion (one distractor)"
         },
         {
           "id": "R3",
