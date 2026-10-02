@@ -10,7 +10,8 @@
 **HSK mock exams, a fresh paper every time.** Each paper is drawn at random from a bank of
 original questions, with spoken listening audio, timed sections and instant scoring in your browser.
 Seven tabs: HSK 4 / 5 / 6 in the current HSK 2.0 format, and 新HSK 4 / 5 / 6 / 7–9 in the new
-HSK 3.0 format (15 full papers per level before any item repeats; 5 for 新HSK 7–9). Free writing
+HSK 3.0 format (15 full papers per level before any item repeats; 5 for 新HSK 7–9). In all: about 8,300 questions,
+95 non-repeating papers. Free writing
 (看图造句, essays, 缩写, practical writing, chart description, translation) is graded by
 [Claude Code](https://claude.com/claude-code) against exam-style rubrics.
 
@@ -155,6 +156,26 @@ depending on the part; after listening there are 3 minutes to check answers.
 
 ## Question bank
 
+**8,299 scored questions and 260 speaking tasks** across the seven tabs, enough for 95 complete
+papers with no item repeated, with 4,789 audio clips and 230 pictures and charts.
+
+| Level | Questions per paper | Questions in the bank | Speaking tasks | Papers before any repeat | Distinct possible papers |
+|---|---:|---:|---:|---:|---:|
+| HSK 4 | 100 | 1,502 | — | 15 | ≈ 10^125 |
+| HSK 5 | 100 | 1,500 | — | 15 | ≈ 10^97 |
+| HSK 6 | 101 | 1,517 | — | 15 | ≈ 10^76 |
+| 新HSK 4 | 70 | 1,050 | 75 | 15 | ≈ 10^65 |
+| 新HSK 5 | 72 | 1,080 | 75 | 15 | ≈ 10^42 |
+| 新HSK 6 | 82 | 1,230 | 75 | 15 | ≈ 10^39 |
+| 新HSK 7–9 | 84 | 420 | 35 | 5 | ≈ 10^13 |
+| **Total** | | **8,299** | **260** | **95** | |
+
+*Questions per paper* counts the scored questions (新HSK 7–9 has 7 more in the speaking practice).
+*Distinct possible papers* is the number of different sets of items a full paper can be drawn as
+(the product, over the parts, of the ways to choose that part's units), so two such papers may still
+share many items. It ignores item order and the reshuffled answer options. Regenerate the table with
+`python3 tools/stats.py`.
+
 Each level's bank holds enough units for 15 complete papers without repeating an item
 (5 papers for 新HSK 7–9; new papers draw the least-used units first; after that, items start to recur). Ambiguity-prone
 items (HSK 4 word banks, A/B/C ordering and word arrangement, HSK 5 cloze, statement-matching
@@ -184,6 +205,7 @@ tools/
   build_charts.py  charts for the 新HSK 7–9 chart-description task (matplotlib)
   add_batch.py / fix.py   add items / apply text fixes
   build_vocab.py   site/vocab.json (level, pinyin, meaning) for the missed-words list
+  stats.py         bank statistics (the table under "Question bank")
   e2e_test.py      headless-Chrome test of a full exam per level, plus drill/progress/words/sheet/exam day
 site/            the web app; audio/<level>/, images/<level>/
 submissions/     attempts/ (your answers), pending/ (writing to grade), graded/ (Claude's grades)
