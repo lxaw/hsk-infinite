@@ -41,6 +41,22 @@ The tables above describe HSK 4. All levels use the same unit shapes by part `ty
 
 Speakers: `m`, `f`, `n` (narrator), plus `m2`/`f2` for a second man/woman.
 
+## Explanations (optional, auto-scored parts)
+
+Shown under the answer on the results page and after Check in a drill. Merge them with
+`tools/add_explain.py` (which also reports coverage).
+
+| type | Where the explanation lives |
+|---|---|
+| `tf`, `mcq`, `order`, `arrange` | `explain` on the unit |
+| `mcq_group` | `explain` on each question |
+| `wordbank` | `explain` on each item |
+| `insert` | `explains[k]` on the unit, one per blank, aligned with `answers` |
+
+Options are reshuffled on every paper, so an explanation never names an option letter: it quotes
+the word or sentence. In an `order` item write `{A}` `{B}` `{C}` for the three sentences; the site
+replaces them with the letters that paper displayed.
+
 ## HSK 3.0 levels (新HSK 4, 5, 6, 7–9)
 
 The new-format levels reuse the types above with a few additions (set in `levels/<level>.json`):

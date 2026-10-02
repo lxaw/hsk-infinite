@@ -149,8 +149,33 @@ def pieces_ok(sentence, pieces):
     return not rem
 
 
+LETTER = re.compile(r"选项\s*[A-F]|选\s*[A-F](?![A-Za-z])|^[A-F][\s：:.、]|[A-F]\s*项")
+
+
+def check_explain(part, u, errs):
+    """Explanations are optional; where present they must be text and must not name option letters (options are reshuffled)."""
+    i, t = u["id"], part["type"]
+    found = [u.get("explain")] + [q.get("explain") for q in u.get("questions", [])]
+    if t == "wordbank":
+        found += [it.get("explain") for it in u["items"]]
+    if "explains" in u:
+        if t != "insert" or len(u["explains"]) != len(u.get("answers", [])):
+            errs.append(f"{i}: explains must have one entry per blank")
+        found += u["explains"]
+    for x in found:
+        if x is None or x == "":
+            continue
+        if not isinstance(x, str):
+            errs.append(f"{i}: explain must be text")
+        elif t == "order" and re.search(r"(?<!\{)[ABC](?!\})", x):
+            errs.append(f"{i}: explain must write the sentences as {{A}} {{B}} {{C}}")
+        elif t != "order" and not u.get("errorType") and LETTER.search(x):
+            errs.append(f"{i}: explain names an option letter (options are reshuffled)")
+
+
 def check(part, u, errs, ans):
     i, t = u["id"], part["type"]
+    check_explain(part, u, errs)
     if t == "tf":
         check_audio_body(part, u, errs)
         if not isinstance(u.get("answer"), bool):

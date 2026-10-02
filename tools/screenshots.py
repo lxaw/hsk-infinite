@@ -142,7 +142,7 @@ def results():
         pg.reload()
         pg.wait_for_selector(".scores")
         shot(pg, "7-results")
-        scroll_to(pg, ".fb")
+        scroll_to(pg, ".fb:not(.why)")
         shot(pg, "8-feedback")
         pg.goto(URL + "#/hsk4")
         pg.reload()

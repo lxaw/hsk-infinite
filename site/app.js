@@ -85,6 +85,47 @@ function pickUnits(part, used) {
   return [];
 }
 
+// Adds one unit to a paper as a block plus its questions (options shuffled), numbered from qnum. Returns the next qnum.
+function addUnit(part, u, qnum, blocks, questions) {
+  const b = { part: part.id, unitId: u.id, qnums: [] };
+  const addQ = (extra) => { const q = { qnum: qnum++, part: part.id, unitId: u.id, response: null, ...extra }; questions.push(q); b.qnums.push(q.qnum); return q; };
+  const mcq = (src, extra = {}) => { const n = src.options.length; const o = src.keepOrder ? [...Array(n).keys()] : perm(n); addQ({ ...extra, optOrder: o, correct: o.indexOf(src.answer) }); };
+  switch (part.type) {
+    case "tf": addQ({ correct: u.answer }); break;
+    case "mcq": mcq(u); break;
+    // A question without options is a short-answer fill-in (HSK 3.0 levels 7-9), checked against answer + accepted.
+    case "mcq_group": u.questions.forEach((q, k) => q.options ? mcq(q, { sub: k }) : addQ({ sub: k, fill: true, correct: q.answer, accepted: q.accepted || [] })); break;
+    case "wordbank":
+      b.bankOrder = perm(u.bank.length); b.itemOrder = perm(u.items.length);
+      b.itemOrder.forEach((k) => addQ({ sub: k, correct: LET[b.bankOrder.indexOf(u.items[k].answer)] }));
+      break;
+    case "insert":
+      b.sentOrder = perm(u.sentences.length);
+      u.answers.forEach((a, k) => addQ({ sub: k, correct: LET[b.sentOrder.indexOf(a)] }));
+      break;
+    case "order":
+      b.order = shuffle(["A", "B", "C"]);
+      addQ({ correct: [...u.answer].map((k) => LET[b.order.indexOf(k)]).join("") });
+      break;
+    case "arrange": {
+      let p; do { p = shuffle(u.pieces); } while (norm(p.join("")) === norm(u.answer) && u.pieces.length > 1);
+      b.pieces = p; addQ({ correct: u.answer, accepted: u.accepted || [] });
+      break;
+    }
+    case "free": addQ({}); break;
+  }
+  blocks.push(b);
+  return qnum;
+}
+
+function newPaper(mode, practice, secs, blocks, questions) {
+  return {
+    id: new Date().toISOString().replace(/[-:T]/g, "").slice(0, 14) + "-" + Math.random().toString(36).slice(2, 6),
+    level: CFG.level, mode, practice, createdAt: new Date().toISOString(), sections: secs, secIndex: 0, blocks, questions,
+    deadline: null, listenState: null, phase: null,
+  };
+}
+
 function buildPaper(mode, practice) {
   const used = usageCounts(CFG.level);
   const secs = mode === "full" ? CFG.sections.map((s) => s.key) : [mode];
@@ -96,43 +137,10 @@ function buildPaper(mode, practice) {
       const units = pickUnits(part, used);
       const need = part.questions || null;
       if (!units.length || units.some((u) => !u) || (!need && units.length < part.units)) throw new Error(`Not enough ${part.id} items in the ${CFG.short} bank yet`);
-      for (const u of units) {
-        const b = { part: part.id, unitId: u.id, qnums: [] };
-        const addQ = (extra) => { const q = { qnum: qnum++, part: part.id, unitId: u.id, response: null, ...extra }; questions.push(q); b.qnums.push(q.qnum); return q; };
-        const mcq = (src, extra = {}) => { const n = src.options.length; const o = src.keepOrder ? [...Array(n).keys()] : perm(n); addQ({ ...extra, optOrder: o, correct: o.indexOf(src.answer) }); };
-        switch (part.type) {
-          case "tf": addQ({ correct: u.answer }); break;
-          case "mcq": mcq(u); break;
-          // A question without options is a short-answer fill-in (HSK 3.0 levels 7-9), checked against answer + accepted.
-          case "mcq_group": u.questions.forEach((q, k) => q.options ? mcq(q, { sub: k }) : addQ({ sub: k, fill: true, correct: q.answer, accepted: q.accepted || [] })); break;
-          case "wordbank":
-            b.bankOrder = perm(u.bank.length); b.itemOrder = perm(u.items.length);
-            b.itemOrder.forEach((k) => addQ({ sub: k, correct: LET[b.bankOrder.indexOf(u.items[k].answer)] }));
-            break;
-          case "insert":
-            b.sentOrder = perm(u.sentences.length);
-            u.answers.forEach((a, k) => addQ({ sub: k, correct: LET[b.sentOrder.indexOf(a)] }));
-            break;
-          case "order":
-            b.order = shuffle(["A", "B", "C"]);
-            addQ({ correct: [...u.answer].map((k) => LET[b.order.indexOf(k)]).join("") });
-            break;
-          case "arrange": {
-            let p; do { p = shuffle(u.pieces); } while (norm(p.join("")) === norm(u.answer) && u.pieces.length > 1);
-            b.pieces = p; addQ({ correct: u.answer, accepted: u.accepted || [] });
-            break;
-          }
-          case "free": addQ({}); break;
-        }
-        blocks.push(b);
-      }
+      for (const u of units) qnum = addUnit(part, u, qnum, blocks, questions);
     }
   }
-  return {
-    id: new Date().toISOString().replace(/[-:T]/g, "").slice(0, 14) + "-" + Math.random().toString(36).slice(2, 6),
-    level: CFG.level, mode, practice, createdAt: new Date().toISOString(), sections: secs, secIndex: 0, blocks, questions,
-    deadline: null, listenState: null, phase: null,
-  };
+  return newPaper(mode, practice, secs, blocks, questions);
 }
 
 // ---------- rendering helpers ----------
@@ -247,8 +255,9 @@ function renderExam() {
   $("#exambar").hidden = false;
   $("#sectionLabel").textContent = `${CFG.short} · ${S.name}`;
   if (S.readMinutes && !exam.practice && !exam.phase) { exam.phase = "read"; exam.deadline = null; save(); }
-  const modeText = exam.drill ? "单项练习 drill · 每题可检查 check each item as you go" : exam.practice ? "练习模式 practice (replay allowed, no timer)" : exam.examDay ? "模拟考试日 exam day · 不能暂停 no pausing" : "考试模式 exam mode";
-  const range = exam.drill ? `${exam.questions[0].qnum}–${exam.questions[exam.questions.length - 1].qnum}` : `${S.first}${S.count > 1 ? `–${S.first + S.count - 1}` : ""}`;
+  const modeText = exam.drill === "mistakes" ? "错题重做 redo mistakes · 每题可检查 check each item as you go" : exam.drill ? "单项练习 drill · 每题可检查 check each item as you go" : exam.practice ? "练习模式 practice (replay allowed, no timer)" : exam.examDay ? "模拟考试日 exam day · 不能暂停 no pausing" : "考试模式 exam mode";
+  const mine = exam.questions.filter((q) => sectionOf(q.qnum) === key);
+  const range = exam.drill ? `${mine[0].qnum}–${mine[mine.length - 1].qnum}` : `${S.first}${S.count > 1 ? `–${S.first + S.count - 1}` : ""}`;
   let html = `<h1>${S.name}</h1><p class="muted">${CFG.name} · 第 ${range} 题 · ${modeText}</p>`;
   if (exam.examDay && exam.leftCount) html += `<div class="notice">已离开考试页面 ${exam.leftCount} 次 · you left the exam page ${exam.leftCount}× (recorded on the result)</div>`;
   if (key === "listening" && !exam.practice) {
@@ -491,6 +500,48 @@ function buildDrill(partId) {
   return { ...paper, mode: `drill:${part.group}`, drill: part.group };
 }
 
+// ---------- mistakes ----------
+// Units you still have wrong: the latest answer to at least one of their questions was wrong (or blank).
+// Answering a unit correctly later, in any paper or drill, clears it. Newest mistakes first.
+// With attemptId, only the mistakes made in that paper.
+function openMistakes(level, attemptId) {
+  const last = {};
+  for (const a of ATTEMPTS.filter((x) => (x.level || "hsk4") === level).sort((x, y) => x.finishedAt.localeCompare(y.finishedAt))) {
+    for (const q of a.questions) {
+      const part = partCfg(q.part);
+      if (!part || part.type === "free" || !unit(q.unitId)) continue;
+      (last[q.unitId] ||= {})[q.sub ?? 0] = { ok: isCorrect(q), at: a.finishedAt, id: a.id };
+    }
+  }
+  return Object.entries(last).map(([unitId, subs]) => ({ unitId, wrong: Object.values(subs).filter((r) => !r.ok) }))
+    .filter((m) => m.wrong.length && (!attemptId || m.wrong.some((r) => r.id === attemptId)))
+    .map((m) => ({ unitId: m.unitId, at: m.wrong.map((r) => r.at).sort().pop() }))
+    .sort((x, y) => y.at.localeCompare(x.at));
+}
+
+// A drill made of exactly those units, in paper order. Question numbers restart at each section's first number
+// (scoring finds the section from the number), so a section can't hold more than a real paper's worth.
+function buildMistakes(mistakes, maxQuestions = Infinity) {
+  const picked = [], blocks = [], questions = [], secs = [];
+  let n = 0;
+  for (const m of mistakes) {
+    const u = unit(m.unitId), part = partCfg(m.unitId.slice(0, m.unitId.lastIndexOf("-")));
+    if (n >= maxQuestions) break;
+    picked.push(u); n += nQuestions(part, u);
+  }
+  for (const sec of CFG.sections) {
+    let qnum = sec.first;
+    for (const part of sec.parts) for (const u of BANK[part.id] || []) {
+      if (!picked.includes(u) || qnum + nQuestions(part, u) > sec.first + sec.count) continue;
+      qnum = addUnit(part, u, qnum, blocks, questions);
+    }
+    if (qnum > sec.first) secs.push(sec.key);
+  }
+  if (!questions.length) throw new Error("没有错题 · no mistakes to redo");
+  return { ...newPaper("mistakes", true, secs, blocks, questions), drill: "mistakes" };
+}
+const MISTAKES_PER_DRILL = 20;
+
 function shortDesc(p) {
   const L = p.section === "listening", group = allParts().filter((x) => x.group === p.group);
   if (p.label) return p.label;  // set in the level config where the type alone would mislead
@@ -509,6 +560,7 @@ function shortDesc(p) {
 
 function modeLabel(a) {
   const cfg = LEVELS.find((l) => l.level === (a.level || "hsk4")) || CFG;
+  if (a.drill === "mistakes") return "错题重做 mistakes";
   if (a.drill) {
     const p = allParts(cfg).find((x) => x.group === a.drill);
     return `单项 drill · ${sectionCfg(p.section, cfg).name.split(" ")[0]} ${p.title || ""}`;
@@ -534,6 +586,7 @@ async function renderHome(level) {
   await useLevel(level || recall("hsk-level") || "hsk4");
   ATTEMPTS = await api("/api/attempts").catch(() => []);
   const saved = recall("hsk-exam");
+  const mistakes = openMistakes(CFG.level);
   const tabs = LEVELS.map((l) => `<a href="#/${l.level}" class="tab ${l.level === CFG.level ? "on" : ""}">${esc(l.short)}</a>`).join("");
   const mins = (k) => { const s = sectionCfg(k); return s.minutes ? `${(s.readMinutes || 0) + s.minutes} min` : `~${s.approxMinutes || 30} min`; };
   const total = CFG.sections.reduce((s, x) => s + (x.minutes ? x.minutes + (x.readMinutes || 0) : x.approxMinutes || 35), 0);
@@ -547,10 +600,11 @@ async function renderHome(level) {
       <a class="btn" href="#/examday/${CFG.level}">🎯 模拟考试日 · Exam day</a>
       <a class="btn" href="#/progress/${CFG.level}">📈 进度 · Progress</a>
       <a class="btn" href="#/words/${CFG.level}">📝 生词本 · Missed words</a>
+      <button class="btn" id="redo" ${mistakes.length ? "" : "disabled"}>🔁 错题重做 · Redo mistakes${mistakes.length ? ` (${mistakes.length})` : ""}</button>
       ${CFG.speaking ? `<a class="btn" href="#/speaking/${CFG.level}">🎤 口语 · Speaking</a>` : ""}
     </div>
     <h2>单项练习 · Drill one part</h2>
-    <p class="muted small">One part of a paper, untimed. Check each item as you go to see the answer, transcript or explanation.</p>
+    <p class="muted small">One part of a paper, untimed. Check each item as you go to see the answer, transcript or explanation. 错题重做 Redo mistakes drills the questions you still have wrong, newest first (about ${MISTAKES_PER_DRILL} at a time); getting one right clears it.</p>
     <div class="drills">${CFG.sections.map((s) => `<div class="drillsec"><div class="k">${esc(s.name.split(" ")[0])}</div>${s.parts.filter((p, i, arr) => arr.findIndex((x) => x.group === p.group) === i).map((p) => `<button class="drill" data-drill="${p.id}"><b>${esc(p.title || p.id)}</b> <span>${esc(shortDesc(partCfg(p.id)))}</span></button>`).join("")}</div>`).join("")}</div>
     <h2>历史成绩 · History</h2>`;
   const mine = ATTEMPTS.filter((a) => (a.level || "hsk4") === CFG.level);
@@ -561,7 +615,7 @@ async function renderHome(level) {
       const s = computeScores(a);
       // Drills show right/total in their section's column so a 10-question drill doesn't read as a section score.
       const cell = (k) => !s[k] ? "—" : a.drill ? (s[k].right !== undefined ? `${s[k].right}/${s[k].of}` : s[k].score ?? `${s[k].provisional}+?`) : (s[k].score ?? `${s[k].provisional}+?`);
-      const full = a.sections.length === CFG.sections.length;
+      const full = !a.drill && a.sections.length === CFG.sections.length;
       const total = full && CFG.sections.every((x) => s[x.key].score !== null) ? CFG.sections.reduce((t, x) => t + s[x.key].score, 0) : null;
       const tot = full && !CFG.noPass ? (total === null ? `<span class="pill wait">待批改</span>` : `${total} <span class="pill ${total >= CFG.pass ? "pass" : "fail"}">${total >= CFG.pass ? "合格" : "未合格"}</span>`) : "";
       html += `<tr data-id="${esc(a.id)}"><td>${new Date(a.finishedAt).toLocaleString()}</td><td>${esc(modeLabel(a))}</td>${CFG.sections.map((x) => `<td>${cell(x.key)}</td>`).join("")}<td>${tot}</td></tr>`;
@@ -570,9 +624,9 @@ async function renderHome(level) {
   }
   $("#app").innerHTML = html;
   $("#app").onclick = async (e) => {
-    const c = e.target.closest("[data-mode]"), d = e.target.closest("[data-drill]");
-    if (c || d) {
-      try { exam = d ? buildDrill(d.dataset.drill) : buildPaper(c.dataset.mode, $("#practice").checked); } catch (err) { $("#app").insertAdjacentHTML("afterbegin", `<div class="notice">${esc(err.message)}</div>`); return; }
+    const c = e.target.closest("[data-mode]"), d = e.target.closest("[data-drill]"), m = e.target.id === "redo";
+    if (c || d || m) {
+      try { exam = m ? buildMistakes(mistakes, MISTAKES_PER_DRILL) : d ? buildDrill(d.dataset.drill) : buildPaper(c.dataset.mode, $("#practice").checked); } catch (err) { $("#app").insertAdjacentHTML("afterbegin", `<div class="notice">${esc(err.message)}</div>`); return; }
       save(); location.hash = "#/exam"; return;
     }
     const r = e.target.closest("tr[data-id]");
@@ -589,8 +643,9 @@ async function renderResult(id) {
   clearTimeout(pollTimer);
   const a = await api(`/api/attempts/${id}`);
   await useLevel(a.level || "hsk4");
+  ATTEMPTS = await api("/api/attempts").catch(() => []);
   const s = computeScores(a);
-  const full = a.sections.length === CFG.sections.length;
+  const full = !a.drill && a.sections.length === CFG.sections.length;
   const total = full && CFG.sections.every((x) => s[x.key].score !== null) ? CFG.sections.reduce((t, x) => t + s[x.key].score, 0) : null;
   let html = `<p class="noprint"><a href="#/${CFG.level}">← 返回 ${esc(CFG.short)}</a> · <a href="#/sheet/${esc(a.id)}">🖨 答题卡 answer sheet</a> · <a href="#/words/${CFG.level}">📝 生词本 missed words</a></p>
     <h1>成绩 · Results</h1><p class="muted">${esc(CFG.name)} · ${new Date(a.finishedAt).toLocaleString()} · ${esc(modeLabel(a))}</p>`;
@@ -607,12 +662,35 @@ async function renderResult(id) {
   html += `</div>`;
   const hasFree = a.questions.some((q) => partCfg(q.part).type === "free");
   if (hasFree && !a.claudeGrade) html += `<div class="notice">书写 is waiting for grading. In Claude Code (in <code>~/Desktop/hsk</code>) say: <code>grade my HSK writing</code>. This page updates by itself when the grade arrives.</div>`;
-  for (const key of a.sections) {
-    html += `<h2>${sectionCfg(key).name}</h2>`;
-    for (const q of a.questions.filter((x) => sectionOf(x.qnum) === key)) html += reviewQ(a, q);
-  }
-  $("#app").innerHTML = html;
-  $("#app").onclick = (e) => { const t = e.target.closest("[data-play]"); if (t) playOnce(t.dataset.play); };
+  // "Wrong only" keeps unanswered questions and writing that is ungraded or below full marks.
+  const missed = (q) => {
+    const ok = isCorrect(q);
+    if (ok !== null) return !ok;
+    const g = a.claudeGrade && a.claudeGrade.items.find((x) => x.qnum === q.qnum);
+    return !g || g.score < partCfg(q.part).points;
+  };
+  const nWrong = a.questions.filter(missed).length, redo = openMistakes(CFG.level, a.id);
+  let filter = recall("hsk-result-filter") === "wrong" ? "wrong" : "all";
+  const draw = () => {
+    let out = `<div class="opts noprint"><span class="chips">${[["all", `全部 all (${a.questions.length})`], ["wrong", `只看错题 wrong only (${nWrong})`]].map(([k, t]) => `<button class="chip ${filter === k ? "on" : ""}" data-rfilter="${k}">${t}</button>`).join("")}</span>
+      ${redo.length ? `<button class="btn small" id="redo">🔁 重做本卷错题 · Redo these mistakes (${redo.length})</button>` : ""}</div>`;
+    for (const key of a.sections) {
+      out += `<h2>${sectionCfg(key).name}</h2>`;
+      const qs = a.questions.filter((x) => sectionOf(x.qnum) === key && (filter === "all" || missed(x)));
+      if (!qs.length) out += `<p class="muted">全对 · nothing wrong in this section.</p>`;
+      // The passage is shown once per block, on the first question listed.
+      for (const q of qs) out += reviewQ(a, q, qs.find((x) => x.unitId === q.unitId).qnum);
+    }
+    $("#review").innerHTML = out;
+  };
+  $("#app").innerHTML = html + `<div id="review"></div>`;
+  draw();
+  $("#app").onclick = (e) => {
+    const t = e.target.closest("[data-play]"), f = e.target.closest("[data-rfilter]");
+    if (t) playOnce(t.dataset.play);
+    else if (f) { filter = f.dataset.rfilter; store("hsk-result-filter", filter); draw(); }
+    else if (e.target.id === "redo") { exam = buildMistakes(redo); save(); location.hash = "#/exam"; }
+  };
   if (hasFree && !a.claudeGrade) {
     const poll = async () => {
       if (location.hash !== `#/result/${id}`) return;
@@ -631,7 +709,9 @@ function transcript(u, q) {
   return u.question ? `${body}\n问：${u.question}` : body;
 }
 
-function reviewQ(a, q) {
+// lead = the question of its block that carries the passage (the first one shown). Explanations come from the bank:
+// `explain` on the unit, on each question of a group, on each word-bank item, or `explains[k]` per insertion blank.
+function reviewQ(a, q, lead) {
   const u = unit(q.unitId), part = partCfg(q.part);
   if (!u) return `<div class="rv"><span class="qn">${q.qnum}.</span> <span class="muted">(item ${esc(q.unitId)} no longer in bank)</span></div>`;
   const ok = isCorrect(q), cls = ok === null ? "" : ok ? "right" : "wrong", mark = ok === null ? "" : ok ? "✓" : "✗";
@@ -639,25 +719,31 @@ function reviewQ(a, q) {
   const listening = part.section === "listening";
   const opt = (opts, di) => di === null || di === undefined ? "—" : `${LET[di]} ${opts[q.optOrder[di]]}`;
   const ans = (mine, right) => `<div class="ans">你的答案：${esc(mine)} · 正确：${esc(right)}</div>`;
+  const why = (t) => t ? `<div class="fb why">${esc(t)}</div>` : "";
+  lead ??= b.qnums[0];
   let body = "";
   switch (part.type) {
-    case "tf": body = `<span class="stmt">★ ${esc(u.statement)}</span>` + ans(q.response === null ? "—" : q.response ? "对" : "错", q.correct ? "对" : "错"); break;
+    case "tf": body = `<span class="stmt">★ ${esc(u.statement)}</span>` + ans(q.response === null ? "—" : q.response ? "对" : "错", q.correct ? "对" : "错") + why(u.explain); break;
     case "mcq":
       body = (!listening && u.passage ? `<div class="passage">${blanks(u.passage, (k) => `<b>${CIRCLED[k - 1]}</b>____`)}</div>` : "") +
         (!part.noQuestion && u.question ? `<span class="stmt">${esc(u.question)}</span>` : "") + ans(opt(u.options, q.response), opt(u.options, q.correct)) +
-        (u.explain ? `<div class="fb">${esc(u.explain.replace(/^[A-D]\s+/, ""))}</div>` : "");
+        why((u.explain || "").replace(/^[A-D]\s+/, ""));
       break;
     case "mcq_group": {
       const Q = u.questions[q.sub];
       body = (Q.question ? `<span class="stmt">★ ${esc(Q.question)}</span>` : "") + (Q.options ? ans(opt(Q.options, q.response), opt(Q.options, q.correct))
         : `<div class="ans">你的答案：${esc(q.response || "—")} · 正确：${esc(q.correct)}${(q.accepted || []).length ? ` <span class="muted">（也可：${esc(q.accepted.join(" / "))}）</span>` : ""}</div>`);
-      if (!listening && q.qnum === b.qnums[0]) body += `<details><summary>原文 passage</summary><div class="transcript">${esc(u.passage.replace(/\[(\d+)\]/g, (_, k) => `（${b.qnums[k - 1]}）`))}</div></details>`;
+      body += why(Q.explain);
+      if (!listening && q.qnum === lead) body += `<details><summary>原文 passage</summary><div class="transcript">${esc(u.passage.replace(/\[(\d+)\]/g, (_, k) => `（${b.qnums[k - 1]}）`))}</div></details>`;
       break;
     }
-    case "wordbank": { const w = (L) => L ? `${L} ${u.bank[b.bankOrder[LET.indexOf(L)]]}` : "—"; body = `<span class="passage">${esc(u.items[q.sub].text)}</span>` + ans(w(q.response), w(q.correct)); break; }
-    case "insert": { const w = (L) => L ? `${L} ${u.sentences[b.sentOrder[LET.indexOf(L)]]}` : "—"; body = ans(w(q.response), w(q.correct)); break; }
-    case "order": body = b.order.map((k, di) => `<div class="orderline"><span class="L">${LET[di]}</span>${esc(u[k])}</div>`).join("") + ans(q.response || "—", q.correct); break;
-    case "arrange": body = `<div class="ans">你的答案：${esc(q.response || "—")}<br>正确：${esc(q.correct)}${(q.accepted || []).length ? ` <span class="muted">（也可：${esc(q.accepted.join(" / "))}）</span>` : ""}</div>`; break;
+    case "wordbank": { const w = (L) => L ? `${L} ${u.bank[b.bankOrder[LET.indexOf(L)]]}` : "—"; body = `<span class="passage">${esc(u.items[q.sub].text)}</span>` + ans(w(q.response), w(q.correct)) + why(u.items[q.sub].explain); break; }
+    case "insert": { const w = (L) => L ? `${L} ${u.sentences[b.sentOrder[LET.indexOf(L)]]}` : "—"; body = ans(w(q.response), w(q.correct)) + why((u.explains || [])[q.sub]);
+      if (q.qnum === lead && !part.ordering) body += `<details><summary>原文 passage</summary><div class="transcript">${esc(u.passage.replace(/\[(\d+)\]/g, (_, k) => `（${b.qnums[k - 1]}）`))}</div></details>`;
+      break; }
+    case "order": body = b.order.map((k, di) => `<div class="orderline"><span class="L">${LET[di]}</span>${esc(u[k])}</div>`).join("") + ans(q.response || "—", q.correct)
+      + why((u.explain || "").replace(/\{([ABC])\}/g, (_, k) => LET[b.order.indexOf(k)])); break;  // {A} {B} {C} name the bank's sentences; show this paper's letters
+    case "arrange": body = `<div class="ans">你的答案：${esc(q.response || "—")}<br>正确：${esc(q.correct)}${(q.accepted || []).length ? ` <span class="muted">（也可：${esc(q.accepted.join(" / "))}）</span>` : ""}</div>` + why(u.explain); break;
     case "free": {
       const g = a.claudeGrade && a.claudeGrade.items.find((x) => x.qnum === q.qnum);
       const pic = ["picture_sentence", "essay_picture", "picture_story", "chart_essay"].includes(part.kind) ? `<img src="${image(u.id)}" alt="">` : "";
@@ -976,7 +1062,7 @@ async function renderProgress(level) {
     const { rows, list } = partStats(CFG.level, filter);
     const qs = Object.values(rows).flat();
     const answered = qs.reduce((s, r) => s + r.of, 0), right = qs.reduce((s, r) => s + r.right, 0);
-    const fulls = list.filter((a) => a.sections.length === CFG.sections.length).map((a) => { const s = computeScores(a); return CFG.sections.every((x) => s[x.key].score !== null) ? CFG.sections.reduce((t, x) => t + s[x.key].score, 0) : null; }).filter((t) => t !== null);
+    const fulls = list.filter((a) => !a.drill && a.sections.length === CFG.sections.length).map((a) => { const s = computeScores(a); return CFG.sections.every((x) => s[x.key].score !== null) ? CFG.sections.reduce((t, x) => t + s[x.key].score, 0) : null; }).filter((t) => t !== null);
     const pct = (r, o) => (o ? Math.round((100 * r) / o) : null);
     const groups = allParts().filter((p, i, arr) => arr.findIndex((x) => x.group === p.group) === i);
     const partRows = groups.map((p) => {

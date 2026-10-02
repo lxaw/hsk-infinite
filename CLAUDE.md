@@ -72,6 +72,10 @@ Never edit `submissions/attempts/` — those are the user's answers.
   a blind solver flagged exactly that; natural wording wins.
 - 新HSK 7–9 short answers (R3, listening fill-ins) are auto-checked against `answer` + `accepted`;
   list every wording a fair examiner would accept. Charts: `tools/build_charts.py --level hsk79n`.
+- Answer explanations (`explain`, see `bank/SCHEMA.md`): merge with `tools/add_explain.py LEVEL PART file.json`;
+  `tools/add_explain.py LEVEL` reports coverage. Say why the answer is right and, where there is a
+  tempting distractor, why it is wrong. Never name an option letter (options are reshuffled): quote the
+  word or sentence; in `order` items write `{A}` `{B}` `{C}`.
 - Regenerate media after edits: `tools/build_audio.py --level L` (cached) and
   `tools/build_images.py --level L` for new picture items — look at every new picture and
   rewrite the `scene` if it shows any writing or doesn't clearly show the task.

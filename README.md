@@ -76,7 +76,9 @@ have 35 minutes to retell it in ~400 字, with a live character counter.
 ### 5. Results
 
 Press 交卷 · Finish section (click twice to confirm). Listening and reading are scored instantly;
-you can review every answer, open listening transcripts, and read the explanation for each 病句.
+you can review every answer (or only the wrong ones), open listening transcripts, and read an explanation
+under every reading and arrange-the-words question: why the answer is right and why the tempting
+option is not (in English for HSK 4 and 新HSK 4, in Chinese from level 5 up).
 
 ![Results: section scores and answer review](docs/screenshots/7-results.png)
 
@@ -96,6 +98,9 @@ The home page of each level also has:
 - **单项练习 Drill one part**: one part of a paper (e.g. only HSK 6 病句 or HSK 5 cloze), untimed.
   Press **检查 Check** under an item to lock it and see the answer, the transcript, or the 病句
   explanation straight away. Drills are saved like any paper and count toward "least-seen first".
+- **🔁 错题重做 Redo mistakes**: a drill made of the questions you still have wrong, newest first
+  (about 20 at a time). Getting one right, there or in any later paper, clears it. Each results page
+  has the same button for just that paper's mistakes, and a **只看错题 wrong only** filter.
 - **📈 进度 Progress**: section scores over time (exam and practice papers marked differently),
   accuracy by part with your weakest part called out, and a Drill button on every part.
 - **📝 生词本 Missed words**: words from the questions you got wrong, tagged by HSK level with pinyin,
@@ -204,9 +209,10 @@ tools/
   build_images.py  Z-Image-Turbo pictures (local, Apple Silicon; model in models/)
   build_charts.py  charts for the 新HSK 7–9 chart-description task (matplotlib)
   add_batch.py / fix.py   add items / apply text fixes
+  add_explain.py   merge answer explanations into a part; coverage report
   build_vocab.py   site/vocab.json (level, pinyin, meaning) for the missed-words list
   stats.py         bank statistics (the table under "Question bank")
-  e2e_test.py      headless-Chrome test of a full exam per level, plus drill/progress/words/sheet/exam day
+  e2e_test.py      headless-Chrome test of a full exam per level, plus drill/mistakes/progress/words/sheet/exam day
 site/            the web app; audio/<level>/, images/<level>/
 submissions/     attempts/ (your answers), pending/ (writing to grade), graded/ (Claude's grades)
 server.py        local server + JSON API

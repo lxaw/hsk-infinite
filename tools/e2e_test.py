@@ -179,14 +179,14 @@ def main():
             check(len(v3) == len(SECS), "no total is shown for a level without a pass mark")
         else:
             check(v3[len(SECS)].startswith(str(full)), f"total = {full}")
-        check(pg.locator(".fb").count() >= len(req["items"]), "feedback shown for each graded item")
+        check(pg.locator(".fb:not(.why)").count() >= len(req["items"]), "feedback shown for each graded item")
         pg.screenshot(path=SHOTS / f"{LEVEL}_graded_result.png")
         pg.goto(URL + f"#/{LEVEL}")
         pg.wait_for_selector(".hist")
         if not CFG.get("noPass"):
             check(str(full) in pg.inner_text(".hist"), "history table shows the graded total")
 
-        print(f"[{LEVEL}] 5. drill, progress, missed words, answer sheet, exam day")
+        print(f"[{LEVEL}] 5. drill, redo mistakes, progress, missed words, answer sheet, exam day")
         fresh(pg)
         pg.click(f'[data-drill="{CFG["sections"][1]["parts"][0]["id"]}"]')
         pg.wait_for_selector("[data-check]")
@@ -200,6 +200,21 @@ def main():
         pg.wait_for_selector(".scores", timeout=10000)
         created.append(pg.url.split("/")[-1])
         check("drill" in pg.inner_text("main"), "drill result is labelled as a drill")
+
+        fresh(pg)
+        check(pg.locator("#redo").is_enabled(), "redo mistakes: offered after the all-wrong paper")
+        pg.click("#redo")
+        pg.wait_for_selector("[data-check]")
+        while not pg.url.split("#")[1].startswith("/result/"):
+            pg.click("#finishBottom")
+            pg.click("#finishBottom")
+            pg.wait_for_timeout(300)
+        pg.wait_for_selector(".scores")
+        created.append(pg.url.split("/")[-1])
+        check("错题重做" in pg.inner_text("main") and "Total" not in pg.inner_text(".scores"), "redo mistakes: result is labelled and has no total")
+        pg.click("[data-rfilter=wrong]")
+        check(pg.locator(".rv.wrong").count() > 0 and pg.locator(".rv.right").count() == 0, "results: wrong-only filter hides correct answers")
+        pg.click("[data-rfilter=all]")
 
         pg.goto(URL + f"#/progress/{LEVEL}")
         pg.wait_for_selector("svg.chart")
