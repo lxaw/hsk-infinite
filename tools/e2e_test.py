@@ -80,7 +80,9 @@ def answer_section(pg, right):
         n, t, c = q["qnum"], PARTS[q["part"]]["type"], q.get("correct")
         if not s["first"] <= n < s["first"] + s["count"]:
             continue
-        if t == "tf":
+        if q.get("fill"):  # short written answer (HSK 3.0 levels 7-9)
+            pg.fill(f'input[data-text="{n}"]', c if right else "错")
+        elif t == "tf":
             pg.click(f'.choice[data-q="{n}"][data-v="{str(c if right else not c).lower()}"]')
         elif "optOrder" in q:
             pg.click(f'.choice[data-q="{n}"][data-v="{c if right else (c + 1) % len(q["optOrder"])}"]')
@@ -120,9 +122,12 @@ def scores(pg):
 
 def main():
     errors = []
-    auto_w = sum(p.get("points", 0) * p.get("units", 0) for p in PARTS.values() if p["section"] == "writing" and p["type"] != "free")
-    free = [p for p in PARTS.values() if p["type"] == "free"]
-    grade_w = sum((p["points"] // 2) * p["units"] for p in free)
+    # Per section: auto-scored points and (for sections with free writing) the points a half-marks grade adds.
+    SECS = [s["key"] for s in CFG["sections"]]
+    FREE = {k: [p for p in PARTS.values() if p["section"] == k and p["type"] == "free"] for k in SECS}
+    AUTO = {k: sum(p.get("points", 0) * p.get("units", 0) for p in PARTS.values() if p["section"] == k and p["type"] != "free") for k in SECS}
+    GRADE = {k: sum((p["points"] // 2) * p["units"] for p in FREE[k]) for k in SECS}
+    full = sum(AUTO[k] + GRADE[k] if FREE[k] else 100 for k in SECS)
     with sync_playwright() as p:
         b = p.chromium.launch(channel="chrome", headless=True, args=["--autoplay-policy=no-user-gesture-required", "--use-fake-ui-for-media-stream", "--use-fake-device-for-media-stream"])
         pg = b.new_context(viewport={"width": 1100, "height": 900}, permissions=["microphone"]).new_page()
@@ -142,18 +147,19 @@ def main():
         print(f"[{LEVEL}] 2. oracle run (all correct)")
         att, v = take_paper(pg, True, "right")
         print("    ", v)
-        check(v[0].startswith("100"), "listening = 100")
-        check(v[1].startswith("100"), "reading = 100")
-        check(v[2].startswith(f"{auto_w} +"), f"writing auto parts = {auto_w}, free writing pending")
+        for i, k in enumerate(SECS):
+            if FREE[k]:
+                check(v[i].startswith(f"{AUTO[k]} +"), f"{k} auto parts = {AUTO[k]}, free writing pending")
+            else:
+                check(v[i].startswith("100"), f"{k} = 100")
         pending = ROOT / "submissions/pending" / f"{att}.json"
         check(pending.exists(), "pending grading request written")
 
         print(f"[{LEVEL}] 3. anti-oracle run (all wrong)")
         _, v2 = take_paper(pg, False, "wrong")
         print("    ", v2)
-        check(v2[0].startswith("0"), "listening = 0")
-        check(v2[1].startswith("0"), "reading = 0")
-        check(v2[2].startswith("0 +"), "writing auto parts = 0")
+        for i, k in enumerate(SECS):
+            check(v2[i].startswith("0 +" if FREE[k] else "0"), f"{k} = 0 when every answer is wrong")
 
         print(f"[{LEVEL}] 4. grading round-trip")
         req = json.loads(pending.read_text())
@@ -166,17 +172,23 @@ def main():
         pg.wait_for_selector(".scores")
         v3 = scores(pg)
         print("    ", v3)
-        check(v3[2].startswith(str(auto_w + grade_w)), f"writing = {auto_w} + {grade_w}")
-        check(v3[3].startswith(str(200 + auto_w + grade_w)), f"total = {200 + auto_w + grade_w}")
+        for i, k in enumerate(SECS):
+            if FREE[k]:
+                check(v3[i].startswith(str(AUTO[k] + GRADE[k])), f"{k} = {AUTO[k]} + {GRADE[k]}")
+        if CFG.get("noPass"):
+            check(len(v3) == len(SECS), "no total is shown for a level without a pass mark")
+        else:
+            check(v3[len(SECS)].startswith(str(full)), f"total = {full}")
         check(pg.locator(".fb").count() >= len(req["items"]), "feedback shown for each graded item")
         pg.screenshot(path=SHOTS / f"{LEVEL}_graded_result.png")
         pg.goto(URL + f"#/{LEVEL}")
         pg.wait_for_selector(".hist")
-        check(str(200 + auto_w + grade_w) in pg.inner_text(".hist"), "history table shows the graded total")
+        if not CFG.get("noPass"):
+            check(str(full) in pg.inner_text(".hist"), "history table shows the graded total")
 
         print(f"[{LEVEL}] 5. drill, progress, missed words, answer sheet, exam day")
         fresh(pg)
-        pg.click('[data-drill="R1"]')
+        pg.click(f'[data-drill="{CFG["sections"][1]["parts"][0]["id"]}"]')
         pg.wait_for_selector("[data-check]")
         n_checks = pg.locator("[data-check]").count()
         pg.click("[data-check] >> nth=0")
