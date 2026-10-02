@@ -249,7 +249,7 @@ def main():
             pg.click("#spStart")
             n = sum(p["units"] * p.get("questions", 1) for p in CFG["speaking"]["parts"])
             for k in range(n):
-                pg.wait_for_selector("#spNow, #spDone", timeout=60000)
+                pg.wait_for_selector("#spNow, #spDone", timeout=240000)  # a listen-and-answer recording can run two minutes
                 if pg.locator("#spNow").count():
                     pg.click("#spNow")
                 pg.click("#spDone")
@@ -271,5 +271,16 @@ def main():
     sys.exit(1 if failures else 0)
 
 
+def cleanup():
+    """Remove the attempts this run created (also after a crash), so test data never mixes with the user's."""
+    if "--keep" not in args:
+        for i in created:
+            for d in ("attempts", "pending", "graded"):
+                (ROOT / "submissions" / d / f"{i}.json").unlink(missing_ok=True)
+
+
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    finally:
+        cleanup()

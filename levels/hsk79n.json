@@ -152,14 +152,23 @@
       "minutes": 35,
       "parts": [
         {
-          "id": "T1",
+          "id": "T1a",
           "type": "free",
           "kind": "translation",
-          "units": 2,
+          "units": 1,
           "group": "T1",
           "points": 50,
           "title": "第一部分",
           "desc": "第83～84题：请将下列两篇材料译写成中文（限时35分钟）。",
+          "rubric": "Score 0-50 (HSK 7-9 written translation, English into Chinese). Compare with the English `source`; `model` is one good translation, not the only one.\n45-50 = complete and accurate; natural, idiomatic written Chinese with appropriate advanced vocabulary and sentence structure; almost no errors\n35-44 = meaning conveyed with minor omissions or inaccuracies; mostly natural Chinese; a few errors\n25-34 = main ideas conveyed but several mistranslations, omissions or awkward word-for-word renderings\n10-24 = large parts missing or mistranslated; many language errors\n1-9 = very little correct, relevant Chinese\n0 = blank or not Chinese\nDeduct 1 per wrongly written character (max 5)."
+        },
+        {
+          "id": "T1b",
+          "type": "free",
+          "kind": "translation",
+          "units": 1,
+          "group": "T1",
+          "points": 50,
           "rubric": "Score 0-50 (HSK 7-9 written translation, English into Chinese). Compare with the English `source`; `model` is one good translation, not the only one.\n45-50 = complete and accurate; natural, idiomatic written Chinese with appropriate advanced vocabulary and sentence structure; almost no errors\n35-44 = meaning conveyed with minor omissions or inaccuracies; mostly natural Chinese; a few errors\n25-34 = main ideas conveyed but several mistranslations, omissions or awkward word-for-word renderings\n10-24 = large parts missing or mistranslated; many language errors\n1-9 = very little correct, relevant Chinese\n0 = blank or not Chinese\nDeduct 1 per wrongly written character (max 5)."
         }
       ]

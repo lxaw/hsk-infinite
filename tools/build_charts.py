@@ -69,7 +69,7 @@ def draw(c, dest):
             ax.legend(frameon=False)
         if c.get("ylabel"):
             ax.set_ylabel(c["ylabel"])
-    ax.set_title(c["title"], fontsize=15, pad=14, color=INK)
+    ax.set_title(c["title"], fontsize=15, pad=30 if c["type"] == "pie" else 14, color=INK)
     fig.tight_layout()
     fig.savefig(dest, format="jpg", facecolor="white", pil_kwargs={"quality": 90})
     plt.close(fig)
